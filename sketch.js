@@ -27,16 +27,16 @@ function draw() {
     rotateZ(millis()/1000000*n)
     translate(n,n-mouseY,n+mouseY)
 
-  box(n, 0, n, mouseY);
+  box(n*50, 0, n, mouseY);
 
     rotateX(millis()/1000000*n/3)
     rotateZ(millis()/1000000*n/2)
     translate(n+mouseX,n+mouseY,n-mouseY)
-  box(n, 0, n, mouseY);
+  box(n*50, 0, n, mouseY);
     rotateX(millis()/1000000*n/3)
     rotateZ(millis()/1000000*n/2)
     translate(n+mouseY,n+mouseX,n-mouseX)
-    box(n, 0, n, mouseX);
+    box(n*50, 0, n, mouseX);
 
 
 
