@@ -19,6 +19,7 @@ function setup() {
 
 }
 function draw() {
+   background(0)
   xoff = xoff + 0.01;
   let n = noise(xoff) * mouseX;
   texture(img)
