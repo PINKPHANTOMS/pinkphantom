@@ -29,12 +29,12 @@ function draw() {
 
   box(n*50, 0, n, mouseY);
 
-    rotateX(millis()/1000000*n/3)
-    rotateZ(millis()/1000000*n/2)
+    rotateX(millis()/10000000*n/3)
+    rotateZ(millis()/10000000*n/2)
     translate(n+mouseX,n+mouseY,n-mouseY)
   box(n*50, 0, n, mouseY);
-    rotateX(millis()/1000000*n/3)
-    rotateZ(millis()/1000000*n/2)
+    rotateX(millis()/10000000*n/3)
+    rotateZ(millis()/10000000*n/2)
     translate(n+mouseY,n+mouseX,n-mouseX)
     box(n*50, 0, n, mouseX);
 
