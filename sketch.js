@@ -1,26 +1,30 @@
 let xoff = 0.0;
 let noiseScale=0.02;
 let img;
+let graphics;
 
 
 function preload(){
 
-      img = loadImage('images/pinky.gif')
-
-
+      img = loadImage('images/tgc.jpg')
 }
 
 
 function setup() {
   var canvas = createCanvas(windowWidth, 500, WEBGL);
 
+  graphics = createGraphics(200,200);
+
 
 }
 function draw() {
+
+    graphics.background(img)
+
    background(0)
-  xoff = xoff + 0.04;
+  xoff = xoff + 0.0;
   let n = noise(xoff) * mouseX;
-  texture(img)
+  texture(graphics)
   rotateX(millis()/1000000*n)
     rotateZ(millis()/1000000*n)
     // translate(n,n-mouseY,n+mouseY)
