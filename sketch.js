@@ -12,10 +12,11 @@ function preload(){
 
 function setup() {
 
-  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+  canvas = createCanvas(500, 500, WEBGL);
 
 
 }
+
 function draw() {
 
     // graphics.background(img)
