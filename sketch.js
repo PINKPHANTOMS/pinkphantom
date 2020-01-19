@@ -22,7 +22,7 @@ function draw() {
     graphics.background(img)
 
    background(0)
-  xoff = xoff + 0.0;
+  xoff = xoff + 0.02;
   let n = noise(xoff) * mouseX;
   texture(graphics)
   rotateX(millis()/1000000*n)
