@@ -2,29 +2,28 @@ let xoff = 0.0;
 let noiseScale=0.02;
 let img;
 let graphics;
-
+let canvas;
 
 function preload(){
+          img = loadImage('images/americandream.jpg')
 
-      img = loadImage('images/americandream.jpg')
 }
 
 
 function setup() {
-  var canvas = createCanvas(windowWidth, windowWidth, WEBGL);
 
-  graphics = createGraphics(200,200);
+  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
 
 
 }
 function draw() {
 
-    graphics.background(img)
+    // graphics.background(img)
 
-   background(0)
+   background(100)
   xoff = xoff + 0.02;
   let n = noise(xoff) * mouseX;
-  texture(graphics)
+  texture(img)
   rotateX(millis()/1000000*n)
     rotateZ(millis()/1000000*n)
     // translate(n,n-mouseY,n+mouseY)
