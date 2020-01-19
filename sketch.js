@@ -11,7 +11,7 @@ function preload(){
 
 
 function setup() {
-  var canvas = createCanvas(windowWidth, 500, WEBGL);
+  var canvas = createCanvas(windowWidth, windowWidth, WEBGL);
 
   graphics = createGraphics(200,200);
 
