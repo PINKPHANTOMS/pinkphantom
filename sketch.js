@@ -6,7 +6,7 @@ let graphics;
 
 function preload(){
 
-      img = loadImage('images/tgc.jpg')
+      img = loadImage('images/americandream.jpg')
 }
 
 
