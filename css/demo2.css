@@ -55,27 +55,27 @@
 }
 
 #content-1 {
-	background-image: url(../img/bg.jpg);
+	background-image: url(../images/tgc.jpg);
 }
 
 #content-2 {
-	background-image: url(../img/bg1.jpg);
+	background-image: url(../images/americandream.jpg);
 }
 
 #content-3 {
-	background-image: url(../img/bg2.jpg);
+	background-image: url(../images/maybs.jpg);
 }
 
 #content-4 {
-	background-image: url(../img/bg3.jpg);
+	background-image: url(../images/tgc.jpg);
 }
 
 #content-5 {
-	background-image: url(../img/bg4.jpg);
+	background-image: url(../images/americandream.jpg);
 }
 
 #content-6 {
-	background-image: url(../img/bg5.jpg);
+	background-image: url(../images/maybs.jpg);
 }
 
 @media screen and (min-width: 55em) {
