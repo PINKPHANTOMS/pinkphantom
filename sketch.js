@@ -14,7 +14,7 @@ function preload(){
 
     img = loadImage('images/pinkphantoms.PNG')
     vid = createVideo('images/glitch1.MP4')
-    song = loadSound("images/thisdot.MP3")
+    song = loadSound("images/thisdot.mp3")
 
 }
 
