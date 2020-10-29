@@ -1,119 +1,100 @@
-let xoff = 0.0;
-let noiseScale=0.02;
-let img;
-let canvas;
-var graphics;
-let vid;
-let x = 0
-let value = false;
-var song;
-let dontloop = false;
-
+let gif;
+let graphics;
+let vS;
+let fontboi
+// let gif1
+// let gif2
 
 function preload(){
+	
 
-    img = loadImage('images/pinkphantoms.png')
-    vid = createVideo('images/particle1.mov')
-    song = loadSound("images/thisdot.mp3")
+
 
 }
 
 
-function setup() {
+function setup(){
 
-  vid.hide()
-  vid.loop()
+	song = loadSound('sounds/fm.mp3');
+	fontBoi = loadFont('fonts/techFont.ttf');
+	song.stop();
+	// vS = loadModel('smallboi.stl'); //loads model - insert file path into quotations
 
+	gif = loadImage('images/albumart/feedme.png'); //loads image
+	// gif.volume(0); //sets volume to zero to comply with CORS
+	// gif.hide();
+	canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+	canvas.parent("canvasBoi");
+	textAlign(CENTER, CENTER);
 
+	// graphics = createGraphics(1000, 1000); //loads separate canvas off screen - named 'graphics'
+	// gif.hide(); //hides mov file
+	// gif.loop(); //loops the mov file
 
-  canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-  graphics = createGraphics(675,675)
+	// fft = new p5.FFT();
 }
 
+function draw(){
 
-function draw() {
-  if(value == true){
-if(dontloop ==false){
-  dontloop = true;
-      song.play();
+	
+
+
+	// graphics.fill(0,0,0,150);
+	// graphics.tint(255, 100); // Apply transparency without changing color
+
+	// graphics.image(gif, 0, 0, 1000, 1000); //draws movie on the entirety of the graphics canvas
+
+	background(0,0,0,0);
+	
+	//ambientLight(56, 56, 56); //this code block adds some ambient light
+	//ambientMaterial(random(200), random(100));
+	//let dirX = (mouseX / width - 0.5) * 2;
+  	//let dirY = (mouseY / height - 0.5) * 2;
+  	//directionalLight(250, 250, 250, -dirX, -dirY, -1);
+
+  	camera(0, 0, -1500, 0, 0, 0, 0, 1, 0); //sets object back in z-direction
+ 
+  	texture(gif); //textures following 3D object with graphics
+  	if(song.isPlaying()){ 
+	rotateX(millis()/1000);  //rotation code block
+  	rotateY(millis()/1000);
+  	rotateZ(millis()/1000);
+  	box(width/2);
+  	}
+  	else{
+	  	fill(255,255,255);
+	  	rotateX(-180);
+	  	rotateZ(3.14);
+	  	textFont(fontBoi);
+	  	textSize(width/2);
+	  	text("tap here",0,0);
+	  	}
+	// model(vS); //draws model vS
+
+  	// let waveform = fft.waveform();
+
+	// beginShape();
+	//   for (var i = 0; i< waveform.length; i++){
+	//     let x = map(i, 0, waveform.length, 0, width);
+	//     let y = map( waveform[i], -1, 1, 0, height);
+	//     stroke(0);
+	//     texture(graphics);
+	// 	box(y/2)
+	// }
+	// endShape();
+
+
 }
 
-strokeWeight(0)
+ async function mousePressed(){
+ 	if (song.isPlaying()) {
+     song.stop();
+   } else {
+     song.play();
+   }
+ }
 
-background(0)
-  texture(vid);
-// translate(0,0,900)
-  plane(1600,1600)
-
-// translate(0,0,-900)
-  texture(vid);
-
-  rotateX(millis()/10000)
-  rotateY(millis()/10000)
-box(300);
-
-
-// sphere(1000)  
-
-
-
-  // graphics.background(vid);
-
-  xoff = xoff + 0.02;
-  let n = noise(xoff) * (100);
-  rotateX(millis()/10000000)
-    rotateZ(millis()/10000000)
-    // translate(n,n-mouseY,n+mouseY)
-translate(0,0,n)
-
-    rotateY(millis()/10000000)
-    rotateZ(millis()/10000000)
-    translate(0,0,400)
-  box(100);
-    translate(0,0,-800)
-
-  translate(0,0,-2*n)
-
-    box(100);
-
-
-        translate(0,400,0)
-  cone(100, 100);
-    translate(0,-800,0)
-    rotateX(millis()/10000000)
-
-  translate(0,-2*n,-4*n)
-
-    cylinder(100,100);
-
-
-        translate(400,0,0)
-  sphere(100);
-    translate(-800,0,0)
-    rotateY(millis()/10000000)
-
-  translate(-4*n,0,-2*n)
-
-    sphere(100);
-
-
-
-  //   for (let x=0; x < width; x++) {
-  //   let noiseVal = noise((mouseX+x)*noiseScale, mouseY*noiseScale);
-  //   stroke(noiseVal*255);
-  //   line(x, mouseY+noiseVal*80, x, height);
-  // }
-}
-}
-
-function mousePressed() {
-  value = true;
-  vid.play()
-  if(value==true && dontloop == true){
-    song.stop()
-    value = false;
-    dontloop = false;
-    background(0)
-    vid.stop()
-  }
+async function touchStarted(){
+ 	mousePressed();
+ 	return false;
 }
