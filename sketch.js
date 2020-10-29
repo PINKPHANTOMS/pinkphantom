@@ -23,7 +23,7 @@ function setup(){
 	gif = loadImage('images/albumart/feedme.png'); //loads image
 	// gif.volume(0); //sets volume to zero to comply with CORS
 	// gif.hide();
-	canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+	canvas = createCanvas(device-width, windowHeight, WEBGL);
 	canvas.parent("canvasBoi");
 	textAlign(CENTER, CENTER);
 
