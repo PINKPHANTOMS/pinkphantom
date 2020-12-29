@@ -1,100 +1,66 @@
-let gif;
-let graphics;
-let vS;
-let fontboi
-// let gif1
-// let gif2
+let song;
+let playIcon;
+let pauseIcon;
+let mainFont
+let subFont
 
 function preload(){
-	
+
+  mainFont = loadFont('fonts/modeNine.ttf')
+  subFont = loadFont('fonts/hacked.ttf')
+  playIcon = loadImage('images/icons/playIcon.png');
+  pauseIcon = loadImage('images/icons/pauseIcon.png')
+  song = loadSound('sounds/fm.mp3');
+
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
+}
+
+function duration(){
+  return double;
+}
+
+function draw() {
+
+  background(0,0,0,.5);
 
 
+  textFont(mainFont);
+  textSize(windowWidth/10)
+  fill(255, 255, 255)
+  text("feed me", windowWidth*.05, windowHeight*.8-(windowWidth/15));
+
+  textFont(subFont);
+  textSize(windowWidth/20)
+  fill(128, 128, 128)
+  text("pink phantom", windowWidth*.05, windowHeight*.8);
+
+  textFont(subFont);
+  textSize(windowWidth/20)
+  fill(128, 128, 128)
+  text(song.duration(), windowWidth*.05, windowHeight*.85);
+
+  fill(128, 128, 128, .5)
+  rect(.05*windowWidth, .81*windowHeight, .9*windowWidth, windowWidth*.015);
+// circle()
+
+  if(song.isPlaying()){
+    image(pauseIcon, (windowWidth/2)-100, windowHeight-300, 200, 200);
+  }else{
+    image(playIcon, (windowWidth/2)-100, windowHeight-300, 200, 200);
+  }
 
 }
 
 
-function setup(){
-
-	song = loadSound('sounds/fm.mp3');
-	fontBoi = loadFont('fonts/techFont.ttf');
-	song.stop();
-	// vS = loadModel('smallboi.stl'); //loads model - insert file path into quotations
-
-	gif = loadImage('images/albumart/feedme.png'); //loads image
-	// gif.volume(0); //sets volume to zero to comply with CORS
-	// gif.hide();
-	canvas = createCanvas(device-width, windowHeight, WEBGL);
-	canvas.parent("canvasBoi");
-	textAlign(CENTER, CENTER);
-
-	// graphics = createGraphics(1000, 1000); //loads separate canvas off screen - named 'graphics'
-	// gif.hide(); //hides mov file
-	// gif.loop(); //loops the mov file
-
-	// fft = new p5.FFT();
-}
-
-function draw(){
-
-	
-
-
-	// graphics.fill(0,0,0,150);
-	// graphics.tint(255, 100); // Apply transparency without changing color
-
-	// graphics.image(gif, 0, 0, 1000, 1000); //draws movie on the entirety of the graphics canvas
-
-	background(0,0,0,0);
-	
-	//ambientLight(56, 56, 56); //this code block adds some ambient light
-	//ambientMaterial(random(200), random(100));
-	//let dirX = (mouseX / width - 0.5) * 2;
-  	//let dirY = (mouseY / height - 0.5) * 2;
-  	//directionalLight(250, 250, 250, -dirX, -dirY, -1);
-
-  	camera(0, 0, -1500, 0, 0, 0, 0, 1, 0); //sets object back in z-direction
- 
-  	texture(gif); //textures following 3D object with graphics
-  	if(song.isPlaying()){ 
-	rotateX(millis()/1000);  //rotation code block
-  	rotateY(millis()/1000);
-  	rotateZ(millis()/1000);
-  	box(width/2);
-  	}
-  	else{
-	  	fill(255,255,255);
-	  	rotateX(-180);
-	  	rotateZ(3.14);
-	  	textFont(fontBoi);
-	  	textSize(width/2);
-	  	text("tap here",0,0);
-	  	}
-	// model(vS); //draws model vS
-
-  	// let waveform = fft.waveform();
-
-	// beginShape();
-	//   for (var i = 0; i< waveform.length; i++){
-	//     let x = map(i, 0, waveform.length, 0, width);
-	//     let y = map( waveform[i], -1, 1, 0, height);
-	//     stroke(0);
-	//     texture(graphics);
-	// 	box(y/2)
-	// }
-	// endShape();
-
-
-}
-
- async function mousePressed(){
- 	if (song.isPlaying()) {
-     song.stop();
-   } else {
-     song.play();
-   }
- }
-
-async function touchStarted(){
- 	mousePressed();
- 	return false;
+function mousePressed() {
+  if (song.isPlaying()) {
+    // .isPlaying() returns a boolean
+    song.stop();
+  } else {
+    song.play();
+  }
 }
