@@ -14,11 +14,11 @@
         <div class="container">
             <div class="music-player">
                 <div class="cover">
-                    <img src="images/albumart/feedme.png" alt="">   
+                    <img src="images/americandream.jpg" alt="">   
                 </div>
                 <div class="titre">
                     <h3>Pink Phantom</h3>
-                    <h1>FEED_ME</h1>
+                    <h1>American Dream</h1>
                 </div>
 								<center>
                 <div class="lecteur">
@@ -107,7 +107,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   font-family: 'Cyber', sans-serif;
-  background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700;
+  /* background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700; */
 }
 
 body .cybr-btn + .cybr-btn {
@@ -312,7 +312,11 @@ html {
 body {
     margin: 0;
 		background: black;
-    font-family: "Raleway",sans-serif;
+		background-image: url("images/unsplashcity.jpg");
+		background-size: cover;
+		background-attachment: fixed;
+		/* background-image: linear-gradient("images/americandream.jpg") */
+    /* font-family: "Raleway",sans-serif; */
 }
 h1 {
     margin: 0;
@@ -333,7 +337,7 @@ h3 {
     height: 100%;
     margin: auto;
     overflow: auto;
-    background-color: url("images/albumart/feedme.png");
+		overflow-y: hidden;
     background-repeat: repeat;
     background-size: cover;
 }
@@ -345,7 +349,7 @@ h3 {
     margin: auto;
     margin-top: 6%;
     border-radius: 0 0 10px 10px;
-    background: transparent linear-gradient(to bottom,black 50%,rgb(10,11,31) 70%) repeat scroll 0 0;
+    background: transparent linear-gradient(to bottom,gray 50%,black 70%) repeat scroll 0 0;
     box-shadow: 1px 10px 20px 5px #222;
 }
 .cover {
