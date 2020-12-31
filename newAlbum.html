@@ -61,20 +61,28 @@
 										</div>
 
 
+
 										<div class="titleReal">
 
-											DREAMS
+											View Lyrics
 										</div>
 
+<div class="bodyBoi">
+	<p id="dreamsLyrics">
+	<button onclick="myFunction()" class="cybr-btn">
+		Dreams<span aria-hidden></span>
+		<span aria-hidden class="cybr-btn__glitch">Dreams</span>
+		<span aria-hidden class="cybr-btn__tag"></span>
+		<span id="dots"></span><span id="more">
+			<br><div class="lyricBoi">PUT LYRICS HERE</div></span>
+	</button>
+
+</p>
+		</div>
+
 										<div class="bodyBoi">
-											They covered the precious mahogany coffin with a
-											brown amalgam of rocks, decomposed organisms, and weeds.
-											It was my turn to take the shovel,
-											but I felt too ashamed to dutifully
-											send her off when I had not properly said goodbye.
-											I refused to throw dirt on her. I refused to let go of my grandmother,
-											to accept a death I had not seen coming, to believe that an illness could
-											not only interrupt, but steal a beloved life.
+											<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+											</script>
 										</div>
 
 										<div class="backgroundThingy">
@@ -131,6 +139,7 @@
 								</a>
 							  <span aria-hidden class="cybr-btn__tag">R25</span>
 							</button>
+
 							<button class="cybr-btn">
 							  VSCO<span aria-hidden>_</span>
 							  <span aria-hidden class="cybr-btn__glitch">VSCO</span>
@@ -153,6 +162,10 @@
 
 
 <style>
+
+
+#more {display: none;}
+
 
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
 -webkit-background-size: 2650px 1440px;
@@ -254,9 +267,10 @@ body .cybr-btn + .cybr-btn {
   transition: 0.2s;
 }
 
-.cybr-btn:hover {
+/* .cybr-btn:hover {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
-}
+} */
+
 .cybr-btn:active {
   --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
 }
@@ -278,9 +292,9 @@ body .cybr-btn + .cybr-btn {
   transform: translate(var(--border), 0);
 }
 
-.cybr-btn:after {
+/* .cybr-btn:after {
   background: var(--primary);
-}
+} */
 
 .cybr-btn__tag {
   position: absolute;
@@ -745,6 +759,44 @@ function timeStamp12(){
 function timeStamp13(){
 	x.currentTime = 2459;
 	x.play();
+}
+
+
+
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementsByClassName('cybr-btn__glitch');
+
+	element = document.getElementById("dreamsLyrics");
+
+	// reset the transition by...
+	element.addEventListener("btnclick", function(e) {
+	  e.preventDefault;
+
+	  // -> removing the class
+	  element.classList.remove("cybr-btn");
+
+	  // -> triggering reflow /* The actual magic */
+	  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
+	  // Oops! This won't work in strict mode. Thanks Felis Phasma!
+	  // element.offsetWidth = element.offsetWidth;
+	  // Do this instead:
+	  void element.offsetWidth;
+
+	  // -> and re-adding the class
+	  element.classList.add("cybr-btn");
+	}, false);
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "View Lyrics";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hide Lyrics";
+    moreText.style.display = "inline";
+  }
 }
 
 
