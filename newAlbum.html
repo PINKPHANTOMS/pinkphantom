@@ -12,6 +12,7 @@
 
     <div class="contain">
         <div class="container">
+					<div class="backgroundThingy">
             <div class="music-player">
                 <div class="cover">
                     <img src="images/americandream.jpg" alt="">   
@@ -37,7 +38,6 @@
 										<br>
 										<br>
 										<h1></h1>
-										<div class="timeSeekers">
 											<h3 style = "text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw;">
 												<u>
 												<a onclick="timeStamp1()"><b style="color: white">[00:00]</b> Dreams  <br></a>
@@ -57,36 +57,89 @@
 
 											</h3>
 										</div>
-							</div>
+										<div class="titleBoi">
+											_
+										</div>
+</div>
+										<div class="titleReal">
 
+											DREAMS
+										</div>
+
+
+										<div class="bodyBoi">
+											They covered the precious mahogany coffin with a
+											brown amalgam of rocks, decomposed organisms, and weeds.
+											It was my turn to take the shovel,
+											but I felt too ashamed to dutifully
+											send her off when I had not properly said goodbye.
+											I refused to throw dirt on her. I refused to let go of my grandmother,
+											to accept a death I had not seen coming, to believe that an illness could
+											not only interrupt, but steal a beloved life.
+										</div>
+										<center>
+
+											<div class="photoBoi">
+												<img src="images/unsplashCity.jpg" width="90%" alt="">
+											</div>
+										</center>
+
+
+										<div class="bodyBoi">
+
+											When my parents finally revealed to me that my
+											grandmother had been battling liver cancer,
+											I was twelve and I was angry--mostly with myself.
+											They had wanted to protect me--only six years
+											old at the time--from the complex and morose concept of death.
+											However, when the end inevitably arrived, I wasn’t trying to
+											comprehend what dying was; I was trying to understand how I had
+											been able to abandon my sick grandmother in favor of playing with
+											friends and watching TV. Hurt that my parents had deceived me and
+											resentful of my own oblivion, I committed myself to preventing such
+											blindness from resurfacing.
+
+										</div>
+
+											<center>
+											<video width="80%" controls>
+												<source src="videos/onTheRun.mp4" type="video/mp4">
+													<source src="mov_bbb.ogg" type="video/ogg">
+														Your browser does not support HTML5 video.
+													</video>
+												</center>
+
+
+
+										<center>
+											<footer style="font-size: 5vw; color: black;">&copy; Copyright 2020 PINK PHANTOM</footer>
+										</center>
+									</div>
+								</div>
 							</center>
 
-<center>
+<!-- <center>
 
 					<p>
 							<button class="cybr-btn">
 							  Website<span aria-hidden>_</span>
 							  <span aria-hidden class="cybr-btn__glitch">Website</span>
 								</a>
-							  <!-- <span aria-hidden class="cybr-btn__tag">R25</span> -->
+							  <span aria-hidden class="cybr-btn__tag">R25</span>
 							</button>
 							<button class="cybr-btn">
 							  VSCO<span aria-hidden>_</span>
 							  <span aria-hidden class="cybr-btn__glitch">VSCO</span>
-							  <!-- <span aria-hidden class="cybr-btn__tag">R25</span> -->
+							  <span aria-hidden class="cybr-btn__tag">R25</span>
 							</button>
 						</p>
-
-						<center>
-						<footer style="font-size: 5vw; color: black;">&copy; Copyright 2020 PINK PHANTOM</footer>
-					</center>
-
-</center>
-            </div>
-
-    </div>
+</center> -->
 
 </body>
+
+
+
+
 
 </html>
 
@@ -97,7 +150,48 @@
 
 <style>
 
-/* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */
+/* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
+
+
+video {
+  max-width: 100%;
+  height: auto;
+	text-align: center;
+}
+
+
+.photoBoi{
+	max-width: 500px;
+}
+
+.titleBoi{
+	background-color: rgba(0,0,0,.5);
+	color:gray;
+	font-size: 10vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	text-align: center;
+}
+
+.titleReal{
+	background-color: rgba(0,0,0);
+	color:gray;
+	font-size: 10vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	text-align: center;
+
+}
+
+.bodyBoi{
+	text-indent: 10%;
+	background-color: black;
+	line-height: 10vw;
+	color:white;
+	font-size: 5vw;
+	padding: 5vw;
+	text-align: left;
+}
 
 
 @font-face {
@@ -322,7 +416,6 @@ html {
 body {
     margin: 0;
 		background-color: black;
-		background-image: url("images/unsplashCity.jpg");
 		background-size: cover;
 		background-attachment: fixed;
 		overflow-x: hidden;
@@ -352,6 +445,12 @@ h3 {
     overflow-x: hidden;
     background-repeat: repeat;
     background-size: cover;
+}
+
+.backgroundThingy{
+	background-image: url("images/unsplashCity.jpg");
+	background-size: cover;
+
 }
 
 
