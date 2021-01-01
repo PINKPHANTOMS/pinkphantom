@@ -765,14 +765,14 @@ function viewLyrics() {
   var dots = document.getElementById("dots");
   var btnText = document.getElementById("myLyricBtn");
 
-	btnText.addEventListener("onmouseover",lyricTime());
+	btnText.addEventListener("onclick",lyricTime());
 
 }
 function viewChron() {
 	var dots = document.getElementById("dots");
   var btnText = document.getElementById("myChronBtn");
 
-	btnText.addEventListener("onmouseover",chronTime());
+	btnText.addEventListener("onclick",chronTime());
 
 }
 
@@ -780,7 +780,7 @@ function viewPReel() {
 	var dots = document.getElementById("dots");
   var btnText = document.getElementById("myPReelBtn");
 
-	btnText.addEventListener("onmouseover",pReelTime());
+	btnText.addEventListener("onclick",pReelTime());
 
 }
 
@@ -803,7 +803,7 @@ function viewDreamsLyrics() {
 
   var btnText = document.getElementById("myDreamsLyricBtn");
 
-	btnText.addEventListener("onmouseover", dreamsLyricsTime());
+	btnText.addEventListener("onclick", dreamsLyricsTime());
 
 
 
@@ -815,13 +815,14 @@ function viewDreamsLyrics() {
 		dreamsDots.style.display = "none";
 		btnText.innerHTML = "Hide Dreams Lyrics";
 		moreDreamsLyrics.style.display = "inline";
+		moreNoWolvesLyrics.style.display = "none";
 
 	}
 
 }
 
 function dreamsLyricsTime(){
-	
+
 	moreDreamsLyrics.style.display = "inline";
 	moreNoWolvesLyrics.style.display= "none";
 	myNoWolvesLyricBtn.innerHTML = "No Wolves...";
@@ -842,7 +843,7 @@ function viewNoWolvesLyrics() {
 
   var btnText = document.getElementById("myNoWolvesLyricBtn");
 
-	btnText.addEventListener("onmouseover", noWolvesLyricsTime());
+	btnText.addEventListener("onclick", noWolvesLyricsTime());
 
 
   if (noWolvesDots.style.display === "none") {
@@ -853,6 +854,7 @@ function viewNoWolvesLyrics() {
     noWolvesDots.style.display = "none";
     btnText.innerHTML = "Hide No Wolves... Lyrics";
     moreNoWolvesLyrics.style.display = "inline";
+		moreDreamsLyrics.style.display= "none";
 
   }
 }
