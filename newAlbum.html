@@ -64,60 +64,127 @@
 
 										<div class="titleReal">
 
-											View Lyrics
-										</div>
+											READ MORE<br>
 
-<div class="bodyBoi">
-	<p id="dreamsLyrics">
-	<button onclick="myFunction()" class="cybr-btn">
-		Dreams<span aria-hidden></span>
-		<span aria-hidden class="cybr-btn__glitch">Dreams</span>
-		<span aria-hidden class="cybr-btn__tag"></span>
-		<span id="dots"></span><span id="more">
-			<br><div class="lyricBoi">PUT LYRICS HERE</div></span>
-	</button>
 
-</p>
-		</div>
+		<button onclick="viewLyrics()" id="myLyricBtn">View Lyrics</button>
 
-										<div class="bodyBoi">
-											<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-											</script>
-										</div>
+		<button onclick="viewChron()" id="myChronBtn">View Chronology</button>
 
-										<div class="backgroundThingy">
-										<center>
-											<div class="photoBoi">
-												<img src="images/unsplashCity.jpg" width="90%" alt="">
+		<button onclick="viewPReel()" id="myPReelBtn">View Photo Reel</button>
+
+	</div>
+
+
+	<div class="bodyBoi2">
+
+
+
+		<span id="dots"></span>
+		<span id="moreLyrics">
+
+			<br>
+			<button onclick="viewDreamsLyrics()" id="myDreamsLyricBtn">Dreams</button><br>
+
+
+
+			<span id="moreDreamsLyrics">
+
+				here's where the dreams lyrics go
+
+			</span>
+
+			<br>
+			<button onclick="viewNoWolvesLyrics()" id="myNoWolvesLyricBtn">No Wolves...</button><br>
+
+
+			<span id="moreNoWolvesLyrics">
+
+				here's where the no wolves lyrics go
+
+			</span>
+
+
+</span>
+
+
+	</div>
+
+
+
+	<div class="bodyBoi">
+		<span id="dots"></span>
+		<span id="moreChron">
+
+
+			<div class="bodyBoi">
+
+				When my parents finally revealed to me that my
+				grandmother had been battling liver cancer,
+				I was twelve and I was angry--mostly with myself.
+				They had wanted to protect me--only six years
+				old at the time--from the complex and morose concept of death.
+				However, when the end inevitably arrived, I wasn’t trying to
+				comprehend what dying was; I was trying to understand how I had
+				been able to abandon my sick grandmother in favor of playing with
+				friends and watching TV. Hurt that my parents had deceived me and
+				resentful of my own oblivion, I committed myself to preventing such
+				blindness from resurfacing.
+
+			</div>
+												<div class="backgroundThingy">
+												<center>
+													<div class="photoBoi">
+														<img src="images/unsplashCity.jpg" width="90%" alt="">
+													</div>
+												</center>
 											</div>
-										</center>
-									</div>
 
 
-										<div class="bodyBoi">
+												<div class="bodyBoi">
 
-											When my parents finally revealed to me that my
-											grandmother had been battling liver cancer,
-											I was twelve and I was angry--mostly with myself.
-											They had wanted to protect me--only six years
-											old at the time--from the complex and morose concept of death.
-											However, when the end inevitably arrived, I wasn’t trying to
-											comprehend what dying was; I was trying to understand how I had
-											been able to abandon my sick grandmother in favor of playing with
-											friends and watching TV. Hurt that my parents had deceived me and
-											resentful of my own oblivion, I committed myself to preventing such
-											blindness from resurfacing.
+													When my parents finally revealed to me that my
+													grandmother had been battling liver cancer,
+													I was twelve and I was angry--mostly with myself.
+													They had wanted to protect me--only six years
+													old at the time--from the complex and morose concept of death.
+													However, when the end inevitably arrived, I wasn’t trying to
+													comprehend what dying was; I was trying to understand how I had
+													been able to abandon my sick grandmother in favor of playing with
+													friends and watching TV. Hurt that my parents had deceived me and
+													resentful of my own oblivion, I committed myself to preventing such
+													blindness from resurfacing.
 
-										</div>
+												</div>
 
 
-										<div class="backgroundThingy">
-										<center>
-											<div class="photoBoi">
-												<img src="images/zz.gif" width="90%" alt="">
+												<div class="backgroundThingy">
+												<center>
+													<div class="photoBoi">
+														<img src="images/zz.gif" width="90%" alt="">
+													</div>
+												</center>
 											</div>
-										</center>
-									</div>
+
+
+
+		</span>
+	</div>
+
+
+
+	<div class="bodyBoi">
+		<span id="dots"></span>
+		<span id="morePReel">
+
+
+			<div class="photoBoi">
+				<img src="images/zz.gif" width="90%" alt="">
+			</div>
+
+				</span>
+	</div>
+
 
 									<div class="backgroundThingy">
 										<center>
@@ -139,7 +206,6 @@
 								</a>
 							  <span aria-hidden class="cybr-btn__tag">R25</span>
 							</button>
-
 							<button class="cybr-btn">
 							  VSCO<span aria-hidden>_</span>
 							  <span aria-hidden class="cybr-btn__glitch">VSCO</span>
@@ -164,8 +230,14 @@
 <style>
 
 
-#more {display: none;}
+#moreLyrics {display: none;}
 
+#moreDreamsLyrics {display: none;}
+#moreNoWolvesLyrics {display: none;}
+
+
+#moreChron {display: none;}
+#morePReel {display: none;}
 
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
 -webkit-background-size: 2650px 1440px;
@@ -204,6 +276,15 @@
 	text-align: left;
 }
 
+.bodyBoi2{
+	background-color: black;
+	line-height: 10vw;
+	color:white;
+	font-size: 8vw;
+	padding: 5vw;
+	text-align: left;
+}
+
 
 @font-face {
   font-family: Cyber;
@@ -225,181 +306,123 @@ body {
   /* background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700; */
 }
 
-body .cybr-btn + .cybr-btn {
-  margin-top: 2rem;
+/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
 }
 
-.cybr-btn {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 1%));
-  --shadow-primary: hsl(var(--shadow-primary-hue), 90%, 50%);
-  --primary-hue: 0;
-  --primary-lightness: 50;
-  --color: hsl(0, 0%, 100%);
-  --font-size: 26px;
-  --shadow-primary-hue: 180;
-  --label-size: 9px;
-  --shadow-secondary-hue: 60;
-  --shadow-secondary: hsl(var(--shadow-secondary-hue), 90%, 60%);
-  --clip: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 70%);
-  --border: 4px;
-  --shimmy-distance: 5;
-  --clip-one: polygon(0 2%, 100% 2%, 100% 95%, 95% 95%, 95% 90%, 85% 90%, 85% 95%, 8% 95%, 0 70%);
-  --clip-two: polygon(0 78%, 100% 78%, 100% 100%, 95% 100%, 95% 90%, 85% 90%, 85% 100%, 8% 100%, 0 78%);
-  --clip-three: polygon(0 44%, 100% 44%, 100% 54%, 95% 54%, 95% 54%, 85% 54%, 85% 54%, 8% 54%, 0 54%);
-  --clip-four: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-five: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
-  --clip-six: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
-  --clip-seven: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
-  font-family: 'Cyber', sans-serif;
-  color: var(--color);
-  cursor: pointer;
-  background: transparent;
-  text-transform: uppercase;
-  font-size: var(--font-size);
-  outline: transparent;
-  letter-spacing: 2px;
-  position: relative;
-  font-weight: 700;
-  border: 0;
-  min-width: 300px;
-  height: 75px;
-  line-height: 75px;
-  transition: 0.2s;
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
 
-/* .cybr-btn:hover {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.8%));
-} */
-
-.cybr-btn:active {
-  --primary: hsl(var(--primary-hue), 85%, calc(var(--primary-lightness, 50) * 0.6%));
-}
-
-.cybr-btn:after,
-.cybr-btn:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  clip-path: var(--clip);
-  z-index: -1;
-}
-
-.cybr-btn:before {
-  background: var(--shadow-primary);
-  transform: translate(var(--border), 0);
-}
-
-/* .cybr-btn:after {
-  background: var(--primary);
-} */
-
-.cybr-btn__tag {
-  position: absolute;
-  padding: 1px 4px;
-  letter-spacing: 1px;
-  line-height: 1;
-  bottom: -5%;
-  right: 5%;
-  font-weight: normal;
-  color: hsl(0, 0%, 0%);
-  font-size: var(--label-size);
-}
-
-.cybr-btn__glitch {
-  position: absolute;
-  top: calc(var(--border) * -1);
-  left: calc(var(--border) * -1);
-  right: calc(var(--border) * -1);
-  bottom: calc(var(--border) * -1);
-  background: var(--shadow-primary);
-  text-shadow: 2px 2px var(--shadow-primary), -2px -2px var(--shadow-secondary);
-  clip-path: var(--clip);
-  animation: glitch 2s infinite;
-  display: none;
-}
-
-.cybr-btn:hover .cybr-btn__glitch {
-  display: block;
-}
-
-.cybr-btn__glitch:before {
-  content: '';
-  position: absolute;
-  top: calc(var(--border) * 1);
-  right: calc(var(--border) * 1);
-  bottom: calc(var(--border) * 1);
-  left: calc(var(--border) * 1);
-  clip-path: var(--clip);
-  background: var(--primary);
-  z-index: -1;
-}
-
-@keyframes glitch {
+@-webkit-keyframes pulse {
   0% {
-    clip-path: var(--clip-one);
-  }
-  2%, 8% {
-    clip-path: var(--clip-two);
-    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
-  }
-  6% {
-    clip-path: var(--clip-two);
-    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-  }
-  9% {
-    clip-path: var(--clip-two);
-    transform: translate(0, 0);
-  }
-  10% {
-    clip-path: var(--clip-three);
-    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-  }
-  13% {
-    clip-path: var(--clip-three);
-    transform: translate(0, 0);
-  }
-  14%, 21% {
-    clip-path: var(--clip-four);
-    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-  }
-  25% {
-    clip-path: var(--clip-five);
-    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-  }
-  30% {
-    clip-path: var(--clip-five);
-    transform: translate(calc(var(--shimmy-distance) * -1%), 0);
-  }
-  35%, 45% {
-    clip-path: var(--clip-six);
-    transform: translate(calc(var(--shimmy-distance) * -1%));
-  }
-  40% {
-    clip-path: var(--clip-six);
-    transform: translate(calc(var(--shimmy-distance) * 1%));
-  }
-  50% {
-    clip-path: var(--clip-six);
-    transform: translate(0, 0);
-  }
-  55% {
-    clip-path: var(--clip-seven);
-    transform: translate(calc(var(--shimmy-distance) * 1%), 0);
-  }
-  60% {
-    clip-path: var(--clip-seven);
-    transform: translate(0, 0);
-  }
-  31%, 61%, 100% {
-    clip-path: var(--clip-four);
+    box-shadow: 0 0 0 0 var(--hover);
   }
 }
 
-.cybr-btn:nth-of-type(2) {
-  --primary-hue: 260;
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--hover);
+  }
+}
+.close:hover,
+.close:focus {
+  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.offset {
+  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+}
+.offset:hover, .offset:focus {
+  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+}
+
+.fill {
+  --color: #a972cb;
+  --hover: #cb72aa;
+}
+
+.pulse {
+  --color: #ef6eae;
+  --hover: #ef8f6e;
+}
+
+.close {
+  --color: #ff7f82;
+  --hover: #ffdc7f;
+}
+
+.raise {
+  --color: #ffa260;
+  --hover: #e5ff60;
+}
+
+.up {
+  --color: #e4cb58;
+  --hover: #94e458;
+}
+
+.slide {
+  --color: #8fc866;
+  --hover: #66c887;
+}
+
+.offset {
+  --color: #19bc8b;
+  --hover: #1973bc;
+}
+
+button {
+  color: var(--color);
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: var(--hover);
+  color: #fff;
+}
+
+
+button {
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
 }
 
 
@@ -762,42 +785,106 @@ function timeStamp13(){
 }
 
 
+var moreLyrics = document.getElementById("moreLyrics");
+var moreChron = document.getElementById("moreChron");
+var morePReel = document.getElementById("morePReel");
 
-function myFunction() {
+
+
+
+function viewLyrics() {
   var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementsByClassName('cybr-btn__glitch');
-
-	element = document.getElementById("dreamsLyrics");
-
-	// reset the transition by...
-	element.addEventListener("btnclick", function(e) {
-	  e.preventDefault;
-
-	  // -> removing the class
-	  element.classList.remove("cybr-btn");
-
-	  // -> triggering reflow /* The actual magic */
-	  // without this it wouldn't work. Try uncommenting the line and the transition won't be retriggered.
-	  // Oops! This won't work in strict mode. Thanks Felis Phasma!
-	  // element.offsetWidth = element.offsetWidth;
-	  // Do this instead:
-	  void element.offsetWidth;
-
-	  // -> and re-adding the class
-	  element.classList.add("cybr-btn");
-	}, false);
+  var btnText = document.getElementById("myLyricBtn");
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
     btnText.innerHTML = "View Lyrics";
-    moreText.style.display = "none";
+    moreLyrics.style.display = "none";
   } else {
     dots.style.display = "none";
     btnText.innerHTML = "Hide Lyrics";
-    moreText.style.display = "inline";
+    moreLyrics.style.display = "inline";
+		moreChron.style.display = "none";
+		morePReel.style.display = "none";
   }
 }
+
+function viewChron() {
+	var dots = document.getElementById("dots");
+  var btnText = document.getElementById("myChronBtn");
+
+  if (dots.style.display === "none") {
+		dots.style.display = "inline";
+    btnText.innerHTML = "View Chronology";
+		moreChron.style.display = "none";
+
+  } else {
+		dots.style.display = "none";
+    btnText.innerHTML = "Hide Chronology";
+		moreChron.style.display = "inline";
+		moreLyrics.style.display = "none";
+		morePReel.style.display = "none";
+
+  }
+}
+
+function viewPReel() {
+	var dots = document.getElementById("dots");
+  var btnText = document.getElementById("myPReelBtn");
+
+  if (dots.style.display === "none") {
+		dots.style.display = "inline";
+    btnText.innerHTML = "View Photo Reel";
+		morePReel.style.display = "none";
+
+  } else {
+		dots.style.display = "none";
+    btnText.innerHTML = "Hide Photo Reel";
+		morePReel.style.display = "inline";
+		moreChron.style.display = "none";
+		moreLyrics.style.display = "none";
+  }
+}
+
+
+
+function viewDreamsLyrics() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("moreDreamsLyrics");
+  var btnText = document.getElementById("myDreamsLyricBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Dreams";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hide Dreams Lyrics";
+    moreText.style.display = "inline";
+
+  }
+}
+
+
+function viewNoWolvesLyrics() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("moreNoWolvesLyrics");
+  var btnText = document.getElementById("myNoWolvesLyricBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "No Wolves...";
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Hide No Wolves... Lyrics";
+    moreText.style.display = "inline";
+
+  }
+}
+
+
+
 
 
   </script>
