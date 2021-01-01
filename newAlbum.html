@@ -67,11 +67,11 @@
 											READ MORE<br>
 
 
-		<button onclick="viewLyrics()" id="myLyricBtn">View Lyrics</button>
+		<button class="glow-on-hover" onclick="viewLyrics()" id="myLyricBtn">View<br> Lyrics</button>
 
-		<button onclick="viewChron()" id="myChronBtn">View Chronology</button>
+		<button class="glow-on-hover" onclick="viewChron()" id="myChronBtn">View<br> Chronology</button>
 
-		<button onclick="viewPReel()" id="myPReelBtn">View Photo Reel</button>
+		<button class="glow-on-hover"onclick="viewPReel()" id="myPReelBtn">View<br> Photo Reel</button>
 
 	</div>
 
@@ -306,123 +306,68 @@ body {
   /* background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700; */
 }
 
-/*
-  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
-  box-shadow: [inset?] [top] [left] [blur] [size] [color];
-
-  Tips:
-    - We're setting all the blurs to 0 since we want a solid fill.
-    - Add the inset keyword so the box-shadow is on the inside of the element
-    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
-    - Multiple shadows can be stacked
-    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
-*/
-.fill:hover,
-.fill:focus {
-  box-shadow: inset 0 0 0 2em var(--hover);
-}
-
-.pulse:hover,
-.pulse:focus {
-  -webkit-animation: pulse 1s;
-          animation: pulse 1s;
-  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--hover);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--hover);
-  }
-}
-.close:hover,
-.close:focus {
-  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
-}
-
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-
-.up:hover,
-.up:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
-}
-
-.slide:hover,
-.slide:focus {
-  box-shadow: inset 6.5em 0 0 0 var(--hover);
-}
-
-.offset {
-  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
-}
-.offset:hover, .offset:focus {
-  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
-}
-
-.fill {
-  --color: #a972cb;
-  --hover: #cb72aa;
-}
-
-.pulse {
-  --color: #ef6eae;
-  --hover: #ef8f6e;
-}
-
-.close {
-  --color: #ff7f82;
-  --hover: #ffdc7f;
-}
-
-.raise {
-  --color: #ffa260;
-  --hover: #e5ff60;
-}
-
-.up {
-  --color: #e4cb58;
-  --hover: #94e458;
-}
-
-.slide {
-  --color: #8fc866;
-  --hover: #66c887;
-}
-
-.offset {
-  --color: #19bc8b;
-  --hover: #1973bc;
-}
-
-button {
-  color: var(--color);
-  transition: 0.25s;
-}
-button:hover, button:focus {
-  border-color: var(--hover);
-  color: #fff;
-}
 
 
-button {
-  background: none;
-  border: 2px solid;
-  line-height: 1;
 
+
+.glow-on-hover {
+    width: 25vw;
+    height: 15vw;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
 }
 
-code {
-  color: #e4cb58;
-  font: inherit;
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 
@@ -798,11 +743,11 @@ function viewLyrics() {
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
-    btnText.innerHTML = "View Lyrics";
+    btnText.innerHTML = "View<br> Lyrics";
     moreLyrics.style.display = "none";
   } else {
     dots.style.display = "none";
-    btnText.innerHTML = "Hide Lyrics";
+    btnText.innerHTML = "Hide<br> Lyrics";
     moreLyrics.style.display = "inline";
 		moreChron.style.display = "none";
 		morePReel.style.display = "none";
@@ -815,12 +760,12 @@ function viewChron() {
 
   if (dots.style.display === "none") {
 		dots.style.display = "inline";
-    btnText.innerHTML = "View Chronology";
+    btnText.innerHTML = "View <br>Chronology";
 		moreChron.style.display = "none";
 
   } else {
 		dots.style.display = "none";
-    btnText.innerHTML = "Hide Chronology";
+    btnText.innerHTML = "Hide <br>Chronology";
 		moreChron.style.display = "inline";
 		moreLyrics.style.display = "none";
 		morePReel.style.display = "none";
@@ -834,12 +779,12 @@ function viewPReel() {
 
   if (dots.style.display === "none") {
 		dots.style.display = "inline";
-    btnText.innerHTML = "View Photo Reel";
+    btnText.innerHTML = "View<br> Photo Reel";
 		morePReel.style.display = "none";
 
   } else {
 		dots.style.display = "none";
-    btnText.innerHTML = "Hide Photo Reel";
+    btnText.innerHTML = "Hide<br> Photo Reel";
 		morePReel.style.display = "inline";
 		moreChron.style.display = "none";
 		moreLyrics.style.display = "none";
