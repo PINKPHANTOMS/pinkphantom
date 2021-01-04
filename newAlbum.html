@@ -67,26 +67,26 @@
 											READ MORE<br>
 
 
-		<button class="glow-on-hover" onclick="viewLyrics()" id="myLyricBtn">View<br> Lyrics</button>
+		<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
 
-		<button class="glow-on-hover" onclick="viewChron()" id="myChronBtn">View<br> Chronology</button>
+		<button class="glow-on-hoverMAIN" onclick="viewChron()" id="myChronBtn">Chronos</button>
 
-		<button class="glow-on-hover" onclick="viewPReel()" id="myPReelBtn">View<br> Photo Reel</button>
+		<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn"> Gallery</button>
 
 	</div>
 
 
 	<div class="bodyBoi2">
 
-
-
 		<span id="lyricsDots"></span>
 		<span id="moreLyrics">
 
+			<span id="lyricImage">
 			<img src="images/EPK.png" width="100%">
+		</span>
 
-			<br>
-			<button onclick="viewLyrics1()" class="glow-on-hover" id="lyricBtn1">Dreams</button><br>
+			<!-- <br>
+			<button onclick="viewLyrics1()" class="glow-on-hoverSUB" id="lyricBtn1">Dreams</button><br>
 
 
 			<span id="lyrics1">
@@ -97,7 +97,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics2()" class="glow-on-hover" id="lyricBtn2">No Wolves, Just Sheep Grazing...</button><br>
+			<button onclick="viewLyrics2()" class="glow-on-hoverSUB" id="lyricBtn2">No Wolves, Just Sheep Grazing...</button><br>
 
 			<span id="lyrics2">
 
@@ -106,7 +106,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics3()" class="glow-on-hover" id="lyricBtn3">Theatre of Animals</button><br>
+			<button onclick="viewLyrics3()" class="glow-on-hoverSUB" id="lyricBtn3">Theatre of Animals</button><br>
 
 
 			<span id="lyrics3">
@@ -117,7 +117,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics4()" class="glow-on-hover" id="lyricBtn4">The Sleep Factory</button><br>
+			<button onclick="viewLyrics4()" class="glow-on-hoverSUB" id="lyricBtn4">The Sleep Factory</button><br>
 
 			<span id="lyrics4">
 
@@ -126,7 +126,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics5()" class="glow-on-hover" id="lyricBtn5">Funeral</button><br>
+			<button onclick="viewLyrics5()" class="glow-on-hoverSUB" id="lyricBtn5">Funeral</button><br>
 
 
 			<span id="lyrics5">
@@ -137,7 +137,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics6()" class="glow-on-hover" id="lyricBtn6">"Be Operation (That Is...</button><br>
+			<button onclick="viewLyrics6()" class="glow-on-hoverSUB" id="lyricBtn6">"Be Operation (That Is...</button><br>
 
 			<span id="lyrics6">
 
@@ -146,7 +146,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics7()" class="glow-on-hover" id="lyricBtn7">Just Be Normal, Do Your Part</button><br>
+			<button onclick="viewLyrics7()" class="glow-on-hoverSUB" id="lyricBtn7">Just Be Normal, Do Your Part</button><br>
 
 
 			<span id="lyrics7">
@@ -157,7 +157,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics8()" class="glow-on-hover" id="lyricBtn8">The Construction of...</button><br>
+			<button onclick="viewLyrics8()" class="glow-on-hoverSUB" id="lyricBtn8">The Construction of...</button><br>
 
 			<span id="lyrics8">
 
@@ -167,7 +167,7 @@
 
 
 			<br>
-			<button onclick="viewLyrics9()" class="glow-on-hover" id="lyricBtn9">Eventually the Train Will Come</button><br>
+			<button onclick="viewLyrics9()" class="glow-on-hoverSUB" id="lyricBtn9">Eventually the Train Will Come</button><br>
 
 
 			<span id="lyrics9">
@@ -178,7 +178,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics10()" class="glow-on-hover" id="lyricBtn10">The Immanence of Sleep in...</button><br>
+			<button onclick="viewLyrics10()" class="glow-on-hoverSUB" id="lyricBtn10">The Immanence of Sleep in...</button><br>
 
 			<span id="lyrics10">
 
@@ -188,7 +188,7 @@
 
 
 			<br>
-			<button onclick="viewLyrics11()" class="glow-on-hover" id="lyricBtn11">Controlled Paralysis</button><br>
+			<button onclick="viewLyrics11()" class="glow-on-hoverSUB" id="lyricBtn11">Controlled Paralysis</button><br>
 
 
 			<span id="lyrics11">
@@ -199,7 +199,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics12()" class="glow-on-hover" id="lyricBtn12">The Sweet Smell of Excess...</button><br>
+			<button onclick="viewLyrics12()" class="glow-on-hoverSUB" id="lyricBtn12">The Sweet Smell of Excess...</button><br>
 
 			<span id="lyrics12">
 
@@ -208,7 +208,7 @@
 			</span>
 
 			<br>
-			<button onclick="viewLyrics13()" class="glow-on-hover" id="lyricBtn13">Empire of Desire</button><br>
+			<button onclick="viewLyrics13()" class="glow-on-hoverSUB" id="lyricBtn13">Empire of Desire</button><br>
 
 
 			<span id="lyrics13">
@@ -216,7 +216,7 @@
 
 				here's where the EOD lyrics go
 
-			</span>
+			</span> -->
 
 
 
@@ -437,20 +437,21 @@ body {
 
 
 
-.glow-on-hover {
-    width: 25vw;
-    height: 15vw;
+.glow-on-hoverSUB {
+    width: 60%;
+    height: 10%;
+		font-size: 5vw;
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: black;
     cursor: pointer;
     position: relative;
     z-index: 0;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
-.glow-on-hover:before {
+.glow-on-hoverSUB:before {
     content: '';
     background: linear-gradient(45deg, green, #080808);
     position: absolute;
@@ -467,25 +468,88 @@ body {
     border-radius: 10px;
 }
 
-.glow-on-hover:active {
+.glow-on-hoverSUB:active {
     color: #000
 }
 
-.glow-on-hover:active:after {
+.glow-on-hoverSUB:active:after {
     background: transparent;
 }
 
-.glow-on-hover:hover:before {
+.glow-on-hoverSUB:hover:before {
     opacity: 1;
 }
 
-.glow-on-hover:after {
+.glow-on-hoverSUB:after {
     z-index: -1;
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+.glow-on-hoverMAIN {
+    width: 30%;
+    height: 10%;
+		font-size: 5vw;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 0px;
+}
+
+.glow-on-hoverMAIN:before {
+    content: '';
+    background: linear-gradient(45deg, green, #080808);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hoverMAIN:active {
+    color: #000
+}
+
+.glow-on-hoverMAIN:active:after {
+    background: transparent;
+}
+
+.glow-on-hoverMAIN:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hoverMAIN:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
     left: 0;
     top: 0;
     border-radius: 10px;
@@ -864,7 +928,13 @@ var morePReel = document.getElementById("morePReel");
 
 function lyricTime(){
 
+
+	if(moreLyrics.style.display=="inline"){
+	moreLyrics.style.display = "none";
+}else{
 	moreLyrics.style.display = "inline";
+}
+
 	moreChron.style.display = "none";
 	morePReel.style.display = "none";
 
@@ -872,15 +942,25 @@ function lyricTime(){
 
 function chronTime(){
 
+	if(moreChron.style.display=="inline"){
+	moreChron.style.display = "none";
+}else{
+	moreChron.style.display = "inline";
+}
+
 	moreLyrics.style.display = "none";
 	morePReel.style.display = "none";
-	moreChron.style.display = "inline";
 
 }
 
 function pReelTime(){
 
+	if(morePReel.style.display=="inline"){
+	morePReel.style.display = "none";
+}else{
 	morePReel.style.display = "inline";
+}
+
 	moreLyrics.style.display = "none";
 	moreChron.style.display = "none";
 
@@ -930,6 +1010,9 @@ var lyrics10 = document.getElementById("lyrics10");
 var lyrics11 = document.getElementById("lyrics11");
 var lyrics12 = document.getElementById("lyrics12");
 var lyrics13 = document.getElementById("lyrics13");
+
+
+var lyricImage = document.getElementById("lyricImage")
 
 // buttonListenerFunctions
 
@@ -1035,6 +1118,7 @@ function lyricsTime1(){
 	lyrics1.style.display = "none";
 	}else{
 	lyrics1.style.display = "inline";
+	lyricImage.style.zoom.scale = "2";
 }
 
 	lyrics2.style.display= "none";
