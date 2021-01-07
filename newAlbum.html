@@ -1,12 +1,13 @@
-<html>
+<!DOCTYPE html>
 
+<html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 	<link rel="icon" href="images\americandream.jpg">
 <title>THE AMERICAN DREAM</title>
 
 
-<body style="overflow-y: hidden;">
+<body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 
@@ -20,6 +21,7 @@
 			<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
+
 
 
 </center>
@@ -397,7 +399,6 @@
 #moreChron {display: none;}
 #morePReel {display: none;}
 
-#glow-on-hoverPreselect::after
 
 
 .boi{
@@ -496,7 +497,7 @@ body {
     border-radius: 0px;
 }
 
-.glow-on-hoverPreselect:before {
+#glow-on-hoverPreselect:before {
     content: '';
     background: linear-gradient(45deg, #66ff00, #080808);
     position: absolute;
@@ -536,10 +537,6 @@ body {
     top: 0;
     border-radius: 10px;
 }
-
-
-
-
 
 
 .glow-on-hoverMAIN {
@@ -883,6 +880,8 @@ h3 {
   <script>
 
 
+
+
 	var audio = {   
 
     init: function() {        
@@ -980,9 +979,6 @@ var moreBack = document.getElementById("moreBack");
 
 function frontTime(){
 
-	document.body.scrollTop
-	document.documentElement.scrollTop
-
 	if(moreFront.style.display=="inline"){
 		moreFront.style.display = "none";
 	}else{
@@ -999,9 +995,6 @@ function frontTime(){
 
 function backTime(){
 
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-
 	if(moreBack.style.display=="inline"){
 		moreBack.style.display = "none";
 	}else{
@@ -1017,8 +1010,6 @@ function backTime(){
 
 function lyricTime(){
 
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
 
 	if(moreLyrics.style.display=="inline"){
 	moreLyrics.style.display = "none";
@@ -1034,8 +1025,6 @@ function lyricTime(){
 
 function pReelTime(){
 
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
 
 	if(morePReel.style.display=="inline"){
 	morePReel.style.display = "none";
