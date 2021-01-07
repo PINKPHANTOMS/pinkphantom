@@ -470,6 +470,7 @@ body {
 
 
 .glow-on-hoverMAIN {
+		display: inline-grid;
     width: 24vw;
     height: 5vw;
 		font-size: 5vw;
@@ -753,13 +754,14 @@ h3 {
   <script>
 
 
-
-
 	var audio = {   
 
     init: function() {
+
 	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;        
+	document.documentElement.scrollTop = 0;      
+
+	  
     var $that = this;  
         $(function() {            
             $that.components.media();        
@@ -855,7 +857,7 @@ var moreBack = document.getElementById("moreBack");
 function frontTime(){
 
 	document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 
 	if(moreFront.style.display=="inline"){
 		// moreFront.style.display = "none";
@@ -874,7 +876,7 @@ document.documentElement.scrollTop = 0;
 function backTime(){
 
 	document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 
 	if(moreBack.style.display=="inline"){
 		// moreBack.style.display = "none";
