@@ -10,16 +10,39 @@
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 
-    <div class="contain">
+	<div style="background: rgba(0,0,0,0);">
+		<center>
+			<button class="glow-on-hoverPreselect" onclick="viewFront()" id="myFrontBtn">Front</button>
+
+			<button class="glow-on-hoverMAIN" onclick="viewBack()" id="myBackBtn">Back</button>
+
+			<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
+
+</center>
+	</div>
+
+
+	  <div class="contain">
         <div class="container">
+
+						<span id="dots"></span>
+						<span id="moreFront">
+
+
+
+
+
             <div class="music-player">
-                <div class="cover">
-                    <img src="images/americandream.jpg" alt="">   
-                </div>
-                <div class="titre">
-                    <h3>Pink Phantom</h3>
-                    <h1>American Dream</h1>
-                </div>
+
+
+								<div class="cover">
+										<img src="images/americandream.jpg" alt="">   
+								</div>
+
+								<div class="titre">
+										<h3>Pink Phantom</h3>
+										<h1>American Dream</h1>
+								</div>
 								<center>
                 <div class="lecteur">
                     <audio style="width: 80%;" id="myAudio" class="fc-media">
@@ -30,8 +53,6 @@
 								</center>
 
 							</div>
-
-								<center>
 
 									<div class="titre">
 										<br>
@@ -53,177 +74,42 @@
 												<a onclick="timeStamp12()"><b style="color: white">[34:39]</b> The Sweet Smell of Excess & Wealth <br></a>
 												<a onclick="timeStamp13()"><b style="color: white">[40:59]</b> Empire of Desire <br></a>
 											</u>
-
+											<br>
+											<br>
 											</h3>
 										</div>
-										<div class="titleBoi">
-											_
-										</div>
+
+																		</span>
 
 
 
-										<div class="titleReal">
+																		<div class="bodyBoi2">
 
-											READ MORE<br>
+																			<span id="lyricsDots"></span>
+																			<span id="moreLyrics">
 
-										</div>
+																				<span id="lyricImage">
+																				<center>	ZOOM IN TO VIEW</center><br>
+																				<img src="images/lyricImage.png" width="100%">
+																			</span>
+
+																	</span>
+
+
+																		</div>
+
+
+
+	<span id="dots"></span>
+	<span id="moreBack">
+
 <div style="background: black; align: center;">
-		<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
-
+	<footer>
 		<button class="glow-on-hoverMAIN" onclick="viewChron()" id="myChronBtn">Chronos</button>
 
 		<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
+	</footer>
 </div>
-
-	<div class="bodyBoi2">
-
-		<span id="lyricsDots"></span>
-		<span id="moreLyrics">
-
-			<span id="lyricImage">
-			<center>	ZOOM IN TO VIEW</center><br>
-			<img src="images/lyricImage.png" width="100%">
-		</span>
-
-			<!-- <br>
-			<button onclick="viewLyrics1()" class="glow-on-hoverSUB" id="lyricBtn1">Dreams</button><br>
-
-
-			<span id="lyrics1">
-
-
-				here's where the dreams lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics2()" class="glow-on-hoverSUB" id="lyricBtn2">No Wolves, Just Sheep Grazing...</button><br>
-
-			<span id="lyrics2">
-
-				here's where the no wolves lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics3()" class="glow-on-hoverSUB" id="lyricBtn3">Theatre of Animals</button><br>
-
-
-			<span id="lyrics3">
-
-
-				here's where the THEATRE of ANIMALS lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics4()" class="glow-on-hoverSUB" id="lyricBtn4">The Sleep Factory</button><br>
-
-			<span id="lyrics4">
-
-				here's where the The Sleep Factory lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics5()" class="glow-on-hoverSUB" id="lyricBtn5">Funeral</button><br>
-
-
-			<span id="lyrics5">
-
-
-				here's where the Funeral lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics6()" class="glow-on-hoverSUB" id="lyricBtn6">"Be Operation (That Is...</button><br>
-
-			<span id="lyrics6">
-
-				here's where the BEOP lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics7()" class="glow-on-hoverSUB" id="lyricBtn7">Just Be Normal, Do Your Part</button><br>
-
-
-			<span id="lyrics7">
-
-
-				here's where the JBNDYP lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics8()" class="glow-on-hoverSUB" id="lyricBtn8">The Construction of...</button><br>
-
-			<span id="lyrics8">
-
-				here's where the TCOU lyrics go
-
-			</span>
-
-
-			<br>
-			<button onclick="viewLyrics9()" class="glow-on-hoverSUB" id="lyricBtn9">Eventually the Train Will Come</button><br>
-
-
-			<span id="lyrics9">
-
-
-				here's where the ETTWC lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics10()" class="glow-on-hoverSUB" id="lyricBtn10">The Immanence of Sleep in...</button><br>
-
-			<span id="lyrics10">
-
-				here's where immanence lyrics go
-
-			</span>
-
-
-			<br>
-			<button onclick="viewLyrics11()" class="glow-on-hoverSUB" id="lyricBtn11">Controlled Paralysis</button><br>
-
-
-			<span id="lyrics11">
-
-
-				here's where the CP lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics12()" class="glow-on-hoverSUB" id="lyricBtn12">The Sweet Smell of Excess...</button><br>
-
-			<span id="lyrics12">
-
-				here's where the TSSOEAW lyrics go
-
-			</span>
-
-			<br>
-			<button onclick="viewLyrics13()" class="glow-on-hoverSUB" id="lyricBtn13">Empire of Desire</button><br>
-
-
-			<span id="lyrics13">
-
-
-				here's where the EOD lyrics go
-
-			</span> -->
-
-
-
-</span>
-
-
-	</div>
 
 
 	<div class="bodyBoi">
@@ -320,164 +206,153 @@
 		<span id="morePReel">
 
 
-			<div class="photoBoi">
-				<img src="images/zz.gif" width="90%" alt="">
+			<div class="titleReal">
+
+				PINK PHANTOM
+
+				<div style="font-size: 8vw;">
+				AMERICAN DREAM ERA <br>
+				(2018-2019)<br><br>
 			</div>
+
+			</div>
+
+			<div class="titleBoi">
+				MAY 2018<br>
+
+				<div style="font-size: 5vw;">
+
+			SALPOINTE HIGHSCHOOL <br>
+
+			</div>
+			</div>
+
+
+			<img src="images/2018_2019/11.jpg" width="100%"><br>
+
+
+			<video width="100%" controls>
+
+				<source src="videos/1.mp4" type="video/mp4"><br>
+
+				</video>
+
+				<video width="100%" controls>
+
+					<source src="videos/2.mp4" type="video/mp4"><br>
+
+					</video>
+
+					<div class="titleReal">
+
+					JUNE 2018
+
+					<div style="font-size: 5vw;">
+
+						sam's house.
+
+					</div>
+
+				</div>
+
+
+
+				<img src="images/2018_2019/1.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/2.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/3.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/5.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/6.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/7.jpg" width="100%"><br>
+
+
+				<div class="titleReal">
+
+				<div style="font-size: 5vw;">
+
+					downtown tucson.
+				</div>
+			</div>
+
+				<img src="images/2018_2019/8.jpg" width="100%"><br>
+
+				<img src="images/2018_2019/9.jpg" width="100%"><br>
+
+				<div class="titleReal">
+					<div style="font-size: 5vw;">
+						photo credits: ILIANA STEVENS
+					</div>
+			</div>
+
+
+			<div class="titleReal">
+
+			OCT. 2018
+
+			</div>
+
+			<img src="images/2018_2019/2018oct.jpg" width="100%"><br>
+
+
+
+						<div class="titleBoi">
+
+						DEC. 2018
+
+						<div style="font-size: 5vw;">
+							song: Theatre of Animals
+						</div>
+					</div>
+
+				<video width="100%" controls>
+
+					<source src="videos/3.mp4" type="video/mp4"><br>
+
+				</video>
+
+				<img src="images/2018_2019/12.jpg" width="100%"><br>
+
+				<div class="titleReal">
+
+				MAY 2019
+
+			</div>
+
+			<img src="images/2018_2019/2019001.jpg" width="100%"><br>
+
+			<img src="images/2018_2019/2019002.jpg" width="100%"><br>
+
+			<video width="100%" controls>
+
+				<source src="videos/4.mp4" type="video/mp4"><br>
+
+
+			</video>
+
+
+
+
+				<div class="titleReal">
+
+				JUNE 2019
+			</div>
+
+			<img src="images/2018_2019/201901.jpg" width="100%"><br>
+
+			<img src="images/2018_2019/201902.jpg" width="100%"><br>
+
+			<img src="images/2018_2019/201903.jpg" width="100%"><br>
+
+			<img src="images/2018_2019/201904.jpg" width="100%"><br>
+
 
 				</span>
 	</div>
-
-
-
-<div class="titleReal">
-
-	PINK PHANTOM
-
-	<div style="font-size: 8vw;">
-	AMERICAN DREAM ERA <br>
-	(2018-2019)<br><br>
-</div>
-
-</div>
-
-<div class="titleBoi">
-	MAY 2018<br>
-
-	<div style="font-size: 5vw;">
-
-SALPOINTE HIGHSCHOOL <br>
-
-</div>
-</div>
-
-
-<img src="images/2018_2019/11.jpg" width="100%"><br>
-
-
-<video width="100%" controls>
-
-	<source src="videos/1.mp4" type="video/mp4"><br>
-
-	</video>
-
-	<video width="100%" controls>
-
-		<source src="videos/2.mp4" type="video/mp4"><br>
-
-		</video>
-
-		<div class="titleReal">
-
-		JUNE 2018
-
-		<div style="font-size: 5vw;">
-
-			sam's house.
-
-		</div>
-
-	</div>
-
-
-
-	<img src="images/2018_2019/1.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/2.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/3.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/5.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/6.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/7.jpg" width="100%"><br>
-
-
-	<div class="titleReal">
-
-	<div style="font-size: 5vw;">
-
-		downtown tucson.
-	</div>
-</div>
-
-	<img src="images/2018_2019/8.jpg" width="100%"><br>
-
-	<img src="images/2018_2019/9.jpg" width="100%"><br>
-
-	<div class="titleReal">
-		<div style="font-size: 5vw;">
-			photo credits: ILIANA STEVENS
-		</div>
-</div>
-
-
-<div class="titleReal">
-
-OCT. 2018
-
-</div>
-
-<img src="images/2018_2019/2018oct.jpg" width="100%"><br>
-
-
-
-			<div class="titleBoi">
-
-			DEC. 2018
-
-			<div style="font-size: 5vw;">
-				song: Theatre of Animals
-			</div>
-		</div>
-
-	<video width="100%" controls>
-
-		<source src="videos/3.mp4" type="video/mp4"><br>
-
-	</video>
-
-	<img src="images/2018_2019/12.jpg" width="100%"><br>
-
-	<div class="titleReal">
-
-	MAY 2019
-
-</div>
-
-<img src="images/2018_2019/2019001.jpg" width="100%"><br>
-
-<img src="images/2018_2019/2019002.jpg" width="100%"><br>
-
-<video width="100%" controls>
-
-	<source src="videos/4.mp4" type="video/mp4"><br>
-
-
-</video>
-
-
-
-
-	<div class="titleReal">
-
-	JUNE 2019
-</div>
-
-<img src="images/2018_2019/201901.jpg" width="100%"><br>
-
-<img src="images/2018_2019/201902.jpg" width="100%"><br>
-
-<img src="images/2018_2019/201903.jpg" width="100%"><br>
-
-<img src="images/2018_2019/201904.jpg" width="100%"><br>
-
-
-
-
-
-
-
+</span>
 
 
 									<div class="backgroundThingy">
@@ -488,7 +363,6 @@ OCT. 2018
 
 									</div>
 								</div>
-							</center>
 
 <!-- <center>
 
@@ -506,7 +380,6 @@ OCT. 2018
 							</button>
 						</p>
 </center> -->
-
 
 
 
@@ -530,21 +403,9 @@ OCT. 2018
 <style>
 
 
+#moreFront {display: inline;}
+#moreBack {display: none;}
 #moreLyrics {display: none;}
-
-#lyrics1 {display: none;}
-#lyrics2 {display: none;}
-#lyrics3 {display: none;}
-#lyrics4 {display: none;}
-#lyrics5 {display: none;}
-#lyrics6 {display: none;}
-#lyrics7 {display: none;}
-#lyrics8 {display: none;}
-#lyrics9 {display: none;}
-#lyrics10 {display: none;}
-#lyrics11 {display: none;}
-#lyrics12 {display: none;}
-#lyrics13 {display: none;}
 
 #moreChron {display: none;}
 #morePReel {display: none;}
@@ -624,12 +485,9 @@ body {
 }
 
 
-
-
-
-.glow-on-hoverSUB {
-    width: 60%;
-    height: 10%;
+.glow-on-hoverPreselect {
+    width: 30%;
+    height: 5%;
 		font-size: 5vw;
     border: none;
     outline: none;
@@ -641,7 +499,7 @@ body {
     border-radius: 0px;
 }
 
-.glow-on-hoverSUB:before {
+.glow-on-hoverPreselect:before {
     content: '';
     background: linear-gradient(45deg, #66ff00, #080808);
     position: absolute;
@@ -658,19 +516,19 @@ body {
     border-radius: 10px;
 }
 
-.glow-on-hoverSUB:active {
+.glow-on-hoverPreselect:active {
     color: #000
 }
 
-.glow-on-hoverSUB:active:after {
+.glow-on-hoverPreselect:active:after {
     background: transparent;
 }
 
-.glow-on-hoverSUB:hover:before {
+.glow-on-hoverPreselect:hover:before {
     opacity: 1;
 }
 
-.glow-on-hoverSUB:after {
+.glow-on-hoverPreselect:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -692,13 +550,12 @@ body {
 
 .glow-on-hoverMAIN {
     width: 30%;
-    height: 10%;
-		font-size: 7vw;
+    height: 5%;
+		font-size: 5vw;
 		padding: none;
     border: none;
     outline: none;
     color: #fff;
-		font-family: Cyber;
     background: black;
     cursor: pointer;
     position: relative;
@@ -781,7 +638,7 @@ body {
 		padding: none;
 		background-color: black;
 		overflow-x: hidden;
-		background-image: url("images/unsplashCity.jpg");
+		/* background-image: url("images/unsplashCity.jpg"); */
 		background-size: cover;
 		background-attachment: fixed;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
@@ -886,7 +743,7 @@ h3 {
     border: 0;
     font-family: FontAwesome;
     font-size: 45px;
-    color: #5bbb95;
+    color: white;
     background: transparent;
     padding: 0;
     margin: 0;
@@ -1116,6 +973,35 @@ function timeStamp13(){
 var moreLyrics = document.getElementById("moreLyrics");
 var moreChron = document.getElementById("moreChron");
 var morePReel = document.getElementById("morePReel");
+var moreFront = document.getElementById("moreFront");
+var moreBack = document.getElementById("moreBack");
+
+
+function frontTime(){
+
+	if(moreFront.style.display=="inline"){
+		moreFront.style.display = "none";
+	}else{
+		moreFront.style.display = "inline";
+
+	}
+moreLyrics.style.display = "none";
+moreBack.style.display = "none";
+
+
+}
+
+function backTime(){
+
+	if(moreBack.style.display=="inline"){
+		moreBack.style.display = "none";
+	}else{
+		moreBack.style.display = "inline";
+		moreFront.style.display = "none";
+		moreLyrics.style.display = "none";
+	}
+
+}
 
 
 function lyricTime(){
@@ -1124,11 +1010,11 @@ function lyricTime(){
 	if(moreLyrics.style.display=="inline"){
 	moreLyrics.style.display = "none";
 }else{
+	moreFront.style.display = "none";
 	moreLyrics.style.display = "inline";
+	moreBack.style.display = "none";
 }
 
-	moreChron.style.display = "none";
-	morePReel.style.display = "none";
 
 }
 
@@ -1140,7 +1026,6 @@ function chronTime(){
 	moreChron.style.display = "inline";
 }
 
-	moreLyrics.style.display = "none";
 	morePReel.style.display = "none";
 
 }
@@ -1153,8 +1038,24 @@ function pReelTime(){
 	morePReel.style.display = "inline";
 }
 
-	moreLyrics.style.display = "none";
 	moreChron.style.display = "none";
+
+}
+
+
+function viewFront() {
+  var btnText = document.getElementById("myFrontBtn");
+
+	btnText.addEventListener("onclick",frontTime());
+
+
+}
+
+function viewBack() {
+
+  var btnText = document.getElementById("myBackBtn");
+	btnText.addEventListener("onclick",backTime());
+
 
 }
 
@@ -1184,418 +1085,597 @@ function viewPReel() {
 }
 
 
-
-// LYRICS SECTION
-
-
-
-var lyrics1 = document.getElementById("lyrics1");
-var lyrics2 = document.getElementById("lyrics2");
-var lyrics3 = document.getElementById("lyrics3");
-var lyrics4 = document.getElementById("lyrics4");
-var lyrics5 = document.getElementById("lyrics5");
-var lyrics6 = document.getElementById("lyrics6");
-var lyrics7 = document.getElementById("lyrics7");
-var lyrics8 = document.getElementById("lyrics8");
-var lyrics9 = document.getElementById("lyrics9");
-var lyrics10 = document.getElementById("lyrics10");
-var lyrics11 = document.getElementById("lyrics11");
-var lyrics12 = document.getElementById("lyrics12");
-var lyrics13 = document.getElementById("lyrics13");
-
-
-var lyricImage = document.getElementById("lyricImage")
-
-// buttonListenerFunctions
-
-function viewLyrics1() {
-
-  var btnText = document.getElementById("lyricBtn1");
-
-	btnText.addEventListener("onclick", lyricsTime1());
-
-}
-
-function viewLyrics2() {
-
-  var btnText = document.getElementById("lyricBtn2");
-	btnText.addEventListener("onclick", lyricsTime2());
-
-}
-
-function viewLyrics3() {
-
-  var btnText = document.getElementById("lyricBtn3");
-	btnText.addEventListener("onclick", lyricsTime3());
-
-}
-
-function viewLyrics4() {
-
-  var btnText = document.getElementById("lyricBtn4");
-	btnText.addEventListener("onclick", lyricsTime4());
-
-}
-
-function viewLyrics5() {
-
-  var btnText = document.getElementById("lyricBtn5");
-	btnText.addEventListener("onclick", lyricsTime5());
-
-}
-
-function viewLyrics6() {
-
-  var btnText = document.getElementById("lyricBtn6");
-	btnText.addEventListener("onclick", lyricsTime6());
-
-}
-
-function viewLyrics7() {
-
-  var btnText = document.getElementById("lyricBtn7");
-	btnText.addEventListener("onclick", lyricsTime7());
-
-}
-
-function viewLyrics8() {
-
-  var btnText = document.getElementById("lyricBtn8");
-	btnText.addEventListener("onclick", lyricsTime8());
-
-}
-
-function viewLyrics9() {
-
-  var btnText = document.getElementById("lyricBtn9");
-	btnText.addEventListener("onclick", lyricsTime9());
-
-}
-
-function viewLyrics10() {
-
-  var btnText = document.getElementById("lyricBtn10");
-	btnText.addEventListener("onclick", lyricsTime10());
-
-}
-
-function viewLyrics11() {
-
-  var btnText = document.getElementById("lyricBtn11");
-	btnText.addEventListener("onclick", lyricsTime11());
-
-}
-
-function viewLyrics12() {
-
-  var btnText = document.getElementById("lyricBtn12");
-	btnText.addEventListener("onclick", lyricsTime12());
-
-}
-
-function viewLyrics13() {
-
-  var btnText = document.getElementById("lyricBtn13");
-	btnText.addEventListener("onclick", lyricsTime13());
-
-}
-
-
-// deactivate/toggleFUNCTIONS
-
-
-function lyricsTime1(){
-
-	if(lyrics1.style.display=="inline"){
-	lyrics1.style.display = "none";
-	}else{
-	lyrics1.style.display = "inline";
-	lyricImage.style.zoom.scale = "2";
-}
-
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime2(){
-
-
-	if(lyrics2.style.display=="inline"){
-	lyrics2.style.display = "none";
-}else{
-	lyrics2.style.display = "inline";
-}
-
-	lyrics1.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime3(){
-
-	if(lyrics3.style.display=="inline"){
-	lyrics3.style.display = "none";
-}else{
-	lyrics3.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime4(){
-
-	if(lyrics4.style.display=="inline"){
-	lyrics4.style.display = "none";
-}else{
-	lyrics4.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime5(){
-
-	if(lyrics5.style.display=="inline"){
-	lyrics5.style.display = "none";
-}else{
-	lyrics5.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime6(){
-
-	if(lyrics6.style.display=="inline"){
-	lyrics6.style.display = "none";
-}else{
-	lyrics6.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime7(){
-
-	if(lyrics7.style.display=="inline"){
-	lyrics7.style.display = "none";
-}else{
-	lyrics7.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime8(){
-
-	if(lyrics8.style.display=="inline"){
-	lyrics8.style.display = "none";
-}else{
-	lyrics8.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime9(){
-
-	if(lyrics9.style.display=="inline"){
-	lyrics9.style.display = "none";
-}else{
-	lyrics9.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime10(){
-
-	if(lyrics10.style.display=="inline"){
-	lyrics10.style.display = "none";
-}else{
-	lyrics10.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime11(){
-
-	if(lyrics11.style.display=="inline"){
-	lyrics11.style.display = "none";
-}else{
-	lyrics11.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics12.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime12(){
-
-	if(lyrics12.style.display=="inline"){
-	lyrics12.style.display = "none";
-}else{
-	lyrics12.style.display = "inline";
-}
-
-	lyrics1.style.display = "none";
-	lyrics2.style.display = "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics13.style.display = "none";
-
-}
-
-function lyricsTime13(){
-
-	if(lyrics13.style.display=="inline"){
-	lyrics13.style.display = "none";
-}else{
-	lyrics13.style.display = "inline";
-}
-	lyrics1.style.display = "none";
-	lyrics2.style.display= "none";
-	lyrics3.style.display = "none";
-	lyrics4.style.display = "none";
-	lyrics5.style.display = "none";
-	lyrics6.style.display = "none";
-	lyrics7.style.display = "none";
-	lyrics8.style.display = "none";
-	lyrics9.style.display = "none";
-	lyrics10.style.display = "none";
-	lyrics11.style.display = "none";
-	lyrics12.style.display = "none";
-
-}
-
+//
+// // LYRICS SECTION
+//
+//
+//
+// var lyrics1 = document.getElementById("lyrics1");
+// var lyrics2 = document.getElementById("lyrics2");
+// var lyrics3 = document.getElementById("lyrics3");
+// var lyrics4 = document.getElementById("lyrics4");
+// var lyrics5 = document.getElementById("lyrics5");
+// var lyrics6 = document.getElementById("lyrics6");
+// var lyrics7 = document.getElementById("lyrics7");
+// var lyrics8 = document.getElementById("lyrics8");
+// var lyrics9 = document.getElementById("lyrics9");
+// var lyrics10 = document.getElementById("lyrics10");
+// var lyrics11 = document.getElementById("lyrics11");
+// var lyrics12 = document.getElementById("lyrics12");
+// var lyrics13 = document.getElementById("lyrics13");
+//
+//
+// var lyricImage = document.getElementById("lyricImage")
+//
+// // buttonListenerFunctions
+//
+// function viewLyrics1() {
+//
+//   var btnText = document.getElementById("lyricBtn1");
+//
+// 	btnText.addEventListener("onclick", lyricsTime1());
+//
+// }
+//
+// function viewLyrics2() {
+//
+//   var btnText = document.getElementById("lyricBtn2");
+// 	btnText.addEventListener("onclick", lyricsTime2());
+//
+// }
+//
+// function viewLyrics3() {
+//
+//   var btnText = document.getElementById("lyricBtn3");
+// 	btnText.addEventListener("onclick", lyricsTime3());
+//
+// }
+//
+// function viewLyrics4() {
+//
+//   var btnText = document.getElementById("lyricBtn4");
+// 	btnText.addEventListener("onclick", lyricsTime4());
+//
+// }
+//
+// function viewLyrics5() {
+//
+//   var btnText = document.getElementById("lyricBtn5");
+// 	btnText.addEventListener("onclick", lyricsTime5());
+//
+// }
+//
+// function viewLyrics6() {
+//
+//   var btnText = document.getElementById("lyricBtn6");
+// 	btnText.addEventListener("onclick", lyricsTime6());
+//
+// }
+//
+// function viewLyrics7() {
+//
+//   var btnText = document.getElementById("lyricBtn7");
+// 	btnText.addEventListener("onclick", lyricsTime7());
+//
+// }
+//
+// function viewLyrics8() {
+//
+//   var btnText = document.getElementById("lyricBtn8");
+// 	btnText.addEventListener("onclick", lyricsTime8());
+//
+// }
+//
+// function viewLyrics9() {
+//
+//   var btnText = document.getElementById("lyricBtn9");
+// 	btnText.addEventListener("onclick", lyricsTime9());
+//
+// }
+//
+// function viewLyrics10() {
+//
+//   var btnText = document.getElementById("lyricBtn10");
+// 	btnText.addEventListener("onclick", lyricsTime10());
+//
+// }
+//
+// function viewLyrics11() {
+//
+//   var btnText = document.getElementById("lyricBtn11");
+// 	btnText.addEventListener("onclick", lyricsTime11());
+//
+// }
+//
+// function viewLyrics12() {
+//
+//   var btnText = document.getElementById("lyricBtn12");
+// 	btnText.addEventListener("onclick", lyricsTime12());
+//
+// }
+//
+// function viewLyrics13() {
+//
+//   var btnText = document.getElementById("lyricBtn13");
+// 	btnText.addEventListener("onclick", lyricsTime13());
+//
+// }
+//
+//
+// // deactivate/toggleFUNCTIONS
+//
+//
+// function lyricsTime1(){
+//
+// 	if(lyrics1.style.display=="inline"){
+// 	lyrics1.style.display = "none";
+// 	}else{
+// 	lyrics1.style.display = "inline";
+// }
+//
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime2(){
+//
+//
+// 	if(lyrics2.style.display=="inline"){
+// 	lyrics2.style.display = "none";
+// }else{
+// 	lyrics2.style.display = "inline";
+// }
+//
+// 	lyrics1.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime3(){
+//
+// 	if(lyrics3.style.display=="inline"){
+// 	lyrics3.style.display = "none";
+// }else{
+// 	lyrics3.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime4(){
+//
+// 	if(lyrics4.style.display=="inline"){
+// 	lyrics4.style.display = "none";
+// }else{
+// 	lyrics4.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime5(){
+//
+// 	if(lyrics5.style.display=="inline"){
+// 	lyrics5.style.display = "none";
+// }else{
+// 	lyrics5.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime6(){
+//
+// 	if(lyrics6.style.display=="inline"){
+// 	lyrics6.style.display = "none";
+// }else{
+// 	lyrics6.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime7(){
+//
+// 	if(lyrics7.style.display=="inline"){
+// 	lyrics7.style.display = "none";
+// }else{
+// 	lyrics7.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime8(){
+//
+// 	if(lyrics8.style.display=="inline"){
+// 	lyrics8.style.display = "none";
+// }else{
+// 	lyrics8.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime9(){
+//
+// 	if(lyrics9.style.display=="inline"){
+// 	lyrics9.style.display = "none";
+// }else{
+// 	lyrics9.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime10(){
+//
+// 	if(lyrics10.style.display=="inline"){
+// 	lyrics10.style.display = "none";
+// }else{
+// 	lyrics10.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime11(){
+//
+// 	if(lyrics11.style.display=="inline"){
+// 	lyrics11.style.display = "none";
+// }else{
+// 	lyrics11.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics12.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime12(){
+//
+// 	if(lyrics12.style.display=="inline"){
+// 	lyrics12.style.display = "none";
+// }else{
+// 	lyrics12.style.display = "inline";
+// }
+//
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display = "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics13.style.display = "none";
+//
+// }
+//
+// function lyricsTime13(){
+//
+// 	if(lyrics13.style.display=="inline"){
+// 	lyrics13.style.display = "none";
+// }else{
+// 	lyrics13.style.display = "inline";
+// }
+// 	lyrics1.style.display = "none";
+// 	lyrics2.style.display= "none";
+// 	lyrics3.style.display = "none";
+// 	lyrics4.style.display = "none";
+// 	lyrics5.style.display = "none";
+// 	lyrics6.style.display = "none";
+// 	lyrics7.style.display = "none";
+// 	lyrics8.style.display = "none";
+// 	lyrics9.style.display = "none";
+// 	lyrics10.style.display = "none";
+// 	lyrics11.style.display = "none";
+// 	lyrics12.style.display = "none";
+//
+// }
+//
 
 
 
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- <br>
+				<button onclick="viewLyrics1()" class="glow-on-hoverSUB" id="lyricBtn1">Dreams</button><br>
+
+
+				<span id="lyrics1">
+
+
+					here's where the dreams lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics2()" class="glow-on-hoverSUB" id="lyricBtn2">No Wolves, Just Sheep Grazing...</button><br>
+
+				<span id="lyrics2">
+
+					here's where the no wolves lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics3()" class="glow-on-hoverSUB" id="lyricBtn3">Theatre of Animals</button><br>
+
+
+				<span id="lyrics3">
+
+
+					here's where the THEATRE of ANIMALS lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics4()" class="glow-on-hoverSUB" id="lyricBtn4">The Sleep Factory</button><br>
+
+				<span id="lyrics4">
+
+					here's where the The Sleep Factory lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics5()" class="glow-on-hoverSUB" id="lyricBtn5">Funeral</button><br>
+
+
+				<span id="lyrics5">
+
+
+					here's where the Funeral lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics6()" class="glow-on-hoverSUB" id="lyricBtn6">"Be Operation (That Is...</button><br>
+
+				<span id="lyrics6">
+
+					here's where the BEOP lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics7()" class="glow-on-hoverSUB" id="lyricBtn7">Just Be Normal, Do Your Part</button><br>
+
+
+				<span id="lyrics7">
+
+
+					here's where the JBNDYP lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics8()" class="glow-on-hoverSUB" id="lyricBtn8">The Construction of...</button><br>
+
+				<span id="lyrics8">
+
+					here's where the TCOU lyrics go
+
+				</span>
+
+
+				<br>
+				<button onclick="viewLyrics9()" class="glow-on-hoverSUB" id="lyricBtn9">Eventually the Train Will Come</button><br>
+
+
+				<span id="lyrics9">
+
+
+					here's where the ETTWC lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics10()" class="glow-on-hoverSUB" id="lyricBtn10">The Immanence of Sleep in...</button><br>
+
+				<span id="lyrics10">
+
+					here's where immanence lyrics go
+
+				</span>
+
+
+				<br>
+				<button onclick="viewLyrics11()" class="glow-on-hoverSUB" id="lyricBtn11">Controlled Paralysis</button><br>
+
+
+				<span id="lyrics11">
+
+
+					here's where the CP lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics12()" class="glow-on-hoverSUB" id="lyricBtn12">The Sweet Smell of Excess...</button><br>
+
+				<span id="lyrics12">
+
+					here's where the TSSOEAW lyrics go
+
+				</span>
+
+				<br>
+				<button onclick="viewLyrics13()" class="glow-on-hoverSUB" id="lyricBtn13">Empire of Desire</button><br>
+
+
+				<span id="lyrics13">
+
+
+					here's where the EOD lyrics go
+
+				</span> -->
+
+
+
+
+
+
+
+
+<!--
+
+				#lyrics1 {display: none;}
+				#lyrics2 {display: none;}
+				#lyrics3 {display: none;}
+				#lyrics4 {display: none;}
+				#lyrics5 {display: none;}
+				#lyrics6 {display: none;}
+				#lyrics7 {display: none;}
+				#lyrics8 {display: none;}
+				#lyrics9 {display: none;}
+				#lyrics10 {display: none;}
+				#lyrics11 {display: none;}
+				#lyrics12 {display: none;}
+				#lyrics13 {display: none;} -->
