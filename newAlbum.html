@@ -39,13 +39,13 @@
             <div class="music-player">
 
 
-								<div class="cover">
+								<!-- <div class="cover">
 										<img src="images/americandream.jpg" alt="">   
-								</div>
+								</div> -->
 
 								<div class="titre">
 										<h3>Pink Phantom</h3>
-										<h1>American Dream</h1>
+										<h1>The American Dream</h1>
 								</div>
 								<center>
                 <div class="lecteur">
@@ -59,10 +59,7 @@
 							</div>
 
 									<div class="titre">
-										<br>
-										<br>
-										<h1></h1>
-											<h3 style = "text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw;">
+										<h3 style = "margin-top: 0%;text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw; background: black;">
 												<u>
 												<a onclick="timeStamp1()"><b style="color: white">[00:00]</b> Dreams  <br></a>
 												<a onclick="timeStamp2()"><b style="color: white">[01:39]</b> No Wolves, Just Sheep Grazing on the Fabric We Call Home <br></a>
@@ -96,6 +93,7 @@
 
 																			<!-- <span id="dots"></span> -->
 																			<!-- <span id="moreChron"> -->
+																			<img src="images/americandream.jpg" width="80%" alt="">   
 
 
 																				<div style="font-size: 5vw; color: white; background: black;text-align: center; indent: none;">
@@ -357,7 +355,7 @@
 										<br>
 										<br>
 										<br>
-										<br>
+
 									</div>
 
 									</div>
@@ -409,6 +407,7 @@
 #moreChron {display: none;}
 #morePReel {display: none;}
 
+#glow-on-hoverPreselect::after
 
 
 .boi{
@@ -544,9 +543,6 @@ body {
 
 
 
-
-
-
 .glow-on-hoverMAIN {
     width: 23%;
     height: 5%;
@@ -637,30 +633,30 @@ body {
 		padding: none;
 		background-color: black;
 		overflow-x: hidden;
-		/* background-image: url("images/unsplashCity.jpg"); */
+		background-image: url("images/divingBoi.gif");
 		background-size: cover;
 		background-attachment: fixed;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
     /* font-family: "Raleway",sans-serif; */
 }
 h1 {
-    margin: 0;
     font-size: 33px;
     color: #fff;
-    padding: 0 10%;
+		padding-left: 5%;
+
 }
 h3 {
-    margin: 0;
+    margin-top: 80vh;
+		padding-left: 5%;
     font-size: 17px;
     font-weight: 500;
     color: #ccc;
-    padding: 0 10%;
 }
 .container {
     display: inline-block;
     width: 100%;
     height: 100%;
-		align-content: center;
+		align-content: bottom;
     margin: 0;
     overflow-x: hidden;
     background-repeat: repeat;
@@ -677,11 +673,11 @@ h3 {
     display: block;
     position: relative;
     width: 100%;
-    height: 570px;
+    height: 100vh;
     margin: auto;
     border-radius: 0 0 1vw 1vw;
-    background: transparent linear-gradient(to bottom,transparent 50%,black 70%) repeat scroll 0 0;
-    box-shadow: 1px 10px 20px 5px #222;
+    background: transparent linear-gradient(to bottom,transparent 50%,black 90%) repeat scroll 0 0;
+    /* box-shadow: 1px 10px 20px 5px #222; */
 }
 .cover {
     float: left;
@@ -729,9 +725,9 @@ h3 {
 }
 .mejs__controls .mejs__playpause-button {
     position: absolute !important;
-		text-align: center;
-    right: 35%;
-    top: 130vw;
+		text-align: right;
+    right: 1%;
+    top: 75vh;
     width: 40px;
 }
 .mejs__controls .mejs__playpause-button button {
@@ -898,7 +894,7 @@ h3 {
             if (media.length) {                
                 media.mediaelementplayer({                    
                     audioHeight: 40,
-                    features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
+                    features : ['playpause'],
                     alwaysShowControls      : true,
                     timeAndDurationSeparator: '<span></span>',
                     iPadUseNativeControls: false,
@@ -910,6 +906,9 @@ h3 {
             
     },
 };
+
+// features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
+
 audio.init();
 
 var x = document.getElementById('myAudio');
