@@ -10,10 +10,8 @@
 <body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
-
-	<div style="background: transparent;">
-		<center>
-			<br>
+	<div style="position:fixed; z-index: 99; ">
+		<br>
 			<button class="glow-on-hoverMAIN" onclick="viewFront()" id="myFrontBtn">SIDE A</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewBack()" id="myBackBtn">SIDE B</button>
@@ -21,12 +19,7 @@
 			<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
-
-
-
-</center>
 	</div>
-
 
 	  <div class="contain">
         <div class="container">
@@ -186,6 +179,7 @@
 
 				<span id="lyricImage">
 					<br>
+					<br>
 					<center>ZOOM IN TO VIEW</center><br>
 					<img src="images/lyricImage.png" width="100%">
 				</span>
@@ -344,9 +338,6 @@
 							<center>
 								<footer style="font-size: 5vw; color: white;">&copy; Copyright 2020 PINK PHANTOM</footer>
 							</center>
-							<br>
-							<br>
-							<br>
 
 						</div>
 
@@ -399,10 +390,6 @@
 #moreChron {display: none;}
 #morePReel {display: none;}
 
-
-.boi{
-	text-align: center;
-}
 
 
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
@@ -481,133 +468,22 @@ body {
   /* background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700; */
 }
 
-.glow-on-hoverPreselect {
-    width: 23%;
-    height: 5%;
-		font-size: 4vw;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: transparent;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 0px;
-}
-
-.glow-on-hoverPreselect:before {
-    content: '';
-    background: linear-gradient(45deg, #66ff00, #080808);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hoverPreselect:active {
-    color: #000
-}
-
-.glow-on-hoverPreselect:active:after {
-    background: transparent;
-}
-
-.glow-on-hoverPreselect:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hoverPreselect:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
 
 .glow-on-hoverMAIN {
-    width: 23%;
-    height: 5%;
-		font-size: 4vw;
-		padding: none;
+    width: 20vw;
+    height: 5vw;
+		margin-left: 3vw;
+		font-size: 5vw;
+		background-color: rgba(0,0,0,0);
+		color: white;
     border: none;
     outline: none;
-    color: #fff;
-    background: transparent;
     cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 0px;
-}
-
-.glow-on-hoverMAIN:before {
-    content: '';
-    background: linear-gradient(45deg, gray, #080808);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hoverMAIN:active {
-    color: #000
-}
-
-.glow-on-hoverMAIN:active:after {
-    background: transparent;
-}
-
-.glow-on-hoverMAIN:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hoverMAIN:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    z-index: 99;
+    border-radius: 3vw;
 }
 
 
-
-
-*:focus{
-    outline: none;
-}
-html {
-    background: #f2f2f2;
-}
 
 @font-face {
    font-family: fongBoi;
@@ -882,7 +758,9 @@ h3 {
 
 	var audio = {   
 
-    init: function() {        
+    init: function() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;        
     var $that = this;  
         $(function() {            
             $that.components.media();        
@@ -981,7 +859,7 @@ function frontTime(){
 document.documentElement.scrollTop = 0;
 
 	if(moreFront.style.display=="inline"){
-		moreFront.style.display = "none";
+		// moreFront.style.display = "none";
 	}else{
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
@@ -1000,7 +878,7 @@ function backTime(){
 document.documentElement.scrollTop = 0;
 
 	if(moreBack.style.display=="inline"){
-		moreBack.style.display = "none";
+		// moreBack.style.display = "none";
 	}else{
 		moreBack.style.display = "inline";
 		moreFront.style.display = "none";
@@ -1018,7 +896,7 @@ function lyricTime(){
   document.documentElement.scrollTop = 0;
 
 	if(moreLyrics.style.display=="inline"){
-	moreLyrics.style.display = "none";
+	// moreLyrics.style.display = "none";
 }else{
 	moreFront.style.display = "none";
 	moreLyrics.style.display = "inline";
@@ -1035,7 +913,7 @@ function pReelTime(){
   document.documentElement.scrollTop = 0;
 
 	if(morePReel.style.display=="inline"){
-	morePReel.style.display = "none";
+	// morePReel.style.display = "none";
 }else{
 	morePReel.style.display = "inline";
 	moreFront.style.display = "none";
