@@ -11,8 +11,7 @@
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div style="position:fixed; z-index: 99; ">
-		<br>
-			<button class="glow-on-hoverMAIN" onclick="viewFront()" id="myFrontBtn">SIDE A</button>
+			<button class="glow-on-hoverMAIN" autofocus onclick="viewFront()" id="myFrontBtn">SIDE A</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewBack()" id="myBackBtn">SIDE B</button>
 
@@ -471,14 +470,19 @@ body {
 
 .glow-on-hoverMAIN {
     width: 24vw;
+		box-shadow: 1vw 1vw 1vw black;
     height: 10vw;
 		font-size: 4vw;
-		background-color: rgba(0,0,0,0);
+		background-color: rgb(0,0,0);
 		color: white;
 		border: none;
 		padding: none;
     cursor: pointer;
     z-index: 99;
+}
+
+.glow-on-hoverMAIN:focus {
+  outline: 1vw solid white;
 }
 
 
