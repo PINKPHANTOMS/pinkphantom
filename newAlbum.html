@@ -10,7 +10,8 @@
 <body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
-	<div style="position:fixed; z-index: 99; ">
+	<div style="position:fixed; z-index: 99;">
+
 			<button class="glow-on-hoverMAIN" autofocus onclick="viewFront()" id="myFrontBtn">SIDE A</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewBack()" id="myBackBtn">SIDE B</button>
@@ -18,6 +19,7 @@
 			<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
 
 			<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
+
 	</div>
 
 	  <div class="contain">
@@ -68,14 +70,9 @@
 											<br>
 											</h3>
 										</div>
-
-																		</span>
-
-
-
-
-																		<span id="dots"></span>
-																		<span id="moreBack">
+									</span>
+									<span id="dots"></span>
+									<span id="moreBack">
 
 
 
@@ -135,7 +132,7 @@
 			Coming back. Given the fact that all that we experience is filtered and produced from our memories, subconscious, and other psychological phenomena, we might conclude that the world is a mirror. The dream is an infinite reflection.<br><br> <place mirror bridge image from inception>
 			</div>
 
-			<div style="padding: 5vw; background: black;">
+			<div style="padding: none; background: black;">
 				<center>
 					<img src="images/unsplashCity.jpg" width="100%" alt="">
 				</center>
@@ -180,7 +177,7 @@
 					<br>
 					<br>
 					<center>ZOOM IN TO VIEW</center><br>
-					<img src="images/lyricImage.png" width="100%">
+					<img style="padding-top: -10vh; padding-bottom: -10vh;"src="images/lyricImage.png" width="100%">
 				</span>
 
 			</span>
@@ -489,12 +486,15 @@ body {
   outline: 1vw solid white;
 }
 
+.glow-on-hoverMAIN:active {
+  outline: 1vw solid white;
+}
+
 
 
 @font-face {
    font-family: fongBoi;
    src: url(fonts/hacked.ttf);
-
 
 }
 
@@ -560,6 +560,12 @@ h3 {
     width: 100%;
     height: 66%;
 }
+
+img {
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
 .cover img {
     display: block;
     position: relative;
