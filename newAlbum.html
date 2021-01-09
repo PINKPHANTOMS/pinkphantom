@@ -1040,8 +1040,8 @@ const gestureZone = document.getElementById('gestureZone');
 let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 
 gestureZone.addEventListener('touchstart', function(event) {
-		touchstartX = event.changedTouches[0].clientX;
-		touchstartY = event.changedTouches[0].clientY;
+		touchstartX = event.touches[0].clientX;
+		touchstartY = event.touches[0].clientY;
 		// console.log(zoom);
 		console.log(screen.width-touchstartX);
 
@@ -1052,7 +1052,7 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && 1>zoom>95 && Math.abs(touchendX-touchstartX)>100){
-		event.preventDefault()
+		event.preventDefault();
 		handleGesture();
 	}
 }, false);
