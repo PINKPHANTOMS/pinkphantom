@@ -1121,7 +1121,7 @@ function touchZoom(){
 function handleGesture() {
 	let swipeLeft;
 	console.log(touchendX-touchstartX)
-	if(Math.abs(touchendX-touchstartX)>100){
+	if(Math.abs(touchendX-touchstartX)>200){
 		if (touchendX <= (touchstartX)) {
 			swipeLeft = true;
 		}else{
