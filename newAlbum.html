@@ -1059,6 +1059,7 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX)){
+			event.preventDefault();
 		handleGesture();
 	}
 }, false);
