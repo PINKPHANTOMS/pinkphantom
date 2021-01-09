@@ -959,6 +959,9 @@ function frontTime(){
 		// moreFront.style.display = "none";
 	}else{
 		myFrontBtn.focus();
+		myLyricBtn.blur();
+		myBackBtn.blur();
+		myPReelBtn.blur();
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
@@ -986,6 +989,9 @@ function backTime(){
 		// moreFront.style.display = "none";
 	}else{
 		myBackBtn.focus();
+		myFrontBtn.blur();
+		myLyricBtn.blur();
+		myPReelBtn.blur();
 		moreBack.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreFront.style.display = "none";
@@ -1008,6 +1014,9 @@ function lyricTime(){
 		// moreFront.style.display = "none";
 	}else{
 		myLyricBtn.focus();
+		myFrontBtn.blur();
+		myBackBtn.blur();
+		myPReelBtn.blur();
 		moreLyrics.style.display = "inline";
 		moreFront.style.display = "none";
 		moreBack.style.display = "none";
@@ -1030,6 +1039,9 @@ function pReelTime(){
 		// moreFront.style.display = "none";
 	}else{
 		myPReelBtn.focus();
+		myFrontBtn.blur();
+		myBackBtn.blur();
+		myLyricBtn.blur();
 		morePReel.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
@@ -1052,6 +1064,9 @@ gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.changedTouches[0].screenX;
 		touchstartY = event.changedTouches[0].screenY;
 		// console.log(zoom);
+		// if(document.body.scrollTop === 0 || document.documentElement.scrollTop === 0){
+		// 	scale = 1;
+		// }
 
 }, false);
 
@@ -1074,10 +1089,6 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 
 function touchZoom(){
-
-	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
-		scale = 1;
-	}
 
 	if (touchendY <= (touchstartY)) {
 			// console.log((touchendY+20)-(touchstartY));
@@ -1109,12 +1120,12 @@ function touchZoom(){
 
 function handleGesture() {
 	let swipeLeft;
-	console.log(touchstartX);
-	console.log(touchendX);
-	console.log(Math.abs(touchendX-touchstartX))
-		if (touchendX <= (touchstartX)) {
+	// console.log(touchstartX);
+	// console.log(touchendX);
+	// console.log(Math.abs(touchstartX))
+		if (touchendX <= touchstartX && Math.abs(touchstartX-screen.width)>100) {
 			swipeLeft = true;
-		}else{
+		}else if (touchendX <= touchstartX && touchstartX<270){
 			swipeLeft = false;
 		}
 				if(swipeLeft==true){
