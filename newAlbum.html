@@ -1051,7 +1051,6 @@ gestureZone.addEventListener('touchstart', function(event) {
 }, false);
 
 gestureZone.addEventListener('touchend', function(event) {
-
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
@@ -1119,11 +1118,11 @@ function handleGesture(event) {
 				if(moreFront.style.display==="inline"){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
+				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop < 20){
 
 					pReelTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
+				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop < 20){
 					pReelTime();
 				}
 				else if(moreBack.style.display==="inline"){
@@ -1131,10 +1130,10 @@ function handleGesture(event) {
 				}
 			}else{
 
-				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
+				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop < 20){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
+				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop < 20){
 					backTime();
 				}
 				else if(moreBack.style.display==="inline"){
