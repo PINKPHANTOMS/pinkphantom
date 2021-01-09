@@ -1075,7 +1075,7 @@ function touchZoom(){
 	if (touchendY <= touchstartY) {
 			console.log((touchendY+20)-(touchstartY));
 
-			scale += -.05;
+			scale += touchendY-touchstartY;
 
 
 			// Restrict scale
@@ -1088,7 +1088,7 @@ function touchZoom(){
 	if (touchendY >= (touchstartY-75)) {
 			console.log('Swiped down');
 			// Zoom out
-			scale += .05;
+			scale += touchendY-touchstartY;
 			// Restrict scale
 			scale = Math.min(Math.max(.05, scale), 1.01);
 
