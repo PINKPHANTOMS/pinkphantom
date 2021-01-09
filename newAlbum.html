@@ -21,7 +21,7 @@
 			<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
 
 	</div>
-	  <div class="contain">
+	  <div id="gestureZone">
         <div class="container">
 
 						<span id="dots"></span>
@@ -836,7 +836,67 @@ img {
 
   <script>
 
+	let touchstartX = 0;
+	let touchstartY = 0;
+	let touchendX = 0;
+	let touchendY = 0;
 
+	const gestureZone = document.getElementById('gestureZone');
+
+	gestureZone.addEventListener('touchstart', function(event) {
+	    touchstartX = event.changedTouches[0].screenX;
+	    touchstartY = event.changedTouches[0].screenY;
+	}, false);
+
+	gestureZone.addEventListener('touchend', function(event) {
+	    touchendX = event.changedTouches[0].screenX;
+	    touchendY = event.changedTouches[0].screenY;
+	    handleGesture();
+	}, false);
+
+	function handleGesture() {
+	    if (touchendX <= touchstartX) {
+	        console.log('Swiped left');
+
+
+					if(moreLyrics.style.display=="inline"){
+						morePReel.style.display = "inline";
+					}else if(moreFront.style.display=="inline"){
+						moreBack.style.display = "inline";
+					}else if(moreBack.style.display=="inline"){
+						moreLyrics.style.display = "inline";
+					}else if(morePReel.style.display=="inline"){
+						
+					}
+
+	    }
+
+	    if (touchendX >= touchstartX) {
+	        console.log('Swiped right');
+					if(moreLyrics.style.display=="inline"){
+						moreBack.style.display = "inline";
+					}else if(moreFront.style.display=="inline"){
+
+					}else if(moreBack.style.display=="inline"){
+						moreFront.style.display = "inline";
+					}else if(morePReel.style.display=="inline"){
+						moreLyrics.style.display = "inline";
+
+					}
+	    }
+
+	    if (touchendY <= touchstartY) {
+	        console.log('Swiped up');
+	    }
+
+	    if (touchendY >= touchstartY) {
+	        console.log('Swiped down');
+	    }
+
+	    if (touchendY === touchstartY) {
+	        console.log('Tap');
+	    }
+	}
 
 	function zoom(event) {
 	  // event.preventDefault();
