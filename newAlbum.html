@@ -1119,7 +1119,7 @@ function handleGesture(event) {
 				if(moreFront.style.display==="inline"){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline"){
+				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop = 0 || document.documentElement.scrollTop = 0){
 
 					pReelTime();
 				}
@@ -1128,7 +1128,7 @@ function handleGesture(event) {
 				}
 			}else{
 
-				 if(moreLyrics.style.display==="inline"){
+				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop = 0 || document.documentElement.scrollTop = 0){
 					backTime();
 				}
 
