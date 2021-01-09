@@ -983,8 +983,8 @@ function backTime(){
 function lyricTime(){
 	scale = 1;
 
-	document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+	document.body.scrollTop = 20;
+  document.documentElement.scrollTop = 20;
 	el.style.transform = `scale(${scale})`;
 
 
@@ -1118,11 +1118,11 @@ function handleGesture(event) {
 				if(moreFront.style.display==="inline"){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop < 20){
+				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
 
 					pReelTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop < 20){
+				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
 					pReelTime();
 				}
 				else if(moreBack.style.display==="inline"){
@@ -1130,10 +1130,10 @@ function handleGesture(event) {
 				}
 			}else{
 
-				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop < 20){
+				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop < 20){
+				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
 					backTime();
 				}
 				else if(moreBack.style.display==="inline"){
