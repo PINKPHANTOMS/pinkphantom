@@ -14,13 +14,13 @@
 		SCROLL UP TO DISPLAY MENU
 	</div>
 	<div id="myNavBtns" style="position:fixed;z-index: 99;">
-			<button class="glow-on-hoverMAIN" autofocus onclick="viewFront()" id="myFrontBtn">SIDE A</button>
+			<button class="glow-on-hoverMAIN" autofocus onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
-			<button class="glow-on-hoverMAIN" onclick="viewBack()" id="myBackBtn">SIDE B</button>
+			<button class="glow-on-hoverMAIN" onclick="backTime()" id="myBackBtn">SIDE B</button>
 
-			<button class="glow-on-hoverMAIN" onclick="viewLyrics()" id="myLyricBtn">Lyrics</button>
+			<button class="glow-on-hoverMAIN" onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 
-			<button class="glow-on-hoverMAIN" onclick="viewPReel()" id="myPReelBtn">Gallery</button>
+			<button class="glow-on-hoverMAIN" onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 
 	</div>
 	  <div id="gestureZone">
@@ -443,14 +443,6 @@
 
 <style>
 
-#moreTopLabel {display: none;}
-#moreFront {display: inline;}
-#moreBack {display: none;}
-#moreLyrics {display: none;}
-
-#moreChron {display: none;}
-#morePReel {display: none;}
-
 
 
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
@@ -837,14 +829,25 @@ img {
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 
   <script>
-
+	var moreLyrics = document.getElementById("moreLyrics");
+	var moreChron = document.getElementById("moreChron");
+	var morePReel = document.getElementById("morePReel");
+	var moreFront = document.getElementById("moreFront");
+	var moreBack = document.getElementById("moreBack");
 
 	var audio = {   
 
     init: function() {
 
 	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;      
+	document.documentElement.scrollTop = 0;  
+	 
+	moreFront.style.display = "inline";   
+	moreBack.style.display = "none";   
+	moreLyrics.style.display = "none";   
+	morePReel.style.display = "none"; 
+	moreTopLabel.style.display = "none";
+  
 
 	  
     var $that = this;  
@@ -932,12 +935,6 @@ function timeStamp13(){
 }
 
 
-var moreLyrics = document.getElementById("moreLyrics");
-var moreChron = document.getElementById("moreChron");
-var morePReel = document.getElementById("morePReel");
-var moreFront = document.getElementById("moreFront");
-var moreBack = document.getElementById("moreBack");
-
 
 function frontTime(){
 
@@ -1012,40 +1009,6 @@ function pReelTime(){
 }
 
 
-function viewFront() {
-  var btnText = document.getElementById("myFrontBtn");
-
-	btnText.addEventListener("onclick",frontTime());
-
-
-}
-
-function viewBack() {
-
-  var btnText = document.getElementById("myBackBtn");
-	btnText.addEventListener("onclick",backTime());
-
-
-}
-
-
-function viewLyrics() {
-  var btnText = document.getElementById("myLyricBtn");
-
-	btnText.addEventListener("onclick",lyricTime());
-
-
-}
-
-function viewPReel() {
-
-  var btnText = document.getElementById("myPReelBtn");
-
-	btnText.addEventListener("onclick",pReelTime());
-
-}
-
-
 let touchstartX = 0;
 let touchstartY = 0;
 let touchendX = 0;
@@ -1066,8 +1029,6 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendY = event.changedTouches[0].screenY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom==96.875){
 		event.preventDefault();
-		var touches = event.targetTouches.length;
-		console.log(touches);
 		handleGesture();
 	}
 }, false);
@@ -1132,7 +1093,7 @@ function handleGesture() {
 		}else{
 			swipeLeft = false;
 		}
-
+				console.log(moreBack.style.display)
 				if(moreFront.style.display==="inline" && swipeLeft==true){
 					console.log('Swiped left');
 
