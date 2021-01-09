@@ -836,93 +836,6 @@ img {
 
   <script>
 
-	let touchstartX = 0;
-	let touchstartY = 0;
-	let touchendX = 0;
-	let touchendY = 0;
-
-	const gestureZone = document.getElementById('gestureZone');
-
-	gestureZone.addEventListener('touchstart', function(event) {
-	    touchstartX = event.changedTouches[0].screenX;
-	    touchstartY = event.changedTouches[0].screenY;
-	}, false);
-
-	gestureZone.addEventListener('touchend', function(event) {
-	    touchendX = event.changedTouches[0].screenX;
-	    touchendY = event.changedTouches[0].screenY;
-	    handleGesture();
-	}, false);
-
-	function handleGesture() {
-	    if (touchendX <= touchstartX) {
-	        console.log('Swiped left');
-
-
-					if(moreLyrics.style.display=="inline"){
-						morePReel.style.display = "inline";
-					}else if(moreFront.style.display=="inline"){
-						moreBack.style.display = "inline";
-					}else if(moreBack.style.display=="inline"){
-						moreLyrics.style.display = "inline";
-					}else if(morePReel.style.display=="inline"){
-						
-					}
-
-	    }
-
-	    if (touchendX >= touchstartX) {
-	        console.log('Swiped right');
-					if(moreLyrics.style.display=="inline"){
-						moreBack.style.display = "inline";
-					}else if(moreFront.style.display=="inline"){
-
-					}else if(moreBack.style.display=="inline"){
-						moreFront.style.display = "inline";
-					}else if(morePReel.style.display=="inline"){
-						moreLyrics.style.display = "inline";
-
-					}
-	    }
-
-	    if (touchendY <= touchstartY) {
-	        console.log('Swiped up');
-	    }
-
-	    if (touchendY >= touchstartY) {
-	        console.log('Swiped down');
-	    }
-
-	    if (touchendY === touchstartY) {
-	        console.log('Tap');
-	    }
-	}
-
-	function zoom(event) {
-	  // event.preventDefault();
-
-	  if (event.deltaY < 0) {
-	    // Zoom in
-	    scale *= event.deltaY * -1;
-	  }
-	  else {
-	    // Zoom out
-	    scale /= event.deltaY * 1;
-	  }
-
-	  // Restrict scale
-	  scale = Math.min(Math.max(.125, scale), 1.01);
-
-	  // Apply scale transform
-	  el.style.transform = `scale(${scale})`;
-	}
-
-	let scale = 1;
-	const el = document.getElementById('myNavBtns');
-	document.onwheel = zoom;
-
-
-
 
 	var audio = {   
 
@@ -1128,6 +1041,136 @@ function viewPReel() {
 	btnText.addEventListener("onclick",pReelTime());
 
 }
+
+
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.getElementById('gestureZone');
+
+gestureZone.addEventListener('touchstart', function(event) {
+		touchstartX = event.changedTouches[0].screenX;
+		touchstartY = event.changedTouches[0].screenY;
+		touchZoom();
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+		touchendX = event.changedTouches[0].screenX;
+		touchendY = event.changedTouches[0].screenY;
+		handleGesture();
+}, false);
+
+function touchZoom(){
+
+	let scale = 1;
+	const el = document.getElementById('myNavBtns');
+	if (touchendY <= (touchstartY)) {
+			console.log(touchendY-touchstartY);
+
+			scale += ((touchendY-touchstartY)/200);
+
+
+			// Restrict scale
+			scale = Math.min(Math.max(.01, scale), 1.01);
+
+			// Apply scale transform
+			el.style.transform = `scale(${scale})`;
+	}
+
+	if (touchendY >= (touchstartY+75)) {
+			console.log('Swiped down');
+			// Zoom out
+			scale *= (touchendY-touchstartY) * 1;
+			// Restrict scale
+			scale = Math.min(Math.max(.125, scale), 1.01);
+
+			// Apply scale transform
+			el.style.transform = `scale(${scale})`;
+
+	}
+
+}
+
+
+function handleGesture() {
+		if (touchendX <= (touchstartX-75)) {
+				console.log('Swiped left');
+
+
+				if(moreLyrics.style.display=="inline"){
+					morePReel.style.display = "inline";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "none";
+					moreBack.style.display = "none";
+				}else if(moreFront.style.display=="inline"){
+					morePReel.style.display = "none";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "none";
+					moreBack.style.display = "inline";
+				}else if(moreBack.style.display=="inline"){
+					morePReel.style.display = "none";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "inline";
+					moreBack.style.display = "none";
+				}else if(morePReel.style.display=="inline"){
+
+				}
+
+		}
+
+		if (touchendX >= (touchstartX+75)) {
+				console.log('Swiped right');
+				if(moreLyrics.style.display=="inline"){
+					morePReel.style.display = "none";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "none";
+					moreBack.style.display = "inline";
+				}else if(moreFront.style.display=="inline"){
+
+				}else if(moreBack.style.display=="inline"){
+					morePReel.style.display = "none";
+					moreFront.style.display = "inline";
+					moreLyrics.style.display = "none";
+					moreBack.style.display = "none";
+				}else if(morePReel.style.display=="inline"){
+					morePReel.style.display = "none";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "inline";
+					moreBack.style.display = "none";
+
+				}
+		}
+
+		if (touchendY === touchstartY) {
+				console.log('Tap');
+		}
+}
+
+function zoom(event) {
+	// event.preventDefault();
+
+	if (event.deltaY < 0) {
+		// Zoom in
+		scale *= event.deltaY * -1;
+	}
+	else {
+		// Zoom out
+		scale /= event.deltaY * 1;
+	}
+
+	// Restrict scale
+	scale = Math.min(Math.max(.125, scale), 1.01);
+
+	// Apply scale transform
+	el.style.transform = `scale(${scale})`;
+}
+
+let scale = 1;
+const el = document.getElementById('myNavBtns');
+
+
 
 
 
