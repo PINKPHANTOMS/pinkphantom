@@ -942,7 +942,7 @@ function frontTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 
-	if(moreFront.style.display=="inline"){
+	if(moreFront.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
 		moreFront.style.display = "inline";
@@ -961,7 +961,7 @@ function backTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 
-	if(moreBack.style.display=="inline"){
+	if(moreBack.style.display==="inline"){
 		// moreBack.style.display = "none";
 	}else{
 		moreBack.style.display = "inline";
@@ -979,7 +979,7 @@ function lyricTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	if(moreLyrics.style.display=="inline"){
+	if(moreLyrics.style.display==="inline"){
 	// moreLyrics.style.display = "none";
 }else{
 	moreFront.style.display = "none";
@@ -996,7 +996,7 @@ function pReelTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	if(morePReel.style.display=="inline"){
+	if(morePReel.style.display==="inline"){
 	// morePReel.style.display = "none";
 }else{
 	morePReel.style.display = "inline";
@@ -1059,7 +1059,7 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX)){
-		touchZoom();
+		handleGesture();
 	}
 }, false);
 
@@ -1105,84 +1105,43 @@ function touchZoom(){
 
 
 function handleGesture() {
-		if (touchendX <= (touchstartX-100)) {
-			scale = 1;
-				console.log('Swiped left');
-
-
-				if(moreFront.style.display==="inline"){
-					morePReel.style.display = "none";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "none";
-					moreBack.style.display = "inline";
-				}
-				if(moreLyrics.style.display==="inline"){
-					morePReel.style.display = "inline";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "none";
-					moreBack.style.display = "none";
-				}
-				if(moreBack.style.display==="inline"){
-					morePReel.style.display = "none";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "inline";
-					moreBack.style.display = "none";
-				}
-				if(morePReel.style.display==="inline"){
-
-				}
-
+	let swipeLeft;
+		if (touchendX <= (touchstartX)) {
+			swipeLeft = true;
+		}else{
+			swipeLeft = false;
 		}
 
-		if (touchendX >= (touchstartX-75)) {
-				console.log('Swiped right');
-				if(moreLyrics.style.display==="inline"){
-					morePReel.style.display = "none";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "none";
-					moreBack.style.display = "inline";
-				}else if(moreFront.style.display==="inline"){
+				if(moreFront.style.display==="inline" && swipeLeft==true){
 
-				}else if(moreBack.style.display==="inline"){
-					morePReel.style.display = "none";
-					moreFront.style.display = "inline";
-					moreLyrics.style.display = "none";
-					moreBack.style.display = "none";
-				}else if(morePReel.style.display==="inline"){
-					morePReel.style.display = "none";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "inline";
-					moreBack.style.display = "none";
-
+					backTime();
 				}
+				if(moreLyrics.style.display==="inline" && swipeLeft==true){
+					console.log('Swiped left');
+
+					pReelTime();
+				}
+				if(moreBack.style.display==="inline" && swipeLeft==true){
+					lyricTime();
+				}
+
+				if(moreLyrics.style.display==="inline" && swipeLeft==false){
+					backTime();
+				}
+
+				if(moreBack.style.display==="inline" && swipeLeft==false){
+					frontTime();
+				}
+				if(morePReel.style.display==="inline" && swipeLeft==false){
+					lyricTime();
 		}
 
 		if (touchendY === touchstartY) {
 				console.log('Tap');
 		}
+
+
 }
-
-function zoom(event) {
-	// event.preventDefault();
-
-	if (event.deltaY < 0) {
-		// Zoom in
-		scaleMouse *= event.deltaY * -1;
-	}
-	else {
-		// Zoom out
-		scaleMouse /= event.deltaY * 1;
-	}
-
-	// Restrict scale
-	scaleMouse = Math.min(Math.max(.125, scale), 1.01);
-
-	// Apply scale transform
-	el.style.transform = `scale(${scaleMouse})`;
-}
-
-let scaleMouse = 1;
-const el = document.getElementById('myNavBtns');
 
 
 
