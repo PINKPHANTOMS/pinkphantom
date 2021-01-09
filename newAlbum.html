@@ -1058,13 +1058,17 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX)){
+		touchZoom();
+	}
 }, false);
 
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
-		handleGesture();
+		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX)){
 		touchZoom();
+	}
 }, false);
 var scale = 1;
 
@@ -1079,7 +1083,7 @@ function touchZoom(){
 
 
 			// Restrict scale
-			scale = Math.min(Math.max(.05, scale), 1.01);
+			scale = Math.min(Math.max(.00, scale), 1.01);
 
 			// Apply scale transform
 			el.style.transform = `scale(${scale})`;
@@ -1090,7 +1094,7 @@ function touchZoom(){
 			// Zoom out
 			scale += (touchendY-touchstartY)*.00625;
 			// Restrict scale
-			scale = Math.min(Math.max(.05, scale), 1.01);
+			scale = Math.min(Math.max(.00, scale), 1.01);
 
 			// Apply scale transform
 			el.style.transform = `scale(${scale})`;
@@ -1101,28 +1105,30 @@ function touchZoom(){
 
 
 function handleGesture() {
-		if (touchendX <= (touchstartX-30)) {
+		if (touchendX <= (touchstartX-100)) {
+			scale = 1;
 				console.log('Swiped left');
 
-				if(moreLyrics.style.display=="inline"){
-					morePReel.style.display = "inline";
-					moreFront.style.display = "none";
-					moreLyrics.style.display = "none";
-					moreBack.style.display = "none";
-				}
-				if(moreFront.style.display=="inline"){
+
+				if(moreFront.style.display==="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "none";
 					moreBack.style.display = "inline";
 				}
-				if(moreBack.style.display=="inline"){
+				if(moreLyrics.style.display==="inline"){
+					morePReel.style.display = "inline";
+					moreFront.style.display = "none";
+					moreLyrics.style.display = "none";
+					moreBack.style.display = "none";
+				}
+				if(moreBack.style.display==="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "inline";
 					moreBack.style.display = "none";
 				}
-				if(morePReel.style.display=="inline"){
+				if(morePReel.style.display==="inline"){
 
 				}
 
@@ -1130,19 +1136,19 @@ function handleGesture() {
 
 		if (touchendX >= (touchstartX-75)) {
 				console.log('Swiped right');
-				if(moreLyrics.style.display=="inline"){
+				if(moreLyrics.style.display==="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "none";
 					moreBack.style.display = "inline";
-				}else if(moreFront.style.display=="inline"){
+				}else if(moreFront.style.display==="inline"){
 
-				}else if(moreBack.style.display=="inline"){
+				}else if(moreBack.style.display==="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "inline";
 					moreLyrics.style.display = "none";
 					moreBack.style.display = "none";
-				}else if(morePReel.style.display=="inline"){
+				}else if(morePReel.style.display==="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "inline";
