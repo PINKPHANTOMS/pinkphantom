@@ -1044,7 +1044,7 @@ gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.changedTouches[0].clientX;
 		touchstartY = event.changedTouches[0].clientY;
 		// console.log(zoom);
-		console.log(touchstartX);
+		console.log(screen.width-touchstartX);
 
 
 }, false);
@@ -1052,7 +1052,7 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95  && Math.abs(touchendX-touchstartX)>100){
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && Math.abs(touchendX-touchstartX)>100){
 		event.preventDefault()
 		handleGesture();
 	}
@@ -1065,13 +1065,6 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchZoom();
 	}
 }, false);
-
-
-// function checkScale(){
-// 	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
-// 		scale = 1;
-// 	}
-// }
 
 
 
@@ -1109,11 +1102,11 @@ function touchZoom(){
 
 function handleGesture() {
 	let swipeLeft;
-	console.log(touchstartX);
+	// console.log(screen.width-touchstartX);
 	// console.log(touchendX);
-		if (touchendX <= touchstartX && (touchstartX-screen.width)<60) {
+		if (touchendX <= touchstartX && (screen.width-touchstartX)<50) {
 			swipeLeft = true;
-		}else if (touchendX <= touchstartX && touchstartX<60){
+		}else if (touchendX <= touchstartX && touchstartX<30){
 			swipeLeft = false;
 		}
 				if(swipeLeft==true){
