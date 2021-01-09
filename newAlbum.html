@@ -7,7 +7,7 @@
 <title>THE AMERICAN DREAM</title>
 
 
-<body onscroll="checkScale()">
+<body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div id="myNavBtns" style="position:fixed;z-index: 99;">
@@ -1041,15 +1041,17 @@ const gestureZone = document.getElementById('gestureZone');
 let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 
 gestureZone.addEventListener('touchstart', function(event) {
-		touchstartX = event.changedTouches[0].screenX;
-		touchstartY = event.changedTouches[0].screenY;
+		touchstartX = event.changedTouches[0].clientX;
+		touchstartY = event.changedTouches[0].clientY;
 		// console.log(zoom);
+		console.log(touchstartX);
+
 
 }, false);
 
 gestureZone.addEventListener('touchend', function(event) {
-		touchendX = event.changedTouches[0].screenX;
-		touchendY = event.changedTouches[0].screenY;
+		touchendX = event.changedTouches[0].clientX;
+		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95  && Math.abs(touchendX-touchstartX)>180){
 		event.preventDefault()
 		handleGesture();
@@ -1057,19 +1059,19 @@ gestureZone.addEventListener('touchend', function(event) {
 }, false);
 
 gestureZone.addEventListener('touchmove', function(event) {
-		touchendX = event.changedTouches[0].screenX;
-		touchendY = event.changedTouches[0].screenY;
+		touchendX = event.changedTouches[0].clientX;
+		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95){
 		touchZoom();
 	}
 }, false);
 
 
-function checkScale(){
-	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
-		scale = 1;
-	}
-}
+// function checkScale(){
+// 	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
+// 		scale = 1;
+// 	}
+// }
 
 
 
@@ -1109,9 +1111,9 @@ function handleGesture() {
 	let swipeLeft;
 	console.log(touchstartX);
 	// console.log(touchendX);
-		if (touchendX <= touchstartX && Math.abs(touchendX-touchstartX)>(screen.width/2)) {
+		if (touchendX <= touchstartX && touchstartX-screen.width<100) {
 			swipeLeft = true;
-		}else if (touchendX <= touchstartX && Math.abs(touchendX-touchstartX)>(screen.width*.35)){
+		}else if (touchendX <= touchstartX && touchstartX<100){
 			swipeLeft = false;
 		}
 				if(swipeLeft==true){
