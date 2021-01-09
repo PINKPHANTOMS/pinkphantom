@@ -10,6 +10,9 @@
 <body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
+	<div onscroll="checkScale()">
+
+</div>
 
 	<div id="myNavBtns" style="position:fixed;z-index: 99;">
 			<button class="glow-on-hoverMAIN" autofocus onclick="frontTime()" id="myFrontBtn">SIDE A</button>
@@ -505,20 +508,6 @@
   font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  align: middle;
-  flex-direction: column;
-  justify-content: center;
-	overflow-x: hidden;
-	padding: none;
-  font-family: 'Cyber', sans-serif;
-  /* background: linear-gradient(90deg, #f5ed00 70%, #e6de00 70%), #fff700; */
-}
-
 
 .buttonBois{
 	display: none
@@ -575,6 +564,7 @@ body {
 		background-image: url("images/albumart/ADREAM.gif");
 		background-size: 100%;
 		background-attachment: fixed;
+		font-family: 'Cyber', sans-serif;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
     /* font-family: "Raleway",sans-serif; */
 }
@@ -1069,9 +1059,6 @@ gestureZone.addEventListener('touchstart', function(event) {
 }, false);
 
 gestureZone.addEventListener('touchend', function(event) {
-	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
-		scale = 1;
-	}
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95  && Math.abs(touchendX-touchstartX)>180){
@@ -1087,6 +1074,14 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchZoom();
 	}
 }, false);
+
+
+function checkScale(){
+	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
+		scale = 1;
+	}
+}
+
 
 
 function touchZoom(){
@@ -1117,6 +1112,8 @@ function touchZoom(){
 	}
 
 }
+
+
 
 
 function handleGesture() {
