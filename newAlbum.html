@@ -1123,9 +1123,9 @@ function handleGesture() {
 	let swipeLeft;
 	console.log(touchstartX);
 	// console.log(touchendX);
-		if (touchendX <= touchstartX && Math.abs(screen.width-touchstartX)>100) {
+		if (touchendX <= touchstartX && Math.abs(touchendX-touchstartX)>(screen.width/2)) {
 			swipeLeft = true;
-		}else if (touchendX <= touchstartX && Math.abs(screen.width-touchstartX)>100){
+		}else if (touchendX <= touchstartX && Math.abs(touchendX-touchstartX)>(screen.width/2)){
 			swipeLeft = false;
 		}
 				if(swipeLeft==true){
