@@ -2,7 +2,7 @@
 
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, maximum-scale: 1, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 	<link rel="icon" href="images\americandream.jpg">
 <title>THE AMERICAN DREAM</title>
 
@@ -1042,13 +1042,27 @@ let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
-		// console.log(zoom);
-		console.log(screen.width-touchstartX);
+		console.log(zoom);
 
 
 }, false);
 
 gestureZone.addEventListener('touchend', function(event) {
+
+	if(moreFront.style.display==="inline"){
+		myFrontBtn.focus();
+	}
+	else if(moreLyrics.style.display==="inline"){
+
+		myLyricBtn.focus();
+	}
+	else if(moreBack.style.display==="inline"){
+		myBackBtn.focus();
+	}else if(morePReel.style.display==="inline"){
+		myPReelBtn.focus();
+
+	}
+
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>100){
@@ -1071,6 +1085,23 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 
 function touchZoom(){
+
+	if(moreFront.style.display==="inline"){
+		myFrontBtn.focus();
+	}
+	else if(moreLyrics.style.display==="inline"){
+
+		myLyricBtn.focus();
+	}
+	else if(moreBack.style.display==="inline"){
+		myBackBtn.focus();
+	}else if(morePReel.style.display==="inline"){
+		myPReelBtn.focus();
+
+	}
+
+
+
 
 	if (touchendY <= (touchstartY)) {
 			// console.log((touchendY+20)-(touchstartY));
@@ -1103,6 +1134,24 @@ function touchZoom(){
 
 
 function handleGesture() {
+
+
+	if(moreFront.style.display==="inline"){
+		myFrontBtn.focus();
+	}
+	else if(moreLyrics.style.display==="inline"){
+
+		myLyricBtn.focus();
+	}
+	else if(moreBack.style.display==="inline"){
+		myBackBtn.focus();
+	}else if(morePReel.style.display==="inline"){
+		myPReelBtn.focus();
+
+	}
+
+
+
 	let swipeLeft;
 	// console.log(screen.width-touchstartX);
 	// console.log(touchendX);
@@ -1136,10 +1185,6 @@ function handleGesture() {
 					lyricTime();
 		}
 	}
-
-		if (touchendY === touchstartY) {
-				console.log('Tap');
-		}
 
 
 }
