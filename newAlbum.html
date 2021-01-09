@@ -964,10 +964,14 @@ function backTime(){
 	document.documentElement.scrollTop = 0;
 
 
+	if(moreBack.style.display==="inline"){
+		// moreFront.style.display = "none";
+	}else{
 		moreBack.style.display = "inline";
-		moreFront.style.display = "none";
 		moreLyrics.style.display = "none";
+		moreFront.style.display = "none";
 		morePReel.style.display = "none";
+	}
 
 }
 
@@ -977,10 +981,14 @@ function lyricTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	moreFront.style.display = "none";
-	moreLyrics.style.display = "inline";
-	moreBack.style.display = "none";
-	morePReel.style.display = "none";
+	if(moreLyrics.style.display==="inline"){
+		// moreFront.style.display = "none";
+	}else{
+		moreLyrics.style.display = "inline";
+		moreFront.style.display = "none";
+		moreBack.style.display = "none";
+		morePReel.style.display = "none";
+	}
 
 
 }
@@ -991,10 +999,14 @@ function pReelTime(){
   document.documentElement.scrollTop = 0;
 
 
-	morePReel.style.display = "inline";
-	moreFront.style.display = "none";
-	moreLyrics.style.display = "none";
-	moreBack.style.display = "none";
+	if(morePReel.style.display==="inline"){
+		// moreFront.style.display = "none";
+	}else{
+		morePReel.style.display = "inline";
+		moreLyrics.style.display = "none";
+		moreBack.style.display = "none";
+		moreFront.style.display = "none";
+	}
 
 
 }
@@ -1077,7 +1089,7 @@ function touchZoom(){
 
 	var moreTopLabel = document.getElementById('moreTopLabel');
 
-	if(scale<.9){
+	if(scale<.5){
 		moreTopLabel.style.display = "inline";
 	}else{
 		moreTopLabel.style.display = "none";
