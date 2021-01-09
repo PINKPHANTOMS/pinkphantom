@@ -1072,10 +1072,10 @@ function touchZoom(){
 
 	const el = document.getElementById('myNavBtns');
 
-	if (touchendY <= touchstartY) {
+	if (touchendY <= (touchstartY)) {
 			console.log((touchendY+20)-(touchstartY));
 
-			scale += touchendY-touchstartY;
+			scale += (touchendY-touchstartY)*.00625;
 
 
 			// Restrict scale
@@ -1085,10 +1085,10 @@ function touchZoom(){
 			el.style.transform = `scale(${scale})`;
 	}
 
-	if (touchendY >= (touchstartY-75)) {
+	if (touchendY >= (touchstartY)) {
 			console.log('Swiped down');
 			// Zoom out
-			scale += touchendY-touchstartY;
+			scale += (touchendY-touchstartY)*.00625;
 			// Restrict scale
 			scale = Math.min(Math.max(.05, scale), 1.01);
 
@@ -1101,32 +1101,34 @@ function touchZoom(){
 
 
 function handleGesture() {
-		if (touchendX <= (touchstartX-75)) {
+		if (touchendX <= (touchstartX-30)) {
 				console.log('Swiped left');
-
 
 				if(moreLyrics.style.display=="inline"){
 					morePReel.style.display = "inline";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "none";
 					moreBack.style.display = "none";
-				}else if(moreFront.style.display=="inline"){
+				}
+				if(moreFront.style.display=="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "none";
 					moreBack.style.display = "inline";
-				}else if(moreBack.style.display=="inline"){
+				}
+				if(moreBack.style.display=="inline"){
 					morePReel.style.display = "none";
 					moreFront.style.display = "none";
 					moreLyrics.style.display = "inline";
 					moreBack.style.display = "none";
-				}else if(morePReel.style.display=="inline"){
+				}
+				if(morePReel.style.display=="inline"){
 
 				}
 
 		}
 
-		if (touchendX >= (touchstartX+75)) {
+		if (touchendX >= (touchstartX-75)) {
 				console.log('Swiped right');
 				if(moreLyrics.style.display=="inline"){
 					morePReel.style.display = "none";
