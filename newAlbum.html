@@ -984,7 +984,6 @@ function backTime(){
 	}else{
 		myBackBtn.focus();
 		moreBack.style.display = "inline";
-		myBackBtn.style.focus = "true";
 		moreLyrics.style.display = "none";
 		moreFront.style.display = "none";
 		morePReel.style.display = "none";
@@ -1118,30 +1117,32 @@ function handleGesture() {
 		}else{
 			swipeLeft = false;
 		}
-				// console.log(moreBack.style.display)
-				if(moreFront.style.display==="inline" && swipeLeft==true){
-					console.log('Swiped left');
 
+				if(swipeLeft==true){
+					
+				if(moreFront.style.display==="inline"){
 					backTime();
-				}else
-				if(moreLyrics.style.display==="inline" && swipeLeft==true){
+				}
+				else if(moreLyrics.style.display==="inline"){
 
 					pReelTime();
 				}
-				if(moreBack.style.display==="inline" && swipeLeft==true){
+				else if(moreBack.style.display==="inline"){
 					lyricTime();
-				}else
+				}
+			}else{
 
-				if(moreLyrics.style.display==="inline" && swipeLeft==false){
+				 if(moreLyrics.style.display==="inline"){
 					backTime();
-				}else
+				}
 
-				if(moreBack.style.display==="inline" && swipeLeft==false){
+				else if(moreBack.style.display==="inline"){
 					frontTime();
-				}else
-				if(morePReel.style.display==="inline" && swipeLeft==false){
+				}
+				else if(morePReel.style.display==="inline"){
 					lyricTime();
 		}
+	}
 
 		if (touchendY === touchstartY) {
 				console.log('Tap');
