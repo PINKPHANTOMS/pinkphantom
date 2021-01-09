@@ -961,15 +961,11 @@ function backTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 
-	if(moreBack.style.display==="inline"){
-		// moreBack.style.display = "none";
-	}else{
+
 		moreBack.style.display = "inline";
 		moreFront.style.display = "none";
 		moreLyrics.style.display = "none";
 		morePReel.style.display = "none";
-
-	}
 
 }
 
@@ -979,14 +975,10 @@ function lyricTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	if(moreLyrics.style.display==="inline"){
-	// moreLyrics.style.display = "none";
-}else{
 	moreFront.style.display = "none";
 	moreLyrics.style.display = "inline";
 	moreBack.style.display = "none";
 	morePReel.style.display = "none";
-}
 
 
 }
@@ -996,14 +988,11 @@ function pReelTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
-	if(morePReel.style.display==="inline"){
-	// morePReel.style.display = "none";
-}else{
+
 	morePReel.style.display = "inline";
 	moreFront.style.display = "none";
 	moreLyrics.style.display = "none";
 	moreBack.style.display = "none";
-}
 
 
 }
@@ -1058,8 +1047,8 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX)){
-			event.preventDefault();
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && event.targetTouches.length==1){
+		event.preventDefault();
 		handleGesture();
 	}
 }, false);
@@ -1114,25 +1103,25 @@ function handleGesture() {
 		}
 
 				if(moreFront.style.display==="inline" && swipeLeft==true){
+					console.log('Swiped left');
 
 					backTime();
-				}
+				}else
 				if(moreLyrics.style.display==="inline" && swipeLeft==true){
-					console.log('Swiped left');
 
 					pReelTime();
 				}
 				if(moreBack.style.display==="inline" && swipeLeft==true){
 					lyricTime();
-				}
+				}else
 
 				if(moreLyrics.style.display==="inline" && swipeLeft==false){
 					backTime();
-				}
+				}else
 
 				if(moreBack.style.display==="inline" && swipeLeft==false){
 					frontTime();
-				}
+				}else
 				if(morePReel.style.display==="inline" && swipeLeft==false){
 					lyricTime();
 		}
