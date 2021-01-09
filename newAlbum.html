@@ -543,15 +543,8 @@ body {
     z-index: 99;
 }
 
-.glow-on-hoverMAIN:hover {
-  outline: 1vw solid white;
-}
 
 .glow-on-hoverMAIN:focus {
-  outline: 1vw solid white;
-}
-
-.glow-on-hoverMAIN:active {
   outline: 1vw solid white;
 }
 
@@ -835,6 +828,17 @@ img {
 	var moreFront = document.getElementById("moreFront");
 	var moreBack = document.getElementById("moreBack");
 
+	var myBackBtn = document.getElementById("myBackBtn");
+	var myFrontBtn = document.getElementById("myFrontBtn");
+	var myLyricBtn = document.getElementById("myLyricBtn");
+	var myPReelBtn = document.getElementById("myPReelBtn");
+	const el = document.getElementById('myNavBtns');
+
+
+	var scale;
+
+
+
 	var audio = {   
 
     init: function() {
@@ -846,8 +850,8 @@ img {
 	moreBack.style.display = "none";   
 	moreLyrics.style.display = "none";   
 	morePReel.style.display = "none"; 
-	moreTopLabel.style.display = "none";
-  
+	moreTopLabel.style.display = "none";  
+	scale = 1;
 
 	  
     var $that = this;  
@@ -937,13 +941,20 @@ function timeStamp13(){
 
 
 function frontTime(){
+	scale = 1;
+
 
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
+	el.style.transform = `scale(${scale})`;
+	moreTopLabel.style.display = "none";  
+
+
 
 	if(moreFront.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
+		myFrontBtn.focus();
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
@@ -957,14 +968,23 @@ function frontTime(){
 
 function backTime(){
 
+	scale = 1;
+
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
+	el.style.transform = `scale(${scale})`;
+	moreTopLabel.style.display = "none";  
+
+
+
 
 
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
+		myBackBtn.focus();
 		moreBack.style.display = "inline";
+		myBackBtn.style.focus = "true";
 		moreLyrics.style.display = "none";
 		moreFront.style.display = "none";
 		morePReel.style.display = "none";
@@ -974,13 +994,19 @@ function backTime(){
 
 
 function lyricTime(){
+	scale = 1;
 
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+	el.style.transform = `scale(${scale})`;
+	moreTopLabel.style.display = "none";  
+
+
 
 	if(moreLyrics.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
+		myLyricBtn.focus();
 		moreLyrics.style.display = "inline";
 		moreFront.style.display = "none";
 		moreBack.style.display = "none";
@@ -991,14 +1017,19 @@ function lyricTime(){
 }
 
 function pReelTime(){
+	scale = 1;
+
 
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+	el.style.transform = `scale(${scale})`;
+	moreTopLabel.style.display = "none";  
 
 
 	if(morePReel.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
+		myPReelBtn.focus();
 		morePReel.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
@@ -1042,10 +1073,6 @@ gestureZone.addEventListener('touchmove', function(event) {
 }, false);
 
 
-
-var scale = 1;
-
-
 function touchZoom(){
 
 	var moreTopLabel = document.getElementById('moreTopLabel');
@@ -1056,10 +1083,8 @@ function touchZoom(){
 		moreTopLabel.style.display = "none";
 	}
 
-	const el = document.getElementById('myNavBtns');
-
 	if (touchendY <= (touchstartY)) {
-			console.log((touchendY+20)-(touchstartY));
+			// console.log((touchendY+20)-(touchstartY));
 
 			scale += (touchendY-touchstartY)*.00625;
 
@@ -1093,7 +1118,7 @@ function handleGesture() {
 		}else{
 			swipeLeft = false;
 		}
-				console.log(moreBack.style.display)
+				// console.log(moreBack.style.display)
 				if(moreFront.style.display==="inline" && swipeLeft==true){
 					console.log('Swiped left');
 
