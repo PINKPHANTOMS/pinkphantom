@@ -1049,20 +1049,6 @@ gestureZone.addEventListener('touchstart', function(event) {
 
 gestureZone.addEventListener('touchend', function(event) {
 
-	if(moreFront.style.display==="inline"){
-		myFrontBtn.focus();
-	}
-	else if(moreLyrics.style.display==="inline"){
-
-		myLyricBtn.focus();
-	}
-	else if(moreBack.style.display==="inline"){
-		myBackBtn.focus();
-	}else if(morePReel.style.display==="inline"){
-		myPReelBtn.focus();
-
-	}
-
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>100){
@@ -1085,24 +1071,6 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 
 function touchZoom(){
-
-	if(moreFront.style.display==="inline"){
-		myFrontBtn.focus();
-	}
-	else if(moreLyrics.style.display==="inline"){
-
-		myLyricBtn.focus();
-	}
-	else if(moreBack.style.display==="inline"){
-		myBackBtn.focus();
-	}else if(morePReel.style.display==="inline"){
-		myPReelBtn.focus();
-
-	}
-
-
-
-
 	if (touchendY <= (touchstartY)) {
 			// console.log((touchendY+20)-(touchstartY));
 
@@ -1133,25 +1101,7 @@ function touchZoom(){
 
 
 
-function handleGesture() {
-
-
-	if(moreFront.style.display==="inline"){
-		myFrontBtn.focus();
-	}
-	else if(moreLyrics.style.display==="inline"){
-
-		myLyricBtn.focus();
-	}
-	else if(moreBack.style.display==="inline"){
-		myBackBtn.focus();
-	}else if(morePReel.style.display==="inline"){
-		myPReelBtn.focus();
-
-	}
-
-
-
+function handleGesture(event) {
 	let swipeLeft;
 	// console.log(screen.width-touchstartX);
 	// console.log(touchendX);
@@ -1159,6 +1109,8 @@ function handleGesture() {
 			swipeLeft = true;
 		}else if (touchendX <= touchstartX && touchstartX<30){
 			swipeLeft = false;
+			event.preventDefault();
+
 		}
 				if(swipeLeft==true){
 
