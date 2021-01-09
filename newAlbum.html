@@ -1074,7 +1074,7 @@ gestureZone.addEventListener('touchend', function(event) {
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
-		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX)){
+		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95){
 		touchZoom();
 	}
 }, false);
