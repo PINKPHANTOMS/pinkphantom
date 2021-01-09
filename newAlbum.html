@@ -1051,10 +1051,13 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && 1>zoom>95 && Math.abs(touchendX-touchstartX)>100){
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && Math.abs(touchendX-touchstartX)>100){
 		event.preventDefault();
 		handleGesture();
 	}
+	if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95){
+	touchZoom();
+}
 }, false);
 
 gestureZone.addEventListener('touchmove', function(event) {
