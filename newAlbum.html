@@ -1052,7 +1052,7 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95  && Math.abs(touchendX-touchstartX)>50){
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95  && Math.abs(touchendX-touchstartX)>100){
 		event.preventDefault()
 		handleGesture();
 	}
@@ -1111,9 +1111,9 @@ function handleGesture() {
 	let swipeLeft;
 	console.log(touchstartX);
 	// console.log(touchendX);
-		if (touchendX <= touchstartX && touchstartX-screen.width<100) {
+		if (touchendX <= touchstartX && (touchstartX-screen.width)<60) {
 			swipeLeft = true;
-		}else if (touchendX <= touchstartX && touchstartX<100){
+		}else if (touchendX <= touchstartX && touchstartX<60){
 			swipeLeft = false;
 		}
 				if(swipeLeft==true){
