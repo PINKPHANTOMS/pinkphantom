@@ -10,9 +10,7 @@
 <body>
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
-	<div id="moreTopLabel" style="text-align: center;position: absolute: top: 0vh;color: white; font-size: 8vw; z-index: 99;">
-		SCROLL UP TO DISPLAY MENU
-	</div>
+
 	<div id="myNavBtns" style="position:fixed;z-index: 99;">
 			<button class="glow-on-hoverMAIN" autofocus onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
@@ -858,7 +856,6 @@ img {
 	moreBack.style.display = "none";   
 	moreLyrics.style.display = "none";   
 	morePReel.style.display = "none"; 
-	moreTopLabel.style.display = "none";  
 	scale = 1;
 
 	  
@@ -955,7 +952,6 @@ function frontTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 	el.style.transform = `scale(${scale})`;
-	moreTopLabel.style.display = "none";  
 
 
 
@@ -981,7 +977,6 @@ function backTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 	el.style.transform = `scale(${scale})`;
-	moreTopLabel.style.display = "none";  
 
 
 
@@ -1006,7 +1001,6 @@ function lyricTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 	el.style.transform = `scale(${scale})`;
-	moreTopLabel.style.display = "none";  
 
 
 
@@ -1030,7 +1024,6 @@ function pReelTime(){
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 	el.style.transform = `scale(${scale})`;
-	moreTopLabel.style.display = "none";  
 
 
 	if(morePReel.style.display==="inline"){
@@ -1082,12 +1075,8 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 function touchZoom(){
 
-	var moreTopLabel = document.getElementById('moreTopLabel');
-
-	if(scale<.5){
-		moreTopLabel.style.display = "inline";
-	}else{
-		moreTopLabel.style.display = "none";
+	if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
+		scale = 1;
 	}
 
 	if (touchendY <= (touchstartY)) {
