@@ -1051,7 +1051,7 @@ gestureZone.addEventListener('touchend', function(event) {
 
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.4)){
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
 		event.preventDefault();
 		document.body.style.overflowY = "hidden";
 		handleGesture();
