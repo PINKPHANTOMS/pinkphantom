@@ -1119,22 +1119,22 @@ function handleGesture(event) {
 				if(moreFront.style.display==="inline"){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop = 0){
+				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
 
 					pReelTime();
 				}
-				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop = 0){
+				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
 					pReelTime();
-}
+				}
 				else if(moreBack.style.display==="inline"){
 					lyricTime();
 				}
 			}else{
 
-				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop = 0){
+				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
 					backTime();
 				}
-				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop = 0){
+				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
 					backTime();
 				}
 				else if(moreBack.style.display==="inline"){
