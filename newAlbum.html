@@ -1047,8 +1047,9 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && event.targetTouches.length==1){
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && event.touches.length=1){
 		event.preventDefault();
+		console.log(touches);
 		handleGesture();
 	}
 }, false);
@@ -1056,7 +1057,7 @@ gestureZone.addEventListener('touchend', function(event) {
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
-		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX)){
+		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && event.touches.length=1){
 		touchZoom();
 	}
 }, false);
