@@ -1065,9 +1065,6 @@ gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.changedTouches[0].screenX;
 		touchstartY = event.changedTouches[0].screenY;
 		// console.log(zoom);
-		// if(document.body.scrollTop === 0 || document.documentElement.scrollTop === 0){
-		// 	scale = 1;
-		// }
 
 }, false);
 
@@ -1083,6 +1080,9 @@ gestureZone.addEventListener('touchend', function(event) {
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].screenX;
 		touchendY = event.changedTouches[0].screenY;
+		if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0 && zoom>95){
+			scale = 1;
+		}
 		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95){
 		touchZoom();
 	}
