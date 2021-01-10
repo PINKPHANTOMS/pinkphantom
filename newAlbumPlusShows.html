@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-
 <html>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="icon" href="images\americandream.jpg">
 <title>EXPLORE</title>
 
 
-<body onload="initialState()">
+<body onload="initState()">
 
 <div id="page">
 <div class="header">
@@ -489,7 +489,7 @@ img {
 } */
   </style>
 
-  <script type="text/javascript">
+  <script>
 
 
 	window.onscroll = function() {myFunction()};
@@ -499,9 +499,6 @@ img {
 	var sticky;
 
 	function myFunction() {
-		if(hasInit==true){
-		sticky = navbar.offsetTop;
-	}
 	  if (window.pageYOffset >= sticky) {
 	    navbar.classList.add("sticky")
 	  } else {
@@ -512,12 +509,13 @@ img {
 
 
 
-function intialState(){
-	console.log(navbar.offsetTop)
+function initState(){
 	myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
 	hasInit = true;
+	sticky = navbar.offsetTop;
+
 }
 
 	var moreAnnounce = document.getElementById("moreAnnounce");
