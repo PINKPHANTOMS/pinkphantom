@@ -7,17 +7,17 @@
 <title>THE AMERICAN DREAM</title>
 
 
-<body>
+<body onload="frontTime();">
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div id="myNavBtns" style="padding: 2vw;position:fixed;z-index: 99;">
 			<button class="glow-on-hoverMAIN" onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
-			<!-- <button class="glow-on-hoverMAIN" onclick="backTime()" id="myBackBtn">SIDE B</button>
+			<button class="glow-on-hoverMAIN" onclick="backTime()" id="myBackBtn">SIDE B</button>
 
 			<button class="glow-on-hoverMAIN" onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 
-			<button class="glow-on-hoverMAIN" onclick="pReelTime()" id="myPReelBtn">Gallery</button> -->
+			<button class="glow-on-hoverMAIN" onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 	</div>
 
 	  <div id="gestureZone">
@@ -506,6 +506,7 @@
 
 
 .glow-on-hoverMAIN {
+		display: none;
     width: 23vw;
 		box-sizing:border-box;
 		box-shadow: 1vw 1vw 1vw black;
