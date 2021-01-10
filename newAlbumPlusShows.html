@@ -10,7 +10,7 @@
 <body onload="intialState()">
 
 
-<div id="POTTD">
+<div class="POTTD">
 
 <img src="images/americandream.jpg" width="100%">
 
@@ -32,9 +32,10 @@
 
 
 	<span id="moreAlbum">
-		<div class="iframeDiv">
-	<iframe src="newAlbum.html" width="100%" height="800" scrolling="no"style="border:none;">
+		<div class="container">
+	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
 	</iframe>
+</div>
 </div>
 </span>
 
@@ -70,8 +71,22 @@
 <style>
 
 
-.iframeDiv{
-	height: 200vh;
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 200%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -126,7 +141,7 @@ body {
 }
 
 .content {
-  padding: 16px;
+  padding: 10vw;
 }
 
 .sticky {
@@ -135,7 +150,7 @@ body {
   width: 100%;
 }
 
-.sticky + .content {
+.sticky + .POTTD {
   padding-top: 100vh;
 }
 
