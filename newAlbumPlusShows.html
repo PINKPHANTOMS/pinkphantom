@@ -15,14 +15,20 @@
 <div id="displayHeader">
 
 	<div class="header">
-
-	<img src="images/americandream.jpg" width="100%">
+		<div class="responsive">
+		  <div class="gallery">
+		    <a target="_blank" href="ticket link">
+		      <img src="images/post.jpg" alt="Cinque Terre" width="600" height="400">
+		    </a>
+		    <div class="desc" style="background-color: black;">whatsup yall, hope you're doing well. We're recording today!</div>
+		  </div>
+		</div>
 
 	</div>
 
 </div>
 
-	<div id="navbar">
+	<div id="navbar" style="padding:none; float: left;">
 
 				<button  class="glow-on-hoverMAIN"  onclick="newAlbumTime()" id="myNewAlbumBtn">MUSIC</button>
 
@@ -35,10 +41,6 @@
 
 
 	<span id="moreAlbum">
-
-
-
-
 		<div class="container">
 	<iframe class="responsive-iframe"src="newAlbum.html" scrolling="no" style="border:none;">
 	</iframe>
@@ -49,16 +51,49 @@
 
 <span id="moreShow">
 
+<div class="showTab">
+	<div class="responsive">
+	  <div class="gallery">
+	    <a target="_blank" href="ticket link">
+	      <img src="images/pinklogo.jpg" alt="Cinque Terre" width="600" height="400">
+	    </a>
+	    <div class="desc">TUCSON, AZ - JAN. 21st <br>@ the platteau</div>
+	  </div>
+	</div>
 
-	<img src="images/americandream.jpg" width="100%">
 
-	<img src="images/americandream.jpg" width="100%">
+	<div class="responsive">
+	  <div class="gallery">
+	    <a target="_blank" href="ticket link">
+	      <img src="images/pinklogo.jpg" alt="Forest" width="600" height="400">
+	    </a>
+	    <div class="desc">NEW YORK CITY, NEW YORK - MAR. 3rd.<br> @ MSG</div>
+	  </div>
+	</div>
 
-	<img src="images/americandream.jpg" width="100%">
+	<div class="responsive">
+	  <div class="gallery">
+	    <a target="_blank" href="ticket link">
+	      <img src="images/pinklogo.jpg" alt="Northern Lights" width="600" height="400">
+	    </a>
+	    <div class="desc">TUCSON, AZ - APRIL 5th <br>@ the nose</div>
+	  </div>
+	</div>
 
-	<img src="images/americandream.jpg" width="100%">
+	<div class="responsive">
+	  <div class="gallery">
+	    <a target="_blank" href="ticket link">
+	      <img src="images/pinklogo.jpg" alt="Mountains" width="600" height="400">
+	    </a>
+	    <div class="desc">TUCSON, AZ - JULY 6th <br>@ TCB</div>
+	  </div>
+	</div>
+
+	<div class="clearfix"></div>
 
 
+
+</div>
 
 <!-- put the show gallery here -->
 
@@ -66,7 +101,46 @@
 
 <span id="moreAnnounce">
 
+<div class="archiveTab">
+	<div class="responsive">
+		<div class="gallery" style="border: none;">
+			<a target="_blank" href="ticket link">
+				<img src="images/pinklogo.jpg" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc" style="background-color: black;">this is an archived post</div>
+		</div>
+	</div>
 
+	<div class="responsive">
+		<div class="gallery" style="border: none;">
+			<a target="_blank" href="ticket link">
+				<img src="images/ojj.gif" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc" style="background-color: black;">this is an archived post</div>
+		</div>
+	</div>
+
+
+	<div class="responsive">
+		<div class="gallery" style="border: none;">
+			<a target="_blank" href="ticket link">
+				<img src="images/adopac.jpg" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc" style="background-color: black;">this is an archived post</div>
+		</div>
+	</div>
+
+
+	<div class="responsive">
+		<div class="gallery" style="border: none;">
+			<a target="_blank" href="ticket link">
+				<img src="images/unsplashCity.jpg" alt="Cinque Terre" width="600" height="400">
+			</a>
+			<div class="desc" style="background-color: black;">this is an archived post</div>
+		</div>
+	</div>
+
+</div>
 </span>
 
 
@@ -85,8 +159,92 @@
 <style>
 
 
+
+
+div.gallery {
+  border: 1px solid magenta;
+	box-shadow: 2vw 2vw 1vw black;
+}
+
+div.gallery:hover {
+  border: 1px solid white;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: thisFont;
+  src: url(fonts/modeNine.ttf)
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+	color: white;
+	font-family: thisFont;
+	text-shadow: 0vw 0vw 2vw magenta;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.archiveTab {
+	/* background-image: url("images/phantoms/showBackground.jpg"); */
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+	background-color: black;
+}
+
+
+.showTab {
+	background-image: url("images/phantoms/showBackground.jpg");
+	background-repeat: no-repeat;
+  background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+}
+
+.boldBoi{
+	font-weight: 100;
+}
+
 #displayheader {display: inline;}
 #page{display: none;}
+
 
 .container {
   position: relative;
@@ -121,17 +279,21 @@
 }
 
 body {
-  margin: 0;
+	max-width: 700px;
+	margin: auto;
+	display: inline-block;
 	background-image: url("images/pinklogo.png");
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
 	background-color: black;
-  font-size: 28px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .header {
   background-color: black;
-  padding: 30px;
+  padding: none;
   text-align: center;
 }
 
@@ -142,19 +304,19 @@ body {
 }
 
 #navbar button {
+	border: none;
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
-  padding: 5vw 3vw;
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 5vw;
 }
 
-#navbar button:hover {
+/* #navbar button:hover {
   background-color: white;
   color: black;
-}
+} */
 
 #navbar button.active {
   background-color: black;
@@ -168,11 +330,14 @@ body {
 .sticky {
   position: fixed;
   top: 0;
+	float: right;
   width: 100%;
 }
 
 .sticky + .content {
   padding-top: 100vh;
+	float: right;
+
 }
 
 
@@ -306,11 +471,6 @@ body {
     float: left;
     width: 100%;
     height: 66%;
-}
-
-img {
-	padding-top: 10vh;
-	padding-bottom: 10vh;
 }
 
 .cover img {
@@ -587,6 +747,9 @@ function showTime(){
 
 	onShow = true;
 
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+
 	if(moreShow.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
@@ -605,6 +768,9 @@ function showTime(){
 function announceTime(){
 
 onShow = false;
+
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
 
 	if(moreAnnounce.style.display==="inline"){
 		// moreAlbum.style.display = "none";
