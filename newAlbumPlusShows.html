@@ -2,15 +2,15 @@
 
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
 	<link rel="icon" href="images\americandream.jpg">
 <title>EXPLORE</title>
 
 
-<body onload="intialState()">
+<body>
 
-<div id="page">
-<div class="POTTD">
+<!-- <div id="page"> -->
+<div class="header">
 
 <img src="images/americandream.jpg" width="100%">
 
@@ -25,7 +25,7 @@
 
 				<button  class="glow-on-hoverMAIN" onclick="showTime()" id="myShowBtn">SHOWS</button>
 
-				<button class="glow-on-hoverMAIN" onclick="announceTime()" id="myAnnounceBtn">ANNOUNCMENTS</button>
+				<button class="glow-on-hoverMAIN" onclick="announceTime()" id="myAnnounceBtn">NEW</button>
 
 	</div>
 
@@ -35,7 +35,6 @@
 		<div class="container">
 	<iframe class="responsive-iframe"src="newAlbum.html" scrolling="no" style="border:none;">
 	</iframe>
-</div>
 </div>
 </span>
 
@@ -54,16 +53,10 @@
 </span>
 
 
-</div>
+<!-- </div> -->
 
 
 </body>
-
-
-
-
-
-</html>
 
 
 
@@ -75,11 +68,7 @@
 <style>
 
 
-#page{display: none;}
-
-.POTTD {
-  padding: 16px;
-}
+/* #page{display: none;} */
 
 .container {
   position: relative;
@@ -123,7 +112,7 @@ body {
 }
 
 .header {
-  background-color: #f1f1f1;
+  background-color: black;
   padding: 30px;
   text-align: center;
 }
@@ -134,28 +123,28 @@ body {
   background-color: black;
 }
 
-#navbar a {
+#navbar button {
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 7vw 7vw;
+  padding: 5vw 3vw;
   text-decoration: none;
   font-size: 3vw;
 }
 
-#navbar a:hover {
+#navbar button:hover {
   background-color: white;
   color: black;
 }
 
-#navbar a.active {
+#navbar button.active {
   background-color: black;
   color: white;
 }
 
 .content {
-  padding: 10vw;
+  padding: 10vh;
 }
 
 .sticky {
@@ -164,10 +153,9 @@ body {
   width: 100%;
 }
 
-.sticky + .POTTD {
+.sticky + .content {
   padding-top: 100vh;
 }
-
 
 
 #moreAlbum {display: inline;}
@@ -521,6 +509,7 @@ img {
 
 
 function intialState(){
+	console.log(navbar.offsetTop)
 	myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
@@ -652,3 +641,8 @@ function announceTime(){
 // }, false);
 
   </script>
+
+
+
+
+	</html>
