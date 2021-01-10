@@ -7,7 +7,7 @@
 <title>EXPLORE</title>
 
 
-<body>
+<body onload="initialState()">
 
 <div id="page">
 <div class="header">
@@ -68,7 +68,7 @@
 <style>
 
 
-/* #page{display: none;} */
+#page{display: none;}
 
 .container {
   position: relative;
@@ -489,7 +489,7 @@ img {
 } */
   </style>
 
-  <script>
+  <script type="text/javascript">
 
 
 	window.onscroll = function() {myFunction()};
@@ -499,15 +499,15 @@ img {
 	var sticky;
 
 	function myFunction() {
-		if(hasInit=true){
+		if(hasInit==true){
 		sticky = navbar.offsetTop;
+	}
 	  if (window.pageYOffset >= sticky) {
 	    navbar.classList.add("sticky")
 	  } else {
 	    navbar.classList.remove("sticky");
 	  }
-	}
-	}
+}
 
 
 
