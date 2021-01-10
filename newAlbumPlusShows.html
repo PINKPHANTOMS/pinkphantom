@@ -9,7 +9,7 @@
 
 <body>
 
-<!-- <div id="page"> -->
+<div id="page">
 <div class="header">
 
 <img src="images/americandream.jpg" width="100%">
@@ -53,7 +53,7 @@
 </span>
 
 
-<!-- </div> -->
+</div>
 
 
 </body>
@@ -494,15 +494,19 @@ img {
 
 	window.onscroll = function() {myFunction()};
 
+	var hasInit = false;
 	var navbar = document.getElementById("navbar");
-	var sticky = navbar.offsetTop;
+	var sticky;
 
 	function myFunction() {
+		if(hasInit=true){
+		sticky = navbar.offsetTop;
 	  if (window.pageYOffset >= sticky) {
 	    navbar.classList.add("sticky")
 	  } else {
 	    navbar.classList.remove("sticky");
 	  }
+	}
 	}
 
 
@@ -513,6 +517,7 @@ function intialState(){
 	myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
+	hasInit = true;
 }
 
 	var moreAnnounce = document.getElementById("moreAnnounce");
