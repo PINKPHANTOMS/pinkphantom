@@ -28,7 +28,7 @@
 
 				<button  class="glow-on-hoverMAIN" onclick="showTime()" id="myShowBtn">SHOWS</button>
 
-				<button class="glow-on-hoverMAIN" onclick="announceTime()" id="myAnnounceBtn">NEW</button>
+				<button class="glow-on-hoverMAIN" onclick="announceTime()" id="myAnnounceBtn">ARCHIVE</button>
 
 	</div>
 
@@ -515,8 +515,17 @@ img {
 	var hasInit = false;
 	var navbar = document.getElementById("navbar");
 	var sticky;
+	var sticky1;
+	var onShow = false;
 
 	function myFunction() {
+		if(onShow ==true){
+			sticky = 0;
+		}else{
+			sticky = sticky1;
+		}
+
+
 	  if (window.pageYOffset >= sticky) {
 	    navbar.classList.add("sticky")
 	  } else {
@@ -532,7 +541,7 @@ function initState(){
 	var page = document.getElementById('page')
 	page.style.display = "inline";
 	hasInit = true;
-	sticky = navbar.offsetTop;
+	sticky1 = navbar.offsetTop;
 
 }
 
@@ -555,7 +564,7 @@ function initState(){
 
 function newAlbumTime(){
 
-
+onShow = false;
 
 	if(moreAlbum.style.display==="inline"){
 		// moreAlbum.style.display = "none";
@@ -576,7 +585,7 @@ function newAlbumTime(){
 
 function showTime(){
 
-initState();
+	onShow = true;
 
 	if(moreShow.style.display==="inline"){
 		// moreAlbum.style.display = "none";
@@ -594,9 +603,8 @@ initState();
 
 
 function announceTime(){
-	initState();
 
-
+onShow = false;
 
 	if(moreAnnounce.style.display==="inline"){
 		// moreAlbum.style.display = "none";
