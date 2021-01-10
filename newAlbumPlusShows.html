@@ -9,7 +9,7 @@
 
 <body onload="intialState()">
 
-
+<div id="page">
 <div class="POTTD">
 
 <img src="images/americandream.jpg" width="100%">
@@ -53,6 +53,10 @@
 
 </span>
 
+
+</div>
+
+
 </body>
 
 
@@ -70,6 +74,8 @@
 
 <style>
 
+
+#page{display: none;}
 
 .POTTD {
   padding: 16px;
@@ -108,7 +114,6 @@
 }
 
 body {
-	display: none;
   margin: 0;
 	background-color: black;
   font-size: 28px;
@@ -515,7 +520,8 @@ img {
 
 function intialState(){
 	myNewAlbumBtn.focus();
-	document.body.display = "inline";
+	var page = document.getElementById('page')
+	page.style.display = "inline";
 }
 
 	var moreAnnounce = document.getElementById("moreAnnounce");
