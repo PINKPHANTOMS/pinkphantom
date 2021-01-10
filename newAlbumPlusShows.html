@@ -312,6 +312,10 @@ body {
 }
 
 #navbar button {
+	padding-left: 7vw;
+	padding-right: 7vw;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
 	border: none;
   float: left;
   display: block;
@@ -322,14 +326,15 @@ body {
   font-size: 5vw;
 }
 
-/* #navbar button:hover {
-  background-color: white;
-  color: black;
-} */
+#navbar button:focus {
+	background-color: grey;
+	outline: 0vw solid white;
+
+}
 
 #navbar button.active {
-  background-color: white;
-  color: black;
+	outline: 2vw solid white;
+
 }
 
 .content {
