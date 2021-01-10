@@ -16,8 +16,8 @@
 	<div class="desc" style="background-color: black; text-align: left;">PINK PHANTOM - STATUS: LIT.</div>
 
 	<div class="header">
-		<div class="responsive">
-		  <div class="gallery">
+		<div class="responsive" style="padding-bottom: 20vh;">>
+		  <div class="gallery"
 		    <a target="_blank" href="ticket link">
 		      <img src="images/2018_2019/7.jpg" alt="Cinque Terre" width="600" height="400">
 		    </a>
@@ -31,11 +31,11 @@
 
 	<div id="navbar" style="padding:none; float: left;">
 
-				<button  class="glow-on-hoverMAIN"  onclick="newAlbumTime()" id="myNewAlbumBtn">MUSIC</button>
+				<button  onclick="newAlbumTime()" id="myNewAlbumBtn">MUSIC</button>
 
-				<button  class="glow-on-hoverMAIN" onclick="showTime()" id="myShowBtn">SHOWS</button>
+				<button onclick="showTime()" id="myShowBtn">SHOWS</button>
 
-				<button class="glow-on-hoverMAIN" onclick="announceTime()" id="myAnnounceBtn">ARCHIVE</button>
+				<button onclick="announceTime()" id="myAnnounceBtn">ARCHIVE</button>
 
 	</div>
 
@@ -273,6 +273,7 @@ div.desc {
 }
 
 
+
 .button{
 	padding: 3vw;
 }
@@ -314,6 +315,7 @@ body {
 	border: none;
   float: left;
   display: block;
+	background-color: black;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -326,8 +328,8 @@ body {
 } */
 
 #navbar button.active {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .content {
