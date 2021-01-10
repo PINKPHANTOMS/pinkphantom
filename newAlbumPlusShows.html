@@ -10,14 +10,17 @@
 <body onload="initState()">
 
 <div id="page">
-<div class="header">
 
-<img src="images/americandream.jpg" width="100%">
 
+<div id="displayHeader">
+
+	<div class="header">
+
+	<img src="images/americandream.jpg" width="100%">
+
+	</div>
 
 </div>
-
-
 
 	<div id="navbar">
 
@@ -32,6 +35,10 @@
 
 
 	<span id="moreAlbum">
+
+
+
+
 		<div class="container">
 	<iframe class="responsive-iframe"src="newAlbum.html" scrolling="no" style="border:none;">
 	</iframe>
@@ -78,6 +85,7 @@
 <style>
 
 
+#displayheader {display: inline;}
 #page{display: none;}
 
 .container {
@@ -536,7 +544,7 @@ function initState(){
 	var myNewAlbumBtn = document.getElementById("myNewAlbumBtn");
 	var myAnnounceBtn = document.getElementById("myAnnounceBtn");
 
-
+	var displayHeader = document.getElementById("displayHeader");
 
 
 
@@ -547,6 +555,8 @@ function initState(){
 
 function newAlbumTime(){
 
+
+
 	if(moreAlbum.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
@@ -556,6 +566,7 @@ function newAlbumTime(){
 		moreAlbum.style.display = "inline";
 		moreAnnounce.style.display = "none";
 		moreShow.style.display = "none";
+		displayHeader.style.display = "inline";
 	}
 
 
@@ -565,6 +576,7 @@ function newAlbumTime(){
 
 function showTime(){
 
+initState();
 
 	if(moreShow.style.display==="inline"){
 		// moreAlbum.style.display = "none";
@@ -575,12 +587,14 @@ function showTime(){
 		moreShow.style.display = "inline";
 		moreAnnounce.style.display = "none";
 		moreAlbum.style.display = "none";
+		displayHeader.style.display = "none";
 	}
 
 }
 
 
 function announceTime(){
+	initState();
 
 
 
@@ -593,6 +607,7 @@ function announceTime(){
 		moreAnnounce.style.display = "inline";
 		moreAlbum.style.display = "none";
 		moreShow.style.display = "none";
+		displayHeader.style.display = "inline";
 	}
 
 
