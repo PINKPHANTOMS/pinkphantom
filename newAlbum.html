@@ -10,7 +10,7 @@
 <body onload="frontTime();">
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
-	<div id="myNavBtns" style="padding: 2vw;position:fixed;z-index: 99;">
+	<div id="myNavBtns" style="position:fixed;z-index: 99;">
 			<button class="glow-on-hoverMAIN" onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
 			<button class="glow-on-hoverMAIN" onclick="backTime()" id="myBackBtn">SIDE B</button>
@@ -468,6 +468,16 @@
 
 }
 
+#myNavBtns{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+#myNavBtns button {
+	flex: 1;
+}
+
 .photoReel{
 	background-color: black;
 	color:gray;
@@ -505,16 +515,15 @@
 
 
 .glow-on-hoverMAIN {
+    width: 25vw;
 		display: none;
-    width: 23vw;
-		box-sizing:border-box;
+		box-sizing: border-box;
 		box-shadow: 1vw 1vw 1vw black;
     height: 10vw;
 		font-size: 5vw;
 		background-color: rgb(0,0,0,.7);
 		color: white;
 		border: 1vw;
-		padding: 2vw;
     cursor: pointer;
     z-index: 99;
 }
@@ -544,6 +553,7 @@
 body {
 		max-width: 700px;
 		margin: auto;
+		display: inline;
 		background-color: black;
 		overflow-x: hidden;
 		background-image: url("images/2018_2019/0001.gif");

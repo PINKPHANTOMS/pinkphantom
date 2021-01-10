@@ -43,9 +43,10 @@
 
 	<span id="moreAlbum">
 		<div class="container">
-	<iframe class="responsive-iframe"src="newAlbum.html" scrolling="no" style="border:none;">
+	<iframe height="100%" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
 	</iframe>
 </div>
+
 </span>
 
 
@@ -258,18 +259,18 @@ div.desc {
 	z-index: 1;
   overflow: hidden;
   width: 100%;
-	padding-bottom: 100vh;
+	height: 100%;
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
 .responsive-iframe {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 
@@ -309,22 +310,24 @@ body {
 	z-index: 99;
   overflow: hidden;
   background-color: black;
+	display: flex;
+	/* border: 1vw solid magenta; */
+	width: 100%;
+	align-items: center;
 }
 
 #navbar button {
-	padding-left: 7vw;
-	padding-right: 7vw;
 	padding-top: 3vw;
 	padding-bottom: 3vw;
 	border: none;
-  float: left;
-  display: block;
+	flex: 1;
 	background-color: black;
   color: white;
   text-align: center;
   text-decoration: none;
   font-size: 5vw;
 }
+
 
 #navbar button:focus {
 	background-color: grey;
