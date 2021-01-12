@@ -1057,12 +1057,9 @@ function pReelTime(){
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos || document.body.scrollTop == 0) {
+  if (prevScrollpos > currentScrollPos) {
     document.getElementById("myNavBtns").style.top = "0";
-  } else if(document.documentElement.scrollTop == 0){
-		document.getElementById("myNavBtns").style.top = "0";
-
-	}else{
+  } else {
     document.getElementById("myNavBtns").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
