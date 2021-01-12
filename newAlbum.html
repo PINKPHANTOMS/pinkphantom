@@ -581,6 +581,7 @@
 body {
 		max-width: 700px;
 		margin: auto;
+		-webkit-overflow-scrolling: auto;
 		display: inline;
 		background-color: black;
 		overflow-x: hidden;
@@ -1056,9 +1057,12 @@ function pReelTime(){
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos || document.body.scrollTop == 0) {
     document.getElementById("myNavBtns").style.top = "0";
-  } else {
+  } else if(document.documentElement.scrollTop == 0){
+		document.getElementById("myNavBtns").style.top = "0";
+
+	}else{
     document.getElementById("myNavBtns").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
