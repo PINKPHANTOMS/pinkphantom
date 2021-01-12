@@ -276,6 +276,28 @@ div.desc {
 	text-shadow: 0vw 0vw 2vw magenta;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 0px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
 
 .clearfix:after {
   content: "";
@@ -347,6 +369,9 @@ div.desc {
 body {
 	max-width: 700px;
 	margin: auto;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+	display: inline;
 	background-image: url("images/pinklogo.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -363,7 +388,7 @@ body {
 }
 
 #homeScreen {
-	display: inline;
+	display: inline-block;
 }
 
 
