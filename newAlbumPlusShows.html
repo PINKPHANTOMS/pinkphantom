@@ -75,7 +75,7 @@ NEW MUSIC
 
 	<span id="moreAlbum">
 		<div class="container">
-	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
+	<iframe id="myMusicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
 
 	</iframe>
 </div>
@@ -358,7 +358,6 @@ body {
 	border-radius: 2vw;
 	/* padding: 16px; */
 	overflow: hidden;
-	background-color: transparent;
 	display: flex;
 	/* border: 1vw solid magenta; */
 	width: 90%;
@@ -373,7 +372,7 @@ body {
 	font-family: cyber;
 	flex: 1;
 	z-index: 99;
-	background-color: rgb(10, 10, 10);
+	background: linear-gradient(to bottom,transparent 50%,black 90%) repeat scroll 0 0;
 	color: white;
 	text-align: left;
 	text-decoration: none;
@@ -959,27 +958,31 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 
 function handleGesture(event) {
+
+
+	var iframe = document.getElementById("myMusicIframe");
+	var elmnt = iframe.contentWindow.document.getElementsByTagName("body")[0];
+
+
 	let swipeLeft;
-	let swipeUp;
-		if (touchendX <= touchstartX && (screen.width-touchstartX)<100) {
+	let swipeDown;
+		if (touchendX < touchstartX && (screen.width-touchstartX)<100) {
 			swipeLeft = true;
-		}else if (touchendX >= touchstartX && touchstartX<100){
+		}else if (touchendX > touchstartX && touchstartX<100){
 			swipeLeft = false;
-		}else if (touchendY >= touchstartY && document.body.scrollTop == 0){
-			swipeUp = true;
-		}else if( document.documentElement.scrollTop == 0 && touchendY >= touchstartY){
-			swipeUp = true;
+		}else if (touchendY > touchstartY && document.body.scrollTop == 0){
+			swipeDown = true;
+		}else if(document.body.scrollTop == 0 && touchendY > touchstartY){
+			swipeDown = true;
 		}
-				if(swipeLeft==true){
 
 
-				}else{
-					if(moreAlbum.style.display==="inline" || moreAnnounce.style.display === "inline"){
-						homeScreenTime();
+				if(swipeLeft==false && homeScreen.style.display==="none"){
 
-				}else if(moreAlbum.style.display==="inline" && swipeUp==true){
 					homeScreenTime();
-				}else if(moreAnnounce.style.display === "inline" && swipeUp==true){
+
+				}else if(swipeDown == true &&moreHomeScreen.style.display==="none"){
+					if(elmnt.scrollTop == 0){
 					homeScreenTime();
 				}
 			}
