@@ -449,13 +449,18 @@ body {
 	margin: auto;
 	padding: 16px;
 	text-align: center;
+	background-color: black;
 	background-image: url("images/pinklogo.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
 	background-size: contain;
-	background: rgb(10, 10, 10);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg {
+	background-color: rgb(10, 10, 10);
+	background-image: url("");
 }
 
 .header {
@@ -465,6 +470,7 @@ body {
 }
 
 #homeScreen {
+
 }
 
 
@@ -682,6 +688,7 @@ function initState(){
 	// myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
+	document.body.classList.add("bg");
 	hasInit = true;
 	// sticky1 = navbar.offsetTop;
 
