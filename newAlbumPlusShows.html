@@ -9,21 +9,38 @@
 
 <body onload="initState()">
 
+<div id="gestureZone">
+
 <div id="page">
 
+<div id="homeScreen">
 
 <div id="displayHeader">
 	<div class="desc" style="font-size: 10vw; color: white;text-align: left;background: linear-gradient(to bottom right,rgb(0, 100, 100) 20%,rgb(10, 10, 10) 40%) repeat scroll 0 0;">
 PINK PHANTOM
 	<div  style="text-align: left; color: rgb(200, 200, 200); text-shadow: black;font-size: 5vw;line-height: 8vw;">
 		<br>
-		here is some news about us
+		Today
 	</div>
 </div>
 
 
+<div id="buttonContainer">
+
+<button onclick="newAlbumTime()" id="myNewAlbumBtn" style="border: 1vw solid white;">
+	<iframe id="musicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="z-index: -1;border:none;">
+	</iframe>
+NEW MUSIC
+</button>
+	</div>
+
+
+<div id="buttonContainer">
+
+	<button onclick="announceTime()" id="myAnnounceBtn">NEWS
+
 	<div class="header">
-		<div class="responsive" style="padding-bottom: 20vh;">>
+		<div class="responsive" style="padding-bottom: 20vh;">
 		  <div class="gallery"
 		    <a target="_blank" href="ticket link">
 		      <img src="images/2018_2019/7.jpg" alt="Cinque Terre" width="600" height="400">
@@ -33,10 +50,18 @@ PINK PHANTOM
 		</div>
 
 	</div>
+</button>
 
 </div>
 
-	<div id="navbar" style="padding:none; float: left;">
+
+</div>
+</div>
+
+
+
+
+	<!-- <div id="navbar" style="padding:none; float: left;">
 
 				<button onclick="newAlbumTime()" id="myNewAlbumBtn">MUSIC</button>
 
@@ -44,17 +69,18 @@ PINK PHANTOM
 
 				<button onclick="announceTime()" id="myAnnounceBtn">ARCHIVE</button>
 
-	</div>
-
+	</div> -->
 
 
 	<span id="moreAlbum">
 		<div class="container">
 	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
+
 	</iframe>
 </div>
 
 </span>
+
 
 
 
@@ -161,9 +187,8 @@ PINK PHANTOM
 </div>
 </span>
 
-
 </div>
-
+</div>
 
 </body>
 
@@ -273,6 +298,10 @@ div.desc {
 	height: 100%;
 }
 
+iframe {
+	z-index: -1;
+}
+
 /* Then style the iframe to fit in the container div with full height and width */
 .responsive-iframe {
   position: relative;
@@ -316,6 +345,52 @@ body {
   padding: none;
   text-align: center;
 }
+
+#homeScreen {
+	display: inline;
+}
+
+
+#buttonContainer{
+	z-index: 99;
+	padding: 16px;
+	overflow: hidden;
+	background-color: transparent;
+	display: flex;
+	/* border: 1vw solid magenta; */
+	width: 100%;
+	align-items: center;
+
+}
+
+#buttonContainer button{
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+	border: none;
+	font-family: cyber;
+	flex: 1;
+	z-index: 99;
+	background-color: rgb(10, 10, 10);
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	font-size: 7vw;
+}
+
+
+#buttonContainer button:focus {
+	background-color: cyan;
+	outline: 0vw solid white;
+	color: black;
+
+}
+
+#buttonContainer button.active {
+	outline: 2vw solid white;
+
+}
+
+
 
 #navbar {
 	z-index: 99;
@@ -371,7 +446,7 @@ body {
 }
 
 
-#moreAlbum {display: inline;}
+#moreAlbum {display: none;}
 #moreShow {display: none;}
 #moreAnnounce {display: none;}
 
@@ -725,26 +800,26 @@ body {
 
 
 
-
 function initState(){
 	myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
 	hasInit = true;
-	sticky1 = navbar.offsetTop;
+	// sticky1 = navbar.offsetTop;
 
 }
 
 	var moreAnnounce = document.getElementById("moreAnnounce");
 	var moreAlbum = document.getElementById("moreAlbum");
 	var moreShow = document.getElementById("moreShow");
+	var moreHomeScreen = document.getElementById("homeScreen");
+	var moreIframe = document.getElementById("moreIframe");
 
 	var myShowBtn = document.getElementById("myShowBtn");
 	var myNewAlbumBtn = document.getElementById("myNewAlbumBtn");
 	var myAnnounceBtn = document.getElementById("myAnnounceBtn");
 
 	var displayHeader = document.getElementById("displayHeader");
-
 
 
 
@@ -759,13 +834,15 @@ onShow = false;
 	if(moreAlbum.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
-		myNewAlbumBtn.focus();
-		myAnnounceBtn.blur();
-		myShowBtn.blur();
+		// myNewAlbumBtn.focus();
+		// myAnnounceBtn.blur();
+		// myShowBtn.blur();
 		moreAlbum.style.display = "inline";
 		moreAnnounce.style.display = "none";
 		moreShow.style.display = "none";
 		displayHeader.style.display = "inline";
+		moreHomeScreen.style.display = "none";
+
 	}
 
 
@@ -783,14 +860,36 @@ function showTime(){
 	if(moreShow.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
-		myShowBtn.focus();
-		myNewAlbumBtn.blur();
-		myAnnounceBtn.blur();
+		// myShowBtn.focus();
+		// myNewAlbumBtn.blur();
+		// myAnnounceBtn.blur();
 		moreShow.style.display = "inline";
 		moreAnnounce.style.display = "none";
 		moreAlbum.style.display = "none";
 		displayHeader.style.display = "none";
 	}
+
+}
+
+
+
+function homeScreenTime(){
+
+onShow = false;
+
+	if(homeScreen.style.display==="inline"){
+		// moreAlbum.style.display = "none";
+	}else{
+		// myAnnounceBtn.focus();
+		// myNewAlbumBtn.blur();
+		// myShowBtn.blur();
+		homeScreen.style.display = "inline";
+		moreAnnounce.style.display = "none";
+		moreAlbum.style.display = "none";
+		moreShow.style.display = "none";
+		displayHeader.style.display = "inline";
+	}
+
 
 }
 
@@ -805,9 +904,9 @@ document.documentElement.scrollTop = 0;
 	if(moreAnnounce.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
-		myAnnounceBtn.focus();
-		myNewAlbumBtn.blur();
-		myShowBtn.blur();
+		// myAnnounceBtn.focus();
+		// myNewAlbumBtn.blur();
+		// myShowBtn.blur();
 		moreAnnounce.style.display = "inline";
 		moreAlbum.style.display = "none";
 		moreShow.style.display = "none";
@@ -817,46 +916,65 @@ document.documentElement.scrollTop = 0;
 
 }
 
-//
-// let touchstartX = 0;
-// let touchstartY = 0;
-// let touchendX = 0;
-// let touchendY = 0;
-//
-// const gestureZone = document.getElementById('gestureZone');
-// let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
-//
-// gestureZone.addEventListener('touchstart', function(event) {
-// 		touchstartX = event.touches[0].clientX;
-// 		touchstartY = event.touches[0].clientY;
-// 		console.log(zoom);
-//
-// 	// if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
-// 	// 	scale = 1;
-// 	// }
-//
-// }, false);
-//
-// gestureZone.addEventListener('touchend', function(event) {
-// 		touchendX = event.changedTouches[0].clientX;
-// 		touchendY = event.changedTouches[0].clientY;
-// 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
-// 		event.preventDefault();
-// 		// document.body.style.overflowY = "hidden";
-// 		// handleGesture();
-// 	}
-// 	if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-// 	touchZoom();
-// }
-// }, false);
-//
-// gestureZone.addEventListener('touchmove', function(event) {
-// 		touchendX = event.changedTouches[0].clientX;
-// 		touchendY = event.changedTouches[0].clientY;
-// 		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-// 		touchZoom();
-// 	}
-// }, false);
+
+let touchstartX = 0;
+let touchstartY = 0;
+let touchendX = 0;
+let touchendY = 0;
+
+const gestureZone = document.getElementById('gestureZone');
+let containBoi = document.getElementsByClassName("container")
+let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
+
+gestureZone.addEventListener('touchstart', function(event) {
+		touchstartX = event.touches[0].clientX;
+		touchstartY = event.touches[0].clientY;
+		// console.log(zoom);
+	// if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
+	// 	scale = 1;
+	// }
+
+}, false);
+
+gestureZone.addEventListener('touchend', function(event) {
+		touchendX = event.changedTouches[0].clientX;
+		touchendY = event.changedTouches[0].clientY;
+		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
+		event.preventDefault();
+		handleGesture();
+
+	}
+}, false);
+
+gestureZone.addEventListener('touchmove', function(event) {
+		touchendX = event.changedTouches[0].clientX;
+		touchendY = event.changedTouches[0].clientY;
+}, false);
+
+
+
+function handleGesture(event) {
+	let swipeLeft;
+	console.log(touchstartX);
+
+		if (touchendX <= touchstartX && (screen.width-touchstartX)<100) {
+			swipeLeft = true;
+		}else if (touchendX >= touchstartX && touchstartX<100){
+			swipeLeft = false;
+		}
+				if(swipeLeft==true){
+
+				if(moreAlbum.style.display==="inline"){
+					homeScreenTime();
+
+				}
+			}
+
+	document.body.style.overflowY = "scroll";
+
+
+
+}
 
   </script>
 
