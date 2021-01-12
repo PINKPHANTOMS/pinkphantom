@@ -584,7 +584,7 @@ body {
 		display: inline;
 		background-color: black;
 		overflow-x: hidden;
-		background-image: url("images/cat.gif");
+		background-image: url("images/albumart/ADREAM.gif");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed;
@@ -1105,36 +1105,6 @@ gestureZone.addEventListener('touchmove', function(event) {
 		// touchZoom();
 	}
 }, false);
-
-
-
-function touchZoom(){
-	if (touchendY <= (touchstartY)) {
-			// console.log((touchendY+20)-(touchstartY));
-
-			scale -= Math.abs(touchendY-touchstartY)*.00625;
-
-
-			// Restrict scale
-			scale = Math.min(Math.max(.00, scale), 1.01);
-
-			// Apply scale transform
-			el.style.transform = `scale(${scale})`;
-	}
-
-	if (touchendY >= (touchstartY)) {
-			console.log('Swiped down');
-			// Zoom out
-			scale += Math.abs(touchendY-touchstartY)*.00625;
-			// Restrict scale
-			scale = Math.min(Math.max(.00, scale), 1.01);
-
-			// Apply scale transform
-			el.style.transform = `scale(${scale})`;
-
-	}
-
-}
 
 
 
