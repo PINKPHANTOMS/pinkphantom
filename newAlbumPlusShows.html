@@ -20,8 +20,24 @@
 PINK PHANTOM
 	<div  style="text-align: left; color: rgb(200, 200, 200); text-shadow: black;font-size: 5vw;line-height: 8vw;">
 		<br>
-		Today
-	</div>
+		<script>
+		// Array of day names
+		var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday",
+						"Thursday","Friday","Saturday");
+
+		// Array of month Names
+		var monthNames = new Array(
+		"January","February","March","April","May","June","July",
+		"August","September","October","November","December");
+
+		var now = new Date();
+		document.write(dayNames[now.getDay()] + ", " +
+		monthNames[now.getMonth()] + " " +
+		now.getDate());
+
+</script>
+
+		</div>
 </div>
 
 </div>
@@ -50,7 +66,7 @@ PINK PHANTOM
 	<button onclick="announceTime()" id="myAnnounceBtn"><br>_NEWS
 
 	<div class="header">
-		<div class="responsive" style="padding-bottom: 20vh;">
+		<div class="responsive">
 		  <div class="gallery">
 		      <img src="images/2018_2019/7.jpg" alt="Cinque Terre" width="600" height="400">
 		    <div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;">whatsup yall, hope you're doing well. We're recording today!</div>
@@ -80,13 +96,9 @@ PINK PHANTOM
 	</div> -->
 
 
-	<span id="moreAlbum" id="gestureZone">
-		<div class="container">
+	<span id="moreAlbum">
 	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="yes" style="border:none;">
 	</iframe>
-
-</div>
-
 </span>
 
 
@@ -297,18 +309,13 @@ div.desc {
 #displayheader {display: inline;}
 #page{display: none;}
 
-#gestureZone{
-	z-index: 99;
-}
+
 .container {
   position: relative;
   width: 100%;
 	height: 100%;
 }
 
-iframe {
-	z-index: 0;
-}
 
 /* Then style the iframe to fit in the container div with full height and width */
 .responsive-iframe {
@@ -783,6 +790,7 @@ body {
   <script>
 
 
+
 	window.onscroll = function() {myFunction()};
 
 	var hasInit = false;
@@ -938,7 +946,7 @@ let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
-		// console.log(zoom);
+		console.log("WAHOO");
 	// if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
 	// 	scale = 1;
 	// }
