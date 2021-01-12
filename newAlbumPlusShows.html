@@ -48,7 +48,7 @@ PINK PHANTOM
 
 <button onclick="newAlbumTime()" id="myNewAlbumBtn" style="line-height: 5vw;">
 	<br>_NEW MUSIC
-	<iframe id="musicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="margin-top: -10vw;z-index: -1;border:none; height: 75vh;">
+	<iframe id="musicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="yes" style="margin-top: -10vw;z-index: -1;border:none; height: 75vh;">
 	</iframe>
 	___this album<br>
 	___is super lit
@@ -97,7 +97,7 @@ PINK PHANTOM
 
 	<span id="moreAlbum">
 		<div class="container">
-	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="no" style="border:none;">
+	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="yes" style="border:none;">
 	</iframe>
 </div>
 </span>
@@ -830,7 +830,6 @@ function initState(){
 	var moreAlbum = document.getElementById("moreAlbum");
 	var moreShow = document.getElementById("moreShow");
 	var moreHomeScreen = document.getElementById("homeScreen");
-	var moreIframe = document.getElementById("moreIframe");
 
 	var myShowBtn = document.getElementById("myShowBtn");
 	var myNewAlbumBtn = document.getElementById("myNewAlbumBtn");
@@ -894,13 +893,13 @@ function homeScreenTime(){
 
 onShow = false;
 
-	if(homeScreen.style.display==="inline"){
+	if(moreHomeScreen.style.display==="inline"){
 		// moreAlbum.style.display = "none";
 	}else{
 		// myAnnounceBtn.focus();
 		// myNewAlbumBtn.blur();
 		// myShowBtn.blur();
-		homeScreen.style.display = "inline";
+		moreHomeScreen.style.display = "inline";
 		moreAnnounce.style.display = "none";
 		moreAlbum.style.display = "none";
 		moreShow.style.display = "none";
