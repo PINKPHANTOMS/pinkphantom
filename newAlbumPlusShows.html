@@ -603,25 +603,15 @@ body {
 
 }
 
-.container {
-    width: 100%;
-    height: 100%;
-		align-content: center;
-    margin: 0;
-    overflow-x: hidden;
-    background-repeat: repeat;
-    background-size: cover;
-}
 
-.backgroundThingy{
-	background-color: rgb(10, 10, 10);
-
-}
   </style>
 
 
 
   <script type="text/javascript">
+
+
+var moreHomeScreen = document.getElementById("homeScreen");
 
 
 	function openMusic() {
@@ -691,11 +681,29 @@ body {
 function initState(){
 	// myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
-	page.style.display = "inline-block";
+	page.style.display = "inline";
 	hasInit = true;
 	// sticky1 = navbar.offsetTop;
 
 }
+
+function homeScreenTime(){
+
+onShow = false;
+
+	if(moreHomeScreen.style.display==="inline"){
+		// moreAlbum.style.display = "none";
+	}else{
+		// myAnnounceBtn.focus();
+		// myNewAlbumBtn.blur();
+		// myShowBtn.blur();
+		moreHomeScreen.style.display = "inline";
+		displayHeader.style.display = "inline";
+	}
+
+
+}
+
 
   </script>
 
