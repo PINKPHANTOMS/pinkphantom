@@ -10,7 +10,7 @@
 <body onload="frontTime();">
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
-	<div id="myNavBtns" style="position:fixed;z-index: 99;">
+	<div id="myNavBtns">
 			<button class="glow-on-hoverMAIN" onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
 			<button class="glow-on-hoverMAIN" onclick="backTime()" id="myBackBtn">SIDE B</button>
@@ -469,9 +469,13 @@
 }
 
 #myNavBtns{
-	display: flex;
-	align-items: center;
+	position: fixed;
+	top: 0;
 	width: 100%;
+	display: flex;
+	z-index: 99;
+	width: 100%;
+	padding: 1vw;
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
 
 }
@@ -526,6 +530,7 @@
 		background-color: rgb(0,0,0,.7);
 		color: white;
 		border: 1vw;
+		text-align: center;
     cursor: pointer;
     z-index: 99;
 }
@@ -933,12 +938,10 @@ function timeStamp13(){
 
 
 function frontTime(){
-	scale = 1;
 
 
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
-	el.style.transform = `scale(${scale})`;
 
 
 
@@ -962,11 +965,8 @@ function frontTime(){
 
 function backTime(){
 
-	scale = 1;
-
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
-	el.style.transform = `scale(${scale})`;
 
 
 
@@ -989,11 +989,9 @@ function backTime(){
 
 
 function lyricTime(){
-	scale = 1;
 
-	document.body.scrollTop = 30;
-  document.documentElement.scrollTop = 30;
-	el.style.transform = `scale(${scale})`;
+	document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 
 
 
@@ -1014,12 +1012,10 @@ function lyricTime(){
 }
 
 function pReelTime(){
-	scale = 1;
 
 
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-	el.style.transform = `scale(${scale})`;
 
 
 	if(morePReel.style.display==="inline"){
