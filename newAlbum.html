@@ -472,6 +472,8 @@
 	display: flex;
 	align-items: center;
 	width: 100%;
+	transition: top 0.3s; /* Transition effect when sliding down (and up) */
+
 }
 
 #myNavBtns button {
@@ -516,7 +518,7 @@
 
 .glow-on-hoverMAIN {
     width: 25vw;
-		display: none;
+		display: inline-flex;
 		box-sizing: border-box;
 		box-shadow: 1vw 1vw 1vw black;
     height: 10vw;
@@ -1037,6 +1039,18 @@ function pReelTime(){
 }
 
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("myNavBtns").style.top = "0";
+  } else {
+    document.getElementById("myNavBtns").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 let touchstartX = 0;
 let touchstartY = 0;
 let touchendX = 0;
@@ -1065,7 +1079,7 @@ gestureZone.addEventListener('touchend', function(event) {
 		// handleGesture();
 	}
 	if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-	touchZoom();
+	// touchZoom();
 }
 }, false);
 
@@ -1073,7 +1087,7 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-		touchZoom();
+		// touchZoom();
 	}
 }, false);
 
