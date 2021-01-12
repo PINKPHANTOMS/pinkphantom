@@ -209,7 +209,7 @@ PINK PHANTOM
 
 
 div.gallery {
-  border: 1px solid magenta;
+  /* border: 1px solid magenta; */
 	box-shadow: 2vw 2vw 1vw black;
 }
 
@@ -945,10 +945,8 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) || Math.abs(touchendX-touchstartX)>(screen.width*.2)){
-		event.preventDefault();
+		// event.preventDefault();
 		handleGesture();
-		console.log("wahoo");
-
 	}
 }, false);
 
@@ -961,30 +959,25 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 function handleGesture(event) {
 
-
+	// console.log(window.scrollY)
 	let swipeLeft;
 	let swipeDown;
 		if (touchendX < touchstartX && (screen.width-touchstartX)<100) {
 			swipeLeft = true;
 		}else if (touchendX > touchstartX && touchstartX<100){
 			swipeLeft = false;
-		}else if (touchendY > touchstartY && document.body.scrollTop == 0){
-			swipeDown = true;
-		}else if(document.body.scrollTop == 0 && touchendY > touchstartY){
+		}else if (touchendY > touchstartY && window.scrollY == 0){
 			swipeDown = true;
 		}
 
 
-				if(swipeLeft==false && homeScreen.style.display==="none"){
+				if(swipeLeft==false && moreHomeScreen.style.display==="none"){
 
 					homeScreenTime();
 
-				}else if(swipeDown == true &&moreHomeScreen.style.display==="none"){
-					if(document.body.scrollTop == 0){
-					homeScreenTime();
-				}else if(document.documentElement.scrollTop == 0){
-					homeScreenTime();
 				}
+				else if(swipeDown == true && moreHomeScreen.style.display==="none"){
+					homeScreenTime();
 			}
 
 	document.body.style.overflowY = "scroll";
