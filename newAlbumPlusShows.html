@@ -944,15 +944,13 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) || Math.abs(touchendX-touchstartX)>(screen.width*.2)){
-		// event.preventDefault();
-		handleGesture();
-	}
 }, false);
 
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
+		handleGesture();
+
 }, false);
 
 
