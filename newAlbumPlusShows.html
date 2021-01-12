@@ -17,10 +17,8 @@
 <div id="homeScreen">
 
 <div id="displayHeader">
-	<div class="desc" style="font-size: 10vw; color: white;text-align: left;background: linear-gradient(to bottom right,rgb(0, 100, 100) 20%,rgb(10, 10, 10) 40%) repeat scroll 0 0;">
-PINK PHANTOM
+	<div class="desc" style="font-size: 10vw; color: white;text-align: left;">
 	<div  style="text-align: left; color: rgb(200, 200, 200); text-shadow: black;font-size: 5vw;line-height: 8vw;">
-		<br>
 		<script>
 		// Array of day names
 		var dayNames = new Array("Sunday","Monday","Tuesday","Wednesday",
@@ -37,22 +35,26 @@ PINK PHANTOM
 		now.getDate());
 
 </script>
+
 </div>
 </div>
 </div>
 
 
 
-<center>
+<div class="desc" style="font-size: 10vw; color: white;text-align: left;">
+
+NEW MUSIC
+</div>
+
+
+
 
 <div id="buttonContainer">
 
-<button onclick="openNav()" id="myNewAlbumBtn" style="line-height: 5vw;">
-	<br>_NEW MUSIC
+<button onclick="openMusic()" style="line-height: 5vw;">
 	<iframe class="responsive-iframe" src="newAlbum.html" scrolling="no" style="margin-top: -10vw;z-index: -1;border:none; height: 75vh;">
 	</iframe>
-	___this album<br>
-	___is super lit
 	<br>
 	<br>
 </button>
@@ -60,26 +62,45 @@ PINK PHANTOM
 
 
 
+<br>
+<br>
+
+
+
+<div class="desc" style="font-size: 10vw; color: white;text-align: left;">
+	NEWS
+</div>
+
+<div id="buttonContainer">
+
+	<button onclick="openNews()"><br>
+		<iframe class="responsive-iframe" width="100%" src="news.html" scrolling="no" style="margin-top: -45vw;z-index: -1;border:none;height: 75vh;">
+		</iframe>
+
+
+</button>
+
+</div>
+
+
 
 <br>
 <br>
+
+
+<div class="desc" style="font-size: 10vw; color: white;text-align: left;">
+	SHOWS
+</div>
 
 
 
 
 <div id="buttonContainer">
 
-	<button onclick="announceTime()" id="myAnnounceBtn"><br>_NEWS
+	<button onclick="openShows()"><br>
 
-	<div class="header">
-		<div class="responsive">
-		  <div class="gallery">
-		      <img src="images/2018_2019/7.jpg" alt="Cinque Terre" width="600" height="400">
-		    <div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;">whatsup yall, hope you're doing well. We're recording today!</div>
-		  </div>
-		</div>
-
-	</div>
+		<iframe class="responsive-iframe" src="shows.html" scrolling="no" style="margin-top: -45vw;z-index: -1;border:none; height: 75vh;">
+		</iframe>
 </button>
 
 </div>
@@ -87,29 +108,6 @@ PINK PHANTOM
 <br>
 <br>
 
-
-
-<div id="buttonContainer">
-
-	<button onclick="showTime()" id="myShowBtn"><br>_SHOWS
-
-	<div class="header">
-		<div class="responsive">
-		  <div class="gallery">
-		      <img src="images/2018_2019/201901.jpg" alt="Cinque Terre" width="600" height="400">
-		    <div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;">SEE US LIVE</div>
-		  </div>
-		</div>
-
-	</div>
-</button>
-
-</div>
-
-<br>
-<br>
-
-</center>
 
 </div>
 
@@ -134,8 +132,8 @@ PINK PHANTOM
 
 
 
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id="myMusic" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
   <div class="overlay-content">
 		<div class="container">
 		<iframe class="responsive-iframe" src="newAlbum.html" scrolling="yes" style="border: none;">
@@ -145,122 +143,29 @@ PINK PHANTOM
 </div>
 
 
-
-
-
-
-	<span id="moreAlbum">
-
-</span>
-
-
-
-
-<span id="moreShow">
-
-	<div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;"><br></div>
-
-
-
-<div class="showTab">
-	<div class="responsive">
-	  <div class="gallery">
-	    <a target="_blank" href="ticket link">
-	      <img src="images/pinklogo.jpg" alt="Cinque Terre" width="600" height="400">
-	    </a>
-	    <div class="desc">TUCSON, AZ - JAN. 21st <br>@ the platteau</div>
-	  </div>
-	</div>
-
-
-	<div class="responsive">
-	  <div class="gallery">
-	    <a target="_blank" href="ticket link">
-	      <img src="images/pinklogo.jpg" alt="Forest" width="600" height="400">
-	    </a>
-	    <div class="desc">NEW YORK CITY, NEW YORK - MAR. 3rd.<br> @ MSG</div>
-	  </div>
-	</div>
-
-	<div class="responsive">
-	  <div class="gallery">
-	    <a target="_blank" href="ticket link">
-	      <img src="images/pinklogo.jpg" alt="Northern Lights" width="600" height="400">
-	    </a>
-	    <div class="desc">TUCSON, AZ - APRIL 5th <br>@ the nose</div>
-	  </div>
-	</div>
-
-	<div class="responsive">
-	  <div class="gallery">
-	    <a target="_blank" href="ticket link">
-	      <img src="images/pinklogo.jpg" alt="Mountains" width="600" height="400">
-	    </a>
-	    <div class="desc">TUCSON, AZ - JULY 6th <br>@ TCB</div>
-	  </div>
-	</div>
-
-	<div class="clearfix" style="padding-bottom: 40vh;"></div>
-
-
-
+<div id="myNews" class="overlayNews">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNews()">&times;</a>
+  <div class="overlay-news">
+		<div class="container">
+		<iframe class="responsive-iframe" src="news.html" scrolling="yes" style="border: none;">
+</iframe>
+</div>
+  </div>
 </div>
 
-<!-- put the show gallery here -->
 
-</span>
-
-
-
-
-<span id="moreAnnounce">
-<div class="archiveTab">
-
-	<div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;">PINK PHANTOM: ARCHIVED.</div>
-
-	<div class="responsive">
-		<div class="gallery" style="border: none;">
-			<a target="_blank" href="ticket link">
-				<img src="images/pinklogo.jpg" alt="Cinque Terre" width="600" height="400">
-			</a>
-			<div class="desc" style="background-color: rgb(10, 10, 10);text-align: left;">this is an archived post</div>
-		</div>
-	</div>
-
-	<div class="responsive">
-		<div class="gallery" style="border: none;">
-			<a target="_blank" href="ticket link">
-				<img src="images/ojj.gif" alt="Cinque Terre" width="600" height="400">
-			</a>
-			<div class="desc" style="background-color: rgb(10, 10, 10);text-align: left;">this is an archived post</div>
-		</div>
-	</div>
-
-
-	<div class="responsive">
-		<div class="gallery" style="border: none;">
-			<a target="_blank" href="ticket link">
-				<img src="images/adopac.jpg" alt="Cinque Terre" width="600" height="400">
-			</a>
-			<div class="desc" style="background-color: rgb(10, 10, 10);text-align: left;">this is an archived post</div>
-		</div>
-	</div>
-
-
-	<div class="responsive">
-		<div class="gallery" style="border: none;">
-			<a target="_blank" href="ticket link">
-				<img src="images/unsplashCity.jpg" alt="Cinque Terre" width="600" height="400">
-			</a>
-			<div class="desc" style="background-color: rgb(10, 10, 10);text-align: left;">this is an archived post</div>
-		</div>
-	</div>
-
-	<div class="clearfix" style="padding-bottom: 40vh;"></div>
-
-
+<div id="myShows" class="overlayShows">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeShows()">&times;</a>
+  <div class="overlay-shows">
+		<div class="container">
+		<iframe class="responsive-iframe" src="shows.html" scrolling="yes" style="border: none;">
+</iframe>
 </div>
-</span>
+  </div>
+</div>
+
+
+
 
 </div>
 
@@ -270,6 +175,100 @@ PINK PHANTOM
 
 
 <style>
+
+
+
+
+.overlayShows {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-shows {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.overlayShows a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlayShows a:hover, .overlayNews a:focus {
+  color: #f1f1f1;
+}
+
+.overlayShows .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+	z-index: 2;
+  font-size: 60px;
+}
+
+
+
+
+
+
+
+.overlayNews {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-news {
+  position: relative;
+  top: 0%;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+}
+
+.overlayNews a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlayNews a:hover, .overlayNews a:focus {
+  color: #f1f1f1;
+}
+
+.overlayNews .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+	z-index: 2;
+  font-size: 60px;
+}
+
 
 
 
@@ -410,7 +409,7 @@ div.desc {
 	font-weight: 100;
 }
 
-#displayheader {display: inline;}
+#displayheader {display: inline-block;}
 #page{display: none;}
 
 
@@ -446,12 +445,10 @@ div.desc {
 }
 
 body {
-	max-width: 700px;
+	max-width: 500px;
 	margin: auto;
 	padding: none;
-	overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
-	display: inline;
+	text-align: center;
 	background-image: url("images/pinklogo.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -468,7 +465,6 @@ body {
 }
 
 #homeScreen {
-	display: inline-block;
 }
 
 
@@ -479,8 +475,7 @@ body {
 	overflow: hidden;
 	display: inline-flex;
 	/* border: 1vw solid magenta; */
-	width: 90%;
-	align-items: center;
+	width: 100%;
 
 }
 
@@ -489,13 +484,13 @@ body {
 	border: none;
 	font-family: cyber;
 	flex: 1;
-	margin: -2vw;
+	margin: -5vw;
 	z-index: 99;
 	background: linear-gradient(to bottom,transparent 50%,black 90%) repeat scroll 0 0;
 	color: white;
-	text-align: left;
 	text-decoration: none;
 	font-size: 7vw;
+	width: 100%;
 }
 
 
@@ -549,23 +544,6 @@ body {
 
 }
 
-.content {
-  padding: 10vh;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-	float: right;
-  width: 100%;
-}
-
-.sticky + .content {
-  padding-top: 100vh;
-	float: right;
-
-}
-
 
 #moreAlbum {display: none;}
 #moreShow {display: none;}
@@ -605,53 +583,11 @@ body {
 
 }
 
-.bodyBoi{
-	background-color: rgb(10, 10, 10);
-	color:white;
-	line-height: 8vw;
-	font-size: 5vw;
-	padding: 5vw;
-	text-align: left;
-}
-
-.bodyBoi2{
-	background-color: rgb(10, 10, 10);
-	line-height: 10vw;
-	color:white;
-	font-size: 8vw;
-	padding: 0vw;
-	text-align: left;
-}
-
 
 @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
   font-display: swap;
-}
-
-
-.glow-on-hoverMAIN {
-    width: 23vw;
-		box-sizing:border-box;
-		box-shadow: 1vw 1vw 1vw rgb(10, 10, 10);
-    height: 10vw;
-		font-size: 5vw;
-		background-color: rgb(0,0,0,.7);
-		color: white;
-		border: 1vw;
-		padding: 2vw;
-    cursor: pointer;
-    z-index: 99;
-}
-
-
-.glow-on-hoverMAIN:focus {
-  outline: 1vw solid white;
-}
-
-.glow-on-hoverMAIN:active {
-  outline: 1vw solid white;
 }
 
 
@@ -681,216 +617,6 @@ body {
 	background-color: rgb(10, 10, 10);
 
 }
-
-
-.music-player {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    margin: auto;
-    border-radius: 0 0 1vw 1vw;
-    background: transparent linear-gradient(to bottom,transparent 50%,rgb(10, 10, 10) 90%) repeat scroll 0 0;
-    /* box-shadow: 1px 10px 20px 5px #222; */
-}
-.cover {
-    float: left;
-    width: 100%;
-    height: 66%;
-}
-
-.cover img {
-    display: block;
-    position: relative;
-    top: 8%;
-    left: 10%;
-    width: 80%;
-    text-align: center;
-}
-.titre {
-    float: left;
-    width: 100%;
-}
-.lecteur {
-    width: 105%;
-    display: block;
-    height: auto;
-    position: relative;
-		right: 10%;
-    /* float: left; */
-}
-.mejs__button>button:focus {
-    outline: 0px dotted #999;
-}
-.mejs__container {
-    position: relative;
-    background-color: transparent;
-    min-width: auto !important;
-}
-.mejs__controls {
-    padding: 0 10%;
-    background: transparent !important;
-    display: block;
-    position: relative;
-}
-.mejs__controls div {
-    display: block;
-    float: left;
-    position: relative;
-}
-
-
-
-
-.mejs__controls .mejs__playpause-button {
-    position: absolute !important;
-		float: right;
-    right: 0%;
-    top: 70vh;
-    width: 40px;
-}
-.mejs__controls .mejs__playpause-button button {
-    display: block;
-    width: 20vw;
-    height: 20vw;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 15vw;
-    color: white;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
-.mejs__controls .mejs__play button:before{
-    content:"\f04b";
-}
-.mejs__controls .mejs__pause button:before{
-    content:"\f04c";
-}
-/* .mejs__controls .mejs__volume-button button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 20px;
-    color: #5bbb95;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-} */
-/* .mejs__controls .mejs__mute button:before {
-    content: "\f028";
-}
-.mejs__controls .mejs__unmute button:before {
-    content: "\f026";
-} */
-.mejs__controls .mejs__time {
-    width: 120%;
-    margin-top: 7%;
-    margin-bottom: 3%;
-    color: #fff;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    min-width: 100%;
-}
-.mejs__controls .mejs__time span {
-    font-size: 5vw;
-}
-.mejs__controls span.mejs__duration {
-    float: right;
-    text-align: right;
-    color: #ccc;
-}
-.mejs__controls span.mejs__currenttime {
-    font-weight: 700;
-    float: right;
-}
-.mejs__controls .mejs__time-rail {
-    width: 120%;
-    margin: 0;
-}
-.mejs__controls .mejs__time-rail span {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-.mejs__controls .mejs__time-rail .mejs__time-loaded {
-    background: rgba(255,255,255,0.2);
-}
-.mejs__controls .mejs__time-rail .mejs__time-float {
-    display: none;
-    top: -40px;
-    width: 40px;
-    height: 25px;
-    margin-left: 0px;
-    text-align: center;
-    font-size: 10px;
-    background: #fff;
-    border: 0;
-}
-.mejs__controls .mejs__time-rail .mejs__time-float-current {
-    display: block;
-    position: relative;
-    top: 0;
-    margin: 0;
-    line-height: 26px;
-    color: #100d28;
-}
-.mejs__controls .mejs__time-rail .mejs__time-float-corner {
-    top: auto;
-    bottom: -9px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-top: 6px solid #fff;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
-}
-.mejs__controls .mejs__time-rail .mejs__time-current {
-    background: #5BBB95 none repeat scroll 0 0;
-}
-.mejs__controls .mejs__time-handle {
-    display: none;
-}
-/* .mejs__controls .mejs__volume-button {
-    position: relative;
-    position: absolute !important;
-    top: 70px;
-    right: 25%;
-    width: 40px;
-    height: 40px;
-}
-.mejs__controls .mejs__horizontal-volume-slider {
-    display: block;
-    position: absolute !important;
-    position: relative;
-    top: 70px;
-    right: 10%;
-    width: 60px;
-    height: 4px;
-    margin-top: 18px;
-    border-radius: 50px;
-    line-height: 11px;
-}
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total,
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.1);
-}
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    background: #fff;
-} */
   </style>
 
 
@@ -898,13 +624,39 @@ body {
   <script type="text/javascript">
 
 
-	function openNav() {
-	  document.getElementById("myNav").style.width = "100%";
+	function openMusic() {
+	  document.getElementById("myMusic").style.width = "100%";
 		moreHomeScreen.style.display = "none";
 	}
 
-	function closeNav() {
-	  document.getElementById("myNav").style.width = "0%";
+	function closeMusic() {
+	  document.getElementById("myMusic").style.width = "0%";
+		moreHomeScreen.style.display = "inline";
+
+	}
+
+
+	function openNews() {
+		document.getElementById("myNews").style.height = "100%";
+		moreHomeScreen.style.display = "none";
+
+	}
+
+	function closeNews() {
+		document.getElementById("myNews").style.height = "0%";
+		moreHomeScreen.style.display = "inline";
+
+	}
+
+
+	function openShows() {
+		document.getElementById("myShows").style.height = "100%";
+		moreHomeScreen.style.display = "none";
+
+	}
+
+	function closeShows() {
+		document.getElementById("myShows").style.height = "0%";
 		moreHomeScreen.style.display = "inline";
 
 	}
@@ -937,182 +689,11 @@ body {
 
 
 function initState(){
-	myNewAlbumBtn.focus();
+	// myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline-block";
 	hasInit = true;
 	// sticky1 = navbar.offsetTop;
-
-}
-
-	var moreAnnounce = document.getElementById("moreAnnounce");
-	var moreAlbum = document.getElementById("moreAlbum");
-	var moreShow = document.getElementById("moreShow");
-	var moreHomeScreen = document.getElementById("homeScreen");
-
-	var myShowBtn = document.getElementById("myShowBtn");
-	var myNewAlbumBtn = document.getElementById("myNewAlbumBtn");
-	var myAnnounceBtn = document.getElementById("myAnnounceBtn");
-
-	var displayHeader = document.getElementById("displayHeader");
-
-
-
-// features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
-
-
-
-function newAlbumTime(){
-
-onShow = false;
-
-	if(moreAlbum.style.display==="inline"){
-		// moreAlbum.style.display = "none";
-	}else{
-		// myNewAlbumBtn.focus();
-		// myAnnounceBtn.blur();
-		// myShowBtn.blur();
-		moreAlbum.style.display = "inline";
-		moreAnnounce.style.display = "none";
-		moreShow.style.display = "none";
-		displayHeader.style.display = "inline";
-		moreHomeScreen.style.display = "none";
-
-	}
-
-
-
-
-}
-
-function showTime(){
-
-	onShow = true;
-
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-
-	if(moreShow.style.display==="inline"){
-		// moreAlbum.style.display = "none";
-	}else{
-		// myShowBtn.focus();
-		// myNewAlbumBtn.blur();
-		// myAnnounceBtn.blur();
-		moreShow.style.display = "inline";
-		moreAnnounce.style.display = "none";
-		moreAlbum.style.display = "none";
-		displayHeader.style.display = "none";
-		moreHomeScreen.style.display = "none";
-	}
-
-}
-
-
-
-function homeScreenTime(){
-
-onShow = false;
-
-	if(moreHomeScreen.style.display==="inline"){
-		// moreAlbum.style.display = "none";
-	}else{
-		// myAnnounceBtn.focus();
-		// myNewAlbumBtn.blur();
-		// myShowBtn.blur();
-		moreHomeScreen.style.display = "inline";
-		moreAnnounce.style.display = "none";
-		moreAlbum.style.display = "none";
-		moreShow.style.display = "none";
-		displayHeader.style.display = "inline";
-	}
-
-
-}
-
-
-function announceTime(){
-
-onShow = false;
-
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
-
-	if(moreAnnounce.style.display==="inline"){
-		// moreAlbum.style.display = "none";
-	}else{
-		// myAnnounceBtn.focus();
-		// myNewAlbumBtn.blur();
-		// myShowBtn.blur();
-		moreAnnounce.style.display = "inline";
-		moreHomeScreen.style.display = "none";
-		moreAlbum.style.display = "none";
-		moreShow.style.display = "none";
-		displayHeader.style.display = "inline";
-	}
-
-
-}
-
-
-let touchstartX = 0;
-let touchstartY = 0;
-let touchendX = 0;
-let touchendY = 0;
-
-const gestureZone = document.getElementById('gestureZone');
-let containBoi = document.getElementsByClassName("container")
-let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
-
-gestureZone.addEventListener('touchstart', function(event) {
-		touchstartX = event.touches[0].clientX;
-		touchstartY = event.touches[0].clientY;
-		console.log("WAHOO");
-	// if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
-	// 	scale = 1;
-	// }
-
-}, false);
-
-gestureZone.addEventListener('touchend', function(event) {
-		touchendX = event.changedTouches[0].clientX;
-		touchendY = event.changedTouches[0].clientY;
-}, false);
-
-gestureZone.addEventListener('touchmove', function(event) {
-		touchendX = event.changedTouches[0].clientX;
-		touchendY = event.changedTouches[0].clientY;
-		handleGesture();
-
-}, false);
-
-
-
-function handleGesture(event) {
-
-	// console.log(window.scrollY)
-	let swipeLeft;
-	let swipeDown;
-		if (touchendX < touchstartX && (screen.width-touchstartX)<100) {
-			swipeLeft = true;
-		}else if (touchendX > touchstartX && touchstartX<100){
-			swipeLeft = false;
-		}else if (touchendY > touchstartY && window.scrollY == 0){
-			swipeDown = true;
-		}
-
-
-				if(swipeLeft==false && moreHomeScreen.style.display==="none"){
-
-					homeScreenTime();
-
-				}
-				else if(swipeDown == true && moreHomeScreen.style.display==="none"){
-					homeScreenTime();
-			}
-
-	document.body.style.overflowY = "scroll";
-
-
 
 }
 
