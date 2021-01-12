@@ -659,44 +659,16 @@ var moreHomeScreen = document.getElementById("homeScreen");
 
 
 
-	window.onscroll = function() {myFunction()};
-
-	var hasInit = false;
-	var navbar = document.getElementById("navbar");
-	var sticky;
-	var sticky1;
-	var onShow = false;
-
-	function myFunction() {
-		if(onShow ==true){
-			sticky = 0;
-		}else{
-			sticky = sticky1;
-		}
-
-
-	  if (window.pageYOffset >= sticky) {
-	    // navbar.classList.add("sticky")
-	  } else {
-	    // navbar.classList.remove("sticky");
-	  }
-}
-
-
-
 function initState(){
 	// myNewAlbumBtn.focus();
 	var page = document.getElementById('page')
 	page.style.display = "inline";
 	document.body.classList.add("bg");
-	hasInit = true;
 	// sticky1 = navbar.offsetTop;
 
 }
 
 function homeScreenTime(){
-
-onShow = false;
 
 	if(moreHomeScreen.style.display==="inline"){
 		// moreAlbum.style.display = "none";

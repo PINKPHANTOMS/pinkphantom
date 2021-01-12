@@ -11,269 +11,140 @@
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div id="myNavBtns">
-			<button autofocus onclick="frontTime()" id="myFrontBtn">SIDE A</button>
+			<button autofocus onclick="frontTime()" id="myFrontBtn">UPCOMING</button>
 
-			<button  onclick="backTime()" id="myBackBtn">SIDE B</button>
+			<button  onclick="backTime()" id="myBackBtn">PAST</button>
 
-			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
+			<button  onclick="lyricTime()" id="myLyricBtn">LIVE</button>
 
-			<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
+			<button  onclick="pReelTime()" id="myPReelBtn" style="display: none;">Gallery</button>
+
 	</div>
-
+	<br>
+	<br>
 	  <div id="gestureZone">
+
         <div class="container">
 
 						<span id="dots"></span>
 						<span id="moreFront">
 
-							<span id="moreShow">
 
-								<div class="desc" style="background-color: rgb(10, 10, 10); text-align: left;"><br></div>
-
-
-
-							<div class="showTab">
-								<div class="responsive">
 								  <div class="gallery">
 								    <a target="_blank" href="ticket link">
-								      <img src="images/pinklogo.jpg" alt="Cinque Terre" width="600" height="400">
-								    </a>
-								    <div class="desc">TUCSON, AZ - JAN. 21st <br>@ the platteau</div>
+								      <div class="dateContainer">
+												Jan.<br> 21
+											</div>
+
+								    <div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
+
+										<div class="time">7-10pm</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
 								  </div>
+
+									<div class="gallery">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Jan.<br> 21
+											</div>
+
+										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
+
+										<div class="time">7-10pm</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+
+
+
+									<div class="gallery">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Jan.<br> 21
+											</div>
+
+										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
+
+										<div class="time">7-10pm</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+
+									<div class="gallery">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Jan.<br> 21
+											</div>
+
+										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
+
+										<div class="time">7-10pm</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+									<div class="clearfix" style="padding-bottom: 40vh;">
+									</div>
+								</div>
+							</span>
+
+							<br>
+							<br>
+
+							<span id="dots"></span>
+							<span id="moreBack">
+
+
+								<div class="gallery" style="border: none;">
+									<img src="images/pinklogo.jpg" alt="Cinque Terre">
+									<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+										venue, date
+									</div>
 								</div>
 
 
-								<div class="responsive">
-								  <div class="gallery">
-								    <a target="_blank" href="ticket link">
-								      <img src="images/pinklogo.jpg" alt="Forest" width="600" height="400">
-								    </a>
-								    <div class="desc">NEW YORK CITY, NEW YORK - MAR. 3rd.<br> @ MSG</div>
-								  </div>
+								<div class="gallery" style="border: none;">
+									<img src="images/pinklogo.jpg" alt="Cinque Terre">
+									<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+										venue, date
+									</div>
 								</div>
 
-								<div class="responsive">
-								  <div class="gallery">
-								    <a target="_blank" href="ticket link">
-								      <img src="images/pinklogo.jpg" alt="Northern Lights" width="600" height="400">
-								    </a>
-								    <div class="desc">TUCSON, AZ - APRIL 5th <br>@ the nose</div>
-								  </div>
+
+								<div class="gallery" style="border: none;">
+									<img src="images/pinklogo.jpg" alt="Cinque Terre">
+									<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+										venue, date
+									</div>
 								</div>
 
-								<div class="responsive">
-								  <div class="gallery">
-								    <a target="_blank" href="ticket link">
-								      <img src="images/pinklogo.jpg" alt="Mountains" width="600" height="400">
-								    </a>
-								    <div class="desc">TUCSON, AZ - JULY 6th <br>@ TCB</div>
-								  </div>
+								<div class="gallery" style="border: none;">
+									<img src="images/pinklogo.jpg" alt="Cinque Terre">
+									<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+										venue, date
+									</div>
 								</div>
+
+								<div class="gallery" style="border: none;">
+									<img src="images/pinklogo.jpg" alt="Cinque Terre">
+									<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+										venue, date
+									</div>
+								</div>
+
+
 
 								<div class="clearfix" style="padding-bottom: 40vh;"></div>
 
 
-
-							</div>
-
-							<!-- put the show gallery here -->
-
-							</span>
-
-
-            <div class="music-player">
-
-								<div class="titre">
-										<h3>Pink Phantom</h3>
-										<h1>The American Dream</h1>
-								</div>
-								<center>
-                <div class="lecteur">
-                    <audio style="width: 80%;" id="myAudio" class="fc-media">
-                        <source src="sounds/ACTII.mp3" type="audio/mp3"/>
-                    </audio>
-                </div>
-
-								</center>
-
-							</div>
-
-									<div class="titre">
-										<h3 style = "margin-top: -0vh;text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw; background: black;">
-												<u>
-												<a onclick="timeStamp1()"><b style="color: white">[00:00]</b> Dreams  <br></a>
-												<a onclick="timeStamp2()"><b style="color: white">[01:39]</b> No Wolves, Just Sheep Grazing on the Fabric We Call Home <br></a>
-												<a onclick="timeStamp3()"><b style="color: white">[06:43]</b> Theatre of Animals <br></a>
-												<a onclick="timeStamp4()"><b style="color: white">[10:12]</b> The Sleep Factory <br></a>
-												<a onclick="timeStamp5()"><b style="color: white">[12:07]</b> Funeral <br></a>
-												<a onclick="timeStamp6()"><b style="color: white">[13:03]</b> "Be Operational (That Is, Commensurable) or Disappear" <br></a>
-												<a onclick="timeStamp7()"><b style="color: white">[18:14]</b> Just Be Normal, Do Your Part<br><a>
-												<a onclick="timeStamp8()"><b style="color: white">[20:25]</b> The Construction of Ultrarealism <br></a>
-												<a onclick="timeStamp9()"><b style="color: white">[24:09]</b> Eventually the Train Will Come <br><a>
-												<a onclick="timeStamp10()"><b style="color: white">[28:14]</b> The Immanence of Sleep in a Bed on Fire <br></a>
-												<a onclick="timeStamp11()"><b style="color: white">[31:52]</b> Controlled Paralysis <br></a>
-												<a onclick="timeStamp12()"><b style="color: white">[34:39]</b> The Sweet Smell of Excess & Wealth <br></a>
-												<a onclick="timeStamp13()"><b style="color: white">[40:59]</b> Empire of Desire <br></a>
-											</u>
-											<br>
-											<br>
-											</h3>
-										</div>
-									</span>
-									<span id="dots"></span>
-									<span id="moreBack">
-
-
-
-<div class="titre">
-	<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
-		The American Dream
-	</div>
-	<div style="font-size: 5vw; color: gray;padding-left: 5%;">
-		by Pink Phantom</div>
-	<div style="padding-bottom: 15vh;padding-left: 5%;margin-top: 0vh;font-size: 4vw; color: gray;"> released April 20th, 2018</div>
-
-</div>
-<div style="margin: 0vw; background: black;">
-	<center>
-		<img src="images/americandream.jpg" width="100%" style="padding: 0vw;"alt="">
-	</center>
-	</div>
-
-	<div style="padding-top: 10vh; padding-bottom: 10vh; font-size: 5vw; color: white; background: black;
-	text-align: right; padding-right: 5vw;">
-
-		What is The American Dream?<br><br> What is reality?<br><br> Why does it matter?<br><br></div>
-
-		<div style="padding: 5vw; font-size: 8vw; color: white;background: black;text-align: left;">
-			<div style="font-size: 8vw;">
-				Part I: Waking<br>
-			</div>
-			<div style="font-size: 5vw;">
-				<i><b>Dreams</b></i>
-			</div>
-		</div>
-
-		<div class="bodyBoi">
-
-			THE MATRIX describes a world in which reality is <i>constructed</i> as opposed to existing with the status of “given” and furthers a narrative that reality’s existence, itself, is and should be up for debate. Entertaining this idea, we might be able to analogize reality with dreams. One may wake up from a dream, but they would find that they only wake to another dream.<br><br>
-
-			Destabilizing reality in this way also destabilizes phenomena we believe to be givens of  reality, such as time & space. What proof do we have that either of these entities exist, given the fact that they are drenched in paradox. Take Zeno’s paradox. If Zeno’s paradox destabilizes distance, might it also destabilize time, as distance often swoops in to analogize time, since we have no other way of understanding but in terms of space?<br><br>
-
-			At the collapse of time and space, the dream becomes the ultimate metaphor of reality; such a fitting metaphor it almost crosses the line that defines the dream and reality.<br><br>
-
-			Therefore, if distance doesn’t exist, moving from one dream to another isn’t even possible. If we cannot move, then waking is impossible.<br><br>
-
-
-		</div>
-
-		<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-			<div style="font-size: 5vw;">
-				<i><b>No Wolves, Just Sheep Grazing on the Fabric We Call Home</b></i><br>
-			</div>
-		</div>
-
-		<div class="bodyBoi">
-
-			And what of the self in this paradigm? We say that we experience reality. Is experience reality?<br><br>
-
-			Well where does the dream come from? If reality comes from the mind, we move from the theory of THE MATRIX to the theory of INCEPTION, where reality is a projection of the consciousness of the dreamer.<br><br>
-
-			As an aside, do these theories disqualify the existence and experience of others? My personal belief: no, and never. Existing in a society, existing with others means unequivocally granting the full and unconditional validity of experience to everyone. To do otherwise is to guarantee the demise of a healthy society.<br><br>
-
-			Coming back. Given the fact that all that we experience is filtered and produced from our memories, subconscious, and other psychological phenomena, we might conclude that the world is a mirror. The dream is an infinite reflection.<br><br> <place mirror bridge image from inception>
-			</div>
-
-			<div style="padding: none; background: black;">
-				<center>
-					<img src="images/unsplashCity.jpg" width="100%" alt="">
-				</center>
-
-			</div>
-
-				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-					<div style="font-size: 5vw;">
-						<i><b>THEATRE OF ANIMALS</b></i>
-					</div>
-				</div>
-				<div class="bodyBoi">
-					This is a concept album about the United States after all… But we’ll hold off on that for now.<br><br>
-				</div>
-				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-					<div style="font-size: 5vw;">
-					<b>	<i>The Sleep Factory</i></b><br>
-					</div>
-				</div>
-
-				<div class="bodyBoi">
-
-					To the question of waking from the dream, we may continue traveling radially across rings of dreams, but you’ll never reach the edge, because moving itself is a fallacy. So, we live in an infinite metadream, one that does not grant real time or real space, or real reality. If distance does not exist, then reality seems to crumble in on itself, only to be reproduced by our minds themselves; as the only correlative is our minds, themselves.<br><br>
-				</div>
-					<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-						<div style="font-size: 5vw;">
-							<b>WHY DOES IT MATTER</b>
-						</div>
-					</div>
-					<div class="bodyBoi">
-
-						Understanding that reality is constructed and not a given begs questions of why, how, and what.. To be infinitely curious is to guarantee one’s own psychological freedom, or does it? In one sense, reality has been created for us - it is a given. The important thing to remember is that reality0 was not created by us - it was a matter of societal, familial, interpersonal creation. To question is to destabilize, and to theorize is to materialize reality.<br><br>
-
-
-				</div>
-				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-					<div style="font-size: 8vw;">
-						<b>CHRONOLOGY</b>
-					</div>
-				</div>
-				<div class="bodyBoi">
-					[10:12]<br><br>
-					The night was dark and the fog was heavy. Everything we have done has been leading up to this moment. The only beam of light there seemed to be was the neon blue skyscraper towering over us. we knew that, after tonight, there was no going back. I hated it, but if I’m being honest, i thought it was kind of beautiful. I looked at Ryan and we both knew this would be it.<br><br>
-
-					“Are you ready?,” Ryan said.<br><br>
-
-					I nodded and we lit the fuse. All I could focus on after that was the chain link fence we were running towards, the dirt kicking up behind us, our bodies beating outside of ourselves. We scale the fence and then there it was. The loudest sound I've ever heard. We hit the ground and as if perfectly orchestrated in concert, in that moment the computer tower exploded with glimmering pieces of servers and concrete, and date. We did it. We had liberated our people. Nothing that could happen after this moment mattered, not even death.<br><br>
-
-					And then there was blackness.<br><br>
-
-					[12:07]<br><br>
-					The underground gathered around their fallen friends. The green sodium lamps from above put a darker vampire black hue on the bodies. The world around began to shrink - blackness began to overtake the city. The city fractilized and the funeral room grew smaller and bigger simultaneously.<br><br>
-
-					[13:03]<br><br>
-					I awoke to the sound of my alarm. It was quieter than usual. That was, until I saw the time. I was late for work. I rushed out the door and headed to work as fast as I could. As I drove through the city, I started to feel nauseous. I’d never felt like this before.<br><br>
-
-					I caught myself, “never?” I thought. And then it hit. My breakfast was all over the car. I called in sick and went back home.<br><br>
-
-					[17:03]<br><br>
-					I lay in bed and Everyday feels the same. Nothing is interesting to me anymore. I go to work, come home, watch tv and sleep. I just need sleep. Maybe I’ll just go to sleep.<br><br>
-
-					I can feel the cold air across my face. I just need to wake up. The ground doesn’t seem so far from me anymore. I just need to wake up. There are sirens in the distance, and it begins to rain. What am I feeling. I’m so lost, but I don’t know if I even feel anything anymore. What is real. Now I can feel the air pushing against my body, I can see the sidewalk coming for me, the people are approaching, and everything is growing larger. Just as I feel the immediacy of blackness, everything bounces away into itself and I feel it all spinning around and behind me. I just need to wake up. I’m nauseous.<br><br>
-
-					[18:14]<br><br>
-					just be normal do your part is the calm before the storm<br><br>
-
-					[20:25]<br><br>
-					Subplot: how to organize a rebellion.<br><br>
-
-					[28:14]<br><br>
-					Maybe this is when the main character goes out and gives a speech (martyr scene)<br><br>
-
-					[31:52]<br><br>
-					this when the main character goes out at night and finds the warehouse filled with bodies<br><br>
-
-					[34:39]<br><br>
-
-
-					[40:59]<br><br>
-
-					Ends with main character falling asleep.<br><br>
-				</div>
-
-
-
-
-
-
-				<!-- </span> -->
 
 
 		</span>
@@ -287,10 +158,20 @@
 			<span id="moreLyrics">
 
 				<span id="lyricImage">
-					<br>
-					<br>
-					<center>ZOOM IN TO VIEW</center><br>
-					<img style="padding-top: -10vh; padding-bottom: -10vh;"src="images/lyricImage.png" width="100%">
+					<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+						put some live videos here
+					</div>
+					<div class="gallery" style="border: none;">
+						<img src="images/albumart/ADREAM.gif" alt="Cinque Terre">
+						<div class="caption" style="background-color: rgb(10, 10, 10);text-align: left;">
+							venue, date
+						</div>
+					</div>
+
+
+
+
+
 				</span>
 
 			</span>
@@ -495,6 +376,8 @@
 div.gallery {
   /* border: 1px solid magenta; */
 	box-shadow: 2vw 2vw 1vw black;
+	text-align: center;
+	position: relative;
 }
 
 div.gallery:hover {
@@ -503,7 +386,45 @@ div.gallery:hover {
 
 div.gallery img {
   width: 100%;
+	max-width: 500px;
+	text-align: center;
+	padding: none;
+	margin: auto;
   height: auto;
+}
+
+div.gallery a{
+	text-decoration: none;
+	color: white;
+}
+
+.tix{
+	display: inline-flex;
+	position: absolute;
+	right: 16px;
+	bottom: 16px;
+}
+
+.fullInfo{
+	display: inline-flex;
+	font-size: 5vw;
+	text-align: right;
+	padding: 16px;
+}
+
+.time {
+	display: inline-flex;
+	font-size: 5vw;
+	text-align: right;
+	padding: 16px;
+}
+
+.dateContainer{
+	color: white;
+	text-align: center;
+	padding: 16px;
+	font-size: 10vw;
+	display: inline-flex;
 }
 
 @font-face {
@@ -519,6 +440,13 @@ div.desc {
 	text-shadow: 0vw 0vw 2vw magenta;
 }
 
+.caption {
+  padding: 16px;
+	color: white;
+	font-family: thisFont;
+	text-shadow: 0vw 0vw 2vw magenta;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -527,19 +455,6 @@ div.desc {
   padding: 0 0px;
   float: left;
   width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
 }
 
 .clearfix:after {
@@ -581,8 +496,8 @@ div.desc {
 #myNavBtns{
 	position: fixed;
 	top: 0;
-	width: 100%;
 	display: inline-flex;
+	margin: auto;
 	z-index: 99;
 	width: 100%;
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
@@ -590,14 +505,13 @@ div.desc {
 
 #myNavBtns button {
 	flex: 1;
-	display: none;
 	padding: 2vw;
 	text-align: center;
 	background-color: rgb(0,0,0,.7);
 	z-index: 99;
 	color: white;
 	font-family: cyber;
-	font-size: 5vw;
+	font-size: 16px;
 	border-style: hidden;
 	border-bottom: 3px solid transparent;
 
@@ -693,11 +607,12 @@ body {
 		max-width: 700px;
 		margin: auto;
 		display: inline;
-		background-color: black;
+		background-color: rgb(10,10,10);
 		overflow-x: hidden;
 		background-size: 100%;
 		background-attachment: fixed;
 		font-family: 'Cyber', sans-serif;
+		text-align: center;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
     /* font-family: "Raleway",sans-serif; */
 }
@@ -717,9 +632,10 @@ h3 {
 
 .container {
     width: 100%;
+		margin: auto;
+		max-width: 500px;
+		text-align: center;
     height: 100%;
-		align-content: center;
-    margin: 0;
     overflow-x: hidden;
     background-repeat: repeat;
     background-size: cover;
@@ -747,10 +663,6 @@ h3 {
     height: 66%;
 }
 
-img {
-	padding-top: 10vh;
-	padding-bottom: 10vh;
-}
 
 .cover img {
     display: block;
@@ -1106,7 +1018,6 @@ function backTime(){
 		myBackBtn.focus();
 		myFrontBtn.blur();
 		myLyricBtn.blur();
-		myPReelBtn.blur();
 		moreBack.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreFront.style.display = "none";
@@ -1129,7 +1040,6 @@ function lyricTime(){
 		myLyricBtn.focus();
 		myFrontBtn.blur();
 		myBackBtn.blur();
-		myPReelBtn.blur();
 		moreLyrics.style.display = "inline";
 		moreFront.style.display = "none";
 		moreBack.style.display = "none";
@@ -1149,7 +1059,6 @@ function pReelTime(){
 	if(morePReel.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
-		myPReelBtn.focus();
 		myFrontBtn.blur();
 		myBackBtn.blur();
 		myLyricBtn.blur();
