@@ -24,17 +24,18 @@ PINK PHANTOM
 	</div>
 </div>
 
-
+<center>
 <div id="buttonContainer">
 
-<button onclick="newAlbumTime()" id="myNewAlbumBtn" style="border: 1vw solid white;">
-	<iframe id="musicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="z-index: -1;border:none;">
+<button onclick="newAlbumTime()" id="myNewAlbumBtn" style="border: 1vw solid magenta;">
+	<iframe id="musicIframe" class="responsive-iframe" src="newAlbum.html" scrolling="no" style="z-index: -1;border:none; height: 50vh;">
 	</iframe>
 NEW MUSIC
 </button>
 	</div>
 
-
+<br>
+<br>
 <div id="buttonContainer">
 
 	<button onclick="announceTime()" id="myAnnounceBtn">NEWS
@@ -53,7 +54,7 @@ NEW MUSIC
 </button>
 
 </div>
-
+</center>
 
 </div>
 </div>
@@ -353,12 +354,14 @@ body {
 
 #buttonContainer{
 	z-index: 99;
-	padding: 16px;
+	box-shadow: 0 0 3vw black;
+	border-radius: 2vw;
+	/* padding: 16px; */
 	overflow: hidden;
 	background-color: transparent;
 	display: flex;
 	/* border: 1vw solid magenta; */
-	width: 100%;
+	width: 90%;
 	align-items: center;
 
 }
@@ -372,7 +375,7 @@ body {
 	z-index: 99;
 	background-color: rgb(10, 10, 10);
 	color: white;
-	text-align: center;
+	text-align: left;
 	text-decoration: none;
 	font-size: 7vw;
 }
@@ -908,6 +911,7 @@ document.documentElement.scrollTop = 0;
 		// myNewAlbumBtn.blur();
 		// myShowBtn.blur();
 		moreAnnounce.style.display = "inline";
+		moreHomeScreen.style.display = "none";
 		moreAlbum.style.display = "none";
 		moreShow.style.display = "none";
 		displayHeader.style.display = "inline";
@@ -966,7 +970,7 @@ function handleGesture(event) {
 
 
 				}else{
-					if(moreAlbum.style.display==="inline"){
+					if(moreAlbum.style.display==="inline" || moreAnnounce.style.display === "inline"){
 						homeScreenTime();
 
 				}
