@@ -943,9 +943,10 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
+		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) || Math.abs(touchendX-touchstartX)>(screen.width*.2)){
 		event.preventDefault();
 		handleGesture();
+		console.log("wahoo");
 
 	}
 }, false);
@@ -959,12 +960,15 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 function handleGesture(event) {
 	let swipeLeft;
-	console.log(touchstartX);
-
+	let swipeUp;
 		if (touchendX <= touchstartX && (screen.width-touchstartX)<100) {
 			swipeLeft = true;
 		}else if (touchendX >= touchstartX && touchstartX<100){
 			swipeLeft = false;
+		}else if (touchendY >= touchstartY && document.body.scrollTop == 0){
+			swipeUp = true;
+		}else if( document.documentElement.scrollTop == 0 && touchendY >= touchstartY){
+			swipeUp = true;
 		}
 				if(swipeLeft==true){
 
@@ -973,6 +977,10 @@ function handleGesture(event) {
 					if(moreAlbum.style.display==="inline" || moreAnnounce.style.display === "inline"){
 						homeScreenTime();
 
+				}else if(moreAlbum.style.display==="inline" && swipeUp==true){
+					homeScreenTime();
+				}else if(moreAnnounce.style.display === "inline" && swipeUp==true){
+					homeScreenTime();
 				}
 			}
 
