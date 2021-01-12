@@ -372,7 +372,7 @@ body {
 	margin: auto;
 	overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
-	display: inline-block;
+	display: inline;
 	background-image: url("images/pinklogo.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -387,18 +387,18 @@ body {
   padding: none;
   text-align: center;
 }
-
+/* 
 #homeScreen {
 	display: inline-block;
-}
+} */
 
 
 #buttonContainer{
-	/* z-index: 99; */
+	z-index: 99;
 	box-shadow: 0 0 3vw black;
 	border-radius: 5vw;
 	overflow: hidden;
-	display: inline-block;
+	display: inline-flex;
 	/* border: 1vw solid magenta; */
 	width: 90%;
 	align-items: center;
@@ -411,6 +411,7 @@ body {
 	font-family: cyber;
 	flex: 1;
 	margin: -2vw;
+	z-index: 99;
 	background: linear-gradient(to bottom,transparent 50%,black 90%) repeat scroll 0 0;
 	color: white;
 	text-align: left;
