@@ -99,6 +99,9 @@ PINK PHANTOM
 
 </div>
 
+<br>
+<br>
+
 </center>
 
 </div>
@@ -117,13 +120,13 @@ PINK PHANTOM
 	</div> -->
 
 
-
 	<span id="moreAlbum">
 		<div class="container">
-	<iframe class="responsive-iframe" src="newAlbum.html" style="border:none;">
-	</iframe>
-	</div>
+		<iframe class="responsive-iframe" src="newAlbum.html" style="border: none;">
+</iframe>
+</div>
 </span>
+
 
 
 
@@ -367,7 +370,8 @@ div.desc {
 body {
 	max-width: 700px;
 	margin: auto;
-	touch-action: auto;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 	display: inline;
 	background-image: url("images/pinklogo.png");
 	background-repeat: no-repeat;
