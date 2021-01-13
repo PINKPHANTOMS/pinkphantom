@@ -11,7 +11,7 @@
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div id="myNavBtns">
-			<button autofocus onclick="frontTime()" id="myFrontBtn">SIDE A</button>
+			<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
 			<button  onclick="backTime()" id="myBackBtn">SIDE B</button>
 
@@ -581,13 +581,10 @@
 body {
 		max-width: 700px;
 		margin: auto;
-		display: inline;
 		background-color: black;
 		overflow-x: hidden;
 		background-image: url("images/albumart/ADREAM.gif");
-		background-repeat: no-repeat;
 		background-size: 100%;
-		background-position: center;
 		background-attachment: fixed;
 		font-family: 'Cyber', sans-serif;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
@@ -1058,7 +1055,7 @@ function pReelTime(){
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-	console.log(window.pageYOffset)
+	// console.log(window.pageYOffset)
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
   } else {
