@@ -623,11 +623,15 @@ var moreHomeScreen = document.getElementById("homeScreen");
 	function openMusic() {
 	  document.getElementById("myMusic").style.width = "100%";
 		moreHomeScreen.style.display = "none";
+		document.body.style.overflowY = "hidden";
+
 	}
 
 	function closeMusic() {
 	  document.getElementById("myMusic").style.width = "0%";
 		moreHomeScreen.style.display = "inline";
+		document.body.style.overflowY = "auto";
+
 
 	}
 
@@ -635,12 +639,15 @@ var moreHomeScreen = document.getElementById("homeScreen");
 	function openNews() {
 		document.getElementById("myNews").style.height = "100%";
 		moreHomeScreen.style.display = "none";
+		document.body.style.overflowY = "hidden";
 
 	}
 
 	function closeNews() {
 		document.getElementById("myNews").style.height = "0%";
 		moreHomeScreen.style.display = "inline";
+		document.body.style.overflowY = "auto";
+
 
 	}
 
@@ -648,12 +655,14 @@ var moreHomeScreen = document.getElementById("homeScreen");
 	function openShows() {
 		document.getElementById("myShows").style.height = "100%";
 		moreHomeScreen.style.display = "none";
+		document.body.style.overflowY = "hidden";
 
 	}
 
 	function closeShows() {
 		document.getElementById("myShows").style.height = "0%";
 		moreHomeScreen.style.display = "inline";
+		document.body.style.overflowY = "auto";
 
 	}
 
