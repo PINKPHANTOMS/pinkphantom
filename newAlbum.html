@@ -1057,7 +1057,8 @@ function pReelTime(){
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+	console.log(window.pageYOffset)
+  if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
   } else {
     document.getElementById("myNavBtns").style.top = "-50px";
