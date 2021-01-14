@@ -30,30 +30,80 @@
 						<span id="moreFront">
 
 
-								  <div class="gallery">
+								  <div class="galleryTix">
 								    <a target="_blank" href="ticket link">
 								      <div class="dateContainer">
-												Jan.<br> 21
+												Tucson, AZ
 											</div>
 
-								    <div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
-
-										<div class="time">7-10pm</div>
+								    <div class="fullInfo">JAN. 21</div>
 										<div class="tix">
 										get tickets
 									</div>
 									</a>
 								  </div>
 
-									<div class="gallery">
-										<a target="_blank" href="ticket link">
-											<div class="dateContainer">
-												Jan.<br> 21
+
+									<div class="galleryTix">
+								    <a target="_blank" href="ticket link">
+								      <div class="dateContainer">
+												Tucson, AZ
 											</div>
 
-										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
+								    <div class="fullInfo">JAN. 21</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+								  </div>
 
-										<div class="time">7-10pm</div>
+									<div class="galleryTix">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Tucson, AZ
+											</div>
+
+										<div class="fullInfo">JAN. 21</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+
+									<div class="galleryTix">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Tucson, AZ
+											</div>
+
+										<div class="fullInfo">JAN. 21</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+
+
+									<div class="galleryTix">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Tucson, AZ
+											</div>
+
+										<div class="fullInfo">JAN. 21</div>
+										<div class="tix">
+										get tickets
+									</div>
+									</a>
+									</div>
+
+									<div class="galleryTix">
+										<a target="_blank" href="ticket link">
+											<div class="dateContainer">
+												Tucson, AZ
+											</div>
+
+										<div class="fullInfo">JAN. 21</div>
 										<div class="tix">
 										get tickets
 									</div>
@@ -62,35 +112,7 @@
 
 
 
-									<div class="gallery">
-										<a target="_blank" href="ticket link">
-											<div class="dateContainer">
-												Jan.<br> 21
-											</div>
 
-										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
-
-										<div class="time">7-10pm</div>
-										<div class="tix">
-										get tickets
-									</div>
-									</a>
-									</div>
-
-									<div class="gallery">
-										<a target="_blank" href="ticket link">
-											<div class="dateContainer">
-												Jan.<br> 21
-											</div>
-
-										<div class="fullInfo">TUCSON, AZ <br>@ the platteau</div>
-
-										<div class="time">7-10pm</div>
-										<div class="tix">
-										get tickets
-									</div>
-									</a>
-									</div>
 									<div class="clearfix" style="padding-bottom: 40vh;">
 									</div>
 								</div>
@@ -373,6 +395,19 @@
 
 
 
+div.galleryTix {
+	box-shadow: 2vw 2vw 1vw black;
+	text-align: center;
+	position: relative;
+	height: 100px;
+
+}
+
+div.galleryTix a {
+	text-decoration: none;
+	color: white;
+}
+
 div.gallery {
   /* border: 1px solid magenta; */
 	box-shadow: 2vw 2vw 1vw black;
@@ -406,10 +441,10 @@ div.gallery a{
 }
 
 .fullInfo{
-	display: inline-flex;
-	font-size: 5vw;
-	text-align: right;
-	padding: 16px;
+	font-size: 10vw;
+	position: absolute;
+	right: 8px;
+	top: 8px;
 }
 
 .time {
@@ -421,8 +456,10 @@ div.gallery a{
 
 .dateContainer{
 	color: white;
-	text-align: center;
-	padding: 16px;
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	vertical-align: middle;
 	font-size: 10vw;
 	display: inline-flex;
 }

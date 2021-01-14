@@ -17,7 +17,7 @@
 <div id="homeScreen">
 
 <div id="displayHeader">
-	<div class="topImage">
+	<div class="topImage" onclick="openNews()">
 	<div class="imgText">
 		<script>
 		// Array of day names
@@ -61,7 +61,7 @@ NEW MUSIC
 
 
 
-<br>
+<!-- <br>
 <br>
 
 
@@ -79,7 +79,7 @@ NEW MUSIC
 
 </button>
 
-</div>
+</div> -->
 
 
 
@@ -98,7 +98,7 @@ NEW MUSIC
 
 	<button onclick="openShows()"><br>
 
-		<iframe class="responsive-iframe" src="shows.html" scrolling="no" style="margin-top: -45vw;z-index: -1;border:none; height: 75vh;">
+		<iframe class="responsive-iframe" src="shows.html" scrolling="no" style="margin-top: -45vw;z-index: -1;border:none; height: 400px;">
 		</iframe>
 </button>
 
@@ -444,6 +444,7 @@ div.desc {
   left: 0;
   bottom: 0;
   right: 0;
+	padding: 16px;
   width: 100%;
   height: 100vh;
 }
@@ -499,7 +500,7 @@ body {
 	overflow: hidden;
 	display: inline-flex;
 	/* border: 1vw solid magenta; */
-	width: 90%;
+	width: 100%;
 
 }
 
