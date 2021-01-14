@@ -61,7 +61,46 @@ The American Dream<br>
 </div>
 </div>
 
+<br>
+<br>
 
+<div class="app">
+
+  <h1>Discography</h1>
+
+  <ul class="hs">
+    <li class="item" style="height: 40vh;	background-size: contain;;background-image:linear-gradient(to bottom, transparent 50%, black 80%), url(images/phantoms/showBackground.jpg)">
+			<div class="itemTxt">
+				OVER MY DEAD BODY
+			</div>
+		</li>
+
+		<li class="item" style="height: 40vh;	background-attachment: fixed;background-size: 20%;background-image:linear-gradient(to bottom, transparent 50%, black 70%), url(images/fm.gif)">
+			<div class="itemTxt">
+				Feed Me
+			</div>
+		</li>
+
+		<li class="item" style="height: 40vh;	background-size: cover;background-image:linear-gradient(to bottom, transparent 50%, black 80%), url(images/newglitch/charl.gif)">
+			<div class="itemTxt">
+				Paralyzed
+			</div>
+		</li>
+
+		<li class="item" style="height: 40vh;	background-attachment: fixed;background-size: 50%;background-image:linear-gradient(to bottom, transparent 50%, black 70%), url(images/neon.gif)">
+			<div class="itemTxt">
+				THE GASLIGHT CORP.
+			</div>
+		</li>
+
+  </ul>
+
+  <div class="container">
+    <div class="item">
+      <h3>Block for context</h3>
+    </div>
+  </div>
+</div>
 
 <!-- <br>
 <br>
@@ -169,6 +208,95 @@ UPCOMING SHOWS<br>
 
 
 <style>
+
+
+
+:root {
+  --gutter: 20px;
+}
+
+.app {
+  padding: var(--gutter) 0;
+  display: grid;
+  grid-gap: var(--gutter) 0;
+  grid-template-columns: var(--gutter) 1fr var(--gutter);
+  align-content: start;
+}
+
+.app > * {
+  grid-column: 2 / -2;
+
+}
+
+.app > .full {
+  grid-column: 1 / -1;
+}
+
+.hs {
+  display: grid;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: repeat(6, calc(50% - var(--gutter) * 2));
+  grid-template-rows: minmax(150px, 1fr);
+  overflow-x:auto;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+}
+
+
+/* Demo styles */
+
+/* body {
+  display: grid;
+  place-items: left;
+  background: #456173;
+} */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+	text-align: left;
+}
+
+.app {
+  width: 100%;
+  height: 50%;
+  background: transparent;
+	color: white;
+	text-shadow: 0 0 1vw magenta;
+  overflow-y: scroll;
+}
+
+.hs > li,
+.item {
+  scroll-snap-align: left;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+	position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  background: black;
+  border-radius: 8px;
+}
+
+
+
+
+.itemTxt {
+	font-size: 4vw;
+	text-align: left;
+	position: absolute;
+	bottom:8px;
+
+}
+
 
 
 .overlayShows {
@@ -463,7 +591,7 @@ div.desc {
 body {
 	max-width: 500px;
 	margin: auto;
-	padding: 16px;
+	/* padding: 16px; */
 	text-align: center;
 	background-color: black;
 	background-image: url("images/pinklogo.png");
