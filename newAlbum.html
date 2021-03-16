@@ -92,7 +92,7 @@
 											</h3>
 
 											<div id="imageGallery">
-											<img src="images/2018_2019/0.gif" onclick="itimeStamp1()" id="myBackBtn">
+											<img src="images/albumart/americandream.jpg" onclick="itimeStamp1()" id="myBackBtn">
 											<img src="images/2018_2019/01.gif" onclick="itimeStamp2()">
 											<img src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
 											<img src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
@@ -148,7 +148,22 @@
 
 		<div style="padding: 5vw; font-size: 8vw; color: white;background: black;text-align: left;">
 			<div style="font-size: 8vw;">
-				Part I: Waking<br>
+				Part I: Waking
+
+				<div class="arrow" id="myPlay1Btn">
+					<span id="dots"></span>
+					<span id="play1" onclick="play1()">
+							►
+				</span>
+				<span id="dots"></span>
+			<span id="pause1" onclick="pause1()">
+							■
+<br>
+		</span>
+				</div>
+
+
+
 			</div>
 			<div style="font-size: 5vw;">
 				<i><b>Dreams</b></i>
@@ -946,6 +961,10 @@ img {
 	var lessTrackListing = document.getElementById("lessTrackListing");
 	var less1TrackListing = document.getElementById("less1TrackListing");
 
+	var morePlay1 = document.getElementById("play1");
+	var morePause1 = document.getElementById("pause1");
+	var myPlay1Button = document.getElementById("myPlay1Btn");
+
 
 
 	var myTrackListBtn = document.getElementById("myTrackListBtn");
@@ -967,9 +986,13 @@ img {
 	moreLyrics.style.display = "none";   
 	morePReel.style.display = "none";
 	moreIG.style.display = "inline"; 
+	morePlay1.style.display = "inline";
+	morePause1.style.display = "none";
 	moreTrackListing.style.display = "inline";
 	lessTrackListing.style.display = "none";
 	less1TrackListing.style.display = "none";
+
+	currentTime = 0;
 
 	myFrontBtn.focus();
 	scale = 1;
@@ -1057,10 +1080,6 @@ function timeStamp13(){
 	x.currentTime = 2459;
 	x.play();
 }
-
-
-
-
 
 //imageTimestamps
 function itimeStamp1(){
