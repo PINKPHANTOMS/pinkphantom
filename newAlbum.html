@@ -120,6 +120,13 @@
 
 
 <div class="titre">
+
+	<div id="myNav1Btns" style="color: white;">
+		<button  onclick="frontTime()" id="myFrontBtn">ᐊgo back</button>
+
+
+</div>
+
 	<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
 		The American Dream
 	</div>
@@ -541,8 +548,32 @@
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
+#myNav1Btns{
+	position: fixed;
+	top: 50px;
+	width: 100%;
+	display: inline-flex;
+	z-index: 99;
+	width: 30%;
+	transition: left 0.3s; /* Transition effect when sliding down (and up) */
+}
+
 #myNavBtns button {
 	flex: 1;
+	padding: 2vw;
+	text-align: center;
+	background-color: rgb(0,0,0,.7);
+	z-index: 99;
+	color: white;
+	font-family: cyber;
+	font-size: 5vw;
+	border-style: hidden;
+	border-bottom: 3px solid transparent;
+}
+
+#myNav1Btns button {
+	flex: 1;
+	top: 50px;
 	padding: 2vw;
 	text-align: center;
 	background-color: rgb(0,0,0,.7);
@@ -1165,7 +1196,8 @@ function frontTime(){
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 
-
+	moreBack.style.display = "none";
+	moreIG.style.display = "inline";
 
 	if(moreFront.style.display==="inline"){
 		// moreFront.style.display = "none";
@@ -1174,10 +1206,8 @@ function frontTime(){
 		myLyricBtn.blur();
 		myBackBtn.blur();
 		myPReelBtn.blur();
-		moreIG.style.display = "inline";
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
-		moreBack.style.display = "none";
 		morePReel.style.display = "none";
 	}
 
@@ -1257,8 +1287,12 @@ window.onscroll = function() {
 	// console.log(window.pageYOffset)
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
+		document.getElementById("myNav1Btns").style.left = "0";
+
   } else {
     document.getElementById("myNavBtns").style.top = "-50px";
+		document.getElementById("myNav1Btns").style.left = "-500px";
+
   }
   prevScrollpos = currentScrollPos;
 }
