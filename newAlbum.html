@@ -1035,8 +1035,8 @@ function itimeStamp1(){
 	x.play();
 
 	backTime();
-		document.body.scrollTop = 50;
-		document.documentElement.scrollTop = 50;
+		document.body.scrollTop = 1450;
+		document.documentElement.scrollTop = 1450;
 }
 function itimeStamp2(){
 	x.currentTime = 99;
@@ -1174,6 +1174,7 @@ function frontTime(){
 		myLyricBtn.blur();
 		myBackBtn.blur();
 		myPReelBtn.blur();
+		moreIG.style.display = "inline";
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
@@ -1186,10 +1187,6 @@ function frontTime(){
 }
 
 function backTime(){
-
-
-
-
 
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
@@ -1292,7 +1289,7 @@ gestureZone.addEventListener('touchend', function(event) {
 		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
 		event.preventDefault();
 		// document.body.style.overflowY = "hidden";
-		// handleGesture();
+		handleGesture();
 	}
 	if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
 	// touchZoom();
@@ -1321,33 +1318,35 @@ function handleGesture(event) {
 		}
 				if(swipeLeft==true){
 
-				if(moreFront.style.display==="inline"){
-					backTime();
-				}
-				else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
-
-					pReelTime();
-				}
-				else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
-					pReelTime();
-				}
-				else if(moreBack.style.display==="inline"){
-					lyricTime();
-				}
+				// if(moreFront.style.display==="inline"){
+				// 	// backTime();
+				// }
+				// else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
+				//
+				// 	pReelTime();
+				// }
+				// else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
+				// 	pReelTime();
+				// }
+				// else if(moreBack.style.display==="inline"){
+				// 	lyricTime();
+				// }
 			}else{
 
-				 if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
-					backTime();
-				}
-				else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
-					backTime();
-				}
-				else if(moreBack.style.display==="inline"){
+				//  if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
+				// 	backTime();
+				// }
+				// else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
+				// 	backTime();
+				// }
+				if(moreBack.style.display==="inline"){
 					frontTime();
+					moreBack.style.display = "none";
+					moreIG.style.display = "inline";
 				}
-				else if(morePReel.style.display==="inline"){
-					lyricTime();
-		}
+		// 		else if(morePReel.style.display==="inline"){
+		// 			lyricTime();
+		// }
 	}
 
 	document.body.style.overflowY = "scroll";
