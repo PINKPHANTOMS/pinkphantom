@@ -92,7 +92,7 @@
 											</h3>
 
 											<div id="imageGallery">
-											<img src="images/albumart/americandream.jpg" onclick="itimeStamp1()" id="myBackBtn">
+											<img src="images/2018_2019/0.gif" onclick="itimeStamp1()" id="myBackBtn">
 											<img src="images/2018_2019/01.gif" onclick="itimeStamp2()">
 											<img src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
 											<img src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
@@ -111,6 +111,7 @@
 
 
 
+									</span>
 
 
 
@@ -150,23 +151,11 @@
 			<div style="font-size: 8vw;">
 				Part I: Waking
 
-				<div class="arrow" id="myPlay1Btn">
-					<span id="dots"></span>
-					<span id="play1" onclick="play1()">
-							►
-				</span>
-				<span id="dots"></span>
-			<span id="pause1" onclick="pause1()">
-							■
-<br>
-		</span>
-				</div>
-
 
 
 			</div>
-			<div style="font-size: 5vw;">
-				<i><b>Dreams</b></i>
+			<div style="font-size: 5vw;" onclick="timeStamp1()">
+				<b><u>[0:00] Dreams</u></b>
 			</div>
 		</div>
 
@@ -184,8 +173,8 @@
 		</div>
 
 		<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-			<div style="font-size: 5vw;">
-				<i><b>No Wolves, Just Sheep Grazing on the Fabric We Call Home</b></i><br>
+			<div style="font-size: 5vw;" onclick="timeStamp2()">
+				<b><u>[01:39] No Wolves, Just Sheep Grazing on the Fabric We Call Home</u></b><br>
 			</div>
 		</div>
 
@@ -208,16 +197,16 @@
 			</div>
 
 				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-					<div style="font-size: 5vw;">
-						<i><b>THEATRE OF ANIMALS</b></i>
+					<div style="font-size: 5vw;" onclick="timeStamp3()">
+						<i><b><u>[06:43] THEATRE OF ANIMALS</u></b></i>
 					</div>
 				</div>
 				<div class="bodyBoi">
 					This is a concept album about the United States after all… But we’ll hold off on that for now.<br><br>
 				</div>
 				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
-					<div style="font-size: 5vw;">
-					<b>	<i>The Sleep Factory</i></b><br>
+					<div style="font-size: 5vw;" onclick="timeStamp4()">
+					<b>	<i><u>[10:12] The Sleep Factory</u></i></b><br>
 					</div>
 				</div>
 
@@ -242,7 +231,7 @@
 					</div>
 				</div>
 				<div class="bodyBoi">
-					[10:12]<br><br>
+					<div onclick="timeStamp4()"><u>[10:12]</u></div><br><br>
 					The night was dark and the fog was heavy. Everything we have done has been leading up to this moment. The only beam of light there seemed to be was the neon blue skyscraper towering over us. we knew that, after tonight, there was no going back. I hated it, but if I’m being honest, i thought it was kind of beautiful. I looked at Ryan and we both knew this would be it.<br><br>
 
 					“Are you ready?,” Ryan said.<br><br>
@@ -251,10 +240,10 @@
 
 					And then there was blackness.<br><br>
 
-					[12:07]<br><br>
+					<div onclick="timeStamp5()"><u>[12:07]</u><div><br><br>
 					The underground gathered around their fallen friends. The green sodium lamps from above put a darker vampire black hue on the bodies. The world around began to shrink - blackness began to overtake the city. The city fractilized and the funeral room grew smaller and bigger simultaneously.<br><br>
 
-					[13:03]<br><br>
+					<div onclick="timestamp6()">[13:03]<div><br><br>
 					I awoke to the sound of my alarm. It was quieter than usual. That was, until I saw the time. I was late for work. I rushed out the door and headed to work as fast as I could. As I drove through the city, I started to feel nauseous. I’d never felt like this before.<br><br>
 
 					I caught myself, “never?” I thought. And then it hit. My breakfast was all over the car. I called in sick and went back home.<br><br>
@@ -293,7 +282,6 @@
 				<!-- </span> -->
 
 
-		</span>
 
 
 
@@ -961,12 +949,6 @@ img {
 	var lessTrackListing = document.getElementById("lessTrackListing");
 	var less1TrackListing = document.getElementById("less1TrackListing");
 
-	var morePlay1 = document.getElementById("play1");
-	var morePause1 = document.getElementById("pause1");
-	var myPlay1Button = document.getElementById("myPlay1Btn");
-
-
-
 	var myTrackListBtn = document.getElementById("myTrackListBtn");
 	var myBackBtn = document.getElementById("myBackBtn");
 	var myFrontBtn = document.getElementById("myFrontBtn");
@@ -986,8 +968,6 @@ img {
 	moreLyrics.style.display = "none";   
 	morePReel.style.display = "none";
 	moreIG.style.display = "inline"; 
-	morePlay1.style.display = "inline";
-	morePause1.style.display = "none";
 	moreTrackListing.style.display = "inline";
 	lessTrackListing.style.display = "none";
 	less1TrackListing.style.display = "none";
@@ -1085,27 +1065,27 @@ function timeStamp13(){
 function itimeStamp1(){
 
 	backTime();
-		document.body.scrollTop = 1450;
-		document.documentElement.scrollTop = 1450;
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
 }
 function itimeStamp2(){
 
 	backTime();
-		document.body.scrollTop = 50;
-		document.documentElement.scrollTop = 50;
+		document.body.scrollTop = 2089;
+		document.documentElement.scrollTop = 2089;
 }
 function itimeStamp3(){
 
 
 	backTime();
-		document.body.scrollTop = 50;
-		document.documentElement.scrollTop = 50;
+		document.body.scrollTop = 3656;
+		document.documentElement.scrollTop = 3656;
 }
 function itimeStamp4(){
 
 	backTime();
-		document.body.scrollTop = 50;
-		document.documentElement.scrollTop = 50;
+		document.body.scrollTop = 3890;
+		document.documentElement.scrollTop = 3890;
 }
 function itimeStamp5(){
 
@@ -1222,6 +1202,7 @@ function backTime(){
 		myLyricBtn.blur();
 		myPReelBtn.blur();
 		moreBack.style.display = "inline";
+		// moreFront.style.display = "none";
 		moreLyrics.style.display = "none";
 		moreIG.style.display = "none";
 		morePReel.style.display = "none";
@@ -1288,6 +1269,7 @@ window.onscroll = function() {
   } else {
     document.getElementById("myNavBtns").style.top = "-50px";
 		document.getElementById("myNav1Btns").style.left = "-500px";
+		console.log(document.documentElement.scrollTop);
 
   }
   prevScrollpos = currentScrollPos;
