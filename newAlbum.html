@@ -51,8 +51,21 @@
 
 							</div>
 
+
 									<div class="titre">
+
 										<h3 style = "margin-top: -0vh;text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw; background: black;">
+
+											<div class="arrow" onclick="trackListTime()" id="myTrackListBtn">
+												<span id="dots"></span>
+												<span id="moreTrackListing">
+												tracklisting ▲
+											</span>
+											<span id="dots"></span>
+										<span id="lessTrackListing">
+										tracklisting ▼ <br>
+
+
 												<u>
 												<a onclick="timeStamp1()"><b style="color: white">[00:00]</b> Dreams  <br></a>
 												<a onclick="timeStamp2()"><b style="color: white">[01:39]</b> No Wolves, Just Sheep Grazing on the Fabric We Call Home <br></a>
@@ -70,6 +83,11 @@
 											</u>
 											<br>
 											<br>
+										</span>
+									</span>
+
+												</div>
+
 											</h3>
 										</div>
 									</span>
@@ -448,6 +466,8 @@
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
 -webkit-background-size: 2650px 1440px;
 
+#moreTrackListing{display: inline;}
+#lessTrackListing{display: none;}
 
 .photoBoi{
 	max-width: 500px;
@@ -849,7 +869,11 @@ img {
 	var morePReel = document.getElementById("morePReel");
 	var moreFront = document.getElementById("moreFront");
 	var moreBack = document.getElementById("moreBack");
+	var moreTrackListing = document.getElementById("moreTrackListing");
+	var lessTrackListing = document.getElementById("lessTrackListing");
 
+
+	var myTrackListBtn = document.getElementById("myTrackListBtn");
 	var myBackBtn = document.getElementById("myBackBtn");
 	var myFrontBtn = document.getElementById("myFrontBtn");
 	var myLyricBtn = document.getElementById("myLyricBtn");
@@ -955,6 +979,25 @@ function timeStamp13(){
 	x.play();
 }
 
+
+function trackListTime(){
+
+	if(moreTrackListing.style.display==="inline"){
+
+		lessTrackListing.style.display = "inline";
+		moreTrackListing.style.display = "none";
+
+	}else{
+
+		moreTrackListing.style.display = "inline"
+		lessTrackListing.style.display = "none";
+
+
+
+	}
+
+
+}
 
 
 function frontTime(){
