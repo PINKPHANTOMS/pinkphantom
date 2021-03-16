@@ -17,7 +17,7 @@
 	<div id="myNavBtns">
 			<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
 
-			<button  onclick="backTime()" id="myBackBtn">SIDE B</button>
+			<!-- <button  onclick="backTime()" id="myBackBtn">SIDE B</button> -->
 
 			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 
@@ -90,6 +90,23 @@
 
 										</span>
 											</h3>
+
+											<div id="imageGallery">
+											<img src="images/2018_2019/0.gif" onclick="itimeStamp1()" id="myBackBtn">
+											<img src="images/2018_2019/01.gif" onclick="itimeStamp2()">
+											<img src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
+											<img src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
+											<img src="images/2018_2019/3.jpg" onclick="itimeStamp5()">
+											<img src="images/2018_2019/5.jpg" onclick="itimeStamp6()">
+											<img src="images/2018_2019/6.jpg" onclick="itimeStamp7()">
+											<img src="images/2018_2019/7.jpg" onclick="itimeStamp8()">
+											<img src="images/2018_2019/8.jpg" onclick="itimeStamp9()">
+											<img src="images/2018_2019/9.jpg" onclick="itimeStamp10()">
+											<img src="images/2018_2019/2018oct.jpg" onclick="itimeStamp11()">
+											<img src="images/2018_2019/001.gif" onclick="itimeStamp12()">
+											<img src="images/2018_2019/12.jpg" onclick="itimeStamp13()">
+										</div>
+
 										</div>
 
 
@@ -97,8 +114,6 @@
 
 
 
-
-									</span>
 									<span id="dots"></span>
 									<span id="moreBack">
 
@@ -248,6 +263,7 @@
 				</div>
 
 
+			</span>
 
 
 
@@ -468,6 +484,26 @@
 
 
 <style>
+
+#imageGallery{
+	margin: 0;
+	padding: 0;
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+#imageGallery img{
+	flex: 1;
+	width: 32vw;
+  height: 32vw;
+  object-fit: cover;
+	padding-top: 0vh;
+	padding-bottom: 0vh;
+
+
+
+}
+
 
 /* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
 -webkit-background-size: 2650px 1440px;
@@ -872,6 +908,7 @@ img {
 	var morePReel = document.getElementById("morePReel");
 	var moreFront = document.getElementById("moreFront");
 	var moreBack = document.getElementById("moreBack");
+	var moreIG = document.getElementById("imageGallery");
 	var moreTrackListing = document.getElementById("moreTrackListing");
 	var lessTrackListing = document.getElementById("lessTrackListing");
 	var less1TrackListing = document.getElementById("less1TrackListing");
@@ -895,7 +932,8 @@ img {
 	moreFront.style.display = "inline";   
 	moreBack.style.display = "none";   
 	moreLyrics.style.display = "none";   
-	morePReel.style.display = "none"; 
+	morePReel.style.display = "none";
+	moreIG.style.display = "inline"; 
 	moreTrackListing.style.display = "inline";
 	lessTrackListing.style.display = "none";
 	less1TrackListing.style.display = "none";
@@ -933,7 +971,6 @@ img {
 audio.init();
 
 var x = document.getElementById('myAudio');
-
 
 function timeStamp1(){
 	x.currentTime = 0;
@@ -989,6 +1026,116 @@ function timeStamp13(){
 }
 
 
+
+
+
+//imageTimestamps
+function itimeStamp1(){
+	x.currentTime = 0;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp2(){
+	x.currentTime = 99;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp3(){
+	x.currentTime = 403;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp4(){
+	x.currentTime = 612.7;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp5(){
+	x.currentTime = 727;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp6(){
+	x.currentTime = 783.5;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp7(){
+	x.currentTime = 1094;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp8(){
+	x.currentTime = 1225;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp9(){
+	x.currentTime = 1449;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp10(){
+	x.currentTime = 1694.8;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp11(){
+	x.currentTime = 1912;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp12(){
+	x.currentTime = 2079;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+function itimeStamp13(){
+	x.currentTime = 2459;
+	x.play();
+
+	backTime();
+		document.body.scrollTop = 50;
+		document.documentElement.scrollTop = 50;
+}
+
+
 function trackListTime(){
 
 	if(moreTrackListing.style.display==="inline"){
@@ -1040,9 +1187,6 @@ function frontTime(){
 
 function backTime(){
 
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-
 
 
 
@@ -1056,7 +1200,7 @@ function backTime(){
 		myPReelBtn.blur();
 		moreBack.style.display = "inline";
 		moreLyrics.style.display = "none";
-		moreFront.style.display = "none";
+		moreIG.style.display = "none";
 		morePReel.style.display = "none";
 	}
 
