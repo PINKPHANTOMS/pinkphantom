@@ -1283,6 +1283,11 @@ window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
 	// console.log(window.pageYOffset)
 
+if(lecteur.style.display === "none" && window.pageYOffset >= 100){
+	lecteur.style.display = "inline";
+	document.getElementById("myNavBtns").style.top = "0";
+	document.getElementById("myNav1Btns").style.left = "0";
+}
 
 	if(moreBack.style.display === "inline" && window.pageYOffset<640){
 		moreFront.style.display = "inline";
@@ -1335,7 +1340,7 @@ gestureZone.addEventListener('touchend', function(event) {
 
 	}
 
-	if(moreFront.style.display === "inline" && window.pageYOffset < 200){
+	if(moreFront.style.display === "inline"){
 		console.log(window.pageYOffset);
 		toggle();
 	}
@@ -1355,19 +1360,19 @@ gestureZone.addEventListener('touchmove', function(event) {
 
 function toggle(event){
 
-	if(touchstartX == touchendX && touchstartY == touchstartY){
-		if(lecteur.style.display === "none"){
-			lecteur.style.display = "inline";
-			document.getElementById("myNavBtns").style.top = "0";
-			document.getElementById("myNav1Btns").style.left = "0";
+	if(lecteur.style.display === "none"){
+		lecteur.style.display = "inline";
+		document.getElementById("myNavBtns").style.top = "0";
+		document.getElementById("myNav1Btns").style.left = "0";
 
-		}else{
+	}
+
+	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset == 0){
 			if(touchstartY < ((screen.height*.7) - window.pageYOffset) && touchendY > 50){
 
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
 			document.getElementById("myNav1Btns").style.left = "-500px";
-}
 		}
 
 
