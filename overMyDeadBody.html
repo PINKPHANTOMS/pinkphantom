@@ -629,11 +629,11 @@ img {
     width: 100%;
 }
 .lecteur {
-    width: 105%;
+    width: 100%;
     display: block;
     height: auto;
     position: relative;
-		right: 10%;
+		right: 0%;
     /* float: left; */
 }
 
@@ -641,7 +641,7 @@ img {
     outline: 0px dotted #999;
 }
 .mejs__container {
-    position: relative;
+		position: relative;
     background-color: transparent;
     min-width: auto !important;
 }
@@ -870,7 +870,7 @@ img {
                     timeAndDurationSeparator: '<span></span>',
                     iPadUseNativeControls: false,
                     iPhoneUseNativeControls: true,
-                    AndroidUseNativeControls: false
+                    AndroidUseNativeControls: true
                 });            
             }        
         },
@@ -1075,7 +1075,7 @@ function toggle(event){
 
 
 	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50){
-		if(lecteur.style.display === "inline" && touchendY < screen.height*.7){
+		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
 			document.getElementById("myNav1Btns").style.left = "-500px";
