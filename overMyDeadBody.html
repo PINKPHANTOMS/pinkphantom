@@ -1064,7 +1064,7 @@ gestureZone.addEventListener('touchmove', function(event) {
 function toggle(event){
 
 
-	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset == 0){
+	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50){
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.7){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
