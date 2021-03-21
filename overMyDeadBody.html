@@ -11,7 +11,7 @@
 <title>OVER MY DEAD BODY</title>
 
 
-<body>
+<body onload="loop()">
 
 	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
 	<div id="myNavBtns">
@@ -869,7 +869,7 @@ img {
                     alwaysShowControls      : true,
                     timeAndDurationSeparator: '<span></span>',
                     iPadUseNativeControls: false,
-                    iPhoneUseNativeControls: false,
+                    iPhoneUseNativeControls: true,
                     AndroidUseNativeControls: false
                 });            
             }        
@@ -884,6 +884,7 @@ audio.init();
 
 var x = document.getElementById('myAudio');
 //imageTimestamps
+
 
 
 function frontTime(){
@@ -911,6 +912,16 @@ function frontTime(){
 
 
 
+}
+
+function loop(){
+
+
+	while(x.currentTime >= 154){
+		console.log("wow");
+		audio.init();
+		x.currentTime = 0;
+	}
 }
 
 function backTime(){
@@ -1023,7 +1034,6 @@ let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
-
 
 		// console.log(zoom);
 
