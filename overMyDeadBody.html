@@ -1362,7 +1362,7 @@ function toggle(event){
 
 
 	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset == 0){
-		if(lecteur.style.display === "inline"){
+		if(lecteur.style.display === "inline" && touchendY < screen.height*.7){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
 			document.getElementById("myNav1Btns").style.left = "-500px";
