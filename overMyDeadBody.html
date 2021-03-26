@@ -416,7 +416,8 @@
 #myNavBtns{
 	position: fixed;
 	top: 0;
-	width: 100%;
+	width: 100vw;
+	max-width: 600px;
 	display: inline-flex;
 	z-index: 99;
 	width: 100%;
@@ -425,7 +426,7 @@
 
 #myNav1Btns{
 	position: fixed;
-	top: 50px;
+	top: 50vw;
 	width: 100%;
 	display: inline-flex;
 	z-index: 99;
@@ -435,20 +436,20 @@
 
 #myNavBtns button {
 	flex: 1;
-	padding: 2vw;
+	padding: 1.5vh;
 	text-align: center;
 	background-color: rgb(0,0,0,.7);
 	z-index: 99;
 	color: white;
 	font-family: cyber;
-	font-size: 5vw;
+	font-size: 3vh;
 	border-style: hidden;
 	border-bottom: 3px solid transparent;
 }
 
 #myNav1Btns button {
 	flex: 1;
-	top: 50px;
+	top: 50vw;
 	padding: 2vw;
 	text-align: center;
 	background-color: rgb(0,0,0,.7);
@@ -560,7 +561,7 @@ body {
     /* font-family: "Raleway",sans-serif; */
 }
 h1 {
-    font-size: 8vw;
+    font-size: 5vh;
     color: #fff;
 		padding-left: 5%;
 
@@ -568,7 +569,7 @@ h1 {
 h3 {
     margin-top: 75vh;
 		padding-left: 5%;
-    font-size: 5vw;
+    font-size: 3vh;
     font-weight: 500;
     color: #ccc;
 }
@@ -599,7 +600,8 @@ h3 {
 		background-size: cover;
     display: block;
     position: relative;
-    width: 100%;
+    width: 100vw;
+		max-width: 600px;
     height: 100vh;
     margin: auto;
     border-radius: 0 0 1vw 1vw;
@@ -626,15 +628,15 @@ img {
 }
 .titre {
     float: left;
-    width: 100%;
+    width: 80%;
 }
 .lecteur {
     width: 100%;
     display: block;
     height: auto;
-    position: relative;
-		right: 0%;
-    /* float: left; */
+    position: absolute;
+		left: 0;
+		top: 90vh;
 }
 
 .mejs__button>button:focus {
@@ -706,14 +708,13 @@ img {
     content: "\f026";
 } */
 .mejs__controls .mejs__time {
-    width: 120%;
+    width: 100%;
     margin-top: 3%;
     margin-bottom: 1%;
     color: #fff;
     height: auto;
     padding: 0;
     overflow: visible;
-    min-width: 100%;
 }
 .mejs__controls .mejs__time span {
     font-size: 4vw;
@@ -728,7 +729,7 @@ img {
     float: right;
 }
 .mejs__controls .mejs__time-rail {
-    width: 120%;
+    width: 100vw;
     margin: 0;
 }
 .mejs__controls .mejs__time-rail span {
@@ -764,7 +765,7 @@ img {
 .mejs__controls .mejs__time-rail .mejs__time-float-corner {
     top: auto;
     bottom: -9px;
-    left: 50%;
+    left: 0%;
     width: 0;
     height: 0;
     border-top: 6px solid #fff;
@@ -1014,8 +1015,8 @@ if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		document.getElementById("myNav1Btns").style.left = "0";
 
   } else {
-    document.getElementById("myNavBtns").style.top = "-50px";
-		document.getElementById("myNav1Btns").style.left = "-500px";
+    document.getElementById("myNavBtns").style.top = "-50vw";
+		document.getElementById("myNav1Btns").style.left = "-500vw";
 		// console.log(document.documentElement.scrollTop);
 
   }
