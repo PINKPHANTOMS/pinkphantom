@@ -107,21 +107,24 @@
 												explore the american dream...
 											</div>
 											<div id="imageGallery">
-											<img loading=lazy src="images/americandream.jpg" onclick="itimeStamp0()" id="myBackBtn">
-											<img loading=lazy src="images/city/a.jpg" onclick="itimeStamp1()"id="myBackBtn">
-											<img loading=lazy src="images/newglitch/tenor.gif" onclick="itimeStamp2()" id="myBackBtn">
-											<img loading=lazy src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
-											<img loading=lazy src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
-											<img loading=lazy src="images/2018_2019/3.jpg" onclick="itimeStamp5()">
-											<img loading=lazy src="images/2018_2019/5.jpg" onclick="itimeStamp6()">
-											<img loading=lazy src="images/2018_2019/6.jpg" onclick="itimeStamp7()">
-											<img loading=lazy src="images/2018_2019/7.jpg" onclick="itimeStamp8()">
-											<img loading=lazy src="images/2018_2019/8.jpg" onclick="itimeStamp9()">
-											<img loading=lazy src="images/2018_2019/9.jpg" onclick="itimeStamp10()">
-											<img loading=lazy src="images/2018_2019/2018oct.jpg" onclick="itimeStamp11()">
-											<img loading=lazy src="images/2018_2019/001.gif" onclick="itimeStamp12()">
-											<img loading=lazy src="images/2018_2019/12.jpg" onclick="itimeStamp13()">
-										</div>
+												<ul>
+													<li><img loading=lazy src="images/americandream.jpg" onclick="itimeStamp0()" id="myBackBtn"></li>
+													<li><img loading=lazy src="images/city/a.jpg" onclick="itimeStamp1()"id="myBackBtn"></li>
+													<li><img loading=lazy src="images/newglitch/tenor.gif" onclick="itimeStamp2()" id="myBackBtn"></li>
+													<li><img loading=lazy src="images/2018_2019/1.jpg" onclick="itimeStamp3()"></li>
+													<li><img loading=lazy src="images/2018_2019/2.jpg" onclick="itimeStamp4()"></li>
+													<li><img loading=lazy src="images/2018_2019/3.jpg" onclick="itimeStamp5()"></li>
+													<li><img loading=lazy src="images/2018_2019/5.jpg" onclick="itimeStamp6()"></li>
+													<li><img loading=lazy src="images/2018_2019/6.jpg" onclick="itimeStamp7()"></li>
+													<li><img loading=lazy src="images/2018_2019/7.jpg" onclick="itimeStamp8()"></li>
+													<li><img loading=lazy src="images/2018_2019/8.jpg" onclick="itimeStamp9()"></li>
+													<li><img loading=lazy src="images/2018_2019/9.jpg" onclick="itimeStamp10()"></li>
+													<li><img loading=lazy src="images/2018_2019/2018oct.jpg" onclick="itimeStamp11()"></li>
+													<li><img loading=lazy src="images/2018_2019/001.gif" onclick="itimeStamp12()"></li>
+													<li><img loading=lazy src="images/2018_2019/12.jpg" onclick="itimeStamp13()"></li>
+													<li></li>
+												</ul>
+											</div>
 										</div>
 									</span>
 									<span id="dots"></span>
@@ -366,24 +369,47 @@ overflow-y: hidden;
 	padding:2vw;
 	width: 80vw;
 }
-#imageGallery{
-	margin: 0;
-	padding: 0;
-	display: inline-flex;
-	flex-wrap: wrap;
+  #imageGallery ul {
+  display: flex;
+  flex-wrap: wrap;
 }
-#imageGallery img{
-	flex: 1;
-	width: 32vw;
-  height: 32vw;
+  #imageGallery li {
+  height: 40vh;
+  flex-grow: 1;
+}
+  #imageGallery li:last-child {
+  flex-grow: 10;
+}
+  #imageGallery img {
+  max-height: 100%;
+  min-width: 100%;
   object-fit: cover;
-	padding-top: 0;
-	padding-left: 0;
-	padding-right: 0;
-	padding-bottom: 0;
+  vertical-align: bottom;
 }
-/* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
--webkit-background-size: 2650px 1440px;
+@media (max-aspect-ratio: 1/1) {
+    #imageGallery li {
+    height: 30vh;
+  }
+}
+@media (max-height: 480px) {
+    #imageGallery li {
+    height: 80vh;
+  }
+}
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+    #imageGallery ul {
+    flex-direction: row;
+  }
+    #imageGallery li {
+    height: auto;
+    width: 100%;
+  }
+  #imageGallery img {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
+}
 .photoBoi{
 	max-width: 500px;
 }
