@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
@@ -116,8 +115,8 @@
 											<img loading=lazy src="images/americandream.jpg" onclick="itimeStamp0()" id="myBackBtn">
 											<img loading=lazy src="images/city/a.jpg" onclick="itimeStamp1()"id="myBackBtn">
 											<img loading=lazy src="images/newglitch/tenor.gif" onclick="itimeStamp2()" id="myBackBtn">
-											<img loading=lazy src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
-											<img loading=lazy src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
+											<img loading=lazy src="images/unsplashCity.jpg" onclick="itimeStamp3()">
+											<img loading=lazy src="images/sleepFactory.png" onclick="itimeStamp4()">
 											<img loading=lazy src="images/2018_2019/3.jpg" onclick="itimeStamp5()">
 											<img loading=lazy src="images/2018_2019/5.jpg" onclick="itimeStamp6()">
 											<img loading=lazy src="images/2018_2019/6.jpg" onclick="itimeStamp7()">
@@ -193,6 +192,9 @@
 					This is a concept album about the United States after all… But we’ll hold off on that for now.<br><br>
 				</div>
 				<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+					<center>
+						<img loading=lazy src="images/sleepFactory.png" onclick="timeStamp3()" width="100%" alt="">
+					</center>
 					<div style="font-size: 5vw;" onclick="timeStamp4()">
 					<b>	<i><u>[10:12] The Sleep Factory</u></i></b><br>
 					</div>
@@ -533,7 +535,6 @@ body {
 		background-image: url("images/albumart/ADREAM.gif");
 		background-repeat: no-repeat;
 		background-size: 100%;
-		background-attachment: fixed;
 		font-family: 'Cyber', sans-serif;
 		/* background-image: linear-gradient("images/americandream.jpg") */ */
     /* font-family: "Raleway",sans-serif; */
@@ -592,12 +593,12 @@ img {
     width: 100%;
 }
 .lecteur {
-    width: 105%;
+    width: 120vw;
     display: block;
     height: auto;
-    position: relative;
-		right: 10%;
-    /* float: left; */
+    position: absolute;
+		left: -6vh;
+		top: 50vh;
 }
 .mejs__button>button:focus {
     outline: 0px dotted #999;
@@ -766,7 +767,7 @@ img {
                     alwaysShowControls      : true,
                     timeAndDurationSeparator: '<span></span>',
                     iPadUseNativeControls: false,
-                    iPhoneUseNativeControls: false,
+                    iPhoneUseNativeControls: true,
                     AndroidUseNativeControls: false
                 });            
             }        
@@ -832,28 +833,28 @@ function timeStamp13(){
 //imageTimestamps
 function itimeStamp0(){
 	backTime();
-		document.body.scrollTop = 800;
-		document.documentElement.scrollTop = 800;
+		document.body.scrollTop = 1347;
+		document.documentElement.scrollTop = 1347;
 }
 function itimeStamp1(){
 	backTime();
-		document.body.scrollTop = 1596;
-		document.documentElement.scrollTop = 1596;
+		document.body.scrollTop = 2180;
+		document.documentElement.scrollTop = 2180;
 }
 function itimeStamp2(){
 	backTime();
-		document.body.scrollTop = 3249;
-		document.documentElement.scrollTop = 3249;
+		document.body.scrollTop = 3780;
+		document.documentElement.scrollTop = 3780;
 }
 function itimeStamp3(){
 	backTime();
-		document.body.scrollTop = 3656;
-		document.documentElement.scrollTop = 3656;
+		document.body.scrollTop = 4962;
+		document.documentElement.scrollTop = 4962;
 }
 function itimeStamp4(){
 	backTime();
-		document.body.scrollTop = 3890;
-		document.documentElement.scrollTop = 3890;
+		document.body.scrollTop = 5847;
+		document.documentElement.scrollTop = 5847;
 }
 function itimeStamp5(){
 	backTime();
@@ -980,6 +981,7 @@ function pReelTime(){
 }
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+	console.log(window.pageYOffset);
   var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
@@ -1013,8 +1015,6 @@ gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 	if(moreFront.style.display === "inline"){
-		console.log("yea!");
-
 		toggle();
 	}
 }, false);
