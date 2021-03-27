@@ -1,54 +1,30 @@
 <!DOCTYPE html>
-
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
 	<link rel="icon" href="images/albumart/OMDB.png">
 	<link rel="apple-touch-icon" href="images/albumart/OMDB.png">
 	<link rel="apple-touch-startup-image" href="images/albumart/OMDB.png">
-
-
 <title>OVER MY DEAD BODY</title>
-
-
-<body onload="loop()">
-
-	<!-- <h1 style="font-size: 8vw; text-align: center;color: white;">PINK PHANTOM</h1> -->
+<body>
 	<div id="myNavBtns">
 			<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
-
-			<button style="display: none"  onclick="backTime()" id="myBackBtn">SIDE B</button>
-
-			<button style="display: none" onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
-
-			<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
+			<button onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 	</div>
-
 	  <div id="gestureZone">
         <div class="container">
-
 						<span id="dots"></span>
 						<span id="moreFront">
-
-
-
-
 							<span id="dots"></span>
-
             <div class="music-player">
 							<span id="stuff">
 								<div class="bg">
-
 								<div class="titre">
-
 										<h3>Pink Phantom</h3>
 										<h1>OVER MY DEAD BODY</h1>
-
 								</div>
 								<span id="stuff">
-
 								<span id="stuff">
-
 								<center>
                 <div class="lecteur">
                     <audio style="width: 80%;" id="myAudio" class="fc-media">
@@ -57,197 +33,53 @@
                 </div>
 								</center>
 							</div>
-
 							</span>
-
 							</div>
 							<img loading=lazy src="images/OMDBmin.png" width="100%">
-
-							<div class="titre">
-
-								<h3 style = "display: none;margin-top: -0vh;text-align: left; text-shadow: 0vw 0vw .5vw black; line-height: 10vw; font-size: 5vw; background: black;">
-
-									<div class="arrow" onclick="trackListTime()" id="myTrackListBtn">
-										<span id="dots"></span>
-										<span id="moreTrackListing">
-										tracklisting ▲
-									</span>
-									<span id="dots"></span>
-								<span id="lessTrackListing">
-								tracklisting ▼ <br>
-							</span>
-									</div>
-
-									<span id="dots"></span>
-									<span id="less1TrackListing">
-										<u>
-										<a onclick="timeStamp1()"><b style="color: white">[00:00]</b> Dreams  <br></a>
-										<a onclick="timeStamp2()"><b style="color: white">[01:39]</b> No Wolves, Just Sheep Grazing on the Fabric We Call Home <br></a>
-										<a onclick="timeStamp3()"><b style="color: white">[06:43]</b> Theatre of Animals <br></a>
-										<a onclick="timeStamp4()"><b style="color: white">[10:12]</b> The Sleep Factory <br></a>
-										<a onclick="timeStamp5()"><b style="color: white">[12:07]</b> Funeral <br></a>
-										<a onclick="timeStamp6()"><b style="color: white">[13:03]</b> "Be Operational (That Is, Commensurable) or Disappear" <br></a>
-										<a onclick="timeStamp7()"><b style="color: white">[18:14]</b> Just Be Normal, Do Your Part<br><a>
-										<a onclick="timeStamp8()"><b style="color: white">[20:25]</b> The Construction of Ultrarealism <br></a>
-										<a onclick="timeStamp9()"><b style="color: white">[24:09]</b> Eventually the Train Will Come <br><a>
-										<a onclick="timeStamp10()"><b style="color: white">[28:14]</b> The Immanence of Sleep in a Bed on Fire <br></a>
-										<a onclick="timeStamp11()"><b style="color: white">[31:52]</b> Controlled Paralysis <br></a>
-										<a onclick="timeStamp12()"><b style="color: white">[34:39]</b> The Sweet Smell of Excess & Wealth <br></a>
-										<a onclick="timeStamp13()"><b style="color: white">[40:59]</b> Empire of Desire <br></a>
-									</u>
-									<br>
-									<br>
-
-								</span>
-									</h3>
-
-									<div id="imageGallery">
-									<!-- <img loading=lazy src="images/albumart/OMDB.png" onclick="itimeStamp0()" id="myBackBtn">
-									<img loading=lazy src="images/city/a.jpg" onclick="itimeStamp1()"id="myBackBtn">
-									<img loading=lazy src="images/newglitch/tenor.gif" onclick="itimeStamp2()" id="myBackBtn">
-									<img loading=lazy src="images/2018_2019/1.jpg" onclick="itimeStamp3()">
-									<img loading=lazy src="images/2018_2019/2.jpg" onclick="itimeStamp4()">
-									<img loading=lazy src="images/2018_2019/3.jpg" onclick="itimeStamp5()">
-									<img loading=lazy src="images/2018_2019/5.jpg" onclick="itimeStamp6()">
-									<img loading=lazy src="images/2018_2019/6.jpg" onclick="itimeStamp7()">
-									<img loading=lazy src="images/2018_2019/7.jpg" onclick="itimeStamp8()">
-									<img loading=lazy src="images/2018_2019/8.jpg" onclick="itimeStamp9()">
-									<img loading=lazy src="images/2018_2019/9.jpg" onclick="itimeStamp10()">
-									<img loading=lazy src="images/2018_2019/2018oct.jpg" onclick="itimeStamp11()">
-									<img loading=lazy src="images/2018_2019/001.gif" onclick="itimeStamp12()">
-									<img loading=lazy src="images/2018_2019/12.jpg" onclick="itimeStamp13()"> -->
-								</div>
-
-								</div>
-
-
-
 				</span>
-
-
-
-									<span id="dots"></span>
-									<span id="moreBack">
-
-
-
-<div class="titre">
-
-	<div id="myNav1Btns" style="color: white;">
-		<button  onclick="frontTime()" id="myFrontBtn">ᐊgo back</button>
-
-
-</div>
-
-	<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
-		OVER MY DEAD BODY
-	</div>
-	<div style="font-size: 5vw; color: gray;padding-left: 5%;">
-		by Pink Phantom</div>
-	<div style="padding-bottom: 15vh;padding-left: 5%;margin-top: 0vh;font-size: 4vw; color: gray;"> released April 20th, 2018</div>
-
-</div>
-<div style="margin: 0vw; background: black;">
-	<center>
-		<img loading=lazy src="images/albumart/OMDB.png" width="100%" style="padding: 0vw;"alt="">
-	</center>
-	</div>
-
-
-			</span>
-
-		<div class="bodyBoi2">
-
-			<span id="lyricsDots"></span>
-			<span id="moreLyrics">
-
-				<span id="lyricImage">
-					<br>
-					<br>
-
-					<center><i>OVER MY DEAD BODY</i></center><br>
-
-
-				</span>
-
-			</span>
-		</div>
-
-
 			<span id="dots"></span>
 			<span id="morePReel">
-
-
 				<div style="color: white; font-size: 8vw; line-height: 10vw; background: black; text-align: center;">
 					<br>
 					<br>
 					PINK PHANTOM
 					<br>
-
 					<div style="font-size: 8vw; padding-bottom: 20vh;">
 						AMERICAN DREAM ERA<br>
 						(2018-2019)
 					</div>
-
 				<div class="titleBoi" style="color: white;">
 					MAY 2018<br>
-
 					<div style="font-size: 5vw; color: gray;">
-
 						SALPOINTE HIGHSCHOOL <br>
 						<br>
-
 					</div>
 				</div>
-
-
 				<img loading=lazy src="images/2018_2019/0.gif" width="100%"><br>
-
 				<img loading=lazy src="images/2018_2019/01.gif" width="100%"><br>
-
-
-
-
 						<div class="titleReal" style="color: white;">
 							<br>
 							JUNE 2018
 							<div style="font-size: 5vw; color: gray;">
-
 								sam's house.
 								<br>
 								<br>
-
 							</div>
-
 						</div>
-
-
-
 						<img loading=lazy src="images/2018_2019/1.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/2.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/3.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/5.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/6.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/7.jpg" width="100%"><br>
-
-
 						<div class="titleReal">
-
 							<div style="font-size: 5vw;">
 								<br>
 								downtown tucson.
 							</div>
 						</div>
-
 						<img loading=lazy src="images/2018_2019/8.jpg" width="100%"><br>
-
 						<img loading=lazy src="images/2018_2019/9.jpg" width="100%"><br>
-
 						<div class="titleReal">
 							<div style="font-size: 5vw;">
 								photo credits: ILIANA STEVENS
@@ -255,125 +87,59 @@
 								<br>
 							</div>
 						</div>
-
-
 						<div class="titleReal" style="color: white;">
-
 							OCT. 2018
 							<br>
 							<br>
-
 						</div>
-
 						<img loading=lazy src="images/2018_2019/2018oct.jpg" width="100%"><br>
-
-
-
 						<div class="titleBoi" style="color: white;">
 							<br>
 							<br>
 							DEC. 2018
 							<br>
 							<br>
-
 						</div>
-
 						<img loading=lazy src="images/2018_2019/001.gif" width="100%"><br>
-
-
 							<img loading=lazy src="images/2018_2019/12.jpg" width="100%"><br>
-
 							<div class="titleReal" style="color: white">
 								<br>
 								MAY 2019
 								<br>
 								<br>
 							</div>
-
 							<img loading=lazy src="images/2018_2019/2019001.jpg" width="100%"><br>
-
 							<img loading=lazy src="images/2018_2019/2019002.jpg" width="100%"><br>
-
 							<img loading=lazy src="images/2018_2019/0001.gif" width="100%"><br>
-
-
-
-
-
 								<div class="titleReal" style="color: white;">
 									<br>
 									JUNE 2019
 									<br>
 									<br>
 								</div>
-
 								<img loading=lazy src="images/2018_2019/201901.jpg" width="100%"><br>
-
 								<img loading=lazy src="images/2018_2019/201902.jpg" width="100%"><br>
-
 								<img loading=lazy src="images/2018_2019/201903.jpg" width="100%"><br>
-
 								<img loading=lazy src="images/2018_2019/201904.jpg" width="100%"><br>
-
 							</div>
-
 							</span>
-
-
 						<div class="backgroundThingy">
 							<center>
 								<footer style="font-size: 5vw; color: white;">&copy; Copyright 2020 PINK PHANTOM</footer>
 							</center>
-
 						</div>
-
 					</div>
 				</div>
-
-				<!-- <center>
-
-				<p>
-				<button class="cybr-btn">
-				Website<span aria-hidden>_</span>
-				<span aria-hidden class="cybr-btn__glitch">Website</span>
-			</a>
-			<span aria-hidden class="cybr-btn__tag">R25</span>
-		</button>
-		<button class="cybr-btn">
-		VSCO<span aria-hidden>_</span>
-		<span aria-hidden class="cybr-btn__glitch">VSCO</span>
-		<span aria-hidden class="cybr-btn__tag">R25</span>
-	</button>
-</p>
-</center> -->
-
-
-
-
-
 </body>
-
-
-
-
-
-
-
-
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
-
-
-
 <style>
-
 #imageGallery{
 	margin: 0;
 	padding: 0;
 	display: inline-flex;
 	flex-wrap: wrap;
 }
-
 #imageGallery img{
 	flex: 1;
 	width: 32vw;
@@ -385,15 +151,10 @@
 	padding-bottom: 0;
 	display: none;
 }
-
-
-/* @media screen and (max-device-width:480px){body{-webkit-text-size-adjust:none}} */ */
 -webkit-background-size: 2650px 1440px;
-
 .photoBoi{
 	max-width: auto;
 }
-
 .titleBoi{
 	background-color: rgba(0,0,0,.5);
 	color:gray;
@@ -402,7 +163,6 @@
 	padding-right: 5vw;
 	text-align: center;
 }
-
 .titleReal{
 	background-color: rgba(0,0,0);
 	color:gray;
@@ -410,9 +170,7 @@
 	padding-left: 5vw;
 	padding-right: 5vw;
 	text-align: center;
-
 }
-
 #myNavBtns{
 	position: fixed;
 	top: 0;
@@ -423,7 +181,6 @@
 	width: 100%;
 	transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
-
 #myNav1Btns{
 	position: fixed;
 	top: 50vw;
@@ -433,7 +190,6 @@
 	width: 30%;
 	transition: left 0.3s; /* Transition effect when sliding down (and up) */
 }
-
 #myNavBtns button {
 	flex: 1;
 	padding: 1.5vh;
@@ -446,7 +202,6 @@
 	border-style: hidden;
 	border-bottom: 3px solid transparent;
 }
-
 #myNav1Btns button {
 	flex: 1;
 	top: 50vw;
@@ -459,21 +214,15 @@
 	font-size: 5vw;
 	border-style: hidden;
 	border-bottom: 3px solid transparent;
-
 }
-
 #myNavBtns button:focus {
 	outline: 0vw solid white;
 	border-bottom: 3px solid magenta;
-	/* background-color: rgba(120,120,120,.5); */
 }
-
 #myNavBtns button:focus {
 	border-bottom: 3px solid magenta;
   outline: 0vw solid white;
 }
-
-
 .photoReel{
 	background-color: black;
 	color:gray;
@@ -481,9 +230,7 @@
 	font-size: 8vw;
 	line-height: 10vw;
 	text-align: center;
-
 }
-
 .bodyBoi{
 	background-color: black;
 	color:white;
@@ -492,7 +239,6 @@
 	padding: 5vw;
 	text-align: left;
 }
-
 .bodyBoi2{
 	background-color: black;
 	line-height: 10vw;
@@ -501,15 +247,11 @@
 	padding: 0vw;
 	text-align: left;
 }
-
-
 @font-face {
   font-family: Cyber;
   src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
   font-display: swap;
 }
-
-
 .glow-on-hoverMAIN {
     width: 25vw;
 		display: inline-flex;
@@ -524,30 +266,21 @@
     cursor: pointer;
     z-index: 99;
 }
-
-
 .glow-on-hoverMAIN:focus {
   outline: 0vw solid white;
 	background-color: rgba(120,120,120,.5);
 }
-
 .glow-on-hoverMAIN:active {
   outline: 0vw solid white;
 }
-
-
 @font-face {
    font-family: fongBoi;
    src: url(fonts/hacked.ttf);
-
 }
-
 @font-face {
    font-family: fontBoi1;
-   src: url(fonts/modeNine.ttf);
-
+	 src: url(fonts/modeNine.ttf);
 }
-
 body {
 		max-width: 600px;
 		margin: auto;
@@ -557,14 +290,11 @@ body {
 		background-size: contain;
 		background-attachment: fixed;
 		font-family: 'Cyber', sans-serif;
-		/* background-image: linear-gradient("images/americandream.jpg") */ */
-    /* font-family: "Raleway",sans-serif; */
 }
 h1 {
     font-size: 5vh;
     color: #fff;
 		padding-left: 2%;
-
 }
 h3 {
     margin-top: 75vh;
@@ -573,7 +303,6 @@ h3 {
     font-weight: 500;
     color: #ccc;
 }
-
 .container {
     width: 100%;
     height: 100%;
@@ -583,18 +312,14 @@ h3 {
     background-repeat: repeat;
     background-size: cover;
 }
-
 .backgroundThingy{
 	background-color: black;
-
 }
-
 .bg{
 	background: transparent linear-gradient(to bottom,transparent 50%,black 90%) repeat scroll 0 0;
 	width: 100vw;
 	height: 100vh;
 }
-
 .music-player {
 		background-image: url("images/omdb.gif");
 		background-size: cover;
@@ -605,19 +330,16 @@ h3 {
     height: 100vh;
     margin: auto;
     border-radius: 0 0 1vw 1vw;
-    /* box-shadow: 1px 10px 20px 5px #222; */
 }
 .cover {
     float: left;
     width: 100%;
     height: 66%;
 }
-
 img {
 	padding-top: 10vh;
 	padding-bottom: 10vh;
 }
-
 .cover img {
     display: block;
     position: relative;
@@ -638,7 +360,6 @@ img {
 		left: -6vh;
 		top: 50vh;
 }
-
 .mejs__button>button:focus {
     outline: 0px dotted #999;
 }
@@ -658,10 +379,6 @@ img {
     float: left;
     position: relative;
 }
-
-
-
-
 .mejs__controls .mejs__playpause-button {
     position: absolute !important;
 		float: right;
@@ -688,25 +405,6 @@ img {
 .mejs__controls .mejs__pause button:before{
     content:"\f04c";
 }
-/* .mejs__controls .mejs__volume-button button {
-    display: block;
-    width: 40px;
-    height: 40px;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 20px;
-    color: #5bbb95;
-    background: transparent;
-    margin: 0;
-    padding: 0;
-} */
-/* .mejs__controls .mejs__mute button:before {
-    content: "\f028";
-}
-.mejs__controls .mejs__unmute button:before {
-    content: "\f026";
-} */
 .mejs__controls .mejs__time {
     width: 100%;
     margin-top: 3%;
@@ -778,83 +476,25 @@ img {
 .mejs__controls .mejs__time-handle {
     display: none;
 }
-/* .mejs__controls .mejs__volume-button {
-    position: relative;
-    position: absolute !important;
-    top: 70px;
-    right: 25%;
-    width: 40px;
-    height: 40px;
-}
-.mejs__controls .mejs__horizontal-volume-slider {
-    display: block;
-    position: absolute !important;
-    position: relative;
-    top: 70px;
-    right: 10%;
-    width: 60px;
-    height: 4px;
-    margin-top: 18px;
-    border-radius: 50px;
-    line-height: 11px;
-}
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-total,
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.1);
-}
-.mejs__controls .mejs__horizontal-volume-slider .mejs__horizontal-volume-current {
-    background: #fff;
-} */
   </style>
-
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
-
   <script>
-	var moreLyrics = document.getElementById("moreLyrics");
-	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
 	var moreFront = document.getElementById("moreFront");
-	var moreBack = document.getElementById("moreBack");
-	var moreIG = document.getElementById("imageGallery");
-	var moreTrackListing = document.getElementById("moreTrackListing");
-	var lessTrackListing = document.getElementById("lessTrackListing");
-	var less1TrackListing = document.getElementById("less1TrackListing");
-
 	var lecteur = document.getElementById("stuff");
-
-	var myTrackListBtn = document.getElementById("myTrackListBtn");
-	var myBackBtn = document.getElementById("myBackBtn");
 	var myFrontBtn = document.getElementById("myFrontBtn");
-	var myLyricBtn = document.getElementById("myLyricBtn");
 	var myPReelBtn = document.getElementById("myPReelBtn");
 	const el = document.getElementById('myNavBtns');
-
-
 	var scale;
-
 	var audio = {   
-
     init: function() {
-	 
 	moreFront.style.display = "inline";   
-	moreBack.style.display = "none";   
-	moreLyrics.style.display = "none";   
 	morePReel.style.display = "none";
-	moreIG.style.display = "inline"; 
 	lecteur.style.display = "inline";
-
 	currentTime = 0;
-
 	myFrontBtn.focus();
-	scale = 1;
-
-	  
+	scale = 1;  
     var $that = this;  
         $(function() {            
             $that.components.media();        
@@ -878,203 +518,68 @@ img {
             
     },
 };
-
 // features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
-
 audio.init();
-
 var x = document.getElementById('myAudio');
-//imageTimestamps
-
-
-
 function frontTime(){
-
-
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
-
-	moreBack.style.display = "none";
-	moreIG.style.display = "inline";
-
 	if(moreFront.style.display==="inline"){
-		// moreFront.style.display = "none";
 	}else{
 		myFrontBtn.focus();
-		myLyricBtn.blur();
-		myBackBtn.blur();
 		myPReelBtn.blur();
-		moreIG.style.display = "inline";
 		moreFront.style.display = "inline";
-		moreLyrics.style.display = "none";
 		morePReel.style.display = "none";
 	}
-
-
-
-
 }
-
-function loop(){
-
-
-	while(x.currentTime >= 154){
-		console.log("wow");
-		audio.init();
-		x.currentTime = 0;
-	}
-}
-
-function backTime(){
-
-	if(moreBack.style.display==="inline"){
-		// moreFront.style.display = "none";
-	}else{
-		myBackBtn.focus();
-		myFrontBtn.blur();
-		myLyricBtn.blur();
-		myPReelBtn.blur();
-		moreBack.style.display = "inline";
-		// moreFront.style.display = "none";
-		moreLyrics.style.display = "none";
-		moreIG.style.display = "none";
-		morePReel.style.display = "none";
-	}
-
-}
-
-
-function lyricTime(){
-
-	document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-
-
-
-	if(moreLyrics.style.display==="inline"){
-		// moreFront.style.display = "none";
-	}else{
-		myLyricBtn.focus();
-		myFrontBtn.blur();
-		myBackBtn.blur();
-		myPReelBtn.blur();
-		moreLyrics.style.display = "inline";
-		moreIG.style.display = "none";
-		moreFront.style.display = "none";
-		moreBack.style.display = "none";
-		morePReel.style.display = "none";
-	}
-
-
-}
-
 function pReelTime(){
-
-
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-
-
 	if(morePReel.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
 		myPReelBtn.focus();
 		myFrontBtn.blur();
-		myBackBtn.blur();
-		myLyricBtn.blur();
 		morePReel.style.display = "inline";
-		moreIG.style.display = "none";
-		moreLyrics.style.display = "none";
-		moreBack.style.display = "none";
 		moreFront.style.display = "none";
 	}
-
-
 }
-
-
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
-	// console.log(window.pageYOffset)
-
 if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 	lecteur.style.display = "inline";
 	document.getElementById("myNavBtns").style.top = "0";
-	document.getElementById("myNav1Btns").style.left = "0";
 }
-
-	if(moreBack.style.display === "inline" && window.pageYOffset<640){
-		moreFront.style.display = "inline";
-		moreBack.style.display = "none";
-		moreIG.style.display = "inline";
-	}
-
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
-		document.getElementById("myNav1Btns").style.left = "0";
-
   } else {
     document.getElementById("myNavBtns").style.top = "-50vw";
-		document.getElementById("myNav1Btns").style.left = "-500vw";
-		// console.log(document.documentElement.scrollTop);
-
   }
   prevScrollpos = currentScrollPos;
 }
-
-
 let touchstartX = 1;
 let touchstartY = 1;
 let touchendX = 0;
 let touchendY = 0;
-
 const gestureZone = document.getElementById('gestureZone');
 let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
-
 gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
-
-		// console.log(zoom);
-
-	// if(document.body.scrollTop == 0 || document.documentElement.scrollTop == 0){
-	// 	scale = 1;
-	// }
-
 }, false);
-
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)<Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101 && Math.abs(touchendX-touchstartX)>(screen.width*.2)){
-		event.preventDefault();
-		// document.body.style.overflowY = "hidden";
-		handleGesture();
-
-	}
-
 	if(moreFront.style.display === "inline"){
-		console.log(window.pageYOffset);
 		toggle();
 	}
-	if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-	// touchZoom();
-}
 }, false);
-
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-		if(Math.abs(touchendY-touchstartY)>Math.abs(touchendX-touchstartX) && zoom>95 && zoom<101){
-		// touchZoom();
-	}
 }, false);
-
-
 function toggle(event){
-
-
 	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50){
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
@@ -1086,51 +591,6 @@ function toggle(event){
 			document.getElementById("myNav1Btns").style.left = "0";
 		}
 		}
-
-}
-
-function handleGesture(event) {
-	let swipeLeft;
-	// console.log(screen.width-touchstartX);
-	// console.log(touchendX);
-		if (touchendX <= touchstartX && (screen.width-touchstartX)<100) {
-			swipeLeft = true;
-		}else if (touchendX >= touchstartX && touchstartX<100){
-			swipeLeft = false;
-		}
-				if(swipeLeft==true){
-
-				// if(moreFront.style.display==="inline"){
-				// 	// backTime();
-				// }
-				// else if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
-				//
-				// 	pReelTime();
-				// }
-				// else if(moreLyrics.style.display==="inline" && 	document.documentElement.scrollTop == 0){
-				// 	pReelTime();
-				// }
-				// else if(moreBack.style.display==="inline"){
-				// 	lyricTime();
-				// }
-			}else{
-
-				//  if(moreLyrics.style.display==="inline" && 	document.body.scrollTop == 0){
-				// 	backTime();
-				// }
-				// else if(moreLyrics.style.display==="inline" && document.documentElement.scrollTop == 0){
-				// 	backTime();
-				// }
-				if(moreBack.style.display==="inline"){
-					frontTime();
-					moreBack.style.display = "none";
-					moreIG.style.display = "inline";
-				}
-		// 		else if(morePReel.style.display==="inline"){
-		// 			lyricTime();
-		// }
-	}
-	document.body.style.overflowY = "scroll";
 }
   </script>
 	</html>
