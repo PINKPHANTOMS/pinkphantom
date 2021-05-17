@@ -27,7 +27,7 @@
 								<span id="stuff">
 									<center>
 										<div class="lecteur">
-											<audio style="width: 80%;" id="myAudio" class="fc-media">
+											<audio style="width: 100%;" controls >
 												<source src="sounds/OMDB.mp3" type="audio/mp3" />
 											</audio>
 										</div>
@@ -45,19 +45,17 @@
 						<a href="https://distrokid.com/hyperfollow/pinkphantom/over-my-dead-body">
 							<img loading=lazy src="images\albumart\OMDB.png">
 						</a>
-						<i>OVER MY DEAD BODY</i><br>
 					</p>
 					<p>
 						<a href="https://distrokid.com/hyperfollow/pinkphantom/feed-me-more-life-fucker ">
 							<img loading=lazy src="images\albumart\feedme.png">
 						</a>
-						<i>feed_me</i><br>
+						<br>
 					</p>
 					<p>
 						<a href="https://distrokid.com/hyperfollow/pinkphantom/paralyzed">
 							<img loading=lazy src="images\paralyzed.png">
 						</a>
-						<i>Paralyzed</i><br>
 					</p>
 				</div>
 
@@ -65,28 +63,28 @@
 					VIDEO
 				</div>
 				<div id="main">
-					<p style="padding: 5vw;">
-						<iframe width="300" height="200" src="https://www.youtube.com/embed/l1asnRW1Aek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					<p>
+						<iframe height="500" src="https://www.youtube.com/embed/l1asnRW1Aek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
 						<i>LIVE @ the nose</i><br>
 					</p>
-					<p style="padding: 5vw;">
-						<iframe width="300" height="200" src="https://www.youtube.com/embed/cuUZDFqxE-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					<p>
+						<iframe height="500" src="https://www.youtube.com/embed/cuUZDFqxE-4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
 						<i>Diving Into Mirrors</i><br>
 					</p>
-					<p style="padding: 5vw;">
-						<iframe width="300" height="200" src="https://www.youtube.com/embed/sElxu17QnG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					<p>
+						<iframe height="500" src="https://www.youtube.com/embed/sElxu17QnG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
 						<i>OVER MY DEAD BODY</i><br>
 					</p>
-					<p style="padding: 5vw;">
-						<iframe width="300" height="200" src="https://www.youtube.com/embed/ES5_IKRe_pE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					<p>
+						<iframe height="500" src="https://www.youtube.com/embed/ES5_IKRe_pE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
 						<i>feed_me</i><br>
 					</p>
-					<p style="padding: 5vw;">
-						<iframe width="300" height="200" src="https://www.youtube.com/embed/LwwzTv8EH6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					<p>
+						<iframe height="500" src="https://www.youtube.com/embed/LwwzTv8EH6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen></iframe>
 						<i>Paralyzed</i><br>
 					</p>
@@ -407,32 +405,27 @@
 
 	.disco {
 		text-align: left;
-		font-size: 10vw;
+		font-size: 5vw;
 		color: white;
-		margin: 0;
-		padding: 5%;
+		margin-top: 5vw;
 	}
 
 	#main {
-		width: 90vw;
-		height: 60vh;
-		margin-top: 5vw;
-		margin-bottom: 0vw;
 		display: flex;
 		flex-direction: row;
-		overflow-x: auto;
+		overflow-x: scroll;
 		overflow-y: hidden;
 	}
 
 	#main p {
 		text-align: center;
-		font-size: 5vw;
+		font-size: 0vw;
 		color: white;
 	}
 
 	#main img {
 		padding: 2vw;
-		width: 80vw;
+		height: 50vh;
 	}
 
 	.music-player {
@@ -451,7 +444,6 @@
 	}
 
 	.cover {
-		float: left;
 		width: 100%;
 		height: 66%;
 	}
@@ -476,11 +468,11 @@
 	}
 
 	.lecteur {
-		width: 120vw;
+		width: 80%;
 		display: block;
 		height: auto;
 		position: absolute;
-		left: -6vh;
+		left: 10%;
 		top: 50vh;
 	}
 
@@ -495,10 +487,11 @@
 	}
 
 	.mejs__controls {
-		padding: 0 10%;
 		background: transparent !important;
 		display: block;
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	.mejs__controls div {
@@ -649,10 +642,10 @@
 				if (media.length) {
 					media.mediaelementplayer({
 						audioHeight: 100,
-						features: ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
+						// features: ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
 						alwaysShowControls: true,
 						timeAndDurationSeparator: '<span></span>',
-						iPadUseNativeControls: false,
+						iPadUseNativeControls: true,
 						iPhoneUseNativeControls: true,
 						AndroidUseNativeControls: true
 					});
