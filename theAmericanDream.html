@@ -18,7 +18,7 @@
 					<span id="stuff">
 					<center>
 					<div class="lecteur" id="wow">
-							<audio style="width: 80%;" controls id='myAudio'>
+							<audio controls id='myAudio'>
 									<source src="sounds/ACTII.mp3" type="audio/mp3"/>
 							</audio>
 					</div>
@@ -572,7 +572,6 @@
 	height: 100vh;
 }
 body {
-	max-width: 1000px;
 	margin: auto;
 	background-color: black;
 	overflow-x: hidden;
@@ -648,6 +647,12 @@ img {
 		bottom: 50vh;
 		z-index: 100;
 		transition: bottom .3s;
+}
+
+.lecteur audio{
+	width: 100vw;
+	height: 50px;
+	float: left;
 }
 audio::-webkit-media-controls-mute-button {
     display: none !important;
@@ -880,9 +885,11 @@ function frontTime(){
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
 		morePReel.style.display = "none";
+		document.getElementById("wow").style.bottom = "50vh";
 	}
 }
 function backTime(){
+
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
@@ -912,6 +919,7 @@ function lyricTime(){
 		moreFront.style.display = "none";
 		moreBack.style.display = "none";
 		morePReel.style.display = "none";
+		document.getElementById("wow").style.bottom = "0vh";
 	}
 }
 function pReelTime(){
@@ -929,11 +937,13 @@ function pReelTime(){
 		moreLyrics.style.display = "none";
 		moreBack.style.display = "none";
 		moreFront.style.display = "none";
+		document.getElementById("wow").style.bottom = "0vh";
+
 	}
 }
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
-	console.log(window.pageYOffset);
+	// console.log(window.pageYOffset);
   var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
