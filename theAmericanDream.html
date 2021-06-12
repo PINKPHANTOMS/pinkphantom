@@ -23,7 +23,7 @@
 								<span id="stuff">
 								<span id="stuff">
 								<center>
-                <div class="lecteur">
+                <div class="lecteur" id="wow">
                     <audio style="width: 80%;" id="myAudio" class="fc-media">
                         <source src="sounds/ACTII.mp3" type="audio/mp3"/>
                     </audio>
@@ -381,6 +381,8 @@
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
+
+
 .disco {
 	text-align: left;
 	font-size: 5vw;
@@ -642,9 +644,10 @@ img {
     width: 120vw;
     display: block;
     height: auto;
-    position: absolute;
+		position: fixed;
 		left: -6vh;
-		top: 50vh;
+		bottom: 0vh;
+		transition: bottom .3s;
 }
 .mejs__button>button:focus {
     outline: 0px dotted #999;
@@ -653,6 +656,7 @@ img {
     position: relative;
     background-color: transparent;
     min-width: auto !important;
+
 }
 .mejs__controls {
     padding: 0 10%;
@@ -669,7 +673,7 @@ img {
     position: absolute !important;
 		float: right;
     right: 0%;
-    top: 70vh;
+    bottom: 0;
     width: 40px;
 }
 .mejs__controls .mejs__playpause-button button {
@@ -1032,6 +1036,8 @@ window.onscroll = function() {
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
 		document.getElementById("myNavBtns").style.top = "0";
+		document.getElementById("wow").style.bottom = "0";
+
 	}
 		if(moreBack.style.display === "inline" && window.pageYOffset<640){
 		moreFront.style.display = "inline";
@@ -1041,9 +1047,13 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
 		document.getElementById("myNav1Btns").style.left = "0";
+		document.getElementById("wow").style.bottom = "0";
+
   } else {
     document.getElementById("myNavBtns").style.top = "-50px";
 		document.getElementById("myNav1Btns").style.left = "-500px";
+		document.getElementById("wow").style.bottom = "-500px";
+
   }
   prevScrollpos = currentScrollPos;
 }
