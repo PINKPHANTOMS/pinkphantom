@@ -28,6 +28,7 @@
 						<span id="dots"></span>
 						<span id="moreFront">
             <div class="music-player">
+							<div id = 'tap' style="position: absolute; top: 80vh; color: white; font-size: 5vw;">tap to play</div>
 								<div class="bg">
 							</div>
 
@@ -644,7 +645,7 @@ img {
     display: block;
     height: auto;
 		position: fixed;
-		bottom: 50vh;
+		bottom: -50vh;
 		z-index: 100;
 		transition: bottom .3s;
 }
@@ -885,7 +886,7 @@ function frontTime(){
 		moreFront.style.display = "inline";
 		moreLyrics.style.display = "none";
 		morePReel.style.display = "none";
-		document.getElementById("wow").style.bottom = "50vh";
+		document.getElementById("wow").style.bottom = "-50vh";
 	}
 }
 function backTime(){
@@ -963,7 +964,12 @@ window.onscroll = function() {
 		if(window.pageYOffset > 20 || moreFront.style.display == "none"){
 		document.getElementById("wow").style.bottom = "0vh";
 	}else{
-		document.getElementById("wow").style.bottom = "50vh";
+		document.getElementById("wow").style.bottom = "-50vh";
+		if(x.currentTime == 0){
+		document.getElementById('tap').style.display = 'inline';
+	}else{
+		document.getElementById('tap').style.display = 'none';
+	}
 	}
 
   } else {
@@ -1000,6 +1006,10 @@ function toggle(event){
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
+			if(x.currentTime == 0){
+			x.play();
+
+		}
 		}else if(lecteur.style.display === "none"){
 			lecteur.style.display = "inline";
 			document.getElementById("myNavBtns").style.top = "0";
