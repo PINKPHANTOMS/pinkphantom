@@ -18,7 +18,7 @@
 					<span id="stuff">
 					<center>
 					<div class="lecteur" id="wow">
-							<audio style="width: 80%;" id="myAudio" class="fc-media">
+							<audio style="width: 80%;" controls>
 									<source src="sounds/ACTII.mp3" type="audio/mp3"/>
 							</audio>
 					</div>
@@ -28,10 +28,10 @@
 						<span id="dots"></span>
 						<span id="moreFront">
             <div class="music-player">
-							<span id="stuff">
 								<div class="bg">
-								<span id="stuff">
 							</div>
+
+						</div>
 							<div class="titre">
 									<h3>Pink Phantom</h3>
 									<h1>The American Dream</h1>
@@ -145,7 +145,8 @@
 										</ul>
 										</div>
 									</span>
-									</span>
+
+
 									<span id="dots"></span>
 									<span id="moreBack">
 <div class="titre">
@@ -456,6 +457,7 @@
 	z-index: 99;
 	width: 100%;
 	transition: top 0.3s;
+	max-width: 1000px;
 	/* Transition effect when sliding down (and up) */
 }
 
@@ -570,7 +572,7 @@
 	height: 100vh;
 }
 body {
-	/* max-width: 1000px; */
+	max-width: 1000px;
 	margin: auto;
 	background-color: black;
 	overflow-x: hidden;
@@ -620,7 +622,6 @@ h3 {
     border-radius: 0 0 1vw 1vw;
 }
 .cover {
-    float: left;
     width: 100%;
     height: 66%;
 }
@@ -637,136 +638,23 @@ img {
     text-align: center;
 }
 .titre {
-    float: left;
     width: 100%;
 }
 .lecteur {
-    width: 120vw;
+    width: 100vw;
     display: block;
     height: auto;
 		position: fixed;
-		left: -6vh;
 		bottom: 50vh;
 		z-index: 100;
 		transition: bottom .3s;
 }
-.mejs__button>button:focus {
-    outline: 0px dotted #999;
+audio::-webkit-media-controls-mute-button {
+    display: none !important;
 }
-.mejs__container {
-    position: relative;
-    background-color: transparent;
-    min-width: auto !important;
 
-}
-.mejs__controls {
-    padding: 0 10%;
-    background: transparent !important;
-    display: block;
-    position: relative;
-}
-.mejs__controls div {
-    display: block;
-    float: left;
-    position: relative;
-}
-.mejs__controls .mejs__playpause-button {
-    position: absolute !important;
-		float: right;
-    right: 0%;
-    bottom: 0;
-    width: 40px;
-}
-.mejs__controls .mejs__playpause-button button {
-    display: block;
-    width: 20vw;
-    height: 20vw;
-    padding: 0;
-    border: 0;
-    font-family: FontAwesome;
-    font-size: 15vw;
-    color: white;
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
-.mejs__controls .mejs__play button:before{
-    content:"\f04b";
-}
-.mejs__controls .mejs__pause button:before{
-    content:"\f04c";
-}
-.mejs__controls .mejs__time {
-    width: 120%;
-    margin-top: 7%;
-    margin-bottom: 3%;
-    color: #fff;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    min-width: 100%;
-}
-.mejs__controls .mejs__time span {
-    font-size: 5vw;
-}
-.mejs__controls span.mejs__duration {
-    float: right;
-    text-align: right;
-    color: #ccc;
-}
-.mejs__controls span.mejs__currenttime {
-    font-weight: 700;
-    float: right;
-}
-.mejs__controls .mejs__time-rail {
-    width: 120%;
-    margin: 0;
-}
-.mejs__controls .mejs__time-rail span {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 4px;
-    border-radius: 50px;
-    cursor: pointer;
-}
-.mejs__controls .mejs__time-rail .mejs__time-loaded {
-    background: rgba(255,255,255,0.2);
-}
-.mejs__controls .mejs__time-rail .mejs__time-float {
-    display: none;
-    top: -40px;
-    width: 40px;
-    height: 25px;
-    margin-left: 0px;
-    text-align: center;
-    font-size: 10px;
-    background: #fff;
-    border: 0;
-}
-.mejs__controls .mejs__time-rail .mejs__time-float-current {
-    display: block;
-    position: relative;
-    top: 0;
-    margin: 0;
-    line-height: 26px;
-    color: #100d28;
-}
-.mejs__controls .mejs__time-rail .mejs__time-float-corner {
-    top: auto;
-    bottom: -9px;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-top: 6px solid #fff;
-    border-right: 6px solid transparent;
-    border-left: 6px solid transparent;
-}
-.mejs__controls .mejs__time-rail .mejs__time-current {
-    background: #5BBB95 none repeat scroll 0 0;
-}
-.mejs__controls .mejs__time-handle {
-    display: none;
+audio::-webkit-media-controls-volume-slider {
+    display: none !important;
 }
   </style>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -813,13 +701,13 @@ img {
             var media = $('audio.fc-media', (target !== undefined) ? target : 'body');            
             if (media.length) {                
                 media.mediaelementplayer({                    
-                    audioHeight: 40,
-                    features : ['playpause','current'],
-                    alwaysShowControls      : true,
-                    timeAndDurationSeparator: '<span></span>',
-                    iPadUseNativeControls: false,
-                    iPhoneUseNativeControls: true,
-                    AndroidUseNativeControls: false
+									audioHeight: 100,
+									// features: ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
+									alwaysShowControls: true,
+									timeAndDurationSeparator: '<span></span>',
+									iPadUseNativeControls: true,
+									iPhoneUseNativeControls: true,
+									AndroidUseNativeControls: true
                 });            
             }        
         },
@@ -1049,7 +937,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
 		document.getElementById("myNav1Btns").style.left = "0";
-		if(window.pageYOffset > 20){
+		if(window.pageYOffset > 20 || moreFront.style.display == "none"){
 		document.getElementById("wow").style.bottom = "0vh";
 	}else{
 		document.getElementById("wow").style.bottom = "50vh";
