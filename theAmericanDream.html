@@ -967,8 +967,6 @@ window.onscroll = function() {
 		document.getElementById("wow").style.bottom = "-50vh";
 		if(x.currentTime == 0){
 		document.getElementById('tap').style.display = 'inline';
-	}else{
-		document.getElementById('tap').style.display = 'none';
 	}
 	}
 
@@ -1008,7 +1006,7 @@ function toggle(event){
 			document.getElementById("myNavBtns").style.top = "-50px";
 			if(x.currentTime == 0){
 			x.play();
-
+			document.getElementById('tap').style.display = 'none';
 		}
 		}else if(lecteur.style.display === "none"){
 			lecteur.style.display = "inline";
