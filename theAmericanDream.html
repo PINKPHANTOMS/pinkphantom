@@ -28,7 +28,7 @@
 						<span id="dots"></span>
 						<span id="moreFront">
             <div class="music-player">
-							<div id = 'tap' style="position: absolute; top: 80vh; color: white; font-size: 5vw;">tap to play</div>
+							<div id = 'tap' style="position: absolute; top: 70vh; color: white; font-size: 10vw; text-shadow: magenta 0 0 5vw;">tap to play</div>
 								<div class="bg">
 							</div>
 
@@ -944,6 +944,9 @@ function pReelTime(){
 }
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
+	if(x.currentTime!=0){
+		document.getElementById('tap').style.display = 'none';
+	}
 	// console.log(window.pageYOffset);
   var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
@@ -987,6 +990,9 @@ let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;
 gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
+		if(x.currentTime!=0){
+			document.getElementById('tap').style.display = 'none';
+		}
 }, false);
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
@@ -1000,14 +1006,14 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchendY = event.changedTouches[0].clientY;
 }, false);
 function toggle(event){
+	if(x.currentTime == 0){
+	x.play();
+	document.getElementById('tap').style.display = 'none';
+}
 	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50){
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
-			if(x.currentTime == 0){
-			x.play();
-			document.getElementById('tap').style.display = 'none';
-		}
 		}else if(lecteur.style.display === "none"){
 			lecteur.style.display = "inline";
 			document.getElementById("myNavBtns").style.top = "0";
