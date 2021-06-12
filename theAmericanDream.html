@@ -15,22 +15,22 @@
 	</div>
 	  <div id="gestureZone">
         <div class="container">
+					<span id="stuff">
+					<center>
+					<div class="lecteur" id="wow">
+							<audio style="width: 80%;" id="myAudio" class="fc-media">
+									<source src="sounds/ACTII.mp3" type="audio/mp3"/>
+							</audio>
+					</div>
+					</center>
+				</div>
+				</span>
 						<span id="dots"></span>
 						<span id="moreFront">
             <div class="music-player">
 							<span id="stuff">
 								<div class="bg">
 								<span id="stuff">
-								<span id="stuff">
-								<center>
-                <div class="lecteur" id="wow">
-                    <audio style="width: 80%;" id="myAudio" class="fc-media">
-                        <source src="sounds/ACTII.mp3" type="audio/mp3"/>
-                    </audio>
-                </div>
-								</center>
-							</div>
-							</span>
 							</div>
 							<div class="titre">
 									<h3>Pink Phantom</h3>
@@ -646,7 +646,8 @@ img {
     height: auto;
 		position: fixed;
 		left: -6vh;
-		bottom: 0vh;
+		bottom: 50vh;
+		z-index: 100;
 		transition: bottom .3s;
 }
 .mejs__button>button:focus {
@@ -1036,18 +1037,23 @@ window.onscroll = function() {
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
 		document.getElementById("myNavBtns").style.top = "0";
-		document.getElementById("wow").style.bottom = "0";
+		document.getElementById("wow").style.bottom = "0vh";
 
 	}
 		if(moreBack.style.display === "inline" && window.pageYOffset<640){
 		moreFront.style.display = "inline";
 		moreBack.style.display = "none";
 		moreIG.style.display = "inline";
+
 	}
   if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
     document.getElementById("myNavBtns").style.top = "0";
 		document.getElementById("myNav1Btns").style.left = "0";
-		document.getElementById("wow").style.bottom = "0";
+		if(window.pageYOffset > 20){
+		document.getElementById("wow").style.bottom = "0vh";
+	}else{
+		document.getElementById("wow").style.bottom = "50vh";
+	}
 
   } else {
     document.getElementById("myNavBtns").style.top = "-50px";
