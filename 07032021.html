@@ -822,7 +822,6 @@ document.getElementById("myMusic5").style.width = "100%";
 }
 
 function closeMusic() {
-	window.pageYOffset = scroll;
 	document.body.style.overflowY = "scroll";
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
@@ -840,15 +839,14 @@ track = 0;
 }
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+window.onscroll = function(event) {
 	closeMusic();
-
 if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==0){
 	x.play();
 	document.getElementById('tap').style.display = 'none';
 }
 if(track != 0){
-	document.body.style.overflowY = "hidden";
+event.preventDefault();
 }
 
 	if(x.currentTime!=0){
