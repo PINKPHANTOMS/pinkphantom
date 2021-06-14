@@ -534,7 +534,6 @@ body {
 	background-size: contain;
 	background-attachment: fixed;
 	font-family: 'Cyber', sans-serif;
-	-webkit-overflow-scrolling: touch;
 }
 
 
@@ -845,6 +844,10 @@ window.onscroll = function() {
 if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==0){
 	x.play();
 	document.getElementById('tap').style.display = 'none';
+}
+if(track != 0){
+	window.pageYOffset = prevScrollpos; 
+
 }
 if(prevScrollpos == currentScrollPos && track != 0){
 	closeMusic();
