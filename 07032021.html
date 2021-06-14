@@ -846,8 +846,7 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	document.getElementById('tap').style.display = 'none';
 }
 if(track != 0){
-	window.pageYOffset = prevScrollpos; 
-
+	document.body.style.overflowY = "hidden";
 }
 if(prevScrollpos == currentScrollPos && track != 0){
 	closeMusic();
