@@ -839,6 +839,7 @@ function pReelTime(){
 	}
 }
 function openMusic() {
+	document.body.style.overflowY = "hidden";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "100%";
@@ -851,11 +852,11 @@ document.getElementById("myMusic4").style.width = "100%";
 }else if(track == 5){
 document.getElementById("myMusic5").style.width = "100%";
 }
-	document.body.style.overflowY = "hidden";
 
 }
 
 function closeMusic() {
+	document.body.style.overflowY = "scroll";
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
@@ -869,8 +870,6 @@ document.getElementById("myMusic4").style.width = "0%";
 document.getElementById("myMusic5").style.width = "0%";
 }
 track = 0;
-
-document.body.style.overflowY = "scroll";
 }
 
 var prevScrollpos = window.pageYOffset;
