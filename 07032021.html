@@ -7,7 +7,41 @@
 	<link rel="apple-touch-startup-image" href="images/ll.gif">
 <title>THE AMERICAN DREAM</title>
 <body>
-
+	<div id="myMusic1" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		<div class="overlay-content">
+			<img loading=lazy src="images/4.jpg" width="100%">
+			<div class="titre">
+					<h3>Pink Phantom</h3>
+					<h1>SURVIVE</h1>
+			</div>
+			<img loading=lazy src="images/survive.svg" width="100%">
+		</div>
+	</div>
+	<div id="myMusic2" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		<div class="overlay-content">
+			<img loading=lazy src="images/4.jpg" width="100%">
+		</div>
+	</div>
+	<div id="myMusic3" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		<div class="overlay-content">
+			<img loading=lazy src="images/hey.gif" width="100%">
+		</div>
+	</div>
+	<div id="myMusic4" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		<div class="overlay-content">
+			<img loading=lazy src="images/cat.gif" width="100%">
+		</div>
+	</div>
+	<div id="myMusic5" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		<div class="overlay-content">
+			<img loading=lazy src="images/bso.jpg" width="100%">
+		</div>
+	</div>
 	<div id="gestureZone">
 		<div id="myNavBtns">
 				<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
@@ -15,41 +49,7 @@
 				<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 				<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 		</div>
-		<div id="myMusic1" class="overlay">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		  <div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
-		</div>
-		<div id="myMusic2" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-			</div>
-		</div>
-		<div id="myMusic3" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/hey.gif" width="100%">
-			</div>
-		</div>
-		<div id="myMusic4" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/cat.gif" width="100%">
-			</div>
-		</div>
-		<div id="myMusic5" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/bso.jpg" width="100%">
-			</div>
-		</div>
+
 			<div class="container">
 				<span id="stuff">
 				<center>
@@ -317,6 +317,7 @@
 }
 
 #imageGallery img{
+	/* box-shadow: white 0 0 1vw; */
 	padding: 4vw;
 	width: 40vw;
 	height: 40vw;
@@ -661,72 +662,7 @@ audio::-webkit-media-controls-volume-slider {
 // features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
 audio.init();
 var x = document.getElementById('myAudio');
-function timeStamp1(){
-	x.currentTime = 0;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp2(){
-	x.currentTime = 99;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp3(){
-	x.currentTime = 403;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp4(){
-	x.currentTime = 612.7;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp5(){
-	x.currentTime = 727;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp6(){
-	x.currentTime = 783.5;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp7(){
-	x.currentTime = 1094;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp8(){
-	x.currentTime = 1225;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp9(){
-	x.currentTime = 1449;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp10(){
-	x.currentTime = 1694.8;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp11(){
-	x.currentTime = 1912;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp12(){
-	x.currentTime = 2079;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-function timeStamp13(){
-	x.currentTime = 2459;
-	x.play();
-	document.getElementById("wow").style.bottom = "0vh";
-}
-var track;
+var track = 0;
 //imageTimestamps
 function itimeStamp0(){
 	track = 1;
