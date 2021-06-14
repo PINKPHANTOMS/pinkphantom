@@ -779,13 +779,17 @@ function openMusic() {
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "100%";
-}else if(track == 2){
+}
+if(track == 2){
 document.getElementById("myMusic2").style.width = "100%";
-}else if(track == 3){
+}
+if(track == 3){
 document.getElementById("myMusic3").style.width = "100%";
-}else if(track == 4){
+}
+ if(track == 4){
 document.getElementById("myMusic4").style.width = "100%";
-}else if(track == 5){
+}
+ if(track == 5){
 document.getElementById("myMusic5").style.width = "100%";
 }
 
@@ -796,13 +800,13 @@ function closeMusic() {
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
-}else if(track == 2){
+} if(track == 2){
 document.getElementById("myMusic2").style.width = "0%";
-}else if(track == 3){
+} if(track == 3){
 document.getElementById("myMusic3").style.width = "0%";
-}else if(track == 4){
+} if(track == 4){
 document.getElementById("myMusic4").style.width = "0%";
-}else if(track == 5){
+} if(track == 5){
 document.getElementById("myMusic5").style.width = "0%";
 }
 track = 0;
@@ -822,7 +826,7 @@ if(prevScrollpos == currentScrollPos && track != 0){
 	if(x.currentTime!=0){
 		document.getElementById('tap').style.display = 'none';
 	}
-	console.log(window.pageYOffset);
+	// console.log(window.pageYOffset);
 	var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
