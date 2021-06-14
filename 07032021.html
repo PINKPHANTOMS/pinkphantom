@@ -804,6 +804,7 @@ function pReelTime(){
 	}
 }
 function openMusic() {
+	var scroll = window.pageYOffset;
 	document.body.style.overflowY = "hidden";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
@@ -821,6 +822,7 @@ document.getElementById("myMusic5").style.width = "100%";
 }
 
 function closeMusic() {
+	window.pageYOffset = scroll;
 	document.body.style.overflowY = "scroll";
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
@@ -840,9 +842,6 @@ track = 0;
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	closeMusic();
-	if(track != 0){
-		window.pageYOffset = prevScrollpos;
-	}
 
 if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==0){
 	x.play();
