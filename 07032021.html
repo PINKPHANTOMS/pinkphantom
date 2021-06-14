@@ -7,41 +7,7 @@
 	<link rel="apple-touch-startup-image" href="images/ll.gif">
 <title>THE AMERICAN DREAM</title>
 <body>
-	<div id="myMusic1" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		<div class="overlay-content">
-			<img loading=lazy src="images/4.jpg" width="100%">
-			<div class="titre">
-					<h3>Pink Phantom</h3>
-					<h1>SURVIVE</h1>
-			</div>
-			<img loading=lazy src="images/survive.svg" width="100%">
-		</div>
-	</div>
-	<div id="myMusic2" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		<div class="overlay-content">
-			<img loading=lazy src="images/4.jpg" width="100%">
-		</div>
-	</div>
-	<div id="myMusic3" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		<div class="overlay-content">
-			<img loading=lazy src="images/hey.gif" width="100%">
-		</div>
-	</div>
-	<div id="myMusic4" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		<div class="overlay-content">
-			<img loading=lazy src="images/cat.gif" width="100%">
-		</div>
-	</div>
-	<div id="myMusic5" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		<div class="overlay-content">
-			<img loading=lazy src="images/bso.jpg" width="100%">
-		</div>
-	</div>
+
 	<div id="gestureZone">
 		<div id="myNavBtns">
 				<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
@@ -49,7 +15,57 @@
 				<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 				<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 		</div>
-
+		<div id="myMusic1" class="overlay">
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+		  <div class="overlay-content">
+				<img loading=lazy src="images/4.jpg" width="100%">
+				<div class="titre">
+						<h3>Pink Phantom</h3>
+						<h1>SURVIVE</h1>
+				</div>
+				<img loading=lazy src="images/survive.svg" width="100%">
+		  </div>
+		</div>
+		<div id="myMusic2" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+			<div class="overlay-content">
+				<img loading=lazy src="images/4.jpg" width="100%">
+				<div class="titre">
+						<h3>Pink Phantom</h3>
+						<h1>electronic glacier</h1>
+				</div>
+			</div>
+		</div>
+		<div id="myMusic3" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+			<div class="overlay-content">
+				<img loading=lazy src="images/hey.gif" width="100%">
+				<div class="titre">
+						<h3>Pink Phantom</h3>
+						<h1>neon life</h1>
+				</div>
+			</div>
+		</div>
+		<div id="myMusic4" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+			<div class="overlay-content">
+				<img loading=lazy src="images/cat.gif" width="100%">
+				<div class="titre">
+						<h3>Pink Phantom</h3>
+						<h1>HOMICIDE</h1>
+				</div>
+			</div>
+		</div>
+		<div id="myMusic5" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+			<div class="overlay-content">
+				<img loading=lazy src="images/bso.jpg" width="100%">
+				<div class="titre">
+						<h3>Pink Phantom</h3>
+						<h1>GH325</h1>
+				</div>
+			</div>
+		</div>
 			<div class="container">
 				<span id="stuff">
 				<center>
@@ -317,7 +333,7 @@
 }
 
 #imageGallery img{
-	/* box-shadow: white 0 0 1vw; */
+	box-shadow: white 0 0 1vw;
 	padding: 4vw;
 	width: 40vw;
 	height: 40vw;
@@ -779,17 +795,13 @@ function openMusic() {
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "100%";
-}
-if(track == 2){
+}else if(track == 2){
 document.getElementById("myMusic2").style.width = "100%";
-}
-if(track == 3){
+}else if(track == 3){
 document.getElementById("myMusic3").style.width = "100%";
-}
- if(track == 4){
+}else if(track == 4){
 document.getElementById("myMusic4").style.width = "100%";
-}
- if(track == 5){
+}else if(track == 5){
 document.getElementById("myMusic5").style.width = "100%";
 }
 
@@ -800,13 +812,13 @@ function closeMusic() {
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
-} if(track == 2){
+}else if(track == 2){
 document.getElementById("myMusic2").style.width = "0%";
-} if(track == 3){
+}else if(track == 3){
 document.getElementById("myMusic3").style.width = "0%";
-} if(track == 4){
+}else if(track == 4){
 document.getElementById("myMusic4").style.width = "0%";
-} if(track == 5){
+}else if(track == 5){
 document.getElementById("myMusic5").style.width = "0%";
 }
 track = 0;
@@ -826,7 +838,7 @@ if(prevScrollpos == currentScrollPos && track != 0){
 	if(x.currentTime!=0){
 		document.getElementById('tap').style.display = 'none';
 	}
-	// console.log(window.pageYOffset);
+	console.log(window.pageYOffset);
 	var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
