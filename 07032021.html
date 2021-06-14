@@ -75,7 +75,7 @@
 				<center>
 				<div class="lecteur" id="wow">
 						<audio controls id='myAudio'>
-								<source src="sounds/ACTII.mp3" type="audio/mp3"/>
+								<source src="sounds/EP.mp3" type="audio/mp3"/>
 						</audio>
 				</div>
 				</center>
@@ -568,7 +568,7 @@ h3 {
 .music-player {
     display: block;
     position: relative;
-		background-image: url("images/albumart/ADREAM.gif");
+		background-image: url("images/city/6.gif");
 		background-size: 100%;
     width: 100%;
 		max-width: 500px;
@@ -686,32 +686,42 @@ var track = 0;
 //imageTimestamps
 function itimeStamp0(){
 	track = 1;
+	if(x.currentTime >= 180+58 || x.currentTime == 0){
 	x.currentTime = 0;
 	x.play();
+}
 	openMusic();
 }
 function itimeStamp1(){
 	track = 2;
-	x.currentTime = 100;
+	if(x.currentTime <= 180+58 || x.currentTime >= 420+33){
+	x.currentTime = 180+58;
 	x.play();
+}
 	openMusic();
 }
 function itimeStamp2(){
 	track = 3;
-	x.currentTime = 200;
+	if(x.currentTime <= 420+33 || x.currentTime >= 620.5){
+	x.currentTime = 420+33;
 	x.play();
+}
 	openMusic();
 }
 function itimeStamp3(){
 	track = 4;
-	x.currentTime = 300;
+	if(x.currentTime <= 620.5 || x.currentTime >= 13*60 + 23.5){
+	x.currentTime = 620.5;
 	x.play();
+}
 	openMusic();
 }
 function itimeStamp4(){
 	track = 5;
-	x.currentTime = 400;
+	if(x.currentTime <= 13*60 + 23.5){
+	x.currentTime = 13*60 + 23.5;
 	x.play();
+}
 	openMusic();
 }
 
