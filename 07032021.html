@@ -15,6 +15,7 @@
 				<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 				<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
 		</div>
+		<div class="extraDiv">
 		<div id="myMusic1" class="overlay">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
 		  <div class="overlay-content">
@@ -26,6 +27,7 @@
 				<img loading=lazy src="images/survive.svg" width="100%">
 		  </div>
 		</div>
+	</div>
 		<div id="myMusic2" class="overlay">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
 			<div class="overlay-content">
@@ -399,7 +401,9 @@
 	border-style: hidden;
 	border-bottom: 3px solid transparent;
 }
-
+.extraDiv{
+	position: relative;
+}
 .overlay {
   height: 100%;
   width: 0;
