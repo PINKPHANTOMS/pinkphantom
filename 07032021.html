@@ -6,6 +6,64 @@
 	<link rel="apple-touch-icon" href="images\city/6.jpeg">
 	<link rel="apple-touch-startup-image" href="images/ll.gif">
 <title>BECOMING CYBORG EP</title>
+
+
+<div id="myMusic1" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+	<div class="overlay-content">
+		<img loading=lazy src="images/4.jpg" width="100%">
+		<div class="titre">
+				<h3>Pink Phantom</h3>
+				<h1>SURVIVE</h1>
+		</div>
+		<img loading=lazy src="images/survive.svg" width="100%">
+	</div>
+</div>
+<div id="myMusic2" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+	<div class="overlay-content">
+		<img loading=lazy src="images/4.jpg" width="100%">
+		<div class="titre">
+				<h3>Pink Phantom</h3>
+				<h1>SURVIVE</h1>
+		</div>
+		<img loading=lazy src="images/survive.svg" width="100%">
+	</div>
+</div>
+<div id="myMusic3" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+	<div class="overlay-content">
+		<img loading=lazy src="images/4.jpg" width="100%">
+		<div class="titre">
+				<h3>Pink Phantom</h3>
+				<h1>SURVIVE</h1>
+		</div>
+		<img loading=lazy src="images/survive.svg" width="100%">
+	</div>
+</div>
+<div id="myMusic4" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+	<div class="overlay-content">
+		<img loading=lazy src="images/4.jpg" width="100%">
+		<div class="titre">
+				<h3>Pink Phantom</h3>
+				<h1>SURVIVE</h1>
+		</div>
+		<img loading=lazy src="images/survive.svg" width="100%">
+	</div>
+</div>
+<div id="myMusic5" class="overlay">
+	<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
+	<div class="overlay-content">
+		<img loading=lazy src="images/4.jpg" width="100%">
+		<div class="titre">
+				<h3>Pink Phantom</h3>
+				<h1>SURVIVE</h1>
+		</div>
+		<img loading=lazy src="images/survive.svg" width="100%">
+	</div>
+</div>
+
 <body>
 
 	<div id="gestureZone">
@@ -14,61 +72,6 @@
 				<!-- <button  onclick="backTime()" id="myBackBtn">SIDE B</button> -->
 				<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 				<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
-		</div>
-		<div id="myMusic1" class="overlay">
-		  <a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-		  <div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
-		</div>
-		<div id="myMusic2" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
-		</div>
-		<div id="myMusic3" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
-		</div>
-		<div id="myMusic4" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
-		</div>
-		<div id="myMusic5" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-		  </div>
 		</div>
 			<div class="container">
 				<span id="stuff">
@@ -861,6 +864,9 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 
 	if(x.currentTime!=0){
 		document.getElementById('tap').style.display = 'none';
+	}
+	if(track != 0){
+		document.body.style.overflow = "hidden";
 	}
 	console.log(window.pageYOffset);
 	var currentScrollPos = window.pageYOffset;
