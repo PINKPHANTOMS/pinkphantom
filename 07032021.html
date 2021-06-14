@@ -826,27 +826,31 @@ function closeMusic() {
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
+	document.getElementById("myMusic1").scrollTop = "0";
+
 }else if(track == 2){
 document.getElementById("myMusic2").style.width = "0%";
+document.getElementById("myMusic2").scrollTop = "0";
 }else if(track == 3){
 document.getElementById("myMusic3").style.width = "0%";
+document.getElementById("myMusic3").scrollTop = "0";
 }else if(track == 4){
 document.getElementById("myMusic4").style.width = "0%";
+document.getElementById("myMusic4").scrollTop = "0";
 }else if(track == 5){
 document.getElementById("myMusic5").style.width = "0%";
+document.getElementById("myMusic5").scrollTop = "0";
+
 }
 track = 0;
 }
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function(event) {
+window.onscroll = function() {
 	closeMusic();
 if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==0){
 	x.play();
 	document.getElementById('tap').style.display = 'none';
-}
-if(track != 0){
-event.preventDefault();
 }
 
 	if(x.currentTime!=0){
