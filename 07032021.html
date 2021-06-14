@@ -528,7 +528,6 @@
 body {
 	margin: auto;
 	background-color: #080808;
-	overflow: hidden; /* Hide scrollbars */
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-attachment: fixed;
@@ -814,7 +813,7 @@ function pReelTime(){
 }
 function openMusic() {
 	var scroll = window.pageYOffset;
-	document.body.style.overflowY = "hidden";
+	document.body.style.overflow = "hidden";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "100%";
@@ -838,7 +837,7 @@ document.getElementById("myMusic5").scrollTop = "0";
 }
 
 function closeMusic() {
-	document.body.style.overflowY = "scroll";
+	document.body.style.overflow = "scroll";
 	document.getElementById("myNavBtns").style.top = "0";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
