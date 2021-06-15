@@ -8,7 +8,13 @@
 <title>BECOMING CYBORG EP</title>
 
 <body>
-	<div id="myMusic1" class="overlay">
+
+
+
+
+
+
+	<span id="myMusic1" class="overlay">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
 		<div class="overlay-content">
 			<img loading=lazy src="images/4.jpg" width="100%">
@@ -18,7 +24,11 @@
 			</div>
 			<img loading=lazy src="images/survive.svg" width="100%">
 		</div>
-	</div>
+	</span>
+
+
+
+
 	<div id="myMusic2" class="overlay">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
 		<div class="overlay-content">
@@ -63,6 +73,17 @@
 			<img loading=lazy src="images/survive.svg" width="100%">
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
 	<div id="gestureZone">
 		<div id="myNavBtns">
 				<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
@@ -400,7 +421,6 @@
 }
 .overlay {
   position: fixed;
-  z-index: 100;
   top: 0;
   left: 0;
   background-color: rgb(0,0,0);
@@ -619,6 +639,7 @@ audio::-webkit-media-controls-volume-slider {
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 	<script>
 	var lecteur = document.getElementById("stuff");
+	var music1 = document.getElementById("myMusic1");
 	var moreLyrics = document.getElementById("moreLyrics");
 	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
