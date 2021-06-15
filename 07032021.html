@@ -823,7 +823,8 @@ function pReelTime(){
 	}
 }
 function openMusic() {
-	document.body.style.overflow = "hidden !important";
+	moreFront.style.display = "none";
+	document.body.style.overflow = "hidden";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "100%";
@@ -847,6 +848,7 @@ document.getElementById("myMusic5").scrollTop = "0";
 }
 
 function closeMusic() {
+	moreFront.style.display = "none";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
 }else if(track == 2){
