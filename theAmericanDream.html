@@ -941,12 +941,14 @@ function pReelTime(){
 		document.getElementById("wow").style.bottom = "0vh";
 	}
 }
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	if(x.currentTime!=0){
 		document.getElementById('tap').style.display = 'none';
 	}
 	// console.log(window.pageYOffset);
+  var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
 		document.getElementById("myNavBtns").style.top = "0";
