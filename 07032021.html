@@ -841,6 +841,7 @@ function openMusic() {
 	scroll = window.pageYOffset;
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
+	moreFront.style.display = "none";
 	music1.style.display = "inline";
 	document.getElementById("myMusic1").style.width = "100%";
 	document.getElementById("myMusic1").scrollTop = "0";
@@ -862,7 +863,6 @@ document.getElementById("myMusic5").scrollTop = "0";
 music5.style.display = "inline";
 }
 myNavBtns.style.display = "none";
-moreFront.style.display = "none";
 }
 
 function closeMusic() {
