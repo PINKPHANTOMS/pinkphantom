@@ -643,6 +643,7 @@ audio::-webkit-media-controls-volume-slider {
 	<script>
 	var lecteur = document.getElementById("stuff");
 	var music1 = document.getElementById("myMusic1");
+	var music2 = document.getElementById("myMusic2");
 	var moreLyrics = document.getElementById("moreLyrics");
 	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
@@ -669,7 +670,10 @@ audio::-webkit-media-controls-volume-slider {
 	moreTrackListing.style.display = "none";
 	lessTrackListing.style.display = "inline";
 	less1TrackListing.style.display = "inline";
-	document.getElementById("myMusic1").style.width = "0";
+	music1.style.display = "none";
+	music1.style.width = "0";
+	music2.style.width = "0";
+	music2.style.display = "none";
 	document.getElementById("myMusic2").style.width = "0";
 	document.getElementById("myMusic3").style.width = "0";
 	document.getElementById("myMusic4").style.width = "0";
@@ -832,11 +836,13 @@ function openMusic() {
 	scroll = window.pageYOffset;
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
+	music1.style.display = "inline";
 	document.getElementById("myMusic1").style.width = "100%";
 	document.getElementById("myMusic1").scrollTop = "0";
 }else if(track == 2){
 document.getElementById("myMusic2").style.width = "100%";
 document.getElementById("myMusic2").scrollTop = "0";
+music2.style.display = "inline";
 }else if(track == 3){
 document.getElementById("myMusic3").style.width = "100%";
 document.getElementById("myMusic3").scrollTop = "0";
