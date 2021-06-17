@@ -644,6 +644,7 @@ audio::-webkit-media-controls-volume-slider {
 	var lecteur = document.getElementById("stuff");
 	var music1 = document.getElementById("myMusic1");
 	var music2 = document.getElementById("myMusic2");
+	var music3 = document.getElementById("myMusic3");
 	var moreLyrics = document.getElementById("moreLyrics");
 	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
@@ -674,6 +675,7 @@ audio::-webkit-media-controls-volume-slider {
 	music1.style.width = "0";
 	music2.style.width = "0";
 	music2.style.display = "none";
+	music3.style.display = "none";
 	document.getElementById("myMusic2").style.width = "0";
 	document.getElementById("myMusic3").style.width = "0";
 	document.getElementById("myMusic4").style.width = "0";
@@ -846,6 +848,7 @@ music2.style.display = "inline";
 }else if(track == 3){
 document.getElementById("myMusic3").style.width = "100%";
 document.getElementById("myMusic3").scrollTop = "0";
+music3.style.display = "inline";
 }else if(track == 4){
 document.getElementById("myMusic4").style.width = "100%";
 document.getElementById("myMusic4").scrollTop = "0";
