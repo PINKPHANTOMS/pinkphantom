@@ -645,6 +645,8 @@ audio::-webkit-media-controls-volume-slider {
 	var music1 = document.getElementById("myMusic1");
 	var music2 = document.getElementById("myMusic2");
 	var music3 = document.getElementById("myMusic3");
+	var music4 = document.getElementById("myMusic4");
+	var music5 = document.getElementById("myMusic5");
 	var moreLyrics = document.getElementById("moreLyrics");
 	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
@@ -676,6 +678,8 @@ audio::-webkit-media-controls-volume-slider {
 	music2.style.width = "0";
 	music2.style.display = "none";
 	music3.style.display = "none";
+	music4.style.display = "none";
+	music5.style.display = "none";
 	document.getElementById("myMusic2").style.width = "0";
 	document.getElementById("myMusic3").style.width = "0";
 	document.getElementById("myMusic4").style.width = "0";
@@ -852,10 +856,11 @@ music3.style.display = "inline";
 }else if(track == 4){
 document.getElementById("myMusic4").style.width = "100%";
 document.getElementById("myMusic4").scrollTop = "0";
-
+music4.style.display = "inline";
 }else if(track == 5){
 document.getElementById("myMusic5").style.width = "100%";
 document.getElementById("myMusic5").scrollTop = "0";
+music5.style.display = "inline";
 }
 myNavBtns.style.display = "none";
 moreFront.style.display = "none";
@@ -865,14 +870,19 @@ function closeMusic() {
 	moreFront.style.display = "inline";
 	if(track == 1){
 	document.getElementById("myMusic1").style.width = "0%";
+	music1.style.display = "none";
 }else if(track == 2){
 document.getElementById("myMusic2").style.width = "0%";
+music2.style.display = "none";
 }else if(track == 3){
 document.getElementById("myMusic3").style.width = "0%";
+music3.style.display = "none";
 }else if(track == 4){
 document.getElementById("myMusic4").style.width = "0%";
+music4.style.display = "none";
 }else if(track == 5){
 document.getElementById("myMusic5").style.width = "0%";
+music5.style.display = "none";
 }
 document.getElementById("myNavBtns").style.top = "0";
 myNavBtns.style.display = "inline-flex";
