@@ -71,7 +71,7 @@
 				<img loading=lazy src="images/survive.svg" width="100%">
 			</div>
 		</span>
-		
+
 		<span id="dots"></span>
 		<span id="myMusic5" class="overlay">
 			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
@@ -831,6 +831,8 @@ function pReelTime(){
 var scroll;
 function openMusic() {
 	scroll = window.pageYOffset;
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 	myFrontBtn.blur();
 	myLyricBtn.blur();
 	myPReelBtn.blur();
@@ -844,23 +846,18 @@ function openMusic() {
 	moreFront.style.display = "none";
 	music1.style.display = "inline";
 	document.getElementById("myMusic1").style.width = "100%";
-	document.getElementById("myMusic1").scrollTop = "0";
 }else if(track == 2){
-document.getElementById("myMusic2").style.width = "100%";
-document.getElementById("myMusic2").scrollTop = "0";
 music2.style.display = "inline";
+document.getElementById("myMusic2").style.width = "100%";
 }else if(track == 3){
+	music3.style.display = "inline";
 document.getElementById("myMusic3").style.width = "100%";
-document.getElementById("myMusic3").scrollTop = "0";
-music3.style.display = "inline";
 }else if(track == 4){
+	music4.style.display = "inline";
 document.getElementById("myMusic4").style.width = "100%";
-document.getElementById("myMusic4").scrollTop = "0";
-music4.style.display = "inline";
 }else if(track == 5){
+	music5.style.display = "inline";
 document.getElementById("myMusic5").style.width = "100%";
-document.getElementById("myMusic5").scrollTop = "0";
-music5.style.display = "inline";
 }
 myNavBtns.style.display = "none";
 }
