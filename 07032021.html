@@ -838,20 +838,15 @@ function pReelTime(){
 
 var scroll;
 function openMusic() {
-	if(moreBack.style.display==="inline"){
-		// moreFront.style.display = "none";
-	}else{
-		myFrontBtn.blur();
-		myLyricBtn.blur();
-		myPReelBtn.blur();
-		moreBack.style.display = "none";
-		// moreFront.style.display = "none";
-		moreLyrics.style.display = "none";
-		moreIG.style.display = "none";
-		morePReel.style.display = "none";
-	}
-}
 	scroll = window.pageYOffset;
+	myFrontBtn.blur();
+	myLyricBtn.blur();
+	myPReelBtn.blur();
+	moreBack.style.display = "none";
+	moreFront.style.display = "none";
+	moreLyrics.style.display = "none";
+	moreIG.style.display = "none";
+	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
 	moreFront.style.display = "none";
@@ -897,6 +892,7 @@ document.getElementById("myMusic5").style.width = "0%";
 music5.style.display = "none";
 }
 document.getElementById("myNavBtns").style.top = "0";
+moreIG.style.display = "inline";
 myNavBtns.style.display = "inline-flex";
 document.body.scrollTop = scroll;
 document.documentElement.scrollTop = scroll;
