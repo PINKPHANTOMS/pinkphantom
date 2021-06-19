@@ -302,7 +302,7 @@
 								<footer style="padding-bottom: 10vh;font-size: 5vw; color: white;">&copy; Copyright 2020 PINK PHANTOM</footer>
 							</center>
 						</div> -->
-					</div>
+					<!-- </div> -->
 				</div>
 </body>
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -829,13 +829,11 @@ function pReelTime(){
 }
 
 var scroll;
+
 function openMusic() {
 	scroll = window.pageYOffset;
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
-	myFrontBtn.blur();
-	myLyricBtn.blur();
-	myPReelBtn.blur();
 	moreBack.style.display = "none";
 	moreFront.style.display = "none";
 	moreLyrics.style.display = "none";
@@ -843,7 +841,6 @@ function openMusic() {
 	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
-	moreFront.style.display = "none";
 	music1.style.display = "inline";
 	document.getElementById("myMusic1").style.width = "100%";
 }else if(track == 2){
