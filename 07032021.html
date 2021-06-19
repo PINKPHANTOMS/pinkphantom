@@ -18,72 +18,61 @@
 
 		<span id="dots"></span>
 		<span id="myMusic1">
-			<div class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
 				<img loading=lazy src="images/4.jpg" width="100%">
 				<div class="titre">
 						<h3>Pink Phantom</h3>
 						<h1>SURVIVE</h1>
 				</div>
 				<img loading=lazy src="images/survive.svg" width="100%">
-			</div>
-		</div>
 		</span>
 
+				<span id="dots"></span>
+				<span id="myMusic2">
+						<img loading=lazy src="images/4.jpg" width="100%">
+						<div class="titre">
+								<h3>Pink Phantom</h3>
+								<h1>SURVIVE</h1>
+						</div>
+						<img loading=lazy src="images/survive.svg" width="100%">
+				</span>
 
 
-		<span id="dots"></span>
-		<span id="myMusic2" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-			</div>
-		</span>
+						<span id="dots"></span>
+						<span id="myMusic3">
+								<img loading=lazy src="images/4.jpg" width="100%">
+								<div class="titre">
+										<h3>Pink Phantom</h3>
+										<h1>SURVIVE</h1>
+								</div>
+								<img loading=lazy src="images/survive.svg" width="100%">
+						</span>
 
-		<span id="dots"></span>
-		<span id="myMusic3" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-			</div>
-		</span>
 
-		<span id="dots"></span>
-		<span id="myMusic4" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-			</div>
-		</span>
+								<span id="dots"></span>
+								<span id="myMusic4">
+										<img loading=lazy src="images/4.jpg" width="100%">
+										<div class="titre">
+												<h3>Pink Phantom</h3>
+												<h1>SURVIVE</h1>
+										</div>
+										<img loading=lazy src="images/survive.svg" width="100%">
+								</span>
 
-		<span id="dots"></span>
-		<span id="myMusic5" class="overlay">
-			<a href="javascript:void(0)" class="closebtn" onclick="closeMusic()">&times;</a>
-			<div class="overlay-content">
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-			</div>
-		</span>
+
+										<span id="dots"></span>
+										<span id="myMusic5">
+												<img loading=lazy src="images/4.jpg" width="100%">
+												<div class="titre">
+														<h3>Pink Phantom</h3>
+														<h1>SURVIVE</h1>
+												</div>
+												<img loading=lazy src="images/survive.svg" width="100%">
+										</span>
+
+
+
+
+
 
 
 			<div class="container">
@@ -895,7 +884,7 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	if(x.currentTime!=0){
 		document.getElementById('tap').style.display = 'none';
 	}
-	console.log(window.pageYOffset);
+	// console.log(window.pageYOffset);
 	var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 		lecteur.style.display = "inline";
@@ -952,13 +941,17 @@ gestureZone.addEventListener('touchend', function(event) {
 	if(moreFront.style.display === "inline"){
 		toggle();
 	}
+	if(track != 0){
+		toggle2();
+		console.log(document.body.scrollHeight-screen.height-window.pageYOffset);
+	}
 }, false);
 gestureZone.addEventListener('touchmove', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
 }, false);
 function toggle(event){
-	if(touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50){
+	if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
@@ -968,6 +961,15 @@ function toggle(event){
 			document.getElementById("wow").style.bottom = "0px";
 		}
 		}
+}
+function toggle2(event){
+	if(touchendY > touchstartY && window.pageYOffset == 0){
+		closeMusic();
+		}
+
+		if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset == 0){
+			closeMusic();
+			}
 }
 	</script>
 	</html>
