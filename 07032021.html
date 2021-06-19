@@ -18,13 +18,14 @@
 
 		<span id="dots"></span>
 		<span id="myMusic1">
-			<h class="closebtn" onclick="closeMusic()">&times;</h>
+			<div class="closebtn" onclick="closeMusic()">&times;</div>
 				<img loading=lazy src="images/4.jpg" width="100%">
 				<div class="titre">
 						<h3>Pink Phantom</h3>
 						<h1>SURVIVE</h1>
 				</div>
 				<img loading=lazy src="images/survive.svg" width="100%">
+				<!-- <div class="closebtn1" onclick="closeMusic()">&times;</div> -->
 		</span>
 
 				<span id="dots"></span>
@@ -441,10 +442,18 @@
 }
 
 .closebtn {
-  color: white;
+  color: gray;
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	font-size: 60px;
+}
+.closebtn1 {
+  color: gray;
+	position: absolute;
+	bottom:0;
+	right:50vw;
+	left: 50vw;
 	font-size: 60px;
 }
 #myNav1Btns button {
