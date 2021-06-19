@@ -963,11 +963,11 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(touchendY > touchstartY && window.pageYOffset == 0){
+	if(touchendY > touchstartY && window.pageYOffset < 10){
 		closeMusic();
 		}
 
-		if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset == 0){
+		if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset < 10){
 			closeMusic();
 			}
 }
