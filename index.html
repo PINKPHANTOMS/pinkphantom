@@ -19,10 +19,10 @@
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeScreen()">&times;</a>
 			  <div class="overlay-content">
 					<div class="container">
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXK6Vgd95saAey_yPZDoCFyeNktrV4H8gfzYidCghBch6-0jBUtHGEsCeI38CaofxNYlvoNj6ZwDDC/embed?start=false&loop=false&delayms=3000"
-frameborder="0"
-width="100%" height="100%" allowfullscreen="false" mozallowfullscreen="false"
-webkitallowfullscreen="false"></iframe>			</div>
+						<a href="">
+						<button class="button button5"><img src="images/paypal.png" height="10vh"></button>
+					</a>
+</div>
 			  </div>
 			</div>
 
@@ -68,10 +68,10 @@ webkitallowfullscreen="false"></iframe>			</div>
 				<br>
 				<br>
 				<br>
-				<div class="disco">
+				<div class="disco" style="display: none;">
 					MERCH
 				</div>
-				<div id="main">
+				<div id="main" style="display: none;">
 					<p>
 						<!-- <a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
 							<a href="https://cash.app/$pinkphantom"></a> -->
@@ -214,6 +214,32 @@ webkitallowfullscreen="false"></iframe>			</div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
 
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+	width: 80vw;
+	text-align: center;
+  color: transparent;
+  padding: 16px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+	margin: 20vw;
+	z-index: 100;
+}
+.button5 {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #555555;
+}
+
+.button5:hover {
+  background-color: white;
+  color: black;
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -253,7 +279,7 @@ webkitallowfullscreen="false"></iframe>			</div>
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	font-size: 60px;
+	font-size: 5vw;
 	z-index: 100;
 }
 .closebtn1 {
@@ -460,7 +486,6 @@ webkitallowfullscreen="false"></iframe>			</div>
 		font-weight: 500;
 		color: #ccc;
 	}
-
 	.container {
 		width: 100%;
 		height: 100%;
