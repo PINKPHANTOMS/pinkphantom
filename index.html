@@ -14,6 +14,18 @@
 	</div>
 	<div id="gestureZone">
 		<div class="container">
+
+			<div id="payScreen" class="overlay">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeScreen()">&times;</a>
+			  <div class="overlay-content">
+					<div class="container">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXK6Vgd95saAey_yPZDoCFyeNktrV4H8gfzYidCghBch6-0jBUtHGEsCeI38CaofxNYlvoNj6ZwDDC/embed?start=false&loop=false&delayms=3000"
+frameborder="0"
+width="100%" height="100%" allowfullscreen="false" mozallowfullscreen="false"
+webkitallowfullscreen="false"></iframe>			</div>
+			  </div>
+			</div>
+
 			<span id="dots"></span>
 			<span id="moreFront">
 				<span id="dots"></span>
@@ -56,20 +68,18 @@
 				<br>
 				<br>
 				<br>
-				<div class="disco" style="display: none;">
+				<div class="disco">
 					MERCH
 				</div>
-				<div id="main" style="display: none;">
+				<div id="main">
 					<p>
-						<a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
-							<a href="https://cash.app/$pinkphantom"></a>
-							<img loading=lazy src="images\nice.png">
+						<!-- <a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
+							<a href="https://cash.app/$pinkphantom"></a> -->
+							<img loading=lazy src="images\nice.png" onclick="openScreen()">
 						</a>
 					</p>
 					<p>
-						<a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
-							<a href="https://cash.app/$pinkphantom"></a>
-							<img loading=lazy src="images\nice1.png">
+							<img loading=lazy src="images\nice1.png" onclick="openScreen()">
 						</a>
 						<br>
 					</p>
@@ -203,6 +213,59 @@
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  /* transition: 0.5s; */
+}
+
+.overlay-content {
+  position: relative;
+  top: 0%;
+	height: 100vh;
+  width: 100vw;
+	text-align: center;
+  margin-top: 0;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.closebtn {
+	background-color: transparent;
+	border: none;
+  color: gray;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	font-size: 60px;
+	z-index: 100;
+}
+.closebtn1 {
+	background-color: transparent;
+	border: none;
+  color: gray;
+	position: absolute;
+	bottom:0;
+	right:50vw;
+	left: 50vw;
+	font-size: 60px;
+}
 	#imageGallery {
 		margin: 0;
 		padding: 0;
@@ -647,6 +710,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelement-and-player.min.js"></script>
 <script>
 	var morePReel = document.getElementById("morePReel");
+	var payScreen = document.getElementById("payScreen");
 	var moreFront = document.getElementById("moreFront");
 	var lecteur = document.getElementById("stuff");
 	var myFrontBtn = document.getElementById("myFrontBtn");
@@ -656,6 +720,7 @@
 	var audio = {
 		init: function() {
 			moreFront.style.display = "inline";
+			payScreen.style.display = "none";
 			morePReel.style.display = "none";
 			lecteur.style.display = "inline";
 			currentTime = 0;
@@ -686,7 +751,23 @@
 	// features : ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
 	audio.init();
 	var x = document.getElementById('myAudio');
+	var scroll;
+	function openScreen() {
+		scroll = window.pageYOffset;
+	  document.getElementById("payScreen").style.display = "inline";
+		moreFront.style.display = "none";
+		myNavBtns.style.display = "none";
+		document.body.style.overflowY = "hidden";
+	}
 
+	function closeScreen() {
+	  document.getElementById("payScreen").style.display = "none";
+		moreFront.style.display = "inline";
+		myNavBtns.style.display = "inline-flex";
+		document.body.style.overflowY = "scroll";
+		document.body.scrollTop = scroll;
+		document.documentElement.scrollTop = scroll;
+	}
 	function frontTime() {
 		document.body.scrollTop = 0;
 		document.documentElement.scrollTop = 0;
