@@ -29,7 +29,7 @@
 									<center>
 										<div class="lecteur" id="wow">
 												<audio controls id='myAudio'>
-														<source src="sounds/trailer.wav" type="audio/wav"/>
+														<source src="sounds/trailer_audio_web.mp3" type="audio/mp3"/>
 												</audio>
 										</div>
 									</center>
@@ -713,6 +713,7 @@
 		document.getElementById('tap').style.display = 'none';
 	}
 
+
 		if(x.currentTime!=0){
 			document.getElementById('tap').style.display = 'none';
 		}
@@ -752,6 +753,10 @@
 	const gestureZone = document.getElementById('gestureZone');
 	document.getElementById('oop').onclick = function(event) {
 		if(x.currentTime == 0){
+			x.play();
+			document.getElementById('tap').style.display = 'none';
+		}else if(x.currentTime >=29){
+			x.currentTime = 0;
 			x.play();
 			document.getElementById('tap').style.display = 'none';
 		}
