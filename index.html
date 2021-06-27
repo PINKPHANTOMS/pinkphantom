@@ -33,11 +33,15 @@
 									<br>
 								</p>
 							</div>
+							<b>THE CYBORG EP - an electronic vinyl</b><br>
+							$5<br><br>
+
 						<b>Description</b><br>
 						<div style="font-size: 4vw; color: gray">
-						These limited edition vinyls have been spray painted with a QR code that allows you to access
-						our music. Placing these vinyls in front of your phone camera will automatically trigger a notification
-						on your phone. Upon tapping that notification, you will be taken into the world we've created, THE CYBORG EP.
+						These limited edition vinyls have been spray painted with QR codes that allow you to access
+						music as well as other media we've never released anywhere else. Placing these vinyls in front of
+						your phone camera will automatically trigger a notification on your phone. Upon tapping that notification,
+						you will be taken into the strange world we've carved out of the internet.
 					</div>
 						<br>
 						<br>
@@ -45,9 +49,11 @@
 						To Purchase<br>
 						<div style="font-size: 4vw; color: gray">
 						1) choose payment method below<br>
-						2) send $5<br>
+						2) send payment<br>
 						3) attach note detailing: ITEM, SHIPPING ADDRESS, & EMAIL<br>
 					</div>
+					<br>
+					<div style="font-size: 4vw; color: gray"> email us @ <a style="font-size: 4vw; color: white"href="mailto:pinkphantomofficial@gmail.com">pinkphantomofficial@gmail.com</a></div>
 					</div>
 						<a href="https://www.paypal.me/paypinkphantom?locale.x=en_US">
 					<button style="margin-top: 20vw;"class="button button5">	<img style="padding-top: 0;padding-bottom: 0;"src="images/paypal.png" width="200vw"></button>
@@ -62,29 +68,32 @@
 			  </div>
 			</div>
 
+			<div class="container">
+				<span id="stuff">
+				<center>
+				<div class="lecteur" id="wow">
+						<audio controls id='myAudio'>
+								<source src="sounds/trailer_audio_web.mp3" type="audio/mp3"/>
+						</audio>
+				</div>
+				</center>
+			</span>
+		</div>
+
 			<span id="dots"></span>
 			<span id="moreFront">
 				<span id="dots"></span>
 				<div class="music-player" id="oop">
-					<div id = 'tap' style="position: absolute; top: 70vh; color: white; font-size: 10vw; text-shadow: grey 0 0 5vw;">tap to play</div>
-					<div class="bg">
+					<div id = 'tap' style="padding: 16px;position: absolute; top: 70vh; color: white; font-size: 10vw; text-shadow: grey 0 0 5vw;">tap to play</div>
 						<span id="stuff">
+							<div class="bg" id="no">
 							<div class="titre">
+								<div class="bg">
 								<h1 style="padding-top: 80vh;">REBOOT COMPLETE</h1>
 							</div>
-							<span id="stuff">
-								<span id="stuff">
-									<center>
-										<div class="lecteur" id="wow">
-												<audio controls id='myAudio'>
-														<source src="sounds/trailer_audio_web.mp3" type="audio/mp3"/>
-												</audio>
-										</div>
-									</center>
-								</span>
-							</span>
+						</div>
+							</div>
 						</span>
-					</div>
 				</div>
 				<br>
 				<br>
@@ -104,13 +113,11 @@
 				<br>
 				<br>
 				<br>
-				<div class="disco" style="display: none">
-					MERCH
+				<div class="disco" style="display:none">
+					SHOP
 				</div>
 				<div id="main" style="display: none;">
 					<p>
-						<!-- <a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
-							<a href="https://cash.app/$pinkphantom"></a> -->
 							<img loading=lazy src="images\nice.png" onclick="openScreen()">
 						</a>
 					</p>
@@ -249,6 +256,7 @@
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
+
 	.button {
 	  background-color: #4CAF50; /* Green */
 	  border: none;
@@ -312,18 +320,8 @@
 	position: absolute;
 	top: 0px;
 	right: 0px;
-	font-size: 5vw;
+	font-size: 1000vw;
 	z-index: 100;
-}
-.closebtn1 {
-	background-color: transparent;
-	border: none;
-  color: gray;
-	position: absolute;
-	bottom:0;
-	right:50vw;
-	left: 50vw;
-	font-size: 60px;
 }
 	#imageGallery {
 		margin: 0;
@@ -372,11 +370,11 @@
 		position: fixed;
 		top: 0;
 		width: 100vw;
-		max-width: 600px;
 		display: inline-flex;
 		z-index: 99;
 		width: 100%;
 		transition: top 0.3s;
+		/* max-width: 1000px; */
 		/* Transition effect when sliding down (and up) */
 	}
 
@@ -400,20 +398,6 @@
 		color: white;
 		font-family: cyber;
 		font-size: 3vh;
-		border-style: hidden;
-		border-bottom: 3px solid transparent;
-	}
-
-	#myNav1Btns button {
-		flex: 1;
-		top: 50vw;
-		padding: 2vw;
-		text-align: center;
-		background-color: rgb(0, 0, 0, .7);
-		z-index: 99;
-		color: white;
-		font-family: cyber;
-		font-size: 5vw;
 		border-style: hidden;
 		border-bottom: 3px solid transparent;
 	}
@@ -496,12 +480,11 @@
 	}
 
 	body {
-		max-width: 600px;
 		margin: auto;
-		background-color: black;
-		overflow-x: hidden;
+		background-color: #080808;
 		background-repeat: no-repeat;
 		background-size: contain;
+		overflow-x: hidden;
 		background-attachment: fixed;
 		font-family: 'Cyber', sans-serif;
 	}
@@ -534,7 +517,7 @@
 	}
 
 	.bg {
-		background: transparent linear-gradient(to bottom, transparent 50%, black 90%) repeat scroll 0 0;
+		background: transparent linear-gradient(to bottom, transparent 50%,#080808 90%) repeat scroll 0 0;
 		width: 100vw;
 		height: 100vh;
 	}
@@ -544,6 +527,7 @@
 		font-size: 5vw;
 		color: white;
 		margin-top: 5vw;
+		padding: 16px;
 	}
 
 	#main {
@@ -617,7 +601,7 @@
 	.lecteur audio{
 		width: 100vw;
 		height: 50px;
-		text-align: center;
+		text-align: left;
 	}
 	audio::-webkit-media-controls-mute-button {
 	    display: none !important;
@@ -625,143 +609,6 @@
 
 	audio::-webkit-media-controls-volume-slider {
 	    display: none !important;
-	}
-
-	.mejs__button>button:focus {
-		outline: 0px dotted #999;
-	}
-
-	.mejs__container {
-		position: relative;
-		background-color: transparent;
-		min-width: auto !important;
-	}
-
-	.mejs__controls {
-		background: transparent !important;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}
-
-	.mejs__controls div {
-		display: block;
-		float: left;
-		position: relative;
-	}
-
-	.mejs__controls .mejs__playpause-button {
-		position: absolute !important;
-		float: right;
-		right: 0%;
-		top: 70vh;
-		width: 40px;
-	}
-
-	.mejs__controls .mejs__playpause-button button {
-		display: block;
-		width: 20vw;
-		height: 20vw;
-		padding: 0;
-		border: 0;
-		font-family: FontAwesome;
-		font-size: 15vw;
-		color: white;
-		background: transparent;
-		padding: 0;
-		margin: 0;
-	}
-
-	.mejs__controls .mejs__play button:before {
-		content: "\f04b";
-	}
-
-	.mejs__controls .mejs__pause button:before {
-		content: "\f04c";
-	}
-
-	.mejs__controls .mejs__time {
-		width: 100%;
-		margin-top: 3%;
-		margin-bottom: 1%;
-		color: #fff;
-		height: auto;
-		padding: 0;
-		overflow: visible;
-	}
-
-	.mejs__controls .mejs__time span {
-		font-size: 4vw;
-	}
-
-	.mejs__controls span.mejs__duration {
-		float: left;
-		text-align: right;
-		color: #ccc;
-	}
-
-	.mejs__controls span.mejs__currenttime {
-		font-weight: 700;
-		float: right;
-	}
-
-	.mejs__controls .mejs__time-rail {
-		width: 100vw;
-		margin: 0;
-	}
-
-	.mejs__controls .mejs__time-rail span {
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 4px;
-		border-radius: 50px;
-		cursor: pointer;
-	}
-
-	.mejs__controls .mejs__time-rail .mejs__time-loaded {
-		background: rgba(255, 255, 255, 0.2);
-	}
-
-	.mejs__controls .mejs__time-rail .mejs__time-float {
-		display: none;
-		top: -40px;
-		width: 40px;
-		height: 25px;
-		margin-left: 0px;
-		text-align: center;
-		font-size: 10px;
-		background: #fff;
-		border: 0;
-	}
-
-	.mejs__controls .mejs__time-rail .mejs__time-float-current {
-		display: block;
-		position: relative;
-		top: 0;
-		margin: 0;
-		line-height: 26px;
-		color: #100d28;
-	}
-
-	.mejs__controls .mejs__time-rail .mejs__time-float-corner {
-		top: auto;
-		bottom: -9px;
-		left: 0%;
-		width: 0;
-		height: 0;
-		border-top: 6px solid #fff;
-		border-right: 6px solid transparent;
-		border-left: 6px solid transparent;
-	}
-
-	.mejs__controls .mejs__time-rail .mejs__time-current {
-		background: white none repeat scroll 0 0;
-	}
-
-	.mejs__controls .mejs__time-handle {
-		display: none;
 	}
 </style>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -777,6 +624,7 @@
 	var scale;
 	var audio = {
 		init: function() {
+			document.getElementById('no').style.display = "none";
 			moreFront.style.display = "inline";
 			payScreen.style.display = "none";
 			morePReel.style.display = "none";
@@ -859,6 +707,7 @@
 
 		if(x.currentTime!=0){
 			document.getElementById('tap').style.display = 'none';
+			document.getElementById('no').style.display = "inline";
 		}
 		// console.log(window.pageYOffset);
 		var currentScrollPos = window.pageYOffset;
@@ -876,9 +725,9 @@
 			document.getElementById("wow").style.bottom = "0vh";
 		}else{
 			document.getElementById("wow").style.bottom = "-50vh";
-
 			if(x.currentTime == 0){
 			document.getElementById('tap').style.display = 'inline';
+			document.getElementById('no').style.display = "none";
 		}
 		}
 
@@ -886,6 +735,8 @@
 			document.getElementById("myNavBtns").style.top = "-50px";
 			// document.getElementById("myNav1Btns").style.left = "-500px";
 			document.getElementById("wow").style.bottom = "0px";
+			document.getElementById('no').style.display = "inline";
+			document.getElementById('tap').style.display = "none";
 		}
 		prevScrollpos = currentScrollPos;
 	}
@@ -898,10 +749,12 @@
 		if(x.currentTime == 0){
 			x.play();
 			document.getElementById('tap').style.display = 'none';
+			document.getElementById('no').style.display = "inline";
 		}else if(x.currentTime >=29){
 			x.currentTime = 0;
 			x.play();
 			document.getElementById('tap').style.display = 'none';
+			document.getElementById('no').style.display = "inline";
 		}
 	};
 	let zoom = ((window.outerWidth - 10) / window.innerWidth) * 100;
@@ -910,6 +763,7 @@
 		touchstartY = event.touches[0].clientY;
 		if(x.currentTime!=0){
 			document.getElementById('tap').style.display = 'none';
+
 		}
 	}, false);
 	gestureZone.addEventListener('touchend', function(event) {
@@ -928,10 +782,12 @@
 		if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
 			if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 				lecteur.style.display = "none";
+				document.getElementById('no').style.display = "none";
 				document.getElementById("myNavBtns").style.top = "-50px";
 			}else if(lecteur.style.display === "none"){
 				lecteur.style.display = "inline";
 				document.getElementById("myNavBtns").style.top = "0";
+				document.getElementById('no').style.display = "inline";
 				document.getElementById("wow").style.bottom = "0px";
 			}
 			}
