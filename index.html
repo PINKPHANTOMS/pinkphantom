@@ -17,19 +17,20 @@
 			<span id="dots"></span>
 			<span id="moreFront">
 				<span id="dots"></span>
-				<div class="music-player">
+				<div class="music-player" id="oop">
+					<div id = 'tap' style="position: absolute; top: 70vh; color: white; font-size: 10vw; text-shadow: grey 0 0 5vw;">tap to play</div>
 					<div class="bg">
 						<span id="stuff">
 							<div class="titre">
-								<h1 style="padding-top: 80vh;">s_2021</h1>
+								<h1 style="padding-top: 80vh;">REBOOT COMPLETE</h1>
 							</div>
 							<span id="stuff">
 								<span id="stuff">
 									<center>
-										<div class="lecteur">
-											<audio style="width: 100%;" controls >
-												<source src="sounds/OMDB.mp3" type="audio/mp3" />
-											</audio>
+										<div class="lecteur" id="wow">
+												<audio controls id='myAudio'>
+														<source src="sounds/TRAILER.wav" type="audio/mp3"/>
+												</audio>
 										</div>
 									</center>
 								</span>
@@ -38,24 +39,34 @@
 					</div>
 				</div>
 				<div class="disco">
-					DISCOGRAPHY
+					UPCOMING SHOWS
 				</div>
 				<div id="main">
 					<p>
-						<a href="https://distrokid.com/hyperfollow/pinkphantom/over-my-dead-body">
-							<img loading=lazy src="images\albumart\OMDB.png">
-						</a>
+							<img loading=lazy src="images\show0.jpg">
 					</p>
 					<p>
-						<a href="https://distrokid.com/hyperfollow/pinkphantom/feed-me-more-life-fucker ">
-							<img loading=lazy src="images\albumart\feedme.png">
-						</a>
+							<img loading=lazy src="images\show1.png">
 						<br>
 					</p>
+				</div>
+
+				<div class="disco">
+					MERCH
+				</div>
+				<div id="main">
 					<p>
-						<a href="https://distrokid.com/hyperfollow/pinkphantom/paralyzed">
-							<img loading=lazy src="images\paralyzed.png">
+						<a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
+							<a href="https://cash.app/$pinkphantom"></a>
+							<img loading=lazy src="images\nice.png">
 						</a>
+					</p>
+					<p>
+						<a href="https://paypal.me/pinkphantomofficial?locale.x=en_US">
+							<a href="https://cash.app/$pinkphantom"></a>
+							<img loading=lazy src="images\nice1.png">
+						</a>
+						<br>
 					</p>
 				</div>
 
@@ -429,14 +440,14 @@
 	}
 
 	.music-player {
-		background-image: url("images/reboot.gif");
+		background-image: url("images/new.gif");
 		background-repeat: no-repeat;
+		background-size: contain;
 		width: 100vw;
 		height: 100vh;
-		object-fit: cover;
-		display: block;
+		max-width: 720px;
+		max-height: 1280px;
 		position: relative;
-		width: 100vw;
 		background-position: center;
 		max-width: 600px;
 		margin: auto;
@@ -468,12 +479,27 @@
 	}
 
 	.lecteur {
-		width: 80%;
-		display: block;
-		height: auto;
-		position: absolute;
-		left: 10%;
-		top: 50vh;
+	    width: 1vw;
+			z-index: 100;
+	    display: block;
+	    height: auto;
+			position: fixed;
+			bottom: -50vh;
+			z-index: 100;
+			transition: bottom .3s;
+	}
+
+	.lecteur audio{
+		width: 100vw;
+		height: 50px;
+		text-align: center;
+	}
+	audio::-webkit-media-controls-mute-button {
+	    display: none !important;
+	}
+
+	audio::-webkit-media-controls-volume-slider {
+	    display: none !important;
 	}
 
 	.mejs__button>button:focus {
@@ -682,15 +708,40 @@
 	}
 	var prevScrollpos = window.pageYOffset;
 	window.onscroll = function() {
+	if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==0){
+		x.play();
+		document.getElementById('tap').style.display = 'none';
+	}
+
+		if(x.currentTime!=0){
+			document.getElementById('tap').style.display = 'none';
+		}
+		// console.log(window.pageYOffset);
 		var currentScrollPos = window.pageYOffset;
-		if (lecteur.style.display === "none" && window.pageYOffset >= 100) {
+		if(lecteur.style.display === "none" && window.pageYOffset >= 100){
 			lecteur.style.display = "inline";
 			document.getElementById("myNavBtns").style.top = "0";
+			document.getElementById("wow").style.bottom = "0vh";
+
 		}
-		if (prevScrollpos > currentScrollPos || window.pageYOffset < 20) {
+
+		if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
 			document.getElementById("myNavBtns").style.top = "0";
+			// document.getElementById("myNav1Btns").style.left = "0";
+			if(window.pageYOffset > 20 || moreFront.style.display == "none"){
+			document.getElementById("wow").style.bottom = "0vh";
+		}else{
+			document.getElementById("wow").style.bottom = "-50vh";
+
+			if(x.currentTime == 0){
+			document.getElementById('tap').style.display = 'inline';
+		}
+		}
+
 		} else {
-			document.getElementById("myNavBtns").style.top = "-50vw";
+			document.getElementById("myNavBtns").style.top = "-50px";
+			// document.getElementById("myNav1Btns").style.left = "-500px";
+			document.getElementById("wow").style.bottom = "0px";
 		}
 		prevScrollpos = currentScrollPos;
 	}
@@ -699,10 +750,19 @@
 	let touchendX = 0;
 	let touchendY = 0;
 	const gestureZone = document.getElementById('gestureZone');
+	document.getElementById('oop').onclick = function(event) {
+		if(x.currentTime == 0){
+			x.play();
+			document.getElementById('tap').style.display = 'none';
+		}
+	};
 	let zoom = ((window.outerWidth - 10) / window.innerWidth) * 100;
 	gestureZone.addEventListener('touchstart', function(event) {
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
+		if(x.currentTime!=0){
+			document.getElementById('tap').style.display = 'none';
+		}
 	}, false);
 	gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
@@ -716,16 +776,17 @@
 		touchendY = event.changedTouches[0].clientY;
 	}, false);
 
-	function toggle(event) {
-		if (touchstartX == touchendX && touchstartY == touchstartY && window.pageYOffset <= 50) {
-			if (lecteur.style.display === "inline" && touchendY < screen.height * .8) {
+	function toggle(event){
+		if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
+			if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 				lecteur.style.display = "none";
 				document.getElementById("myNavBtns").style.top = "-50px";
-			} else if (lecteur.style.display === "none") {
+			}else if(lecteur.style.display === "none"){
 				lecteur.style.display = "inline";
 				document.getElementById("myNavBtns").style.top = "0";
+				document.getElementById("wow").style.bottom = "0px";
 			}
-		}
+			}
 	}
 </script>
 
