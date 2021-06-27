@@ -668,7 +668,7 @@ audio::-webkit-media-controls-volume-slider {
 	morePReel.style.display = "none";
 	moreBack.style.display = "none";
 	moreLyrics.style.display = "none";
-	lecteur.style.display = "inline";
+	lecteur.style.display = "block";
 	moreTrackListing.style.display = "none";
 	lessTrackListing.style.display = "inline";
 	less1TrackListing.style.display = "inline";
@@ -905,7 +905,7 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	// console.log(window.pageYOffset);
 	var currentScrollPos = window.pageYOffset;
 	if(lecteur.style.display === "none" && window.pageYOffset >= 100){
-		lecteur.style.display = "inline";
+		lecteur.style.display = "block";
 		document.getElementById("myNavBtns").style.top = "0";
 		document.getElementById("wow").style.bottom = "0vh";
 
