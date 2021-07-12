@@ -33,15 +33,15 @@
 									<br>
 								</p>
 							</div>
-							<b>THE CYBORG EP - an electronic vinyl</b><br>
+							<b>BECOMING CYBORG - an electronic vinyl</b><br>
 							$5<br><br>
 
 						<b>Description</b><br>
 						<div style="font-size: 4vw; color: gray">
-						These limited edition vinyls have been spray painted with QR codes that allow you to access
+						These limited edition vinyls have been stamped with QR codes that allow you to access
 						music and other media we've never released anywhere else. Placing these vinyls in front of
 						your phone camera will automatically trigger a notification on your phone. Upon tapping that notification,
-						you will be taken into the strange world we've carved out of the internet.
+						you will be taken into the strange world we've carved out of cyber space.
 					</div>
 						<br>
 						<br>
@@ -68,6 +68,60 @@
 			<br>
 </div>
 			  </div>
+			</div>
+
+			<div id="payScreen1" class="overlay">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeScreen1()">&times;</a>
+				<div class="overlay-content">
+					<div class="container">
+						<br>
+						<br>
+						<div class="disco" style="padding: 16px;text-align: left; font-size: 6vw;padding-bottom: none;">
+							<div id="main">
+								<p>
+										<img loading=lazy src="images\nice.png">
+									</a>
+								</p>
+								<p>
+										<img loading=lazy src="images\nice1.png">
+									</a>
+									<br>
+								</p>
+							</div>
+							<b><i>i</i> usb</b><br>
+							$5<br><br>
+
+						<b>Description</b><br>
+						<div style="font-size: 4vw; color: gray">
+						Venture inside the megentascape. These usb's have been loaded with mind bending content. They
+						explicitly lay out the conceptual foundations behind organically created virtual reality. It
+						is the embodiment of BECOMING CYBORG.
+					</div>
+						<br>
+						<br>
+
+						To Purchase<br>
+						<div style="font-size: 4vw; color: gray">
+						1) choose payment method below<br>
+						2) send payment<br>
+						3) attach note detailing: ITEM, SHIPPING ADDRESS, & EMAIL<br>
+					</div>
+					<br>
+					<div style="font-size: 4vw; color: gray"> email us @ <a style="font-size: 4vw; color: white"href="mailto:pinkphantomofficial@gmail.com">pinkphantomofficial@gmail.com</a></div>
+					</div>
+						<a href="https://www.paypal.me/paypinkphantom?locale.x=en_US">
+					<button style="margin-top: 20vw;"class="button button5">	<img style="padding-top: 0;padding-bottom: 0;"src="images/paypal.png" width="200vw"></button>
+					</a>
+					<a href="https://venmo.com/code?user_id=2769294282719232824&printed=1">
+				<button style="margin-top: 20vw;"class="button button5">	<img style="padding-top: 0;padding-bottom: 0;"src="images/venmo.png" width="200vw"></button>
+				</a>
+				<a href="https://cash.app/$pinkphantom">
+			<button style="margin-top: 20vw; margin-bottom: 20vw;"class="button button5">	<img style="padding-top: 0;padding-bottom: 0;"src="images/cashapp.png" width="200vw"></button>
+			</a>
+			<br>
+			<br>
+</div>
+				</div>
 			</div>
 
 			<div class="container">
@@ -124,7 +178,7 @@
 						</a>
 					</p>
 					<p>
-							<img loading=lazy src="images\nice1.png" onclick="openScreen()">
+							<img loading=lazy src="images\nice1.png" onclick="openScreen1()">
 						</a>
 						<br>
 					</p>
@@ -618,6 +672,7 @@
 <script>
 	var morePReel = document.getElementById("morePReel");
 	var payScreen = document.getElementById("payScreen");
+	var payScreen1 = document.getElementById("payScreen");
 	var moreFront = document.getElementById("moreFront");
 	var lecteur = document.getElementById("stuff");
 	var myFrontBtn = document.getElementById("myFrontBtn");
@@ -629,6 +684,7 @@
 			document.getElementById('no').style.display = "none";
 			moreFront.style.display = "inline";
 			payScreen.style.display = "none";
+			payScreen1.style.display = "none";
 			morePReel.style.display = "none";
 			lecteur.style.display = "inline";
 			currentTime = 0;
@@ -670,6 +726,22 @@
 
 	function closeScreen() {
 	  document.getElementById("payScreen").style.display = "none";
+		moreFront.style.display = "inline";
+		myNavBtns.style.display = "inline-flex";
+		document.body.style.overflowY = "scroll";
+		document.body.scrollTop = scroll;
+		document.documentElement.scrollTop = scroll;
+	}
+	function openScreen1() {
+		scroll = window.pageYOffset;
+		document.getElementById("payScreen1").style.display = "inline";
+		moreFront.style.display = "none";
+		myNavBtns.style.display = "none";
+		document.body.style.overflowY = "hidden";
+	}
+
+	function closeScreen1() {
+		document.getElementById("payScreen1").style.display = "none";
 		moreFront.style.display = "inline";
 		myNavBtns.style.display = "inline-flex";
 		document.body.style.overflowY = "scroll";
