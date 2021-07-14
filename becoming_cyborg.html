@@ -824,9 +824,9 @@ audio::-webkit-media-controls-volume-slider {
 	var audio = {   
     init: function() {
 	myNavBtns.style.top = "0";
-	myNav1Btns.style.left = "0";
-	myNav2Btns.style.right = "0";
-	myNav3Btns.style.left = "0";
+	myNav1Btns.style.left = "-500px";
+	myNav2Btns.style.right = "-500px";
+	myNav3Btns.style.left = "-500px";
 	moreFront.style.display = "inline";   
 	morePReel.style.display = "none";
 	moreBack.style.display = "none";
@@ -969,6 +969,7 @@ function frontTime(){
 	}
 }
 function backTime(){
+	myNavBtns.style.top = "0";
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 	if(moreBack.style.display==="inline"){
