@@ -16,7 +16,7 @@
 		</div>
 
 		<span id="dots"></span>
-		<span id="myMusic1" style="position:fixed;transition: top .3s">
+		<span id="myMusic1" style="position:fixed;transition: top .3s;">
 			<div id="myNav2Btns">
 			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 		</div>
@@ -128,7 +128,7 @@
 											<span id="less1TrackListing">
 													<div id="imageGallery">
 														<figure>
-															<img loading=lazy src="images/4.jpg" onclick="itimeStamp0()">
+															<img loading=lazy src="images/circ.gif" onclick="itimeStamp0()">
 															<figcaption>
 																SURVIVE
 															</figcaption>
@@ -383,7 +383,7 @@
 #myMusic1 {
 	display: block;
 	position: relative;
-	background-image: url("images/4.jpg");
+	background-image: url("images/circ.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -1044,6 +1044,8 @@ myNavBtns.style.display = "none";
 }
 
 function closeMusic() {
+	document.body.scrollTop = scroll;
+	document.documentElement.scrollTop = scroll;
 	if(track == 1){
 	music1.style.top = "100vh";
 }else if(track == 2){
@@ -1056,11 +1058,9 @@ function closeMusic() {
 	music5.style.top = "100vh";
 }
 moreFront.style.display = "inline";
-document.getElementById("myNavBtns").style.top = "0";
 moreIG.style.display = "flex";
 myNavBtns.style.display = "inline-flex";
-document.body.scrollTop = scroll;
-document.documentElement.scrollTop = scroll;
+document.getElementById("myNavBtns").style.top = "0";
 document.getElementById("myNav2Btns").style.right = "-500px";
 document.getElementById("myNav3Btns").style.left = "-500px";
 track = 0;
@@ -1170,7 +1170,7 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(touchendY > touchstartY && window.pageYOffset < 10){
+	if(touchendY > touchstartY && window.pageYOffset < 10 && moreLyrics.style.display == "none"){
 		closeMusic();
 		}
 		if(touchstartX == touchendX && touchendY == touchstartY){
