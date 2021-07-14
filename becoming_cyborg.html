@@ -1178,10 +1178,10 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchendY = event.changedTouches[0].clientY;
 }, false);
 function toggle(event){
-	if(touchendX > touchstartX + 50 && moreBack.style.display == "inline"){
+	if(touchendX > touchstartX + 100 && moreBack.style.display == "inline"){
 		frontTime();
 	}
-	if(touchendX < touchstartX - 50 && moreFront.style.display == "inline"){
+	if(touchendX < touchstartX - 100 && moreFront.style.display == "inline"){
 		backTime();
 	}
 	if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
