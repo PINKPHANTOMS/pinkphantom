@@ -939,6 +939,9 @@ track = 5;
 	openMusic();
 }
 
+var scrollBack = 0;
+var scrollFront = 0;
+
 function trackListTime(){
 	if(moreTrackListing.style.display==="inline"){
 		lessTrackListing.style.display = "inline";
@@ -951,8 +954,11 @@ function trackListTime(){
 	}
 }
 function frontTime(){
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
+	if(moreBack.style.display == "inline"){
+	scrollBack = window.pageYOffset;
+}
+	myNavBtns.style.top = "0";
+
 	moreBack.style.display = "none";
 	moreIG.style.display = "flex";
 	if(moreFront.style.display==="inline"){
@@ -967,11 +973,12 @@ function frontTime(){
 		morePReel.style.display = "none";
 		document.getElementById("wow").style.bottom = "-50vh";
 	}
+	document.body.scrollTop = scrollFront;
+	document.documentElement.scrollTop = scrollFront;
 }
 function backTime(){
+	scrollFront = window.pageYOffset;
 	myNavBtns.style.top = "0";
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
@@ -984,6 +991,8 @@ function backTime(){
 		moreIG.style.display = "none";
 		morePReel.style.display = "none";
 	}
+	document.body.scrollTop = scrollBack;
+	document.documentElement.scrollTop = scrollBack;
 }
 function lyricTime(){
 	myNavBtns.style.display = "none";
