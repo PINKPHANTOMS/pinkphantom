@@ -10,19 +10,21 @@
 <body>
 	<div id="gestureZone">
 		<div id="myNavBtns">
-				<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
-				<!-- <button  onclick="backTime()" id="myBackBtn">SIDE B</button> -->
-				<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
-				<button  onclick="pReelTime()" id="myPReelBtn">Gallery</button>
+				<button onclick="frontTime()" id="myFrontBtn" style="display: none;">SIDE A</button>
+				<button  onclick="backTime()" id="myBackBtn" style="display: none;">SIDE B</button>
+				<button  onclick="pReelTime()" id="myPReelBtn" style="display: none">Gallery</button>
 		</div>
 
 		<span id="dots"></span>
 		<span id="myMusic1" style="position:fixed;transition: top .3s">
+			<div id="myNav2Btns">
+			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
+		</div>
 			<div class="container" id="stuff">
-				<div class="bg1">
 				<div class="closebtn" onclick="closeMusic()">
-					<img width="40px" style="padding: 8px" src="images/back.png">
+					<img width="40px" style="padding: 8px;" src="images/back.png">
 				</div>
+				<div class="bg1">
 				<div class="titre" style="position: absolute; top: 0vh; text-align: center;">
 						<h3 style="text-align: center; margin-top: 8px;"> SURVIVE</h3>
 				</div>
@@ -219,20 +221,146 @@
 										</div>
 									</span>
 
-
 									<span id="dots"></span>
+									<span id="morePReel">
+									</span>
+
+
+										<span id="dots"></span>
 									<span id="moreBack">
-<div class="titre">
-	<div id="myNav1Btns" style="color: white;">
-		<button  onclick="frontTime()" id="myFrontBtn">ᐊgo back</button>
-</div>
-</div>
-			</span>
+								<div class="titre">
+								<div id="myNav1Btns" style="color: white;">
+								<button  onclick="frontTime()" id="myFrontBtn">ᐊSIDE A</button>
+								</div>
+								<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
+								The American Dream
+								</div>
+								<div style="font-size: 5vw; color: gray;padding-left: 5%;">
+								by Pink Phantom</div>
+								<div style="padding-bottom: 15vh;padding-left: 5%;margin-top: 0vh;font-size: 4vw; color: gray;"> released April 20th, 2018</div>
+								</div>
+								<div style="margin: 0vw; background: black;">
+								<center>
+								<img loading=lazy src="images/americandream.jpg" width="100%" style="padding: 0vw;"alt="">
+								</center>
+								</div>
+								<div style="padding-top: 10vh; padding-bottom: 10vh; font-size: 5vw; color: white; background: black;
+								text-align: right; padding-right: 5vw;">
+								What is The American Dream?<br><br> What is reality?<br><br> Why does it matter?<br><br></div>
+								<div style="padding: 5vw; font-size: 8vw; color: white;background: black;text-align: left;">
+								<div style="font-size: 8vw;">
+								Part I: Waking
+								</div>
+								<img loading=lazy src="images/city/a.jpg" width="100%" style="padding: 0vw;"alt="" onclick="timeStamp1()">
+								<div style="font-size: 5vw;" onclick="timeStamp1()">
+								<b><u>[0:00] Dreams</u></b>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								THE MATRIX describes a world in which reality is <i>constructed</i> as opposed to existing with the status of “given” and furthers a narrative that reality’s existence, itself, is and should be up for debate. Entertaining this idea, we might be able to analogize reality with dreams. One may wake up from a dream, but they would find that they only wake to another dream.<br><br>
+								Destabilizing reality in this way also destabilizes phenomena we believe to be givens of  reality, such as time & space. What proof do we have that either of these entities exist, given the fact that they are drenched in paradox. Take Zeno’s paradox. If Zeno’s paradox destabilizes distance, might it also destabilize time, as distance often swoops in to analogize time, since we have no other way of understanding but in terms of space?<br><br>
+								At the collapse of time and space, the dream becomes the ultimate metaphor of reality; such a fitting metaphor it almost crosses the line that defines the dream and reality.<br><br>
+								Therefore, if distance doesn’t exist, moving from one dream to another isn’t even possible. If we cannot move, then waking is impossible.<br><br>
+								</div>
+								<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+								<img loading=lazy src="images/newglitch/tenor.gif" width="100%" style="padding: 0vw;"alt=""onclick="timeStamp2()">
+								<div style="font-size: 5vw;" onclick="timeStamp2()">
+								<b><u>[01:39] No Wolves, Just Sheep Grazing on the Fabric We Call Home</u></b><br>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								And what of the self in this paradigm? We say that we experience reality. Is experience reality?<br><br>
+								Well where does the dream come from? If reality comes from the mind, we move from the theory of THE MATRIX to the theory of INCEPTION, where reality is a projection of the consciousness of the dreamer.<br><br>
+								As an aside, do these theories disqualify the existence and experience of others? My personal belief: no, and never. Existing in a society, existing with others means unequivocally granting the full and unconditional validity of experience to everyone. To do otherwise is to guarantee the demise of a healthy society.<br><br>
+								Coming back. Given the fact that all that we experience is filtered and produced from our memories, subconscious, and other psychological phenomena, we might conclude that the world is a mirror. The dream is an infinite reflection.<br><br> <place mirror bridge image from inception>
+								</div>
+								<div style="padding: none; background: black;">
+								<center>
+								<img loading=lazy src="images/unsplashCity.jpg" onclick="timeStamp3()" width="100%" alt="">
+								</center>
+								</div>
+								<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+								<div style="font-size: 5vw;" onclick="timeStamp3()">
+								<i><b><u>[06:43] THEATRE OF ANIMALS</u></b></i>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								This is a concept album about the United States after all… But we’ll hold off on that for now.<br><br>
+								</div>
+								<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+								<center>
+								<img loading=lazy src="images/sleepFactory.png" onclick="timeStamp3()" width="100%" alt="">
+								</center>
+								<div style="font-size: 5vw;" onclick="timeStamp4()">
+								<b>	<i><u>[10:12] The Sleep Factory</u></i></b><br>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								To the question of waking from the dream, we may continue traveling radially across rings of dreams, but you’ll never reach the edge, because moving itself is a fallacy. So, we live in an infinite metadream, one that does not grant real time or real space, or real reality. If distance does not exist, then reality seems to crumble in on itself, only to be reproduced by our minds themselves; as the only correlative is our minds, themselves.<br><br>
+								</div>
+								<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+								<div style="font-size: 5vw;">
+								<b>WHY DOES IT MATTER</b>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								Understanding that reality is constructed and not a given begs questions of why, how, and what.. To be infinitely curious is to guarantee one’s own psychological freedom, or does it? In one sense, reality has been created for us - it is a given. The important thing to remember is that reality0 was not created by us - it was a matter of societal, familial, interpersonal creation. To question is to destabilize, and to theorize is to materialize reality.<br><br>
+								</div>
+								<div style="padding: 5vw;font-size: 8vw; color: white;background: black;text-align: left;"><br>
+								<div style="font-size: 8vw;">
+								<b>CHRONOLOGY</b>
+								<center>
+								<img loading=lazy src="images/1012.png" onclick="timeStamp5()" width="100%" alt="">
+								</center>
+								</div>
+								</div>
+								<div class="bodyBoi">
+								<div onclick="timeStamp4()"><u>[10:12]</u></div><br><br>
+								The night was dark and the fog was heavy. Everything we have done has been leading up to this moment. The only beam of light there seemed to be was the neon blue skyscraper towering over us. we knew that, after tonight, there was no going back. I hated it, but if I’m being honest, i thought it was kind of beautiful. I looked at Ryan and we both knew this would be it.<br><br>
+								“Are you ready?,” Ryan said.<br><br>
+								I nodded and we lit the fuse. All I could focus on after that was the chain link fence we were running towards, the dirt kicking up behind us, our bodies beating outside of ourselves. We scale the fence and then there it was. The loudest sound I've ever heard. We hit the ground and as if perfectly orchestrated in concert, in that moment the computer tower exploded with glimmering pieces of servers and concrete, and date. We did it. We had liberated our people. Nothing that could happen after this moment mattered, not even death.<br><br>
+								And then there was blackness.<br><br>
+								<center>
+								<img loading=lazy src="images/funeral.png" onclick="timeStamp6()" width="100%" alt="">
+								</center>
+								<div onclick="timeStamp5()"><u>[12:07]</u></div><br><br>
+								The underground gathered around their fallen friends. The green sodium lamps from above put a darker vampire black hue on the bodies. The world around began to shrink - blackness began to overtake the city. The city fractilized and the funeral room grew smaller and bigger simultaneously.<br><br>
+								<center>
+								<img loading=lazy src="images/funeral1.png" width="100%" alt="">
+								</center>
+								<div onclick="timestamp6()">[13:03]</div><br><br>
+								I awoke to the sound of my alarm. It was quieter than usual. That was, until I saw the time. I was late for work. I rushed out the door and headed to work as fast as I could. As I drove through the city, I started to feel nauseous. I’d never felt like this before.<br><br>
+								I caught myself, “never?” I thought. And then it hit. My breakfast was all over the car. I called in sick and went back home.<br><br>
+								<center>
+								<img loading=lazy src="images/1703.jpeg" width="100%" alt="">
+								</center>
+								[17:03]<br><br>
+								I lay in bed and Everyday feels the same. Nothing is interesting to me anymore. I go to work, come home, watch tv and sleep. I just need sleep. Maybe I’ll just go to sleep.<br><br>
+								I can feel the cold air across my face. I just need to wake up. The ground doesn’t seem so far from me anymore. I just need to wake up. There are sirens in the distance, and it begins to rain. What am I feeling. I’m so lost, but I don’t know if I even feel anything anymore. What is real. Now I can feel the air pushing against my body, I can see the sidewalk coming for me, the people are approaching, and everything is growing larger. Just as I feel the immediacy of blackness, everything bounces away into itself and I feel it all spinning around and behind me. I just need to wake up. I’m nauseous.<br><br>
+								<center>
+								<img loading=lazy src="images/fall1.gif" width="100%" alt="">
+								</center>
+								[18:14]<br><br>
+								just be normal do your part is the calm before the storm<br><br>
+								[20:25]<br><br>
+								Subplot: how to organize a rebellion.<br><br>
+								[28:14]<br><br>
+								Maybe this is when the main character goes out and gives a speech (martyr scene)<br><br>
+								[31:52]<br><br>
+								this when the main character goes out at night and finds the warehouse filled with bodies<br><br>
+								[34:39]<br><br>
+								[40:59]<br><br>
+								Ends with main character falling asleep.<br><br>
+								</div>
+								</span>
 
 		<div class="bodyBoi2">
 			<span id="lyricsDots"></span>
 			<span id="moreLyrics">
 				<span id="lyricImage">
+					<div id="myNav3Btns" style="color: white;">
+					<button onclick="openMusic()">ᐊback to music</button>
+					</div>
 					<br>
 					<br>
 					<center>ZOOM IN TO VIEW</center><br>
@@ -240,92 +368,7 @@
 				</span>
 			</span>
 		</div>
-			<span id="dots"></span>
-			<span id="morePReel">
-				<div style="color: white; font-size: 8vw; line-height: 10vw; background: #080808	; text-align: center;">
-					<br>
-					<br>
-					PINK PHANTOM
-					<br>
-					<div style="font-size: 8vw; padding-bottom: 20vh;">
-						AMERICAN DREAM ERA<br>
-						(2018-2019)
-					</div>
-				<div class="titleBoi" style="color: white;">
-					MAY 2018<br>
-					<div style="font-size: 5vw; color: gray;">
-						SALPOINTE HIGHSCHOOL <br>
-						<br>
-					</div>
-				</div>
-				<img loading=lazy src="images/2018_2019/0.gif" width="80%"><br>
-				<img loading=lazy src="images/2018_2019/01.gif" width="80%"><br>
-						<div class="titleReal" style="color: white;">
-							<br>
-							JUNE 2018
-							<div style="font-size: 5vw; color: gray;">
-								sam's house.
-								<br>
-								<br>
-							</div>
-						</div>
-						<img loading=lazy src="images/2018_2019/1.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/2.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/3.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/5.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/6.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/7.jpg" width="80%"><br>
-						<div class="titleReal">
-							<div style="font-size: 5vw;">
-								<br>
-								downtown tucson.
-							</div>
-						</div>
-						<img loading=lazy src="images/2018_2019/8.jpg" width="80%"><br>
-						<img loading=lazy src="images/2018_2019/9.jpg" width="80%"><br>
-						<div class="titleReal">
-							<div style="font-size: 5vw;">
-								photo credits: ILIANA STEVENS
-								<br>
-								<br>
-							</div>
-						</div>
-						<div class="titleReal" style="color: white;">
-							OCT. 2018
-							<br>
-							<br>
-						</div>
-						<img loading=lazy src="images/2018_2019/2018oct.jpg" width="80%"><br>
-						<div class="titleBoi" style="color: white;">
-							<br>
-							<br>
-							DEC. 2018
-							<br>
-							<br>
-						</div>
-						<img loading=lazy src="images/2018_2019/001.gif" width="80%"><br>
-							<img loading=lazy src="images/2018_2019/12.jpg" width="80%"><br>
-							<div class="titleReal" style="color: white">
-								<br>
-								MAY 2019
-								<br>
-								<br>
-							</div>
-							<img loading=lazy src="images/2018_2019/2019001.jpg" width="80%"><br>
-							<img loading=lazy src="images/2018_2019/2019002.jpg" width="80%"><br>
-							<img loading=lazy src="images/2018_2019/0001.gif" width="80%"><br>
-								<div class="titleReal" style="color: white;">
-									<br>
-									JUNE 2019
-									<br>
-									<br>
-								</div>
-								<img loading=lazy src="images/2018_2019/201901.jpg" width="80%"><br>
-								<img loading=lazy src="images/2018_2019/201902.jpg" width="80%"><br>
-								<img loading=lazy src="images/2018_2019/201903.jpg" width="80%"><br>
-								<img loading=lazy src="images/2018_2019/201904.jpg" width="80%"><br>
-							</div>
-							</span>
+
 						<!-- <div class="backgroundThingy">
 							<center>
 								<footer style="padding-bottom: 10vh;font-size: 5vw; color: white;">&copy; Copyright 2020 PINK PHANTOM</footer>
@@ -447,7 +490,27 @@ figcaption {
 
 #myNav1Btns {
 	position: fixed;
-	top: 50vw;
+	top: 20vw;
+	width: 100%;
+	display: inline-flex;
+	z-index: 99;
+	width: 30%;
+	transition: left 0.3s;
+	/* Transition effect when sliding down (and up) */
+}
+#myNav2Btns {
+	position: fixed;
+	top: 8px;
+	width: 100%;
+	display: inline-flex;
+	z-index: 99;
+	width: 30%;
+	transition: right 0.3s;
+	/* Transition effect when sliding down (and up) */
+}
+#myNav3Btns {
+	position: fixed;
+	top: 8px;
 	width: 100%;
 	display: inline-flex;
 	z-index: 99;
@@ -521,6 +584,32 @@ figcaption {
 	font-size: 60px;
 }
 #myNav1Btns button {
+	flex: 1;
+	top: 50vw;
+	padding: 2vw;
+	text-align: center;
+	background-color: rgb(0, 0, 0, .7);
+	z-index: 99;
+	color: white;
+	font-family: cyber;
+	font-size: 5vw;
+	border-style: hidden;
+	border-bottom: 3px solid transparent;
+}
+#myNav2Btns button {
+	flex: 1;
+	top: 50vw;
+	padding: 2vw;
+	text-align: center;
+	background-color: rgb(0, 0, 0, .7);
+	z-index: 99;
+	color: white;
+	font-family: cyber;
+	font-size: 5vw;
+	border-style: hidden;
+	border-bottom: 3px solid transparent;
+}
+#myNav3Btns button {
 	flex: 1;
 	top: 50vw;
 	padding: 2vw;
@@ -607,7 +696,7 @@ figcaption {
 	height: 100vh;
 }
 .bg1{
-	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,1) 100%);
 	width: 100vw;
 	height: 100vh;
 }
@@ -879,13 +968,14 @@ function backTime(){
 		myLyricBtn.blur();
 		myPReelBtn.blur();
 		moreBack.style.display = "inline";
-		// moreFront.style.display = "none";
+		moreFront.style.display = "none";
 		moreLyrics.style.display = "none";
 		moreIG.style.display = "none";
 		morePReel.style.display = "none";
 	}
 }
 function lyricTime(){
+	myNavBtns.style.display = "none";
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 	if(moreLyrics.style.display==="inline"){
@@ -895,6 +985,9 @@ function lyricTime(){
 		myFrontBtn.blur();
 		myPReelBtn.blur();
 		moreLyrics.style.display = "inline";
+		music1.style.top = "100vh";
+		myNav2Btns.style.right = "-500px";
+		myNav3Btns.style.left = "0";
 		moreIG.style.display = "none";
 		moreFront.style.display = "none";
 		moreBack.style.display = "none";
@@ -933,6 +1026,7 @@ function openMusic() {
 	moreIG.style.display = "none";
 	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
+	document.getElementById("myNav3Btns").style.left = "-500px";
 	if(track == 1){
 	music1.style.top = "0";
 }else if(track == 2){
@@ -965,6 +1059,8 @@ moreIG.style.display = "flex";
 myNavBtns.style.display = "inline-flex";
 document.body.scrollTop = scroll;
 document.documentElement.scrollTop = scroll;
+document.getElementById("myNav2Btns").style.right = "-500px";
+document.getElementById("myNav3Btns").style.left = "-500px";
 track = 0;
 }
 
@@ -988,8 +1084,18 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	}
 
 	if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
+		if(moreBack.style.display == "none"){
 		document.getElementById("myNavBtns").style.top = "0";
+	}
 		document.getElementById("myNav1Btns").style.left = "0";
+		if(track!=0 && moreLyrics.style.display == "none"){
+		document.getElementById("myNav2Btns").style.right = "0";
+	}
+	if(track != 0 && moreLyrics.style.display == "inline"){
+		document.getElementById("myNav3Btns").style.left = "0";
+	}
+
+
 		if(window.pageYOffset > 20 || moreFront.style.display == "none"){
 		document.getElementById("wow").style.bottom = "0vh";
 	}else{
@@ -1003,6 +1109,8 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	} else {
 		document.getElementById("myNavBtns").style.top = "-50px";
 		document.getElementById("myNav1Btns").style.left = "-500px";
+		document.getElementById("myNav2Btns").style.right = "-500px";
+		document.getElementById("myNav3Btns").style.left = "-500px";
 		document.getElementById("wow").style.bottom = "0px";
 	}
 	prevScrollpos = currentScrollPos;
@@ -1064,12 +1172,17 @@ function toggle2(event){
 		closeMusic();
 		}
 		if(touchstartX == touchendX && touchendY == touchstartY){
-			if(lecteur.style.display =="none"){
+			if(touchendY < 50 && touchendX < 50 && moreLyrics.style.display == "none"){
+				closeMusic();
+			}
+			if(lecteur.style.display =="inline" && touchendY >= 50){
+				lecteur.style.display = "none"
+				document.getElementById("wow").style.bottom = "-60px";
+				document.getElementById("myNav2Btns").style.right = "-500px";
+		}else{
 			lecteur.style.display = "inline"
 			document.getElementById("wow").style.bottom = "0vh";
-		}else{
-			lecteur.style.display = "none"
-			document.getElementById("wow").style.bottom = "-60px";
+			document.getElementById("myNav2Btns").style.right = "0vw";
 		}
 	}
 		// if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset < 10){
