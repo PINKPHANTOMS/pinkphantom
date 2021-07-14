@@ -230,7 +230,7 @@
 									<span id="moreBack">
 								<div class="titre">
 								<div id="myNav1Btns" style="color: white;">
-								<button  onclick="frontTime()" id="myFrontBtn">ᐊSIDE A</button>
+								<button  onclick="lyricTime()" id="myLyricBtn">ᐊback to lyrics</button>
 								</div>
 								<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
 								The American Dream
@@ -489,7 +489,7 @@ figcaption {
 
 #myNav1Btns {
 	position: fixed;
-	top: 20vw;
+	top: 0vw;
 	width: 100%;
 	display: inline-flex;
 	z-index: 99;
@@ -959,7 +959,8 @@ function frontTime(){
 	}
 }
 function backTime(){
-
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
@@ -1019,6 +1020,7 @@ function openMusic() {
 	if(moreFront.style.display == "inline"){
 	scroll = window.pageYOffset;
 }
+	lecteur.style.display = "inline";
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 	moreBack.style.display = "none";
@@ -1088,9 +1090,11 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 		if(moreBack.style.display == "none"){
 		document.getElementById("myNavBtns").style.top = "0";
 	}
-		document.getElementById("myNav1Btns").style.left = "0";
 		if(track!=0 && moreLyrics.style.display == "none"){
+			document.getElementById("myNav1Btns").style.left = "0";
+			if(moreBack.style.display == "none"){
 		document.getElementById("myNav2Btns").style.right = "0";
+	}
 	}
 	if(track != 0 && moreLyrics.style.display == "inline"){
 		document.getElementById("myNav3Btns").style.left = "0";
@@ -1169,6 +1173,9 @@ function toggle(event){
 		}
 }
 function toggle2(event){
+	if(moreLyrics.style.display == "inline" && document.body.scrollHeight-screen.height-window.pageYOffset == 0){
+			backTime();
+	}
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
