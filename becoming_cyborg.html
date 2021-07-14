@@ -16,7 +16,7 @@
 		</div>
 
 		<span id="dots"></span>
-		<span id="myMusic1" style="position:fixed;transition: top .3s;">
+		<span id="myMusic1" style="position:fixed;transition: top .3s">
 			<div id="myNav2Btns">
 			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
 		</div>
@@ -60,7 +60,7 @@
 								<span id="dots"></span>
 								<span id="myMusic4" style="position:fixed;transition: top .3s">
 									<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-										<img loading=lazy src="images/4.jpg" width="100%">
+										<img loading=lazy src="images/circ.gif" width="100%">
 										<div class="titre">
 												<h3>Pink Phantom</h3>
 												<h1>SURVIVE</h1>
@@ -1016,7 +1016,7 @@ function pReelTime(){
 var scroll;
 
 function openMusic() {
-	if(track == 0){
+	if(moreFront.style.display == "inline"){
 	scroll = window.pageYOffset;
 }
 	document.body.scrollTop = 0;
@@ -1026,7 +1026,6 @@ function openMusic() {
 	moreLyrics.style.display = "none";
 	moreIG.style.display = "none";
 	morePReel.style.display = "none";
-	lecteur.style.display = "inline"
 	document.getElementById("myNavBtns").style.top = "-50px";
 	document.getElementById("myNav3Btns").style.left = "-500px";
 	if(track == 1){
@@ -1044,8 +1043,6 @@ myNavBtns.style.display = "none";
 }
 
 function closeMusic() {
-	document.body.scrollTop = scroll;
-	document.documentElement.scrollTop = scroll;
 	if(track == 1){
 	music1.style.top = "100vh";
 }else if(track == 2){
@@ -1058,9 +1055,11 @@ function closeMusic() {
 	music5.style.top = "100vh";
 }
 moreFront.style.display = "inline";
+document.getElementById("myNavBtns").style.top = "0";
 moreIG.style.display = "flex";
 myNavBtns.style.display = "inline-flex";
-document.getElementById("myNavBtns").style.top = "0";
+document.body.scrollTop = scroll;
+document.documentElement.scrollTop = scroll;
 document.getElementById("myNav2Btns").style.right = "-500px";
 document.getElementById("myNav3Btns").style.left = "-500px";
 track = 0;
@@ -1170,7 +1169,7 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(touchendY > touchstartY && window.pageYOffset < 10 && moreLyrics.style.display == "none"){
+	if(touchendY > touchstartY && window.pageYOffset < 10){
 		closeMusic();
 		}
 		if(touchstartX == touchendX && touchendY == touchstartY){
