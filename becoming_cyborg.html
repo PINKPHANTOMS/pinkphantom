@@ -17,7 +17,7 @@
 		</div>
 
 		<span id="dots"></span>
-		<span id="myMusic1">
+		<span id="myMusic1" style="position:fixed;transition: top .3s">
 			<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 				<img loading=lazy src="images/4.jpg" width="100%">
 				<div class="titre">
@@ -335,7 +335,6 @@
 <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
-
 
 .disco {
 	text-align: left;
@@ -718,12 +717,11 @@ audio::-webkit-media-controls-volume-slider {
 	moreTrackListing.style.display = "none";
 	lessTrackListing.style.display = "inline";
 	less1TrackListing.style.display = "inline";
-	music1.style.display = "none";
 	music2.style.display = "none";
 	music3.style.display = "none";
 	music4.style.display = "none";
 	music5.style.display = "none";
-	music1.style.width = "0";
+	music1.style.top = "100vh";
 	music2.style.width = "0";
 	music3.style.width = "0";
 	music4.style.width = "0";
@@ -917,8 +915,7 @@ function openMusic() {
 	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
-	music1.style.display = "inline";
-	music1.style.width = "100%";
+	music1.style.top = "0";
 }else if(track == 2){
 	music2.style.display = "inline";
 	music2.style.width = "100%";
@@ -937,8 +934,9 @@ myNavBtns.style.display = "none";
 
 function closeMusic() {
 	if(track == 1){
-	music1.style.width = "0%";
-	music1.style.display = "none";
+	music1.style.top = "100vh";
+	// music1.style.position = "static"
+	// music1.style.bottom = "1000";
 }else if(track == 2){
 	music2.style.width = "0%";
 	music2.style.display = "none";
