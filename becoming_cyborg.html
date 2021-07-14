@@ -1016,7 +1016,9 @@ function pReelTime(){
 var scroll;
 
 function openMusic() {
+	if(track == 0){
 	scroll = window.pageYOffset;
+}
 	document.body.scrollTop = 0;
 	document.documentElement.scrollTop = 0;
 	moreBack.style.display = "none";
@@ -1024,6 +1026,7 @@ function openMusic() {
 	moreLyrics.style.display = "none";
 	moreIG.style.display = "none";
 	morePReel.style.display = "none";
+	lecteur.style.display = "inline"
 	document.getElementById("myNavBtns").style.top = "-50px";
 	document.getElementById("myNav3Btns").style.left = "-500px";
 	if(track == 1){
