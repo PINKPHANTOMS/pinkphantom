@@ -1178,7 +1178,12 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchendY = event.changedTouches[0].clientY;
 }, false);
 function toggle(event){
-
+	if(touchendX > touchstartX + 20 && moreBack.style.display == "inline"){
+		frontTime();
+	}
+	if(touchendX < touchstartX - 20 && moreFront.style.display == "inline"){
+		backTime();
+	}
 	if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
 
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
@@ -1193,6 +1198,12 @@ function toggle(event){
 		}
 }
 function toggle2(event){
+	if(touchendX > touchstartX + 20 && moreLyrics.display == "inline"){
+		openMusic();
+	}
+	if(touchendX < touchstartX - 20 && moreLyrics.style.display == "none"){
+		lyricTime();
+	}
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
