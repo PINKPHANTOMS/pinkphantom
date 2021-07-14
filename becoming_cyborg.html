@@ -914,7 +914,6 @@ function openMusic() {
 	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
 	if(track == 1){
-	music1.style.position = "fixed";
 	music1.style.top = "0";
 }else if(track == 2){
 	music2.style.top = "0";
@@ -931,7 +930,6 @@ myNavBtns.style.display = "none";
 function closeMusic() {
 	if(track == 1){
 	music1.style.top = "100vh";
-	music1.style.position = "fixed";
 }else if(track == 2){
 	music2.style.top = "100vh";
 }else if(track == 3){
@@ -1005,10 +1003,6 @@ document.getElementById('oop').onclick = function(event) {
 };
 
 gestureZone.addEventListener('touchstart', function(event) {
-	if(track = 1){
-	music1.style.position = "static";
-}
-
 		touchstartX = event.touches[0].clientX;
 		touchstartY = event.touches[0].clientY;
 		if(x.currentTime!=0){
