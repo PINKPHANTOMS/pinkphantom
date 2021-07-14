@@ -18,7 +18,7 @@
 		<span id="dots"></span>
 		<span id="myMusic1" style="position:fixed;transition: top .3s">
 			<div id="myNav2Btns">
-			<button  onclick="lyricTime()" id="myLyricBtn">Lyrics</button>
+			<button  onclick="lyricTime()" id="myLyricBtn">▲Lyrics</button>
 		</div>
 			<div class="container" id="stuff">
 				<div class="closebtn" onclick="closeMusic()">
@@ -230,7 +230,7 @@
 									<span id="moreBack">
 								<div class="titre">
 								<div id="myNav1Btns" style="color: white;">
-								<button  onclick="lyricTime()" id="myLyricBtn">ᐊlyrics</button>
+								<button  onclick="lyricTime()" id="myLyricBtn">▲lyrics</button>
 								</div>
 								<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
 								The American Dream
@@ -359,7 +359,7 @@
 			<span id="moreLyrics">
 				<span id="lyricImage">
 					<div id="myNav3Btns" style="color: white;">
-					<button onclick="openMusic()">ᐊmusic</button>
+					<button onclick="openMusic()">▲music</button>
 					</div>
 					<br>
 					<br>
@@ -500,7 +500,7 @@ figcaption {
 }
 #myNav2Btns {
 	position: fixed;
-	top: 8px;
+	bottom: 10vh;
 	width: 100%;
 	display: inline-flex;
 	z-index: 99;
@@ -1198,10 +1198,9 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(touchendY < touchstartY + 20 && moreLyrics.style.display == "none"){
+	if(touchendY < touchstartY - 20 && moreLyrics.style.display == "none"){
 		lyricTime();
 	}
-
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
