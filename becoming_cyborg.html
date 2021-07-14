@@ -957,8 +957,6 @@ function frontTime(){
 	if(moreBack.style.display == "inline"){
 	scrollBack = window.pageYOffset;
 }
-	myNavBtns.style.top = "0";
-
 	moreBack.style.display = "none";
 	moreIG.style.display = "flex";
 	if(moreFront.style.display==="inline"){
@@ -975,10 +973,11 @@ function frontTime(){
 	}
 	document.body.scrollTop = scrollFront;
 	document.documentElement.scrollTop = scrollFront;
+	myNavBtns.style.top = "0";
+
 }
 function backTime(){
 	scrollFront = window.pageYOffset;
-	myNavBtns.style.top = "0";
 	if(moreBack.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
@@ -993,6 +992,7 @@ function backTime(){
 	}
 	document.body.scrollTop = scrollBack;
 	document.documentElement.scrollTop = scrollBack;
+	myNavBtns.style.top = "0";
 }
 function lyricTime(){
 	myNavBtns.style.display = "none";
