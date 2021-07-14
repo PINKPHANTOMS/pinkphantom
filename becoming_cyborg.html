@@ -363,6 +363,10 @@
 					</div>
 					<br>
 					<br>
+					<center>
+						SWIPE UP FOR SIDE B
+					</center>
+					<br>
 					<img loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="images/survive.svg" width="100%">
 				</span>
 			</span>
@@ -1029,6 +1033,7 @@ function openMusic() {
 	moreIG.style.display = "none";
 	morePReel.style.display = "none";
 	document.getElementById("myNavBtns").style.top = "-50px";
+	document.getElementById("myNav2Btns").style.right = "0";
 	document.getElementById("myNav3Btns").style.left = "-500px";
 	if(track == 1){
 	music1.style.top = "0";
@@ -1179,8 +1184,8 @@ function toggle2(event){
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
-			music1.style.top = '0';
-			closeMusic();
+			music1.style.top = '100vh';
+			backTime();
 		}else{
 			closeMusic();
 		}
