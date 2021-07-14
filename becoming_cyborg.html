@@ -815,9 +815,18 @@ audio::-webkit-media-controls-volume-slider {
 	var myLyricBtn = document.getElementById("myLyricBtn");
 	var myPReelBtn = document.getElementById("myPReelBtn");
 	const el = document.getElementById('myNavBtns');
+	var myNavBtns = document.getElementById("myNavBtns");
+	var myNav1Btns = document.getElementById("myNav1Btns");
+	var myNav2Btns = document.getElementById("myNav2Btns");
+	var myNav3Btns = document.getElementById("myNav3Btns");
+
 	var scale;
 	var audio = {   
     init: function() {
+	myNavBtns.style.top = "0";
+	myNav1Btns.style.left = "0";
+	myNav2Btns.style.right = "0";
+	myNav3Btns.style.left = "0";
 	moreFront.style.display = "inline";   
 	morePReel.style.display = "none";
 	moreBack.style.display = "none";
