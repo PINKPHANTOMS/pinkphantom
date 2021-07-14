@@ -32,60 +32,6 @@
 		</div>
 		</span>
 
-		<span id="dots"></span>
-		<span id="myMusic2" style="position:fixed;transition: top .3s">
-			<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-				<img loading=lazy src="images/5.jpg" width="100%">
-				<div class="titre">
-						<h3>Pink Phantom</h3>
-						<h1>SURVIVE</h1>
-				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-				<!-- <div class="closebtn1" onclick="closeMusic()">&times;</div> -->
-		</span>
-
-
-						<span id="dots"></span>
-						<span id="myMusic3" style="position:fixed;transition: top .3s">
-							<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-								<img loading=lazy src="images/6.jpg" width="100%">
-								<div class="titre">
-										<h3>Pink Phantom</h3>
-										<h1>THE ART GALLERY</h1>
-								</div>
-								<img loading=lazy src="images/survive.svg" width="100%">
-						</span>
-
-
-								<span id="dots"></span>
-								<span id="myMusic4" style="position:fixed;transition: top .3s">
-									<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-										<img loading=lazy src="images/circ.gif" width="100%">
-										<div class="titre">
-												<h3>Pink Phantom</h3>
-												<h1>SURVIVE</h1>
-										</div>
-										<img loading=lazy src="images/survive.svg" width="100%">
-								</span>
-
-
-										<span id="dots"></span>
-										<span id="myMusic5" style="position:fixed;transition: top .3s">
-											<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-												<img loading=lazy src="images/4.jpg" width="100%">
-												<div class="titre">
-														<h3>Pink Phantom</h3>
-														<h1>SURVIVE</h1>
-												</div>
-												<img loading=lazy src="images/survive.svg" width="100%">
-										</span>
-
-
-
-
-
-
-
 			<div class="container">
 				<span id="stuff">
 				<center>
@@ -363,7 +309,7 @@
 					</div>
 					<br>
 					<br>
-					<img loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="images/survive.svg" width="100%">
+					<img id="lyricPANEL"loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="" width="100%">
 					<br>
 				</span>
 			</span>
@@ -384,7 +330,19 @@
 #myMusic1 {
 	display: block;
 	position: relative;
-	background-image: url("images/circ.gif");
+	/* background-image: url("images/circ.gif"); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	max-width: 500px;
+	height: 100vh;
+	margin: auto;
+	border-radius: 0 0 1vw 1vw;
+}
+#myMusic2 {
+	display: block;
+	position: relative;
+	background-image: url("images/5.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -796,10 +754,6 @@ audio::-webkit-media-controls-volume-slider {
 	<script>
 	var lecteur = document.getElementById("stuff");
 	var music1 = document.getElementById("myMusic1");
-	var music2 = document.getElementById("myMusic2");
-	var music3 = document.getElementById("myMusic3");
-	var music4 = document.getElementById("myMusic4");
-	var music5 = document.getElementById("myMusic5");
 	var moreLyrics = document.getElementById("moreLyrics");
 	var moreChron = document.getElementById("moreChron");
 	var morePReel = document.getElementById("morePReel");
@@ -836,13 +790,6 @@ audio::-webkit-media-controls-volume-slider {
 	lessTrackListing.style.display = "inline";
 	less1TrackListing.style.display = "inline";
 	music1.style.top = "100vh";
-	music2.style.top = "100vh";
-	music3.style.top = "100vh";
-	music4.style.top = "100vh";
-	music5.style.top = "100vh";
-
-
-
 
 	currentTime = 0;
 	myFrontBtn.focus();
@@ -875,7 +822,6 @@ audio.init();
 var changeTrack = true;
 
 var x = document.getElementById('myAudio');
-
 	function cs_change_music(music){
 		x.style.display = "inline";
 		x.pause();
@@ -883,12 +829,19 @@ var x = document.getElementById('myAudio');
 		x.load();
 		x.play();
 	}
+	function change_background(background, lyricPanel){
+		const imageURL = background;
+		music1.style.backgroundImage ="url("+imageURL+")";
+		document.getElementById("lyricPANEL").setAttribute('src', lyricPanel);
+	}
 var track = 0;
 var currentTrack = 0;
 //imageTimestamps
 function itimeStamp0(){
 	if(track != 1 && currentTrack != 1){
 	cs_change_music("sounds/BC_1.wav");
+	change_background("images/circ.gif", "images/survive.svg");
+
 	x.currentTime = 0;
 	currentTrack = 1;
 	x.play();
@@ -899,6 +852,7 @@ function itimeStamp0(){
 function itimeStamp1(){
 	if(track != 2 && currentTrack != 2){
 	cs_change_music("sounds/BC_2.wav");
+	change_background("images/5.jpg", "images/circ.gif");
 	x.currentTime = 0;
 	currentTrack = 2;
 	x.play();
@@ -909,6 +863,7 @@ track = 2;
 function itimeStamp2(){
 	if(track != 3 && currentTrack != 3){
 		cs_change_music("sounds/BC_3.wav");
+		change_background("images/6.jpg", "images/circ.gif");
 	x.currentTime = 0;
 	x.play();
 	currentTrack = 3;
@@ -920,6 +875,7 @@ track = 3;
 function itimeStamp3(){
 	if(track != 4 && currentTrack != 4){
 		cs_change_music("sounds/BC_4.wav");
+		change_background("images/city/6.gif", "images/circ.gif");
 	x.currentTime = 0;
 	currentTrack = 4;
 	x.play();
@@ -930,6 +886,7 @@ track = 4;
 function itimeStamp4(){
 	if(track != 5 && currentTrack != 5){
 		cs_change_music("sounds/BC_5.wav");
+		change_background("images/city/12.gif", "images/circ.gif");
 	x.currentTime = 0;
 	x.play();
 	currentTrack = 5;
@@ -1052,32 +1009,12 @@ function openMusic() {
 	document.getElementById("myNavBtns").style.top = "-50px";
 	document.getElementById("myNav2Btns").style.right = "0";
 	document.getElementById("myNav3Btns").style.left = "-500px";
-	if(track == 1){
 	music1.style.top = "0";
-}else if(track == 2){
-	music2.style.top = "0";
-}else if(track == 3){
-	music3.style.top = "0";
-}else if(track == 4){
-	music4.style.top = "0";
-}else if(track == 5){
-	music5.style.top = "0";
-}
-myNavBtns.style.display = "none";
+	myNavBtns.style.display = "none";
 }
 
 function closeMusic() {
-	if(track == 1){
 	music1.style.top = "100vh";
-}else if(track == 2){
-	music2.style.top = "100vh";
-}else if(track == 3){
-	music3.style.top = "100vh";
-}else if(track == 4){
-	music4.style.top = "100vh";
-}else if(track == 5){
-	music5.style.top = "100vh";
-}
 moreFront.style.display = "inline";
 document.getElementById("myNavBtns").style.top = "0";
 moreIG.style.display = "flex";
