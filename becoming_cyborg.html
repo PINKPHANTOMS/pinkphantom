@@ -230,7 +230,7 @@
 									<span id="moreBack">
 								<div class="titre">
 								<div id="myNav1Btns" style="color: white;">
-								<button  onclick="lyricTime()" id="myLyricBtn">ᐊback to lyrics</button>
+								<button  onclick="lyricTime()" id="myLyricBtn">ᐊlyrics</button>
 								</div>
 								<div style="padding-top: 20vh;color: white; margin-top: 0vh; padding-left: 5%; font-size: 17px; font-weight: 500;font-size: 7vw;">
 								The American Dream
@@ -359,7 +359,7 @@
 			<span id="moreLyrics">
 				<span id="lyricImage">
 					<div id="myNav3Btns" style="color: white;">
-					<button onclick="openMusic()">ᐊback to music</button>
+					<button onclick="openMusic()">ᐊmusic</button>
 					</div>
 					<br>
 					<br>
@@ -984,10 +984,11 @@ function lyricTime(){
 	myNavBtns.style.display = "none";
 	document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+
 	if(moreLyrics.style.display==="inline"){
 		// moreFront.style.display = "none";
 	}else{
-		myLyricBtn.focus();
+		myLyricBtn.blur();
 		myFrontBtn.blur();
 		myPReelBtn.blur();
 		moreLyrics.style.display = "inline";
