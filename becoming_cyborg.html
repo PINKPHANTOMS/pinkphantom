@@ -1198,10 +1198,10 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(touchendX > touchstartX + 20 && moreLyrics.display == "inline"){
+	if(touchendX > touchstartX + 10 && moreLyrics.display == "inline"){
 		openMusic();
 	}
-	if(touchendX < touchstartX - 20 && moreLyrics.style.display == "none"){
+	if(touchendX < touchstartX - 10 && moreLyrics.style.display == "none"){
 		lyricTime();
 	}
 	if(touchendY > touchstartY && window.pageYOffset < 10){
