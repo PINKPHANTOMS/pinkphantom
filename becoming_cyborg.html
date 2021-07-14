@@ -363,11 +363,13 @@
 					</div>
 					<br>
 					<br>
+					<img loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="images/survive.svg" width="100%">
+					<br>
 					<center>
-						SWIPE UP FOR SIDE B
+						SWIPE DOWN FOR SIDE B
 					</center>
 					<br>
-					<img loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="images/survive.svg" width="100%">
+					<br>
 				</span>
 			</span>
 		</div>
@@ -1184,8 +1186,9 @@ function toggle2(event){
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
-			music1.style.top = '100vh';
-			backTime();
+			openMusic();
+		}else if(moreBack.style.display == "inline"){
+			lyricTime();
 		}else{
 			closeMusic();
 		}
