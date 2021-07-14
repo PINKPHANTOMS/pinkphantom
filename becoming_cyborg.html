@@ -10,8 +10,8 @@
 <body>
 	<div id="gestureZone">
 		<div id="myNavBtns">
-				<button onclick="frontTime()" id="myFrontBtn" style="display: none;">SIDE A</button>
-				<button  onclick="backTime()" id="myBackBtn" style="display: none;">SIDE B</button>
+				<button onclick="frontTime()" id="myFrontBtn">SIDE A</button>
+				<button  onclick="backTime()" id="myBackBtn">SIDE B</button>
 				<button  onclick="pReelTime()" id="myPReelBtn" style="display: none">Gallery</button>
 		</div>
 
@@ -364,11 +364,6 @@
 					<br>
 					<br>
 					<img loading=lazy style="padding-top: -10vh; padding-bottom: -10vh;" src="images/survive.svg" width="100%">
-					<br>
-					<center>
-						SWIPE DOWN FOR SIDE B
-					</center>
-					<br>
 					<br>
 				</span>
 			</span>
@@ -1095,9 +1090,7 @@ if(prevScrollpos == currentScrollPos && window.pageYOffset<20 && x.currentTime==
 	}
 
 	if (prevScrollpos > currentScrollPos || window.pageYOffset<20) {
-		if(moreBack.style.display == "none"){
 		document.getElementById("myNavBtns").style.top = "0";
-	}
 		if(track!=0 && moreLyrics.style.display == "none"){
 			document.getElementById("myNav1Btns").style.left = "0";
 			if(moreBack.style.display == "none"){
@@ -1153,7 +1146,7 @@ gestureZone.addEventListener('touchstart', function(event) {
 gestureZone.addEventListener('touchend', function(event) {
 		touchendX = event.changedTouches[0].clientX;
 		touchendY = event.changedTouches[0].clientY;
-	if(moreFront.style.display === "inline"){
+	if(moreFront.style.display === "inline" || moreBack.style.display == "inline"){
 		toggle();
 	}
 	if(track != 0){
@@ -1181,9 +1174,6 @@ function toggle(event){
 		}
 }
 function toggle2(event){
-	if(moreLyrics.style.display == "inline" && document.body.scrollHeight-screen.height-window.pageYOffset == 0){
-			backTime();
-	}
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		if(moreLyrics.style.display == 'inline'){
 			moreLyrics.style.display == "none";
