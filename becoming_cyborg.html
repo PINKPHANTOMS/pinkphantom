@@ -18,7 +18,7 @@
 
 		<span id="dots"></span>
 		<span id="myMusic1">
-			<div class="closebtn" onclick="closeMusic()">&times;</div>
+			<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 				<img loading=lazy src="images/4.jpg" width="100%">
 				<div class="titre">
 						<h3>Pink Phantom</h3>
@@ -30,7 +30,7 @@
 
 		<span id="dots"></span>
 		<span id="myMusic2">
-			<div class="closebtn" onclick="closeMusic()">&times;</div>
+			<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 				<img loading=lazy src="images/5.jpg" width="100%">
 				<div class="titre">
 						<h3>Pink Phantom</h3>
@@ -43,7 +43,7 @@
 
 						<span id="dots"></span>
 						<span id="myMusic3">
-							<div class="closebtn" onclick="closeMusic()">&times;</div>
+							<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 								<img loading=lazy src="images/6.jpg" width="100%">
 								<div class="titre">
 										<h3>Pink Phantom</h3>
@@ -55,7 +55,7 @@
 
 								<span id="dots"></span>
 								<span id="myMusic4">
-									<div class="closebtn" onclick="closeMusic()">&times;</div>
+									<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 										<img loading=lazy src="images/4.jpg" width="100%">
 										<div class="titre">
 												<h3>Pink Phantom</h3>
@@ -67,7 +67,7 @@
 
 										<span id="dots"></span>
 										<span id="myMusic5">
-											<div class="closebtn" onclick="closeMusic()">&times;</div>
+											<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
 												<img loading=lazy src="images/4.jpg" width="100%">
 												<div class="titre">
 														<h3>Pink Phantom</h3>
@@ -487,12 +487,13 @@ figcaption {
 }
 
 .closebtn {
+	margin-top: 0vw;
 	background-color: transparent;
 	border: none;
   color: gray;
 	position: absolute;
 	top: 0px;
-	right: 0px;
+	left: 0px;
 	font-size: 60px;
 }
 .closebtn1 {
@@ -645,7 +646,7 @@ h3 {
     height: 66%;
 }
 img {
-	padding-top: 10vh;
+	padding-top: 0vh;
 	padding-bottom: 10vh;
 }
 .cover img {
@@ -742,7 +743,7 @@ audio::-webkit-media-controls-volume-slider {
 						if (media.length) {                
 								media.mediaelementplayer({                    
 									audioHeight: 100,
-									// features: ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
+									features: ['playpause', 'current', 'duration', 'progress', 'volume', 'tracks', 'fullscreen'],
 									alwaysShowControls: true,
 									timeAndDurationSeparator: '<span></span>',
 									iPadUseNativeControls: true,
