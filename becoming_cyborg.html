@@ -1170,7 +1170,13 @@ function toggle(event){
 }
 function toggle2(event){
 	if(touchendY > touchstartY && window.pageYOffset < 10){
-		closeMusic();
+		if(moreLyrics.style.display == 'inline'){
+			moreLyrics.style.display == "none";
+			music1.style.top = '0';
+			closeMusic();
+		}else{
+			closeMusic();
+		}
 		}
 		if(touchstartX == touchendX && touchendY == touchstartY){
 			if(touchendY < 50 && touchendX < 50 && moreLyrics.style.display == "none"){
