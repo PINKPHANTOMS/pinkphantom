@@ -1204,7 +1204,9 @@ function toggle2(event){
 		}else{
 			lecteur.style.display = "inline"
 			document.getElementById("wow").style.bottom = "0vh";
+			if(moreLyrics.style.display == "none" && moreBack.style.display == "none"){
 			document.getElementById("myNav2Btns").style.right = "0vw";
+		}
 		}
 	}
 		// if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset < 10){
