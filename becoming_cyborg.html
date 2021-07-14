@@ -18,14 +18,17 @@
 
 		<span id="dots"></span>
 		<span id="myMusic1" style="position:fixed;transition: top .3s">
-			<div class="closebtn" onclick="closeMusic()"><img width="40px"; src="images/back.png"></div>
-				<img loading=lazy src="images/4.jpg" width="100%">
-				<div class="titre">
+			<div class="container" id="stuff">
+				<div class="bg1">
+				<div class="closebtn" onclick="closeMusic()">
+					<img width="40px" src="images/back.png">
+				</div>
+				<div class="titre" style="position: absolute; top: 80vh;">
 						<h3>Pink Phantom</h3>
 						<h1>SURVIVE</h1>
 				</div>
-				<img loading=lazy src="images/survive.svg" width="100%">
-				<!-- <div class="closebtn1" onclick="closeMusic()">&times;</div> -->
+			</div>
+		</div>
 		</span>
 
 		<span id="dots"></span>
@@ -336,6 +339,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.7/mediaelementplayer.min.css">
 <style>
 
+#myMusic1 {
+	display: block;
+	position: relative;
+	background-image: url("images/city/final.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	max-width: 500px;
+	height: 100vh;
+	margin: auto;
+	border-radius: 0 0 1vw 1vw;
+}
+
 .disco {
 	text-align: left;
 	font-size: 5vw;
@@ -588,6 +604,11 @@ figcaption {
 }
 .bg{
 	background: transparent linear-gradient(to bottom,transparent 90%,#080808	 100%) repeat scroll 0 0;
+	width: 100vw;
+	height: 100vh;
+}
+.bg1{
+	background: transparent linear-gradient(to bottom,transparent 60%,#080808 100%) repeat scroll 0 0;
 	width: 100vw;
 	height: 100vh;
 }
@@ -1025,7 +1046,9 @@ gestureZone.addEventListener('touchmove', function(event) {
 		touchendY = event.changedTouches[0].clientY;
 }, false);
 function toggle(event){
+
 	if(touchstartX == touchendX && touchendY == touchstartY && window.pageYOffset <= 50){
+
 		if(lecteur.style.display === "inline" && touchendY < screen.height*.8){
 			lecteur.style.display = "none";
 			document.getElementById("myNavBtns").style.top = "-50px";
@@ -1040,7 +1063,15 @@ function toggle2(event){
 	if(touchendY > touchstartY && window.pageYOffset < 10){
 		closeMusic();
 		}
-
+		if(touchstartX == touchendX && touchendY == touchstartY){
+			if(lecteur.style.display =="none"){
+			lecteur.style.display = "inline"
+			document.getElementById("wow").style.bottom = "0vh";
+		}else{
+			lecteur.style.display = "none"
+			document.getElementById("wow").style.bottom = "-60px";
+		}
+	}
 		// if(touchendY < touchstartY && document.body.scrollHeight-screen.height-window.pageYOffset < 10){
 		// 	closeMusic();
 		// 	}
